@@ -4,6 +4,7 @@
 [![Coverage Status](https://coveralls.io/repos/dcousens/typeforce/badge.png)](https://coveralls.io/r/dcousens/typeforce)
 [![Version](http://img.shields.io/npm/v/typeforce.svg)](https://www.npmjs.org/package/typeforce)
 
+Another biased type checking solution for Javascript.
 
 ## Examples
 
@@ -29,7 +30,7 @@ typeforce([{ prop: 'String' }], unknown)
 // will also pass as an Array is an Object
 typeforce('Object', unknown)
 
-// THROWS 'Expected Number, got Array ...'
+// THROWS 'TypeError: Expected Number, got Array [object Object],[object Object]'
 typeforce('Number', unknown)
 ```
 
