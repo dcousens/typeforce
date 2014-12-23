@@ -49,6 +49,7 @@ module.exports = function enforce(type, value) {
       break
     }
 
+    // evaluate type templates
     case 'object': {
       if (Array.isArray(type)) {
         var subType = type[0]
