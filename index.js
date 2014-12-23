@@ -1,8 +1,10 @@
-function getName(fn) {
-//  if (fn.name !== undefined) return fn.name
+function getName(value) {
+  if (value === undefined) return ''
+  if (value === null) return ''
+//  if (value.constructor.name !== undefined) return fn.name
 
-  // why not fn.name: https://kangax.github.io/compat-table/es6/#function_name_property
-  var match = fn.toString().match(/function (.*?)\(/)
+  // why not constructor.name: https://kangax.github.io/compat-table/es6/#function_name_property
+  var match = value.constructor.toString().match(/function (.*?)\(/)
   return match ? match[1] : null
 }
 
@@ -42,7 +44,7 @@ module.exports = function enforce(type, value) {
 
   switch (typeof type) {
     case 'string': {
-      if (type === getName(value.constructor)) return
+      if (type === getName(value)) return
 
       break
     }
@@ -70,7 +72,7 @@ module.exports = function enforce(type, value) {
         try {
           enforce(propertyType, propertyValue)
         } catch (e) {
-          throw new TypeError('Expected property "' + propertyName + '" of type ' + JSON.stringify(propertyType) + ', got ' + getName(propertyValue.constructor) + ' ' + propertyValue)
+          throw new TypeError('Expected property "' + propertyName + '" of type ' + JSON.stringify(propertyType) + ', got ' + getName(propertyValue) + ' ' + propertyValue)
         }
       }
 
@@ -78,5 +80,5 @@ module.exports = function enforce(type, value) {
     }
   }
 
-  throw new TypeError('Expected ' + (getName(type) || type) + ', got ' + getName(value.constructor) + ' ' + value)
+  throw new TypeError('Expected ' + type + ', got ' + getName(value) + ' ' + value)
 }
