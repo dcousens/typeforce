@@ -1,7 +1,7 @@
 {
   "name": "typeforce",
   "version": "0.0.1",
-  "description": "",
+  "description": "Another biased type checking solution for Javascript",
   "main": "./index.js",
   "scripts": {
     "coverage": "istanbul cover _mocha -- test/*.js",
