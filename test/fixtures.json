@@ -29,6 +29,14 @@
       "value": {}
     },
     {
+      "type": "Object",
+      "value": []
+    },
+    {
+      "type": "Object",
+      "custom": "CustomType"
+    },
+    {
       "type": {
         "a": "Number",
         "b": {
