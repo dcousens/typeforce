@@ -35,8 +35,8 @@ module.exports = function enforce(type, value) {
   }
 
   switch (typeof type) {
-    case 'function': {
-      if (getName(type) === getName(value.constructor)) return
+    case 'string': {
+      if (type === getName(value.constructor)) return
 
       break
     }
@@ -61,5 +61,5 @@ module.exports = function enforce(type, value) {
 //    }
   }
 
-  throw new TypeError('Expected ' + (getName(type) || type) + ', got ' + value)
+  throw new TypeError('Expected ' + (getName(type) || type) + ', got ' + getName(value.constructor) + ' ' + value)
 }
