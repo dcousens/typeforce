@@ -356,6 +356,18 @@
           "c": 2
         }
       }
+    },
+    {
+      "exception": "Expected Array, got  null",
+      "type": ["String"],
+      "value": null
+    },
+    {
+      "exception": "Expected String, got Number 1",
+      "type": ["String"],
+      "value": [
+        1
+      ]
     }
   ]
 }
