@@ -32,7 +32,8 @@ typeforce('Object', unknown)
 // will also pass as an Array is an Object
 
 typeforce('Number', unknown)
-// THROWS 'Expected Number, got Array ...'
+// THROWS 'Expected Number, got Array ...
+```
 
 ## License
 
