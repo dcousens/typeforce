@@ -10,29 +10,27 @@
 ``` javascript
 var typeforce = require('typeforce')
 
-var unknown = [{ prop: 'foo' }, { prop: 'bar' }]
+var unknown = [{ prop: 'foo' }, { prop: 'bar' }, { prop: 2 } ]
 typeforce('Array', unknown)
 // supported primitives 'Array', 'Boolean', 'Buffer', 'Number', 'Object', 'String'
 
-typeforce(['Object'], unknown)
 // array types only support 1 element type
+typeforce(['Object'], unknown)
 
+// pop the last element
 var element = unknown.pop()
-typeforce({ prop: 'String' }, element)
+
 // supports recursive type templating
+typeforce({ prop: 'Number' }, element)
 
-typeforce([{
-  {
-    prop: 'String'
-  }
-}], unknown)
-// works for array types too
+// works for array types too (remember, we popped off the non-conforming element)
+typeforce([{ prop: 'String' }], unknown)
 
-typeforce('Object', unknown)
 // will also pass as an Array is an Object
+typeforce('Object', unknown)
 
+// THROWS 'Expected Number, got Array ...'
 typeforce('Number', unknown)
-// THROWS 'Expected Number, got Array ...
 ```
 
 ## License
