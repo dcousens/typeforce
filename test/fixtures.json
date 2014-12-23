@@ -27,6 +27,20 @@
     {
       "type": "Object",
       "value": {}
+    },
+    {
+      "type": {
+        "a": "Number",
+        "b": {
+          "c": "String"
+        }
+      },
+      "value": {
+        "a": 1,
+        "b": {
+          "c": "satoshi"
+        }
+      }
     }
   ],
   "invalid": [
@@ -211,19 +225,9 @@
       "value": {}
     },
     {
-      "exception": "Expected Object, got Array",
-      "type": "Object",
-      "value": []
-    },
-    {
       "exception": "Expected Object, got Boolean true",
       "type": "Object",
       "value": true
-    },
-    {
-      "exception": "Expected Object, got Buffer",
-      "custom": "Buffer",
-      "type": "Object"
     },
     {
       "exception": "Expected Object, got Number 1234",
@@ -236,9 +240,114 @@
       "value": "foobar"
     },
     {
-      "exception": "Expected Object, got CustomType \\[object Object\\]",
-      "type": "Object",
+      "exception": "Missing property \"a\" of type \"Number\"",
+      "type": {
+        "a": "Number",
+        "b": {
+          "c": "String"
+        }
+      },
+      "value": []
+    },
+    {
+      "exception": "Missing property \"a\" of type \"Number\"",
+      "type": {
+        "a": "Number",
+        "b": {
+          "c": "String"
+        }
+      },
+      "value": {}
+    },
+    {
+      "exception": "Expected Object, got Boolean true",
+      "type": {
+        "a": "Number",
+        "b": {
+          "c": "String"
+        }
+      },
+      "value": true
+    },
+    {
+      "exception": "Missing property \"a\" of type \"Number\"",
+      "custom": "Buffer",
+      "type": {
+        "a": "Number",
+        "b": {
+          "c": "String"
+        }
+      }
+    },
+    {
+      "exception": "Expected Object, got Number 1234",
+      "type": {
+        "a": "Number",
+        "b": {
+          "c": "String"
+        }
+      },
+      "value": 1234
+    },
+    {
+      "exception": "Expected Object, got String foobar",
+      "type": {
+        "a": "Number",
+        "b": {
+          "c": "String"
+        }
+      },
+      "value": "foobar"
+    },
+    {
+      "exception": "Missing property \"a\" of type \"Number\"",
+      "type": {
+        "a": "Number",
+        "b": {
+          "c": "String"
+        }
+      },
       "custom": "CustomType"
+    },
+    {
+      "exception": "Expected property \"a\" of type \"Number\", got String wrong",
+      "type": {
+        "a": "Number",
+        "b": {
+          "c": "String"
+        }
+      },
+      "value": {
+        "a": "wrong"
+      }
+    },
+    {
+      "exception": "Expected property \"b\" of type {\"c\":\"String\"}, got String wrong",
+      "type": {
+        "a": "Number",
+        "b": {
+          "c": "String"
+        }
+      },
+      "value": {
+        "a": 1,
+        "b": "wrong"
+      }
+    },
+    {
+      "exception": "Expected property \"b\" of type {\"c\":\"String\"}, got Object \\[object Object\\]",
+      "type": {
+        "a": "Number",
+        "b": {
+          "c": "String"
+        }
+      },
+      "value": {
+        "a": 1,
+        "b": {
+          "c": 2
+        }
+      }
     }
   ]
 }

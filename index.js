@@ -28,6 +28,12 @@ module.exports = function enforce(type, value) {
       break
     }
 
+    case 'Object': {
+      if (typeof value === 'object') return
+
+      break
+    }
+
     case 'String': {
       if (typeof value === 'string') return
       break
@@ -41,24 +47,35 @@ module.exports = function enforce(type, value) {
       break
     }
 
-//    case 'object': {
-//      if (Array.isArray(type)) {
-//        var subType = type[0]
-//
-//        enforce('Array', value)
-//        value.forEach(enforce.bind(undefined, subType))
-//
-//        return
-//      }
-//
-//      for (var propertyName in type) {
-//        var propertyType = type[propertyName]
-//
-//        enforce(propertyType, value[propertyName])
-//      }
-//
-//      return
-//    }
+    case 'object': {
+      if (Array.isArray(type)) {
+        var subType = type[0]
+
+        enforce('Array', value)
+        value.forEach(enforce.bind(undefined, subType))
+
+        return
+      }
+
+      enforce('Object', value)
+      for (var propertyName in type) {
+        var propertyType = type[propertyName]
+
+        if (!(propertyName in value)) {
+          throw new TypeError('Missing property "' + propertyName + '" of type ' + JSON.stringify(propertyType))
+        }
+
+        var propertyValue = value[propertyName]
+
+        try {
+          enforce(propertyType, propertyValue)
+        } catch (e) {
+          throw new TypeError('Expected property "' + propertyName + '" of type ' + JSON.stringify(propertyType) + ', got ' + getName(propertyValue.constructor) + ' ' + propertyValue)
+        }
+      }
+
+      return
+    }
   }
 
   throw new TypeError('Expected ' + (getName(type) || type) + ', got ' + getName(value.constructor) + ' ' + value)
