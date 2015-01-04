@@ -4,7 +4,8 @@ var enforceType = require('../')
 function CustomType() { return "ensure non-greedy match".toUpperCase() }
 var CUSTOM_TYPES = {
   'Buffer': new Buffer(1),
-  'CustomType': new CustomType()
+  'CustomType': new CustomType(),
+  'Function': function() {}
 }
 
 var fixtures = require('./fixtures')

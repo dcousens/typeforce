@@ -25,6 +25,11 @@ module.exports = function enforce(type, value) {
       break
     }
 
+    case 'Function': {
+      if (typeof value === 'function') return
+      break
+    }
+
     case 'Number': {
       if (typeof value === 'number') return
       break

@@ -13,6 +13,10 @@
       "custom": "Buffer"
     },
     {
+      "type": "Function",
+      "custom": "Function"
+    },
+    {
       "type": "Number",
       "value": 1234
     },
@@ -376,6 +380,41 @@
       "value": [
         1
       ]
+    },
+    {
+      "exception": "Expected Function, got Array",
+      "type": "Function",
+      "value": []
+    },
+    {
+      "exception": "Expected Function, got Boolean true",
+      "type": "Function",
+      "value": true
+    },
+    {
+      "exception": "Expected Function, got Buffer",
+      "type": "Function",
+      "custom": "Buffer"
+    },
+    {
+      "exception": "Expected Function, got Number 1234",
+      "type": "Function",
+      "value": 1234
+    },
+    {
+      "exception": "Expected Function, got String foobar",
+      "type": "Function",
+      "value": "foobar"
+    },
+    {
+      "exception": "Expected Function, got CustomType \\[object Object\\]",
+      "type": "Function",
+      "custom": "CustomType"
+    },
+    {
+      "exception": "Expected Function, got Object \\[object Object\\]",
+      "type": "Function",
+      "value": {}
     }
   ]
 }
