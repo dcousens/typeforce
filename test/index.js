@@ -1,5 +1,5 @@
 var assert = require('assert')
-var enforceType = require('../')
+var typeForce = require('../')
 
 function CustomType() { return "ensure non-greedy match".toUpperCase() }
 var CUSTOM_TYPES = {
@@ -10,12 +10,12 @@ var CUSTOM_TYPES = {
 
 var fixtures = require('./fixtures')
 
-describe('enforceType', function() {
+describe('typeForce', function() {
   fixtures.valid.forEach(function(f) {
     var actualValue = f.custom ? CUSTOM_TYPES[f.custom] : f.value
 
     it('passes for ' + JSON.stringify(f.type) + ' with ' + (f.custom ? f.custom : JSON.stringify(f.value)), function() {
-      enforceType(f.type, actualValue)
+      typeForce(f.type, actualValue)
     })
   })
 
@@ -24,7 +24,7 @@ describe('enforceType', function() {
 
     it('fails for ' + JSON.stringify(f.type) + ' with ' + (f.custom ? f.custom : JSON.stringify(f.value)), function() {
       assert.throws(function() {
-        enforceType(f.type, actualValue)
+        typeForce(f.type, actualValue)
       }, new RegExp(f.exception))
     })
   })
