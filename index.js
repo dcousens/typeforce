@@ -1,4 +1,4 @@
-function getName(value) {
+function getName (value) {
   if (value === undefined) return ''
   if (value === null) return ''
 //  if (value.constructor.name !== undefined) return fn.name
@@ -8,7 +8,7 @@ function getName(value) {
   return match ? match[1] : null
 }
 
-module.exports = function enforce(type, value) {
+module.exports = function enforce (type, value) {
   switch (type) {
     case 'Array': {
       if (Array.isArray(value)) return

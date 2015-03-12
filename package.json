@@ -6,7 +6,9 @@
   "scripts": {
     "coverage": "istanbul cover _mocha -- test/*.js",
     "coveralls": "npm run coverage && coveralls < coverage/lcov.info",
-    "test": "standard && istanbul test mocha -- --reporter list test/*.js"
+    "standard": "standard",
+    "test": "npm run-script unit",
+    "unit": "istanbul test mocha -- --reporter list test/*.js"
   },
   "repository": {
     "type": "git",
