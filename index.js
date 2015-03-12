@@ -37,7 +37,6 @@ module.exports = function enforce(type, value) {
 
     case 'Object': {
       if (typeof value === 'object') return
-
       break
     }
 
@@ -50,7 +49,6 @@ module.exports = function enforce(type, value) {
   switch (typeof type) {
     case 'string': {
       if (type === getName(value)) return
-
       break
     }
 
