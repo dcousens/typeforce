@@ -6,7 +6,7 @@
   "scripts": {
     "coverage": "istanbul cover _mocha -- test/*.js",
     "coveralls": "npm run coverage && coveralls < coverage/lcov.info",
-    "test": "istanbul test mocha -- --reporter list test/*.js"
+    "test": "standard && istanbul test mocha -- --reporter list test/*.js"
   },
   "repository": {
     "type": "git",
@@ -21,7 +21,8 @@
   "devDependencies": {
     "coveralls": "^2.11.2",
     "istanbul": "^0.3.7",
-    "mocha": "^2.2.1"
+    "mocha": "^2.2.1",
+    "standard": "^2.11.0"
   },
   "dependencies": {}
 }
