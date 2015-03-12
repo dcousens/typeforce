@@ -61,6 +61,18 @@
     {
       "type": [{ "a": "Number" }],
       "value": [{ "a": 1 }, { "a": 2, "b": 3 }]
+    },
+    {
+      "type": "?Number",
+      "value": null
+    },
+    {
+      "type": ["?Number"],
+      "value": [1, null]
+    },
+    {
+      "type": [{ "a": "?Number" }],
+      "value": [{ "a": 1 }, { "a": null }, {}]
     }
   ],
   "invalid": [
@@ -260,7 +272,7 @@
       "value": "foobar"
     },
     {
-      "exception": "Missing property \"a\" of type \"Number\"",
+      "exception": "Expected property \"a\" of type \"Number\", got  undefined",
       "type": {
         "a": "Number",
         "b": {
@@ -270,7 +282,7 @@
       "value": []
     },
     {
-      "exception": "Missing property \"a\" of type \"Number\"",
+      "exception": "Expected property \"a\" of type \"Number\", got  undefined",
       "type": {
         "a": "Number",
         "b": {
@@ -290,7 +302,7 @@
       "value": true
     },
     {
-      "exception": "Missing property \"a\" of type \"Number\"",
+      "exception": "Expected property \"a\" of type \"Number\", got  undefined",
       "custom": "Buffer",
       "type": {
         "a": "Number",
@@ -320,7 +332,7 @@
       "value": "foobar"
     },
     {
-      "exception": "Missing property \"a\" of type \"Number\"",
+      "exception": "Expected property \"a\" of type \"Number\", got  undefined",
       "type": {
         "a": "Number",
         "b": {
@@ -415,6 +427,11 @@
       "exception": "Expected Function, got Object \\[object Object\\]",
       "type": "Function",
       "value": {}
+    },
+    {
+      "exception": "Expected Number, got  null",
+      "type": "Number",
+      "value": null
     }
   ]
 }

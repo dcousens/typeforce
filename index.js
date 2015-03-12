@@ -9,9 +9,19 @@ function getName (value) {
 }
 
 module.exports = function enforce (type, value) {
+  if (typeof type === 'string') {
+    if (type[0] === '?') {
+      if (value === null || value === undefined) {
+        return
+      }
+
+      type = type.slice(1)
+    }
+  }
+
   switch (type) {
     case 'Array': {
-      if (Array.isArray(value)) return
+      if (value !== null && value !== undefined && value.constructor === Array) return
       break
     }
 
@@ -44,43 +54,40 @@ module.exports = function enforce (type, value) {
       if (typeof value === 'string') return
       break
     }
-  }
 
-  switch (typeof type) {
-    case 'string': {
-      if (type === getName(value)) return
-      break
-    }
-
-    // evaluate type templates
-    case 'object': {
-      if (Array.isArray(type)) {
-        var subType = type[0]
-
-        enforce('Array', value)
-        value.forEach(enforce.bind(undefined, subType))
-
-        return
-      }
-
-      enforce('Object', value)
-      for (var propertyName in type) {
-        var propertyType = type[propertyName]
-
-        if (!(propertyName in value)) {
-          throw new TypeError('Missing property "' + propertyName + '" of type ' + JSON.stringify(propertyType))
+    default: {
+      switch (typeof type) {
+        case 'string': {
+          if (type === getName(value)) return
+          break
         }
 
-        var propertyValue = value[propertyName]
+        // evaluate type templates
+        case 'object': {
+          if (Array.isArray(type)) {
+            var subType = type[0]
 
-        try {
-          enforce(propertyType, propertyValue)
-        } catch (e) {
-          throw new TypeError('Expected property "' + propertyName + '" of type ' + JSON.stringify(propertyType) + ', got ' + getName(propertyValue) + ' ' + propertyValue)
+            enforce('Array', value)
+            value.forEach(enforce.bind(undefined, subType))
+
+            return
+          }
+
+          enforce('Object', value)
+          for (var propertyName in type) {
+            var propertyType = type[propertyName]
+            var propertyValue = value[propertyName]
+
+            try {
+              enforce(propertyType, propertyValue)
+            } catch (e) {
+              throw new TypeError('Expected property "' + propertyName + '" of type ' + JSON.stringify(propertyType) + ', got ' + getName(propertyValue) + ' ' + propertyValue)
+            }
+          }
+
+          return
         }
       }
-
-      return
     }
   }
 
