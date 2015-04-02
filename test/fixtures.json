@@ -73,6 +73,10 @@
     {
       "type": [{ "a": "?Number" }],
       "value": [{ "a": 1 }, { "a": null }, {}]
+    },
+    {
+      "type": "?",
+      "value": null
     }
   ],
   "invalid": [
@@ -432,6 +436,16 @@
       "exception": "Expected Number, got  null",
       "type": "Number",
       "value": null
+    },
+    {
+      "expception": "Expected ?, got  Number 1234",
+      "type": "?",
+      "value": 1234
+    },
+    {
+      "expception": "Expected ?, got  String foobar",
+      "type": "?",
+      "value": "foobar"
     }
   ]
 }
