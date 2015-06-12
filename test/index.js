@@ -22,12 +22,18 @@ describe('typeForce', function () {
   })
 
   fixtures.invalid.forEach(function (f) {
+    assert(f.exception)
     var actualValue = f.custom ? CUSTOM_TYPES[f.custom] : f.value
 
     it('fails for ' + JSON.stringify(f.type) + ' with ' + (f.custom ? f.custom : JSON.stringify(f.value)), function () {
       assert.throws(function () {
         typeForce(f.type, actualValue)
-      }, new RegExp(f.exception))
+      }, toRegExp(f.exception))
     })
   })
 })
+
+function toRegExp (str) {
+  str = str.replace(/\?/g, '\\?')
+  return new RegExp(str)
+}
