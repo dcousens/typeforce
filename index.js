@@ -9,6 +9,8 @@ function getName (value) {
 }
 
 module.exports = function enforce (type, value) {
+  var typeName = type
+
   if (typeof type === 'string') {
     if (type[0] === '?') {
       if (value === null || value === undefined) {
@@ -16,9 +18,6 @@ module.exports = function enforce (type, value) {
       }
 
       type = type.slice(1)
-      if (!type.length) {
-        return throwDefault('?', value)
-      }
     }
   }
 
@@ -94,9 +93,5 @@ module.exports = function enforce (type, value) {
     }
   }
 
-  throwDefault(type, value)
-}
-
-function throwDefault(type, value) {
-  throw new TypeError('Expected ' + type + ', got ' + getName(value) + ' ' + value)
+  throw new TypeError('Expected ' + typeName + ', got ' + getName(value) + ' ' + value)
 }
