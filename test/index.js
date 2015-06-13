@@ -28,12 +28,7 @@ describe('typeForce', function () {
     it('fails for ' + JSON.stringify(f.type) + ' with ' + (f.custom ? f.custom : JSON.stringify(f.value)), function () {
       assert.throws(function () {
         typeForce(f.type, actualValue)
-      }, toRegExp(f.exception))
+      }, new RegExp(f.exception))
     })
   })
 })
-
-function toRegExp (str) {
-  str = str.replace(/\?/g, '\\?')
-  return new RegExp(str)
-}
