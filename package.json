@@ -2,20 +2,20 @@
   "name": "typeforce",
   "version": "1.0.1",
   "description": "Another biased type checking solution for Javascript",
-  "main": "./index.js",
+  "main": "index.js",
+  "author": "Daniel Cousens",
+  "license": "MIT",
   "scripts": {
     "coverage": "istanbul cover _mocha -- test/*.js",
     "coveralls": "npm run coverage && coveralls < coverage/lcov.info",
     "standard": "standard",
-    "test": "npm run-script unit",
-    "unit": "istanbul test mocha -- --reporter list test/*.js"
+    "test": "npm run standard && npm run unit",
+    "unit": "mocha"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/dcousens/typeforce.git"
   },
-  "author": "Daniel Cousens",
-  "license": "MIT",
   "bugs": {
     "url": "https://github.com/dcousens/typeforce/issues"
   },
