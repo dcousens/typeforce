@@ -438,12 +438,12 @@
       "value": null
     },
     {
-      "expception": "Expected ?, got  Number 1234",
+      "exception": "Expected ?, got Number 1234",
       "type": "?",
       "value": 1234
     },
     {
-      "expception": "Expected ?, got  String foobar",
+      "exception": "Expected ?, got String foobar",
       "type": "?",
       "value": "foobar"
     }
