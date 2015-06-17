@@ -8,7 +8,7 @@ function getName (value) {
   return match ? match[1] : null
 }
 
-module.exports = function enforce (type, value) {
+module.exports = function enforce (type, value, strict) {
   var typeName = type
 
   if (typeof type === 'string') {
@@ -70,18 +70,26 @@ module.exports = function enforce (type, value) {
             var subType = type[0]
 
             enforce('Array', value)
-            value.forEach(enforce.bind(undefined, subType))
+            value.forEach(function (x) {
+              enforce(subType, x, strict)
+            })
 
             return
           }
 
           enforce('Object', value)
-          for (var propertyName in type) {
+          var propertyNames = strict ? value : type
+
+          for (var propertyName in propertyNames) {
             var propertyType = type[propertyName]
             var propertyValue = value[propertyName]
 
+            if (!propertyType) {
+              throw new TypeError('Unexpected property "' + propertyName + '"')
+            }
+
             try {
-              enforce(propertyType, propertyValue)
+              enforce(propertyType, propertyValue, strict)
             } catch (e) {
               throw new TypeError('Expected property "' + propertyName + '" of type ' + JSON.stringify(propertyType) + ', got ' + getName(propertyValue) + ' ' + propertyValue)
             }

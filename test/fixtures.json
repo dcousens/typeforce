@@ -55,24 +55,58 @@
       }
     },
     {
-      "type": ["String"],
-      "value": ["foo", "bar"]
+      "type": [
+        "String"
+      ],
+      "value": [
+        "foo",
+        "bar"
+      ]
     },
     {
-      "type": [{ "a": "Number" }],
-      "value": [{ "a": 1 }, { "a": 2, "b": 3 }]
+      "type": [
+        {
+          "a": "Number"
+        }
+      ],
+      "value": [
+        {
+          "a": 1
+        },
+        {
+          "a": 2,
+          "b": 3
+        }
+      ]
     },
     {
       "type": "?Number",
       "value": null
     },
     {
-      "type": ["?Number"],
-      "value": [1, null]
+      "type": [
+        "?Number"
+      ],
+      "value": [
+        1,
+        null
+      ]
     },
     {
-      "type": [{ "a": "?Number" }],
-      "value": [{ "a": 1 }, { "a": null }, {}]
+      "type": [
+        {
+          "a": "?Number"
+        }
+      ],
+      "value": [
+        {
+          "a": 1
+        },
+        {
+          "a": null
+        },
+        {}
+      ]
     },
     {
       "type": "?",
@@ -386,13 +420,28 @@
       }
     },
     {
+      "exception": "Unexpected property \"b\"",
+      "type": {
+        "a": "Number"
+      },
+      "value": {
+        "a": 1,
+        "b": 2
+      },
+      "strict": true
+    },
+    {
       "exception": "Expected Array, got  null",
-      "type": ["String"],
+      "type": [
+        "String"
+      ],
       "value": null
     },
     {
       "exception": "Expected String, got Number 1",
-      "type": ["String"],
+      "type": [
+        "String"
+      ],
       "value": [
         1
       ]
