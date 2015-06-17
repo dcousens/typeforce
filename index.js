@@ -4,8 +4,7 @@ function getName (value) {
 //  if (value.constructor.name !== undefined) return fn.name
 
   // why not constructor.name: https://kangax.github.io/compat-table/es6/#function_name_property
-  var match = value.constructor.toString().match(/function (.*?)\s*\(/)
-  return match ? match[1] : null
+  return value.constructor.toString().match(/function (.*?)\s*\(/)[1]
 }
 
 module.exports = function enforce (type, value, strict) {
