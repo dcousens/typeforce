@@ -12,7 +12,7 @@ module.exports = function enforce (type, value, strict) {
 
   if (typeof type === 'string') {
     if (type[0] === '?') {
-      if (value === null || value === undefined) {
+      if (value === undefined || value === null) {
         return
       }
 
