@@ -130,17 +130,17 @@
       "value": 1234
     },
     {
-      "exception": "Expected Array, got String foobar",
+      "exception": "Expected Array, got String \"foobar\"",
       "type": "Array",
       "value": "foobar"
     },
     {
-      "exception": "Expected Array, got CustomType \\[object Object\\]",
+      "exception": "Expected Array, got CustomType {}",
       "type": "Array",
       "custom": "CustomType"
     },
     {
-      "exception": "Expected Array, got Object \\[object Object\\]",
+      "exception": "Expected Array, got Object {}",
       "type": "Array",
       "value": {}
     },
@@ -160,17 +160,17 @@
       "value": 1234
     },
     {
-      "exception": "Expected Boolean, got String foobar",
+      "exception": "Expected Boolean, got String \"foobar\"",
       "type": "Boolean",
       "value": "foobar"
     },
     {
-      "exception": "Expected Boolean, got CustomType \\[object Object\\]",
+      "exception": "Expected Boolean, got CustomType {}",
       "type": "Boolean",
       "custom": "CustomType"
     },
     {
-      "exception": "Expected Boolean, got Object \\[object Object\\]",
+      "exception": "Expected Boolean, got Object {}",
       "type": "Boolean",
       "value": {}
     },
@@ -190,17 +190,17 @@
       "value": 1234
     },
     {
-      "exception": "Expected Buffer, got String foobar",
+      "exception": "Expected Buffer, got String \"foobar\"",
       "type": "Buffer",
       "value": "foobar"
     },
     {
-      "exception": "Expected Buffer, got CustomType \\[object Object\\]",
+      "exception": "Expected Buffer, got CustomType {}",
       "type": "Buffer",
       "custom": "CustomType"
     },
     {
-      "exception": "Expected Buffer, got Object \\[object Object\\]",
+      "exception": "Expected Buffer, got Object {}",
       "type": "Buffer",
       "value": {}
     },
@@ -220,17 +220,17 @@
       "type": "Number"
     },
     {
-      "exception": "Expected Number, got String foobar",
+      "exception": "Expected Number, got String \"foobar\"",
       "type": "Number",
       "value": "foobar"
     },
     {
-      "exception": "Expected Number, got CustomType \\[object Object\\]",
+      "exception": "Expected Number, got CustomType {}",
       "type": "Number",
       "custom": "CustomType"
     },
     {
-      "exception": "Expected Number, got Object \\[object Object\\]",
+      "exception": "Expected Number, got Object {}",
       "type": "Number",
       "value": {}
     },
@@ -255,12 +255,12 @@
       "value": 1234
     },
     {
-      "exception": "Expected String, got CustomType \\[object Object\\]",
+      "exception": "Expected String, got CustomType {}",
       "type": "String",
       "custom": "CustomType"
     },
     {
-      "exception": "Expected String, got Object \\[object Object\\]",
+      "exception": "Expected String, got Object {}",
       "type": "String",
       "value": {}
     },
@@ -285,12 +285,12 @@
       "value": 1234
     },
     {
-      "exception": "Expected CustomType, got String foobar",
+      "exception": "Expected CustomType, got String \"foobar\"",
       "type": "CustomType",
       "value": "foobar"
     },
     {
-      "exception": "Expected CustomType, got Object \\[object Object\\]",
+      "exception": "Expected CustomType, got Object {}",
       "type": "CustomType",
       "value": {}
     },
@@ -305,7 +305,7 @@
       "value": 1234
     },
     {
-      "exception": "Expected Object, got String foobar",
+      "exception": "Expected Object, got String \"foobar\"",
       "type": "Object",
       "value": "foobar"
     },
@@ -360,7 +360,7 @@
       "value": 1234
     },
     {
-      "exception": "Expected Object, got String foobar",
+      "exception": "Expected Object, got String \"foobar\"",
       "type": {
         "a": "Number",
         "b": {
@@ -380,7 +380,7 @@
       "custom": "CustomType"
     },
     {
-      "exception": "Expected property \"a\" of type \"Number\", got String wrong",
+      "exception": "Expected property \"a\" of type \"Number\", got String \"foobar\"",
       "type": {
         "a": "Number",
         "b": {
@@ -388,11 +388,11 @@
         }
       },
       "value": {
-        "a": "wrong"
+        "a": "foobar"
       }
     },
     {
-      "exception": "Expected property \"b\" of type {\"c\":\"String\"}, got String wrong",
+      "exception": "Expected property \"b\" of type {\"c\":\"String\"}, got String \"foobar\"",
       "type": {
         "a": "Number",
         "b": {
@@ -401,11 +401,11 @@
       },
       "value": {
         "a": 1,
-        "b": "wrong"
+        "b": "foobar"
       }
     },
     {
-      "exception": "Expected property \"b\" of type {\"c\":\"String\"}, got Object \\[object Object\\]",
+      "exception": "Expected property \"b\" of type {\"c\":\"String\"}, got Object {\"c\":2}",
       "type": {
         "a": "Number",
         "b": {
@@ -467,17 +467,17 @@
       "value": 1234
     },
     {
-      "exception": "Expected Function, got String foobar",
+      "exception": "Expected Function, got String \"foobar\"",
       "type": "Function",
       "value": "foobar"
     },
     {
-      "exception": "Expected Function, got CustomType \\[object Object\\]",
+      "exception": "Expected Function, got CustomType {}",
       "type": "Function",
       "custom": "CustomType"
     },
     {
-      "exception": "Expected Function, got Object \\[object Object\\]",
+      "exception": "Expected Function, got Object {}",
       "type": "Function",
       "value": {}
     },
@@ -492,7 +492,7 @@
       "value": 1234
     },
     {
-      "exception": "Expected \\?, got String foobar",
+      "exception": "Expected \\?, got String \"foobar\"",
       "type": "?",
       "value": "foobar"
     }

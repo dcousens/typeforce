@@ -90,7 +90,7 @@ module.exports = function enforce (type, value, strict) {
             try {
               enforce(propertyType, propertyValue, strict)
             } catch (e) {
-              throw new TypeError('Expected property "' + propertyName + '" of type ' + JSON.stringify(propertyType) + ', got ' + getName(propertyValue) + ' ' + propertyValue)
+              throw new TypeError('Expected property "' + propertyName + '" of type ' + JSON.stringify(propertyType) + ', got ' + getName(propertyValue) + ' ' + JSON.stringify(propertyValue))
             }
           }
 
@@ -100,5 +100,5 @@ module.exports = function enforce (type, value, strict) {
     }
   }
 
-  throw new TypeError('Expected ' + typeName + ', got ' + getName(value) + ' ' + value)
+  throw new TypeError('Expected ' + typeName + ', got ' + getName(value) + ' ' + JSON.stringify(value))
 }
