@@ -25,7 +25,7 @@ describe('typeForce', function () {
     assert(f.exception)
     var actualValue = f.custom ? CUSTOM_TYPES[f.custom] : f.value
 
-    it('fails for ' + JSON.stringify(f.type) + ' with ' + (f.custom ? f.custom : JSON.stringify(f.value)), function () {
+    it('throws "' + f.exception + '" for type ' + JSON.stringify(f.custom || f.type) + ' with value of ' + (f.custom ? f.custom : JSON.stringify(f.value)), function () {
       assert.throws(function () {
         typeForce(f.type, actualValue, f.strict)
       }, new RegExp(f.exception))

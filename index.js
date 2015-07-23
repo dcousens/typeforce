@@ -9,8 +9,9 @@ function getName (value) {
 
 module.exports = function enforce (type, value, strict) {
   var typeName = type
+  var typeOfType = typeof type
 
-  if (typeof type === 'string') {
+  if (typeOfType === 'string') {
     if (type[0] === '?') {
       if (value === undefined || value === null) {
         return
@@ -57,9 +58,11 @@ module.exports = function enforce (type, value, strict) {
     }
 
     default: {
-      switch (typeof type) {
+      switch (typeOfType) {
         case 'string': {
           if (type === getName(value)) return
+          if (type === '') return
+
           break
         }
 
