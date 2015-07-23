@@ -1,4 +1,4 @@
-function getName (value) {
+function getTypeName (value) {
   if (value === undefined) return ''
   if (value === null) return ''
 //  if (value.constructor.name !== undefined) return fn.name
@@ -7,8 +7,13 @@ function getName (value) {
   return value.constructor.toString().match(/function (.*?)\s*\(/)[1]
 }
 
+function throwTypeError (type, value) {
+  var valueType = getTypeName(value)
+
+  throw new TypeError('Expected ' + type + ', got ' + (valueType && valueType + ' ') + JSON.stringify(value))
+}
+
 module.exports = function enforce (type, value, strict) {
-  var typeName = type
   var typeOfType = typeof type
 
   if (typeOfType === 'string') {
@@ -60,7 +65,7 @@ module.exports = function enforce (type, value, strict) {
     default: {
       switch (typeOfType) {
         case 'string': {
-          if (type === getName(value)) return
+          if (type === getTypeName(value)) return
           if (type === '') return
 
           break
@@ -92,8 +97,9 @@ module.exports = function enforce (type, value, strict) {
 
             try {
               enforce(propertyType, propertyValue, strict)
+
             } catch (e) {
-              throw new TypeError('Expected property "' + propertyName + '" of type ' + JSON.stringify(propertyType) + ', got ' + getName(propertyValue) + ' ' + JSON.stringify(propertyValue))
+              throwTypeError('property \"' + propertyName + '\" of type ' + JSON.stringify(propertyType), propertyValue)
             }
           }
 
@@ -103,5 +109,5 @@ module.exports = function enforce (type, value, strict) {
     }
   }
 
-  throw new TypeError('Expected ' + typeName + ', got ' + getName(value) + ' ' + JSON.stringify(value))
+  throwTypeError(type, value)
 }

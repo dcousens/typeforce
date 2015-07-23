@@ -318,7 +318,7 @@
       "value": "foobar"
     },
     {
-      "exception": "Expected property \"a\" of type \"Number\", got  undefined",
+      "exception": "Expected property \"a\" of type \"Number\", got undefined",
       "type": {
         "a": "Number",
         "b": {
@@ -328,7 +328,7 @@
       "value": []
     },
     {
-      "exception": "Expected property \"a\" of type \"Number\", got  undefined",
+      "exception": "Expected property \"a\" of type \"Number\", got undefined",
       "type": {
         "a": "Number",
         "b": {
@@ -348,7 +348,7 @@
       "value": true
     },
     {
-      "exception": "Expected property \"a\" of type \"Number\", got  undefined",
+      "exception": "Expected property \"a\" of type \"Number\", got undefined",
       "custom": "Buffer",
       "type": {
         "a": "Number",
@@ -378,7 +378,7 @@
       "value": "foobar"
     },
     {
-      "exception": "Expected property \"a\" of type \"Number\", got  undefined",
+      "exception": "Expected property \"a\" of type \"Number\", got undefined",
       "type": {
         "a": "Number",
         "b": {
@@ -439,7 +439,7 @@
       "strict": true
     },
     {
-      "exception": "Expected Array, got  null",
+      "exception": "Expected Array, got null",
       "type": [
         "String"
       ],
@@ -490,7 +490,7 @@
       "value": {}
     },
     {
-      "exception": "Expected Number, got  null",
+      "exception": "Expected Number, got null",
       "type": "Number",
       "value": null
     },
