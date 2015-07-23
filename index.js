@@ -14,105 +14,101 @@ function throwTypeError (type, value) {
 }
 
 module.exports = function enforce (type, value, strict) {
-  var typeOfType = typeof type
+  switch (typeof type) {
+    case 'string': {
+      if (type[0] === '?') {
+        if (value === undefined || value === null) {
+          return
+        }
 
-  if (typeOfType === 'string') {
-    if (type[0] === '?') {
-      if (value === undefined || value === null) {
-        return
+        type = type.slice(1)
       }
 
-      type = type.slice(1)
-    }
-  }
-
-  switch (type) {
-    case 'Array': {
-      if (value !== null && value !== undefined && value.constructor === Array) return
-      break
-    }
-
-    case 'Boolean': {
-      if (typeof value === 'boolean') return
-      break
-    }
-
-    case 'Buffer': {
-      if (Buffer.isBuffer(value)) return
-      break
-    }
-
-    case 'Function': {
-      if (typeof value === 'function') return
-      break
-    }
-
-    case 'Number': {
-      if (typeof value === 'number') return
-      break
-    }
-
-    case 'Object': {
-      if (typeof value === 'object') return
-      break
-    }
-
-    case 'String': {
-      if (typeof value === 'string') return
-      break
-    }
-
-    default: {
-      switch (typeOfType) {
-        case 'string': {
-          if (type === getTypeName(value)) return
-          if (type === '') return
-
+      switch (type) {
+        case 'Array': {
+          if (value !== null && value !== undefined && value.constructor === Array) return
           break
         }
 
-        // evaluate type templates
-        case 'object': {
-          if (Array.isArray(type)) {
-            var subType = type[0]
+        case 'Boolean': {
+          if (typeof value === 'boolean') return
+          break
+        }
 
-            enforce('Array', value)
-            value.forEach(function (x) {
-              enforce(subType, x, strict)
-            })
+        case 'Buffer': {
+          if (Buffer.isBuffer(value)) return
+          break
+        }
 
-            return
-          }
+        case 'Function': {
+          if (typeof value === 'function') return
+          break
+        }
 
-          enforce('Object', value)
+        case 'Number': {
+          if (typeof value === 'number') return
+          break
+        }
 
-          for (var propertyName in type) {
-            var propertyType = type[propertyName]
-            var propertyValue = value[propertyName]
+        case 'Object': {
+          if (typeof value === 'object') return
+          break
+        }
 
-            try {
-              enforce(propertyType, propertyValue, strict)
+        case 'String': {
+          if (typeof value === 'string') return
+          break
+        }
 
-            } catch (e) {
-              throwTypeError('property \"' + propertyName + '\" of type ' + JSON.stringify(propertyType), propertyValue)
-            }
-          }
-
-          if (strict) {
-            for (propertyName in value) {
-              propertyType = type[propertyName]
-
-              if (!propertyType) {
-                throw new TypeError('Unexpected property "' + propertyName + '"')
-              }
-            }
-          }
-
-          return
+        default: {
+          if (type === getTypeName(value)) return
+          if (type === '') return
         }
       }
+
+      break
+    }
+
+    case 'object': {
+      if (Array.isArray(type)) {
+        var subType = type[0]
+
+        enforce('Array', value)
+        value.forEach(function (x) {
+          enforce(subType, x, strict)
+        })
+
+        return
+      }
+
+      enforce('Object', value)
+
+      for (var propertyName in type) {
+        var propertyType = type[propertyName]
+        var propertyValue = value[propertyName]
+
+        try {
+          enforce(propertyType, propertyValue, strict)
+
+        } catch (e) {
+          throwTypeError('property \"' + propertyName + '\" of type ' + JSON.stringify(propertyType), propertyValue)
+        }
+      }
+
+      if (strict) {
+        for (propertyName in value) {
+          propertyType = type[propertyName]
+
+          if (!propertyType) {
+            throw new TypeError('Unexpected property "' + propertyName + '"')
+          }
+        }
+      }
+
+      return
     }
   }
 
+  // catch all
   throwTypeError(type, value)
 }
