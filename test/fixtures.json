@@ -514,6 +514,19 @@
       },
       "value": {},
       "strict": true
+    },
+    {
+      "exception": "Expected property \"b\" of type \"{ c: Number }\", got undefined",
+      "type": {
+        "a": "Number",
+        "b": {
+          "c": "Number"
+        }
+      },
+      "value": {
+        "a": 1
+      },
+      "strict": true
     }
   ]
 }
