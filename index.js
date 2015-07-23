@@ -85,21 +85,26 @@ module.exports = function enforce (type, value, strict) {
           }
 
           enforce('Object', value)
-          var propertyNames = strict ? value : type
 
-          for (var propertyName in propertyNames) {
+          for (var propertyName in type) {
             var propertyType = type[propertyName]
             var propertyValue = value[propertyName]
-
-            if (!propertyType) {
-              throw new TypeError('Unexpected property "' + propertyName + '"')
-            }
 
             try {
               enforce(propertyType, propertyValue, strict)
 
             } catch (e) {
               throwTypeError('property \"' + propertyName + '\" of type ' + JSON.stringify(propertyType), propertyValue)
+            }
+          }
+
+          if (strict) {
+            for (propertyName in value) {
+              propertyType = type[propertyName]
+
+              if (!propertyType) {
+                throw new TypeError('Unexpected property "' + propertyName + '"')
+              }
             }
           }
 
