@@ -97,11 +97,9 @@ module.exports = function enforce (type, value, strict) {
 
       if (strict) {
         for (propertyName in value) {
-          propertyType = type[propertyName]
+          if (type[propertyName]) continue
 
-          if (!propertyType) {
-            throw new TypeError('Unexpected property "' + propertyName + '"')
-          }
+          throw new TypeError('Unexpected property "' + propertyName + '"')
         }
       }
 
