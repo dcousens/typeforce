@@ -1,7 +1,7 @@
 /* global describe, it */
 
 var assert = require('assert')
-var typeForce = require('../')
+var typeForce = require('../src')
 
 function CustomType () { return 'ensure non-greedy match'.toUpperCase() }
 var CUSTOM_TYPES = {
