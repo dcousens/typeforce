@@ -1,97 +1,51 @@
-function getTypeName (value) {
-  if (value === undefined) return ''
-  if (value === null) return ''
-//  if (value.constructor.name !== undefined) return fn.name
-
-  // why not constructor.name: https://kangax.github.io/compat-table/es6/#function_name_property
-  return value.constructor.toString().match(/function (.*?)\s*\(/)[1]
+function getFunctionName (fn) {
+  return fn.name || fn.toString().match(/function (.*?)\s*\(/)[1]
 }
 
-function throwTypeError (type, value) {
+function getTypeName (value) {
+  if (value === null || value === undefined) return ''
+
+  return getFunctionName(value.constructor)
+}
+
+function tfErrorString (type, value) {
   var valueType = getTypeName(value)
 
-  throw new TypeError('Expected ' + type + ', got ' + (valueType && valueType + ' ') + JSON.stringify(value))
+  return 'Expected ' + type + ', got ' + (valueType && valueType + ' ') + JSON.stringify(value)
 }
 
-module.exports = function enforce (type, value, strict) {
-  switch (typeof type) {
-    case 'string': {
-      if (type[0] === '?') {
-        if (value === undefined || value === null) {
-          return
-        }
+var types = {
+  Array (value) { return value !== null && value !== undefined && value.constructor === Array },
+  Boolean (value) { return typeof value === 'boolean' },
+  Buffer (value) { return Buffer.isBuffer(value) },
+  Function (value) { return typeof value === 'function' },
+  Number (value) { return typeof value === 'number' },
+  Object (value) { return typeof value === 'object' },
+  String (value) { return typeof value === 'string' },
+  '' () { return true },
 
-        type = type.slice(1)
-      }
+  // sum types
+  arrayOf (type) {
+    return function arrayOf (value, strict) {
+      typeforce(types.Array, value, strict)
 
-      switch (type) {
-        case 'Array': {
-          if (value !== null && value !== undefined && value.constructor === Array) return
-          break
-        }
-
-        case 'Boolean': {
-          if (typeof value === 'boolean') return
-          break
-        }
-
-        case 'Buffer': {
-          if (Buffer.isBuffer(value)) return
-          break
-        }
-
-        case 'Function': {
-          if (typeof value === 'function') return
-          break
-        }
-
-        case 'Number': {
-          if (typeof value === 'number') return
-          break
-        }
-
-        case 'Object': {
-          if (typeof value === 'object') return
-          break
-        }
-
-        case 'String': {
-          if (typeof value === 'string') return
-          break
-        }
-
-        default: {
-          if (type === getTypeName(value)) return
-          if (type === '') return
-        }
-      }
-
-      break
+      return value.every(x => typeforce(type, x, strict))
     }
+  },
 
-    case 'object': {
-      if (Array.isArray(type)) {
-        var subType = type[0]
-
-        enforce('Array', value)
-        value.forEach(function (x) {
-          enforce(subType, x, strict)
-        })
-
-        return
-      }
-
-      enforce('Object', value)
+  object (type) {
+    return function object (value, strict) {
+      typeforce(types.Object, value, strict)
 
       for (var propertyName in type) {
         var propertyType = type[propertyName]
         var propertyValue = value[propertyName]
 
         try {
-          enforce(propertyType, propertyValue, strict)
+          typeforce(propertyType, propertyValue, strict)
 
         } catch (e) {
-          throwTypeError('property \"' + propertyName + '\" of type ' + JSON.stringify(propertyType), propertyValue)
+          throw new TypeError(tfErrorString('property \"' + propertyName + '\" of type ' + JSON.stringify(propertyType), propertyValue))
         }
       }
 
@@ -103,10 +57,65 @@ module.exports = function enforce (type, value, strict) {
         }
       }
 
-      return
+      return true
+    }
+  },
+
+  maybe (type) {
+    return function maybe (value, strict) {
+      if (value === undefined || value === null) return true
+
+      return typeforce(type, value, strict)
+    }
+  },
+
+  oneOf (types) {
+    return function oneOf (value, strict) {
+      return types.some(type => {
+        try {
+          typeforce(type, value, strict)
+
+          return true
+        } catch (e) {
+          return false
+        }
+      })
+    }
+  }
+}
+
+function typeforce (type, value, strict) {
+  switch (typeof type) {
+    case 'function': {
+      if (type(value, strict)) return true
+
+      throw new TypeError(tfErrorString(getFunctionName(type), value))
+    }
+
+    case 'object': {
+      if (types.Array(type)) return typeforce(types.arrayOf(type[0]), value, strict)
+
+      return typeforce(types.object(type), value, strict)
+    }
+
+    case 'string': {
+      if (type[0] === '?') {
+        type = type.slice(1)
+
+        return typeforce(types.maybe(type), value, strict)
+      }
+
+      var tfType = types[type]
+      if (tfType) return typeforce(tfType, value, strict)
+      if (type === getTypeName(value)) return true
+
+      break
     }
   }
 
   // catch all
-  throwTypeError(type, value)
+  throw new TypeError(tfErrorString(type, value))
 }
+
+module.exports = typeforce
+module.exports.types = types
