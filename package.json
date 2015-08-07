@@ -2,16 +2,8 @@
   "name": "typeforce",
   "version": "1.1.4",
   "description": "Another biased type checking solution for Javascript",
-  "main": "index.js",
   "author": "Daniel Cousens",
   "license": "MIT",
-  "scripts": {
-    "coverage": "istanbul cover _mocha -- test/*.js",
-    "coveralls": "npm run coverage && coveralls < coverage/lcov.info",
-    "standard": "standard",
-    "test": "npm run standard && npm run unit",
-    "unit": "mocha"
-  },
   "repository": {
     "type": "git",
     "url": "https://github.com/dcousens/typeforce.git"
@@ -20,11 +12,48 @@
     "url": "https://github.com/dcousens/typeforce/issues"
   },
   "homepage": "https://github.com/dcousens/typeforce",
-  "devDependencies": {
-    "coveralls": "^2.11.2",
-    "istanbul": "^0.3.7",
-    "mocha": "*",
-    "standard": "*"
+  "keywords": [
+    "typeforce",
+    "types",
+    "typechecking",
+    "type",
+    "exceptions",
+    "force"
+  ],
+  "main": "lib/index.js",
+  "files": [
+    "lib/"
+  ],
+  "scripts": {
+    "build": "babel --out-dir lib/ src/",
+    "coverage": "mocha --require blanket -R travis-cov",
+    "coverage-local": "mocha --require blanket -R html-cov",
+    "prepublish": "npm run build",
+    "standard": "standard",
+    "test": "npm run standard && npm run unit",
+    "unit": "mocha --compilers js:babel/register",
+    "watch": "babel --watch --out-dir lib/ src/"
   },
-  "dependencies": {}
+  "config": {
+    "blanket": {
+      "pattern": [""],
+      "data-cover-never": ["node_modules", "test"]
+    },
+    "travis-cov": {
+      "threshold": 100
+    }
+  },
+  "standard": {
+    "ignore": [
+      "lib/"
+    ]
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "babel": "*",
+    "blanket": "*",
+    "mocha": "*",
+    "standard": "*",
+    "travis-cov": "*"
+  }
 }
