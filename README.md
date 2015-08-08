@@ -68,7 +68,7 @@ var fastType = typeforce.compile(type)
 //   bar: typeforce.maybe(typeforce.String)
 // }
 
-// also use strictness for recursive types to enforce whitelisting properties
+// use strictness for recursive types to enforce whitelisting properties
 typeforce({
 	x: 'Number'
 }, { x: 1 }, true)
