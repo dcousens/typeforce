@@ -64,6 +64,17 @@ var fastType = typeforce.compile(type)
 //   foo: typeforce.Number,
 //   bar: typeforce.maybe(typeforce.String)
 // }
+
+// also use strictness for recursive types to enforce whitelisting properties
+typeforce({
+	x: 'Number'
+}, { x: 1 }, true)
+// OK!
+
+typeforce({
+	x: 'Number'
+}, { x: 1, y: 2 }, true)
+// ERROR: Unexpected property 'y' of type Number
 ```
 
 ## License
