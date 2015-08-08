@@ -14,7 +14,7 @@ function tfErrorString (type, value) {
   return 'Expected ' + type + ', got ' + (valueType && valueType + ' ') + JSON.stringify(value)
 }
 
-var types = {
+var nativeTypes = {
   Array (value) { return value !== null && value !== undefined && value.constructor === Array },
   Boolean (value) { return typeof value === 'boolean' },
   Buffer (value) { return Buffer.isBuffer(value) },
@@ -22,12 +22,13 @@ var types = {
   Number (value) { return typeof value === 'number' },
   Object (value) { return typeof value === 'object' },
   String (value) { return typeof value === 'string' },
-  '' () { return true },
+  '' () { return true }
+}
 
-  // sum types
+var sumTypes = {
   arrayOf (type) {
     return function arrayOf (value, strict) {
-      typeforce(types.Array, value, strict)
+      typeforce(nativeTypes.Array, value, strict)
 
       return value.every(x => typeforce(type, x, strict))
     }
@@ -35,7 +36,7 @@ var types = {
 
   object (type) {
     return function object (value, strict) {
-      typeforce(types.Object, value, strict)
+      typeforce(nativeTypes.Object, value, strict)
 
       for (var propertyName in type) {
         var propertyType = type[propertyName]
@@ -81,6 +82,12 @@ var types = {
         }
       })
     }
+  },
+
+  value (expected) {
+    return function value (actual) {
+      return actual === expected
+    }
   }
 }
 
@@ -93,19 +100,19 @@ function typeforce (type, value, strict) {
     }
 
     case 'object': {
-      if (types.Array(type)) return typeforce(types.arrayOf(type[0]), value, strict)
+      if (nativeTypes.Array(type)) return typeforce(sumTypes.arrayOf(type[0]), value, strict)
 
-      return typeforce(types.object(type), value, strict)
+      return typeforce(sumTypes.object(type), value, strict)
     }
 
     case 'string': {
       if (type[0] === '?') {
         type = type.slice(1)
 
-        return typeforce(types.maybe(type), value, strict)
+        return typeforce(sumTypes.maybe(type), value, strict)
       }
 
-      var tfType = types[type]
+      var tfType = nativeTypes[type]
       if (tfType) return typeforce(tfType, value, strict)
       if (type === getTypeName(value)) return true
 
@@ -117,5 +124,14 @@ function typeforce (type, value, strict) {
   throw new TypeError(tfErrorString(type, value))
 }
 
+// assign all types to typeforce function
+var typeName
+for (typeName in nativeTypes) {
+  typeforce[typeName] = nativeTypes[typeName]
+}
+
+for (typeName in sumTypes) {
+  typeforce[typeName] = sumTypes[typeName]
+}
+
 module.exports = typeforce
-module.exports.types = types
