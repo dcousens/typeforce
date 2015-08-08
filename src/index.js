@@ -19,10 +19,10 @@ var nativeTypes = {
   Boolean (value) { return typeof value === 'boolean' },
   Buffer (value) { return Buffer.isBuffer(value) },
   Function (value) { return typeof value === 'function' },
+  Null (value) { return value === undefined || value === null },
   Number (value) { return typeof value === 'number' },
   Object (value) { return typeof value === 'object' },
   String (value) { return typeof value === 'string' },
-  Null (value) { return value === undefined || value === null },
   '' () { return true }
 }
 
