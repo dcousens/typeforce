@@ -18,6 +18,9 @@ var array = [element, element, elementNumber]
 // supported primitives 'Array', 'Boolean', 'Buffer', 'Number', 'Object', 'String'
 typeforce('Array', array)
 
+typeforce('Number', array)
+// TypeError: Expected Number, got Array [ ... ]'
+
 // array types
 typeforce(['Object'], array)
 typeforce(typeforce.arrayOf('Object'), array)
@@ -74,7 +77,7 @@ typeforce({
 typeforce({
 	x: 'Number'
 }, { x: 1, y: 2 }, true)
-// ERROR: Unexpected property 'y' of type Number
+// TypeError: Unexpected property 'y' of type Number
 ```
 
 ## License
