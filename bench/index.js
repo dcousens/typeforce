@@ -16,7 +16,7 @@ var CUSTOM_TYPES = {
 fixtures.valid.forEach(function (f) {
   var actualValue = f.custom ? CUSTOM_TYPES[f.custom] : f.value
   var suite = new benchmark.Suite()
-  var ctype = local.precompiled(f.type)
+  var ctype = local.compile(f.type)
 
   if (f.exception) {
     assert.throws(function () { local(f.type, actualValue, f.strict) }, new RegExp(f.exception))

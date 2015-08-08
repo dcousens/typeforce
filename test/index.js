@@ -21,6 +21,14 @@ describe('typeForce', function () {
     })
   })
 
+  fixtures.valid.forEach(function (f) {
+    var actualValue = f.custom ? CUSTOM_TYPES[f.custom] : f.value
+
+    it('passes for ' + JSON.stringify(f.type) + ' (compiled) with ' + (f.custom ? f.custom : JSON.stringify(f.value)), function () {
+      typeForce(typeForce.compile(f.type), actualValue, f.strict)
+    })
+  })
+
   fixtures.invalid.forEach(function (f) {
     assert(f.exception)
     var actualValue = f.custom ? CUSTOM_TYPES[f.custom] : f.value

@@ -84,8 +84,14 @@ var otherTypes = {
     }
   },
 
-  precompiled (type) {
+  compile (type) {
     if (nativeTypes.String(type)) {
+      if (type[0] === '?') {
+        type = type.slice(1)
+
+        return otherTypes.maybe(otherTypes.compile(type))
+      }
+
       var nativeType = nativeTypes[type]
       if (nativeType) return nativeType
 
@@ -93,7 +99,7 @@ var otherTypes = {
       var compiled = {}
 
       for (var propertyName in type) {
-        compiled[propertyName] = otherTypes.precompiled(type[propertyName])
+        compiled[propertyName] = otherTypes.compile(type[propertyName])
       }
 
       return compiled
