@@ -8,10 +8,10 @@ function getTypeName (value) {
   return getFunctionName(value.constructor)
 }
 
-function tfErrorString (type, value) {
+function tfErrorString (typeName, value) {
   var valueType = getTypeName(value)
 
-  return 'Expected ' + type + ', got ' + (valueType && valueType + ' ') + JSON.stringify(value)
+  return 'Expected ' + typeName + ', got ' + (valueType && valueType + ' ') + JSON.stringify(value)
 }
 
 var nativeTypes = {
@@ -22,6 +22,7 @@ var nativeTypes = {
   Number (value) { return typeof value === 'number' },
   Object (value) { return typeof value === 'object' },
   String (value) { return typeof value === 'string' },
+  Null (value) { return value === undefined || value === null },
   '' () { return true }
 }
 
@@ -36,7 +37,7 @@ var otherTypes = {
 
   maybe (type) {
     return function maybe (value, strict) {
-      if (value === undefined || value === null) return true
+      if (nativeTypes.Null(value, strict)) return
 
       return typeforce(type, value, strict)
     }
