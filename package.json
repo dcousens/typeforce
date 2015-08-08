@@ -1,6 +1,6 @@
 {
   "name": "typeforce",
-  "version": "1.1.4",
+  "version": "1.2.0",
   "description": "Another biased type checking solution for Javascript",
   "author": "Daniel Cousens",
   "license": "MIT",
@@ -36,8 +36,13 @@
   },
   "config": {
     "blanket": {
-      "pattern": [""],
-      "data-cover-never": ["node_modules", "test"]
+      "pattern": [
+        ""
+      ],
+      "data-cover-never": [
+        "node_modules",
+        "test"
+      ]
     },
     "travis-cov": {
       "threshold": 100
