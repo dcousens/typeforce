@@ -3,7 +3,7 @@ function getFunctionName (fn) {
 }
 
 function getTypeName (value) {
-  if (value === null || value === undefined) return ''
+  if (nativeTypes.Null(value)) return ''
 
   return getFunctionName(value.constructor)
 }
@@ -37,7 +37,7 @@ var otherTypes = {
 
   maybe (type) {
     return function maybe (value, strict) {
-      if (nativeTypes.Null(value, strict)) return
+      if (nativeTypes.Null(value, strict)) return true
 
       return typeforce(type, value, strict)
     }
