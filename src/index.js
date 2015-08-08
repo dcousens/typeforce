@@ -25,12 +25,20 @@ var nativeTypes = {
   '' () { return true }
 }
 
-var sumTypes = {
+var otherTypes = {
   arrayOf (type) {
     return function arrayOf (value, strict) {
       typeforce(nativeTypes.Array, value, strict)
 
       return value.every(x => typeforce(type, x, strict))
+    }
+  },
+
+  maybe (type) {
+    return function maybe (value, strict) {
+      if (value === undefined || value === null) return true
+
+      return typeforce(type, value, strict)
     }
   },
 
@@ -62,14 +70,6 @@ var sumTypes = {
     }
   },
 
-  maybe (type) {
-    return function maybe (value, strict) {
-      if (value === undefined || value === null) return true
-
-      return typeforce(type, value, strict)
-    }
-  },
-
   oneOf (types) {
     return function oneOf (value, strict) {
       return types.some(type => {
@@ -82,6 +82,24 @@ var sumTypes = {
         }
       })
     }
+  },
+
+  precompiled (type) {
+    if (nativeTypes.String(type)) {
+      var nativeType = nativeTypes[type]
+      if (nativeType) return nativeType
+
+    } else if (nativeTypes.Object(type)) {
+      var compiled = {}
+
+      for (var propertyName in type) {
+        compiled[propertyName] = otherTypes.precompiled(type[propertyName])
+      }
+
+      return compiled
+    }
+
+    return type
   },
 
   value (expected) {
@@ -100,16 +118,16 @@ function typeforce (type, value, strict) {
     }
 
     case 'object': {
-      if (nativeTypes.Array(type)) return typeforce(sumTypes.arrayOf(type[0]), value, strict)
+      if (nativeTypes.Array(type)) return typeforce(otherTypes.arrayOf(type[0]), value, strict)
 
-      return typeforce(sumTypes.object(type), value, strict)
+      return typeforce(otherTypes.object(type), value, strict)
     }
 
     case 'string': {
       if (type[0] === '?') {
         type = type.slice(1)
 
-        return typeforce(sumTypes.maybe(type), value, strict)
+        return typeforce(otherTypes.maybe(type), value, strict)
       }
 
       var tfType = nativeTypes[type]
@@ -130,8 +148,8 @@ for (typeName in nativeTypes) {
   typeforce[typeName] = nativeTypes[typeName]
 }
 
-for (typeName in sumTypes) {
-  typeforce[typeName] = sumTypes[typeName]
+for (typeName in otherTypes) {
+  typeforce[typeName] = otherTypes[typeName]
 }
 
 module.exports = typeforce
