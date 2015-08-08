@@ -11,27 +11,59 @@ Another biased type checking solution for Javascript.
 ``` javascript
 var typeforce = require('typeforce')
 
-var unknown = [{ prop: 'foo' }, { prop: 'bar' }, { prop: 2 } ]
-typeforce('Array', unknown)
+var element = { prop: 'foo' }
+var elementNumber = { prop: 2 }
+var array = [element, element, elementNumber]
+
 // supported primitives 'Array', 'Boolean', 'Buffer', 'Number', 'Object', 'String'
+typeforce('Array', array)
 
-// array types only support 1 element type
-typeforce(['Object'], unknown)
-
-// pop the last element
-var element = unknown.pop()
+// array types
+typeforce(['Object'], array)
+typeforce(typeforce.arrayOf('Object'), array)
 
 // supports recursive type templating
-typeforce({ prop: 'Number' }, element)
+typeforce({ prop: 'Number' }, elementNumber)
 
-// works for array types too (remember, we popped off the non-conforming element)
-typeforce([{ prop: 'String' }], unknown)
+// maybe types
+typeforce('?Number', 2)
+typeforce('?Number', null)
+typeforce(typeforce.maybe(typeforce.Number), 2)
+typeforce(typeforce.maybe(typeforce.Number), null)
 
-// will also pass as an Array is an Object
-typeforce('Object', unknown)
+// sum types
+typeforce(typeforce.oneOf(['String', 'Number']))
 
-// THROWS 'TypeError: Expected Number, got Array [object Object],[object Object]'
-typeforce('Number', unknown)
+// value types
+typeforce(typeforce.value(3.14), 3.14)
+
+// custom types
+function LongString (value, strict) {
+	if (!typeforce.String(value)) return false
+	if (value.length !== 32) return false
+	return true
+}
+
+typeforce(LongString, '00000000000000000000000000000000')
+```
+
+**Pro**tips:
+
+``` javascript
+// use precompiled primitives for high performance
+typeforce(typeforce.Array, array)
+
+// or just precompile a template
+var type = {
+	foo: 'Number',
+	bar: '?String'
+}
+
+var fastType = typeforce.compile(type)
+// fastType => {
+//   foo: typeforce.Number,
+//   bar: typeforce.maybe(typeforce.String)
+// }
 ```
 
 ## License
