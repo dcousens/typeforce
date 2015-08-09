@@ -1,7 +1,7 @@
 /* global describe, it */
 
 var assert = require('assert')
-var typeForce = require('../src')
+var typeforce = require('../src')
 
 function CustomType () { return 'ensure non-greedy match'.toUpperCase() }
 var CUSTOM_TYPES = {
@@ -12,20 +12,16 @@ var CUSTOM_TYPES = {
 
 var fixtures = require('./fixtures')
 
-describe('typeForce', function () {
+describe('typeforce', function () {
   fixtures.valid.forEach(function (f) {
     var actualValue = f.custom ? CUSTOM_TYPES[f.custom] : f.value
 
     it('passes for ' + JSON.stringify(f.type) + ' with ' + (f.custom ? f.custom : JSON.stringify(f.value)), function () {
-      typeForce(f.type, actualValue, f.strict)
+      typeforce(f.type, actualValue, f.strict)
     })
-  })
-
-  fixtures.valid.forEach(function (f) {
-    var actualValue = f.custom ? CUSTOM_TYPES[f.custom] : f.value
 
     it('passes for ' + JSON.stringify(f.type) + ' (compiled) with ' + (f.custom ? f.custom : JSON.stringify(f.value)), function () {
-      typeForce(typeForce.compile(f.type), actualValue, f.strict)
+      typeforce(typeforce.compile(f.type), actualValue, f.strict)
     })
   })
 
