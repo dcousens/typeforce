@@ -14,6 +14,26 @@ function tfErrorString (typeName, value) {
   return 'Expected ' + typeName + ', got ' + (valueType && valueType + ' ') + JSON.stringify(value)
 }
 
+function tfFunctionErrorString (type, value) {
+  return tfErrorString(type.toJSON ? type.toJSON() : getFunctionName(type), value)
+}
+
+function tfPropertyErrorString (type, name, value) {
+  var typeName
+
+  if (nativeTypes.Function(type)) {
+    typeName = type.toJSON ? type.toJSON() : getFunctionName(type)
+
+  } else if (nativeTypes.Object(type)) {
+    typeName = JSON.stringify(type)
+
+  } else if (nativeTypes.String(type)) {
+    typeName = type
+  }
+
+  return tfErrorString('property \"' + name + '\" of type ' + typeName, value)
+}
+
 var nativeTypes = {
   Array (value) { return value !== null && value !== undefined && value.constructor === Array },
   Boolean (value) { return typeof value === 'boolean' },
@@ -28,11 +48,21 @@ var nativeTypes = {
 
 var otherTypes = {
   arrayOf (type) {
-    return function arrayOf (value, strict) {
-      typeforce(nativeTypes.Array, value, strict)
+    function arrayOf (value, strict) {
+      if (!nativeTypes.Array(value)) return false
 
-      return value.every(x => typeforce(type, x, strict))
+      return value.every(x => {
+        try {
+          return typeforce(type, x, strict)
+
+        } catch (e) {
+          return false
+        }
+      })
     }
+    arrayOf.toJSON = function () { return '[' + JSON.stringify(type) + ']' }
+
+    return arrayOf
   },
 
   maybe (type) {
@@ -55,7 +85,7 @@ var otherTypes = {
           typeforce(propertyType, propertyValue, strict)
 
         } catch (e) {
-          throw new TypeError(tfErrorString('property \"' + propertyName + '\" of type ' + JSON.stringify(propertyType), propertyValue))
+          throw new TypeError(tfPropertyErrorString(propertyType, propertyName, propertyValue))
         }
       }
 
@@ -97,6 +127,10 @@ var otherTypes = {
       if (nativeType) return nativeType
 
     } else if (nativeTypes.Object(type)) {
+      if (nativeTypes.Array(type)) {
+        return otherTypes.arrayOf(otherTypes.compile(type[0]))
+      }
+
       var compiled = {}
 
       for (var propertyName in type) {
@@ -121,7 +155,7 @@ function typeforce (type, value, strict) {
     case 'function':
       if (type(value, strict)) return true
 
-      throw new TypeError(tfErrorString(getFunctionName(type), value))
+      throw new TypeError(tfFunctionErrorString(type, value))
 
     case 'object':
       if (nativeTypes.Array(type)) return typeforce(otherTypes.arrayOf(type[0]), value, strict)
@@ -149,7 +183,14 @@ function typeforce (type, value, strict) {
 // assign all types to typeforce function
 var typeName
 for (typeName in nativeTypes) {
-  typeforce[typeName] = nativeTypes[typeName]
+  var nativeType = nativeTypes[typeName]
+  if (!nativeType.toJSON) {
+    nativeTypes[typeName].toJSON = (function (tn) {
+      return function () { return tn }
+    })(typeName)
+  }
+
+  typeforce[typeName] = nativeType
 }
 
 for (typeName in otherTypes) {

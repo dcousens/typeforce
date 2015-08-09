@@ -31,7 +31,13 @@ describe('typeforce', function () {
 
     it('throws "' + f.exception + '" for type ' + JSON.stringify(f.custom || f.type) + ' with value of ' + (f.custom ? f.custom : JSON.stringify(f.value)), function () {
       assert.throws(function () {
-        typeForce(f.type, actualValue, f.strict)
+        typeforce(f.type, actualValue, f.strict)
+      }, new RegExp(f.exception))
+    })
+
+    it('throws "' + f.exception + '" for (compiled) type ' + JSON.stringify(f.custom || f.type) + ' with value of ' + (f.custom ? f.custom : JSON.stringify(f.value)), function () {
+      assert.throws(function () {
+        typeforce(typeforce.compile(f.type), actualValue, f.strict)
       }, new RegExp(f.exception))
     })
   })
