@@ -118,19 +118,17 @@ var otherTypes = {
 
 function typeforce (type, value, strict) {
   switch (typeof type) {
-    case 'function': {
+    case 'function':
       if (type(value, strict)) return true
 
       throw new TypeError(tfErrorString(getFunctionName(type), value))
-    }
 
-    case 'object': {
+    case 'object':
       if (nativeTypes.Array(type)) return typeforce(otherTypes.arrayOf(type[0]), value, strict)
 
       return typeforce(otherTypes.object(type), value, strict)
-    }
 
-    case 'string': {
+    case 'string':
       if (type[0] === '?') {
         type = type.slice(1)
 
@@ -142,7 +140,6 @@ function typeforce (type, value, strict) {
       if (type === getTypeName(value)) return true
 
       break
-    }
   }
 
   // catch all
