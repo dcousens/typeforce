@@ -2,6 +2,10 @@ function getFunctionName (fn) {
   return fn.name || fn.toString().match(/function (.*?)\s*\(/)[1]
 }
 
+function getFunctionTypeName (fn) {
+  return fn.toJSON ? fn.toJSON() : getFunctionName(fn)
+}
+
 function getTypeName (value) {
   if (nativeTypes.Null(value)) return ''
 
@@ -14,15 +18,11 @@ function tfErrorString (typeName, value) {
   return 'Expected ' + typeName + ', got ' + (valueType && valueType + ' ') + JSON.stringify(value)
 }
 
-function tfFunctionErrorString (type, value) {
-  return tfErrorString(type.toJSON ? type.toJSON() : getFunctionName(type), value)
-}
-
 function tfPropertyErrorString (type, name, value) {
   var typeName
 
   if (nativeTypes.Function(type)) {
-    typeName = type.toJSON ? type.toJSON() : getFunctionName(type)
+    typeName = getFunctionTypeName(type)
 
   } else if (nativeTypes.Object(type)) {
     typeName = JSON.stringify(type)
@@ -66,15 +66,18 @@ var otherTypes = {
   },
 
   maybe (type) {
-    return function maybe (value, strict) {
+    function maybe (value, strict) {
       if (nativeTypes.Null(value, strict)) return true
 
       return typeforce(type, value, strict)
     }
+    maybe.toJSON = function () { return '?' + JSON.stringify(type) }
+
+    return maybe
   },
 
   object (type) {
-    return function object (value, strict) {
+    function object (value, strict) {
       typeforce(nativeTypes.Object, value, strict)
 
       for (var propertyName in type) {
@@ -96,9 +99,12 @@ var otherTypes = {
           throw new TypeError('Unexpected property "' + propertyName + '"')
         }
       }
+      object.toJSON = function () { return JSON.stringify(type) }
 
       return true
     }
+
+    return object
   },
 
   oneOf (types) {
@@ -155,7 +161,7 @@ function typeforce (type, value, strict) {
     case 'function':
       if (type(value, strict)) return true
 
-      throw new TypeError(tfFunctionErrorString(type, value))
+      throw new TypeError(tfErrorString(getFunctionTypeName(type), value))
 
     case 'object':
       if (nativeTypes.Array(type)) return typeforce(otherTypes.arrayOf(type[0]), value, strict)
@@ -182,16 +188,12 @@ function typeforce (type, value, strict) {
 
 // assign all types to typeforce function
 var typeName
-for (typeName in nativeTypes) {
+Object.keys(nativeTypes).forEach(typeName => {
   var nativeType = nativeTypes[typeName]
-  if (!nativeType.toJSON) {
-    nativeTypes[typeName].toJSON = (function (tn) {
-      return function () { return tn }
-    })(typeName)
-  }
+  nativeType.toJSON = () => typeName
 
   typeforce[typeName] = nativeType
-}
+})
 
 for (typeName in otherTypes) {
   typeforce[typeName] = otherTypes[typeName]
