@@ -99,10 +99,10 @@ var otherTypes = {
           throw new TypeError('Unexpected property "' + propertyName + '"')
         }
       }
-      object.toJSON = function () { return JSON.stringify(type) }
 
       return true
     }
+    object.toJSON = function () { return JSON.stringify(type) }
 
     return object
   },
