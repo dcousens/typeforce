@@ -71,7 +71,8 @@ var otherTypes = {
 
       return typeforce(type, value, strict)
     }
-    maybe.toJSON = function () { return '?' + JSON.stringify(type) }
+    // TODO: FIXME: why do I need to do this?
+    maybe.toJSON = function () { return '?' + (type.toJSON && type.toJSON() || JSON.stringify(type)) }
 
     return maybe
   },

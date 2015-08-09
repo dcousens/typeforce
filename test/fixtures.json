@@ -446,9 +446,25 @@
       "value": null
     },
     {
+      "exception": "Expected \\[\"\\?String\"\\], got null",
+      "type": [
+        "?String"
+      ],
+      "value": null
+    },
+    {
       "exception": "Expected \\[\"String\"\\], got Array \\[1\\]",
       "type": [
         "String"
+      ],
+      "value": [
+        1
+      ]
+    },
+    {
+      "exception": "Expected \\[\"\\?String\"\\], got Array \\[1\\]",
+      "type": [
+        "?String"
       ],
       "value": [
         1
@@ -502,6 +518,22 @@
       "value": {
         "a": null,
         "b": 2
+      },
+      "strict": true
+    },
+    {
+      "exception": "Expected property \"b\" of type {\"c\":\"Number\"}, got Object {\"c\":\"foo\"}",
+      "type": {
+        "a": "?Number",
+        "b": {
+          "c": "Number"
+        }
+      },
+      "value": {
+        "a": null,
+        "b": {
+          "c": "foo"
+        }
       },
       "strict": true
     },
