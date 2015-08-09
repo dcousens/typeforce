@@ -19,18 +19,18 @@ fixtures.valid.forEach(function (f) {
   var ctype = local.compile(f.type)
 
   if (f.exception) {
-    assert.throws(function () { local(f.type, actualValue, f.strict) }, new RegExp(f.exception))
-    assert.throws(function () { npm(f.type, actualValue, f.strict) }, new RegExp(f.exception))
+    assert.throws(function () { local(ctype, actualValue, f.strict) }, new RegExp(f.exception))
+    assert.throws(function () { npm(ctype, actualValue, f.strict) }, new RegExp(f.exception))
 
     suite.add('local(e)#' + f.type, function () { try { local(ctype, actualValue, f.strict) } catch (e) {} })
-    suite.add('  npm(e)#' + f.type, function () { try { npm(f.type, actualValue, f.strict) } catch (e) {} })
+    suite.add('  npm(e)#' + f.type, function () { try { npm(ctype, actualValue, f.strict) } catch (e) {} })
 
   } else {
     local(ctype, actualValue, f.strict)
-    npm(f.type, actualValue, f.strict)
+    npm(ctype, actualValue, f.strict)
 
     suite.add('local#' + f.type, function () { local(ctype, actualValue, f.strict) })
-    suite.add('  npm#' + f.type, function () { npm(f.type, actualValue, f.strict) })
+    suite.add('  npm#' + f.type, function () { npm(ctype, actualValue, f.strict) })
   }
 
   // after each cycle

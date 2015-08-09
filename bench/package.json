@@ -10,6 +10,6 @@
   "license": "ISC",
   "dependencies": {
     "benchmark": "^1.0.0",
-    "typeforce": "^1.1.4"
+    "typeforce": "^1.2.1"
   }
 }
