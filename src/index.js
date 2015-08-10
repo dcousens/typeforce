@@ -49,16 +49,12 @@ var nativeTypes = {
 var otherTypes = {
   arrayOf (type) {
     function arrayOf (value, strict) {
-      if (!nativeTypes.Array(value)) return false
+      try {
+        return nativeTypes.Array(value) && value.every(x => typeforce(type, x, strict))
 
-      return value.every(x => {
-        try {
-          return typeforce(type, x, strict)
-
-        } catch (e) {
-          return false
-        }
-      })
+      } catch (e) {
+        return false
+      }
     }
     arrayOf.toJSON = function () { return '[' + JSON.stringify(type) + ']' }
 
@@ -67,9 +63,7 @@ var otherTypes = {
 
   maybe (type) {
     function maybe (value, strict) {
-      if (nativeTypes.Null(value, strict)) return true
-
-      return typeforce(type, value, strict)
+      return nativeTypes.Null(value, strict) || typeforce(type, value, strict)
     }
     maybe.toJSON = function () { return '?' + (type.toJSON && type.toJSON() || JSON.stringify(type)) }
 
@@ -80,16 +74,18 @@ var otherTypes = {
     function object (value, strict) {
       typeforce(nativeTypes.Object, value, strict)
 
-      for (var propertyName in type) {
-        var propertyType = type[propertyName]
-        var propertyValue = value[propertyName]
+      var propertyName, propertyType, propertyValue
 
-        try {
+      try {
+        for (propertyName in type) {
+          propertyType = type[propertyName]
+          propertyValue = value[propertyName]
+
           typeforce(propertyType, propertyValue, strict)
-
-        } catch (e) {
-          throw new TypeError(tfPropertyErrorString(propertyType, propertyName, propertyValue))
         }
+
+      } catch (e) {
+        throw new TypeError(tfPropertyErrorString(propertyType, propertyName, propertyValue))
       }
 
       if (strict) {
