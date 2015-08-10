@@ -63,7 +63,7 @@ var otherTypes = {
 
   maybe (type) {
     function maybe (value, strict) {
-      return nativeTypes.Null(value, strict) || typeforce(type, value, strict)
+      return nativeTypes.Null(value) || typeforce(type, value, strict)
     }
     maybe.toJSON = function () { return '?' + (type.toJSON && type.toJSON() || JSON.stringify(type)) }
 
