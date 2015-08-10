@@ -18,7 +18,7 @@ var array = [element, element, elementNumber]
 typeforce('Array', array)
 
 typeforce('Number', array)
-// TypeError: Expected Number, got Array [ ... ]'
+// TypeError: Expected Number, got Array [ ... ]
 
 // array types
 typeforce(['Object'], array)
@@ -47,6 +47,10 @@ function LongString (value, strict) {
 }
 
 typeforce(LongString, '00000000000000000000000000000000')
+// => OK!
+
+typeforce(LongString, 'not long enough')
+// TypeError: Expected LongString, got String 'not long enough'
 ```
 
 **Pro**tips:
