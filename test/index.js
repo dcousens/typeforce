@@ -3,50 +3,47 @@
 var assert = require('assert')
 var typeforce = require('../src')
 
-function CustomType () { return 'ensure non-greedy match'.toUpperCase() }
-var CUSTOM_TYPES = {
-  'Buffer': new Buffer(1),
-  'CustomType': new CustomType(),
-  'Function': function () {}
-}
-
 var fixtures = require('./fixtures')
 
 describe('typeforce', function () {
   fixtures.valid.forEach(function (f) {
-    var actualValue = f.custom ? CUSTOM_TYPES[f.custom] : f.value
     var typeDescription = JSON.stringify(f.type)
-    var valueDescription = JSON.stringify(f.custom || f.value)
+    var valueDescription = JSON.stringify(f.value)
 
-    it('passes for ' + typeDescription + ' with ' + valueDescription, function () {
-      typeforce(f.type, actualValue, f.strict)
+    it('passes ' + typeDescription + ' with ' + valueDescription, function () {
+      typeforce(f.type, f.value, f.strict)
     })
 
-    it('passes for ' + typeDescription + ' (compiled) with ' + valueDescription, function () {
-      typeforce(typeforce.compile(f.type), actualValue, f.strict)
-    })
-
-    it(typeDescription + ', when compiled and .toJSON() gives back ' + typeDescription, function () {
-      assert.equal(JSON.stringify(typeforce.compile(f.type)), typeDescription)
+    it('passes ' + typeDescription + ' (compiled) with ' + valueDescription, function () {
+      typeforce(typeforce.compile(f.type), f.value, f.strict)
     })
   })
 
   fixtures.invalid.forEach(function (f) {
     assert(f.exception)
-    var actualValue = f.custom ? CUSTOM_TYPES[f.custom] : f.value
-    var typeDescription = JSON.stringify(f.custom || f.type)
-    var valueDescription = JSON.stringify(f.custom || f.value)
+    var typeDescription = JSON.stringify(f.type)
+    var valueDescription = JSON.stringify(f.value)
 
     it('throws "' + f.exception + '" for type ' + typeDescription + ' with value of ' + valueDescription, function () {
       assert.throws(function () {
-        typeforce(f.type, actualValue, f.strict)
+        typeforce(f.type, f.value, f.strict)
       }, new RegExp(f.exception))
     })
 
     it('throws "' + f.exception + '" for (compiled) type ' + typeDescription + ' with value of ' + valueDescription, function () {
       assert.throws(function () {
-        typeforce(typeforce.compile(f.type), actualValue, f.strict)
+        typeforce(typeforce.compile(f.type), f.value, f.strict)
       }, new RegExp(f.exception))
+    })
+  })
+})
+
+describe('typeforce.compile', function () {
+  fixtures.valid.forEach(function (f) {
+    var typeDescription = JSON.stringify(f.type)
+
+    it('when compiled with ' + typeDescription + ', toJSON\'s the same', function () {
+      assert.equal(JSON.stringify(typeforce.compile(f.type)), typeDescription)
     })
   })
 })

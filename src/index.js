@@ -44,6 +44,11 @@ function tJSON (type) {
   return (type && type.toJSON) ? type.toJSON() : type
 }
 
+function sJSON (type) {
+  var json = tJSON(type)
+  return nativeTypes.Object(json) ? JSON.stringify(json) : json
+}
+
 var otherTypes = {
   arrayOf (type) {
     function arrayOf (value, strict) {
@@ -63,7 +68,7 @@ var otherTypes = {
     function maybe (value, strict) {
       return nativeTypes.Null(value) || typeforce(type, value, strict)
     }
-    maybe.toJSON = () => '?' + tJSON(type)
+    maybe.toJSON = () => '?' + sJSON(type)
 
     return maybe
   },
@@ -112,7 +117,7 @@ var otherTypes = {
         }
       })
     }
-    oneOf.toJSON = () => '+' + types.map(tJSON).join('|')
+    oneOf.toJSON = () => '+' + types.map(sJSON).join('|')
 
     return oneOf
   },
