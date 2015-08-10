@@ -109,6 +109,38 @@
       ]
     },
     {
+      "type": "+Array|String",
+      "value": []
+    },
+    {
+      "type": "+Array|String",
+      "value": "foobar"
+    },
+    {
+      "type": {
+        "a": "+Array|String"
+      },
+      "value": {
+        "a": []
+      }
+    },
+    {
+      "type": {
+        "a": "+Array|String"
+      },
+      "value": {
+        "a": "foobar"
+      }
+    },
+    {
+      "type": "?String",
+      "value": "foobar"
+    },
+    {
+      "type": "?String",
+      "value": null
+    },
+    {
       "type": "?",
       "value": 1234
     },

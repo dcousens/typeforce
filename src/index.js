@@ -102,7 +102,7 @@ var otherTypes = {
   },
 
   oneOf (types) {
-    return function oneOf (value, strict) {
+    function oneOf (value, strict) {
       return types.some(type => {
         try {
           return typeforce(type, value, strict)
@@ -112,6 +112,9 @@ var otherTypes = {
         }
       })
     }
+    oneOf.toJSON = () => '+' + types.map(tJSON).join('|')
+
+    return oneOf
   },
 
   quacksLike (type) {
@@ -133,6 +136,7 @@ var otherTypes = {
 function compile (type) {
   if (nativeTypes.String(type)) {
     if (type[0] === '?') return otherTypes.maybe(compile(type.slice(1)))
+    if (type[0] === '+') return otherTypes.oneOf(type.slice(1).split('|').map(compile))
 
     return nativeTypes[type] || otherTypes.quacksLike(type)
 
