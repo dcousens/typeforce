@@ -126,18 +126,12 @@ var otherTypes = {
 
 function compile (type) {
   if (nativeTypes.String(type)) {
-    if (type[0] === '?') {
-      type = type.slice(1)
-
-      return otherTypes.maybe(compile(type))
-    }
+    if (type[0] === '?') return otherTypes.maybe(compile(type.slice(1)))
 
     return nativeTypes[type] || otherTypes.quacksLike(type)
 
   } else if (nativeTypes.Object(type)) {
-    if (nativeTypes.Array(type)) {
-      return otherTypes.arrayOf(compile(type[0]))
-    }
+    if (nativeTypes.Array(type)) return otherTypes.arrayOf(compile(type[0]))
 
     var compiled = {}
 
