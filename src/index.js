@@ -2,36 +2,28 @@ function getFunctionName (fn) {
   return fn.name || fn.toString().match(/function (.*?)\s*\(/)[1]
 }
 
-function getFunctionTypeName (fn) {
-  return fn.toJSON ? fn.toJSON() : getFunctionName(fn)
+function getTypeTypeName (type) {
+  if (nativeTypes.Function(type)) return type.toJSON ? type.toJSON() : getFunctionName(type)
+  if (nativeTypes.Object(type)) return JSON.stringify(type)
+
+  return type
 }
 
-function getTypeName (value) {
+function getValueTypeName (value) {
   if (nativeTypes.Null(value)) return ''
 
   return getFunctionName(value.constructor)
 }
 
-function tfErrorString (typeName, value) {
-  var valueType = getTypeName(value)
+function tfErrorString (type, value) {
+  var typeTypeName = getTypeTypeName(type)
+  var valueTypeName = getValueTypeName(value)
 
-  return 'Expected ' + typeName + ', got ' + (valueType && valueType + ' ') + JSON.stringify(value)
+  return 'Expected ' + typeTypeName + ', got ' + (valueTypeName && valueTypeName + ' ') + JSON.stringify(value)
 }
 
 function tfPropertyErrorString (type, name, value) {
-  var typeName
-
-  if (nativeTypes.Function(type)) {
-    typeName = getFunctionTypeName(type)
-
-  } else if (nativeTypes.Object(type)) {
-    typeName = JSON.stringify(type)
-
-  } else if (nativeTypes.String(type)) {
-    typeName = type
-  }
-
-  return tfErrorString('property \"' + name + '\" of type ' + typeName, value)
+  return tfErrorString('property \"' + name + '\" of type ' + getTypeTypeName(type), value)
 }
 
 var nativeTypes = {
@@ -56,7 +48,7 @@ var otherTypes = {
         return false
       }
     }
-    arrayOf.toJSON = function () { return '[' + JSON.stringify(type) + ']' }
+    arrayOf.toJSON = () => '[' + JSON.stringify(type) + ']'
 
     return arrayOf
   },
@@ -65,7 +57,7 @@ var otherTypes = {
     function maybe (value, strict) {
       return nativeTypes.Null(value) || typeforce(type, value, strict)
     }
-    maybe.toJSON = function () { return '?' + (type.toJSON && type.toJSON() || JSON.stringify(type)) }
+    maybe.toJSON = () => '?' + (type.toJSON && type.toJSON() || JSON.stringify(type))
 
     return maybe
   },
@@ -98,7 +90,7 @@ var otherTypes = {
 
       return true
     }
-    object.toJSON = function () { return JSON.stringify(type) }
+    object.toJSON = () => JSON.stringify(type)
 
     return object
   },
@@ -154,13 +146,13 @@ function typeforce (type, value, strict) {
   if (nativeTypes.Function(type)) {
     if (type(value, strict)) return true
 
-    throw new TypeError(tfErrorString(getFunctionTypeName(type), value))
+    throw new TypeError(tfErrorString(type, value))
   }
 
   // JIT
   type = compile(type)
   if (!nativeTypes.String(type)) return typeforce(type, value, strict)
-  if (type === getTypeName(value)) return true
+  if (type === getValueTypeName(value)) return true
 
   throw new TypeError(tfErrorString(type, value))
 }
