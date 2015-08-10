@@ -157,12 +157,10 @@ var valid = [
     value: null
   },
   {
-    'description': '+String|{"a": "Number" }',
     type: typeforce.oneOf(['String', { a: 'Number' }]),
     value: 'foobar'
   },
   {
-    'description': '+String|{"a": "Number" }',
     type: typeforce.oneOf([typeforce.String, { a: typeforce.Number }]),
     value: 'foobar'
   },
