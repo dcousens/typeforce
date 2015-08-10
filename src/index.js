@@ -151,30 +151,15 @@ var otherTypes = {
 }
 
 function typeforce (type, value, strict) {
-  switch (typeof type) {
-    case 'function':
-      if (type(value, strict)) return true
+  if (nativeTypes.Function(type)) {
+    if (type(value, strict)) return true
 
-      throw new TypeError(tfErrorString(getFunctionTypeName(type), value))
-
-    case 'object':
-      if (nativeTypes.Array(type)) return typeforce(otherTypes.arrayOf(type[0]), value, strict)
-
-      return typeforce(otherTypes.object(type), value, strict)
-
-    case 'string':
-      if (type[0] === '?') {
-        type = type.slice(1)
-
-        return typeforce(otherTypes.maybe(type), value, strict)
-      }
-
-      var tfType = nativeTypes[type]
-      if (tfType) return typeforce(tfType, value, strict)
-      if (type === getTypeName(value)) return true
-
-      break
+    throw new TypeError(tfErrorString(getFunctionTypeName(type), value))
   }
+
+  type = otherTypes.compile(type)
+  if (!nativeTypes.String(type)) return typeforce(type, value, strict)
+  if (type === getTypeName(value)) return true
 
   throw new TypeError(tfErrorString(type, value))
 }
