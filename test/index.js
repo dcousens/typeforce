@@ -27,7 +27,7 @@ describe('typeforce', function () {
     })
 
     it(typeDescription + ', when compiled and .toJSON() gives back ' + typeDescription, function () {
-      assert.equal(typeforce.compile(f.type).toJSON(), f.type)
+      assert.equal(JSON.stringify(typeforce.compile(f.type)), typeDescription)
     })
   })
 

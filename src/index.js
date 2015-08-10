@@ -3,7 +3,9 @@ function getFunctionName (fn) {
 }
 
 function getTypeTypeName (type) {
-  if (nativeTypes.Function(type)) return type.toJSON ? type.toJSON() : getFunctionName(type)
+  if (nativeTypes.Function(type)) {
+    type = (type.toJSON && type.toJSON()) || getFunctionName(type)
+  }
   if (nativeTypes.Object(type)) return JSON.stringify(type)
 
   return type
@@ -38,6 +40,10 @@ var nativeTypes = {
   '' () { return true }
 }
 
+function tJSON (type) {
+  return (type && type.toJSON) ? type.toJSON() : type
+}
+
 var otherTypes = {
   arrayOf (type) {
     function arrayOf (value, strict) {
@@ -48,7 +54,7 @@ var otherTypes = {
         return false
       }
     }
-    arrayOf.toJSON = () => '[' + JSON.stringify(type) + ']'
+    arrayOf.toJSON = () => [tJSON(type)]
 
     return arrayOf
   },
@@ -57,7 +63,7 @@ var otherTypes = {
     function maybe (value, strict) {
       return nativeTypes.Null(value) || typeforce(type, value, strict)
     }
-    maybe.toJSON = () => '?' + (type.toJSON && type.toJSON() || JSON.stringify(type))
+    maybe.toJSON = () => '?' + tJSON(type)
 
     return maybe
   },
@@ -90,7 +96,7 @@ var otherTypes = {
 
       return true
     }
-    object.toJSON = () => JSON.stringify(type)
+    object.toJSON = () => type
 
     return object
   },
