@@ -22,6 +22,7 @@ var fixtures = require('../test/fixtures').valid
 
 fixtures.forEach(function (f) {
   var suite = new benchmark.Suite()
+  var tdescription = JSON.stringify(f.type)
 
   var actualValue = f.custom ? CUSTOM_TYPES[f.custom] : f.value
   var ctype = local.compile(f.type)
@@ -32,19 +33,19 @@ fixtures.forEach(function (f) {
     assert.throws(function () { local(ctype, actualValue, f.strict) }, new RegExp(f.exception))
     assert.throws(function () { npm(ctype, actualValue, f.strict) }, new RegExp(f.exception))
 
-    suite.add('local(e)#' + f.type, function () { try { local(f.type, actualValue, f.strict) } catch (e) {} })
-    suite.add('  npm(e)#' + f.type, function () { try { npm(f.type, actualValue, f.strict) } catch (e) {} })
-    suite.add('local(c, e)#' + f.type, function () { try { local(ctype, actualValue, f.strict) } catch (e) {} })
-    suite.add('  npm(c, e)#' + f.type, function () { try { npm(ctype, actualValue, f.strict) } catch (e) {} })
+    suite.add('local(e)#' + tdescription, function () { try { local(f.type, actualValue, f.strict) } catch (e) {} })
+    suite.add('  npm(e)#' + tdescription, function () { try { npm(f.type, actualValue, f.strict) } catch (e) {} })
+    suite.add('local(c, e)#' + tdescription, function () { try { local(ctype, actualValue, f.strict) } catch (e) {} })
+    suite.add('  npm(c, e)#' + tdescription, function () { try { npm(ctype, actualValue, f.strict) } catch (e) {} })
 
   } else {
     local(ctype, actualValue, f.strict)
     npm(ctype, actualValue, f.strict)
 
-    suite.add('local#' + f.type, function () { local(f.type, actualValue, f.strict) })
-    suite.add('  npm#' + f.type, function () { npm(f.type, actualValue, f.strict) })
-    suite.add('local(c)#' + f.type, function () { local(ctype, actualValue, f.strict) })
-    suite.add('  npm(c)#' + f.type, function () { npm(ctype, actualValue, f.strict) })
+    suite.add('local#' + tdescription, function () { local(f.type, actualValue, f.strict) })
+    suite.add('  npm#' + tdescription, function () { npm(f.type, actualValue, f.strict) })
+    suite.add('local(c)#' + tdescription, function () { local(ctype, actualValue, f.strict) })
+    suite.add('  npm(c)#' + tdescription, function () { npm(ctype, actualValue, f.strict) })
   }
 
   // after each cycle

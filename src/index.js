@@ -117,28 +117,30 @@ var otherTypes = {
   },
 
   compile (type) {
-    if (nativeTypes.String(type)) {
-      if (type[0] === '?') {
-        type = type.slice(1)
+    switch (typeof type) {
+      case 'string':
+        if (type[0] === '?') {
+          type = type.slice(1)
 
-        return otherTypes.maybe(otherTypes.compile(type))
-      }
+          return otherTypes.maybe(otherTypes.compile(type))
+        }
 
-      var nativeType = nativeTypes[type]
-      if (nativeType) return nativeType
+        var nativeType = nativeTypes[type]
+        if (nativeType) return nativeType
+        break
 
-    } else if (nativeTypes.Object(type)) {
-      if (nativeTypes.Array(type)) {
-        return otherTypes.arrayOf(otherTypes.compile(type[0]))
-      }
+      case 'object':
+        if (nativeTypes.Array(type)) {
+          return otherTypes.arrayOf(otherTypes.compile(type[0]))
+        }
 
-      var compiled = {}
+        var compiled = {}
 
-      for (var propertyName in type) {
-        compiled[propertyName] = otherTypes.compile(type[propertyName])
-      }
+        for (var propertyName in type) {
+          compiled[propertyName] = otherTypes.compile(type[propertyName])
+        }
 
-      return compiled
+        return otherTypes.object(compiled)
     }
 
     return type
@@ -177,7 +179,6 @@ function typeforce (type, value, strict) {
       break
   }
 
-  // catch all
   throw new TypeError(tfErrorString(type, value))
 }
 
