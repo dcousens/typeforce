@@ -116,38 +116,38 @@ var otherTypes = {
     }
   },
 
-  compile (type) {
-    if (nativeTypes.String(type)) {
-      if (type[0] === '?') {
-        type = type.slice(1)
-
-        return otherTypes.maybe(otherTypes.compile(type))
-      }
-
-      return nativeTypes[type] || type
-
-    } else if (nativeTypes.Object(type)) {
-      if (nativeTypes.Array(type)) {
-        return otherTypes.arrayOf(otherTypes.compile(type[0]))
-      }
-
-      var compiled = {}
-
-      for (var propertyName in type) {
-        compiled[propertyName] = otherTypes.compile(type[propertyName])
-      }
-
-      return otherTypes.object(compiled)
-    }
-
-    return type
-  },
-
   value (expected) {
     return function value (actual) {
       return actual === expected
     }
   }
+}
+
+function compile (type) {
+  if (nativeTypes.String(type)) {
+    if (type[0] === '?') {
+      type = type.slice(1)
+
+      return otherTypes.maybe(compile(type))
+    }
+
+    return nativeTypes[type] || type
+
+  } else if (nativeTypes.Object(type)) {
+    if (nativeTypes.Array(type)) {
+      return otherTypes.arrayOf(compile(type[0]))
+    }
+
+    var compiled = {}
+
+    for (var propertyName in type) {
+      compiled[propertyName] = compile(type[propertyName])
+    }
+
+    return otherTypes.object(compiled)
+  }
+
+  return type
 }
 
 function typeforce (type, value, strict) {
@@ -157,7 +157,8 @@ function typeforce (type, value, strict) {
     throw new TypeError(tfErrorString(getFunctionTypeName(type), value))
   }
 
-  type = otherTypes.compile(type)
+  // JIT
+  type = compile(type)
   if (!nativeTypes.String(type)) return typeforce(type, value, strict)
   if (type === getTypeName(value)) return true
 
@@ -178,3 +179,4 @@ for (typeName in otherTypes) {
 }
 
 module.exports = typeforce
+module.exports.compile = compile
