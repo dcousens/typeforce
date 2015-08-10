@@ -108,6 +108,15 @@ var otherTypes = {
     }
   },
 
+  quacksLike (type) {
+    function quacksLike (value, strict) {
+      return type === getValueTypeName(value)
+    }
+    quacksLike.toJSON = () => type
+
+    return quacksLike
+  },
+
   value (expected) {
     return function value (actual) {
       return actual === expected
@@ -123,7 +132,7 @@ function compile (type) {
       return otherTypes.maybe(compile(type))
     }
 
-    return nativeTypes[type] || type
+    return nativeTypes[type] || otherTypes.quacksLike(type)
 
   } else if (nativeTypes.Object(type)) {
     if (nativeTypes.Array(type)) {
@@ -150,11 +159,7 @@ function typeforce (type, value, strict) {
   }
 
   // JIT
-  type = compile(type)
-  if (!nativeTypes.String(type)) return typeforce(type, value, strict)
-  if (type === getValueTypeName(value)) return true
-
-  throw new TypeError(tfErrorString(type, value))
+  return typeforce(compile(type), value, strict)
 }
 
 // assign all types to typeforce function
