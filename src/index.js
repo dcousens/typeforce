@@ -117,30 +117,27 @@ var otherTypes = {
   },
 
   compile (type) {
-    switch (typeof type) {
-      case 'string':
-        if (type[0] === '?') {
-          type = type.slice(1)
+    if (nativeTypes.String(type)) {
+      if (type[0] === '?') {
+        type = type.slice(1)
 
-          return otherTypes.maybe(otherTypes.compile(type))
-        }
+        return otherTypes.maybe(otherTypes.compile(type))
+      }
 
-        var nativeType = nativeTypes[type]
-        if (nativeType) return nativeType
-        break
+      return nativeTypes[type] || type
 
-      case 'object':
-        if (nativeTypes.Array(type)) {
-          return otherTypes.arrayOf(otherTypes.compile(type[0]))
-        }
+    } else if (nativeTypes.Object(type)) {
+      if (nativeTypes.Array(type)) {
+        return otherTypes.arrayOf(otherTypes.compile(type[0]))
+      }
 
-        var compiled = {}
+      var compiled = {}
 
-        for (var propertyName in type) {
-          compiled[propertyName] = otherTypes.compile(type[propertyName])
-        }
+      for (var propertyName in type) {
+        compiled[propertyName] = otherTypes.compile(type[propertyName])
+      }
 
-        return otherTypes.object(compiled)
+      return otherTypes.object(compiled)
     }
 
     return type
