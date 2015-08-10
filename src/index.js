@@ -117,7 +117,7 @@ var otherTypes = {
         }
       })
     }
-    oneOf.toJSON = () => '+' + types.map(sJSON).join('|')
+    oneOf.toJSON = () => types.map(sJSON).join('|')
 
     return oneOf
   },
@@ -141,7 +141,6 @@ var otherTypes = {
 function compile (type) {
   if (nativeTypes.String(type)) {
     if (type[0] === '?') return otherTypes.maybe(compile(type.slice(1)))
-    if (type[0] === '+') return otherTypes.oneOf(type.slice(1).split('|').map(compile))
 
     return nativeTypes[type] || otherTypes.quacksLike(type)
 
