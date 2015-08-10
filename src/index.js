@@ -107,9 +107,8 @@ var otherTypes = {
     return function oneOf (value, strict) {
       return types.some(type => {
         try {
-          typeforce(type, value, strict)
+          return typeforce(type, value, strict)
 
-          return true
         } catch (e) {
           return false
         }
