@@ -59,6 +59,7 @@
     "blanket": "*",
     "mocha": "*",
     "standard": "*",
-    "travis-cov": "*"
+    "travis-cov": "*",
+    "xtend": "^4.0.0"
   }
 }

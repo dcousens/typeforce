@@ -3,47 +3,54 @@
 var assert = require('assert')
 var typeforce = require('../src')
 
+var generate = require('./__generate')
 var fixtures = require('./fixtures')
 
 describe('typeforce', function () {
   fixtures.valid.forEach(function (f) {
-    var typeDescription = JSON.stringify(f.type)
-    var valueDescription = JSON.stringify(f.value)
+    var type = generate.types[f.typeId] || f.type
+    var value = generate.values[f.valueId] || f.value
+    var typeDescription = JSON.stringify(type)
+    var valueDescription = JSON.stringify(value)
 
     it('passes ' + typeDescription + ' with ' + valueDescription, function () {
-      typeforce(f.type, f.value, f.strict)
+      typeforce(type, value, f.strict)
     })
 
     it('passes ' + typeDescription + ' (compiled) with ' + valueDescription, function () {
-      typeforce(typeforce.compile(f.type), f.value, f.strict)
+      typeforce(typeforce.compile(type), value, f.strict)
     })
   })
 
   fixtures.invalid.forEach(function (f) {
     assert(f.exception)
-    var typeDescription = JSON.stringify(f.type)
-    var valueDescription = JSON.stringify(f.value)
+    var type = generate.types[f.typeId] || f.type
+    var value = generate.values[f.valueId] || f.value
+    var typeDescription = JSON.stringify(type)
+    var valueDescription = JSON.stringify(value)
+    var exception = f.exception.replace(/([.*+?^=!:${}()|\[\]\/\\])/g, '\\$&')
 
-    it('throws "' + f.exception + '" for type ' + typeDescription + ' with value of ' + valueDescription, function () {
+    it('throws "' + exception + '" for type ' + typeDescription + ' with value of ' + valueDescription, function () {
       assert.throws(function () {
-        typeforce(f.type, f.value, f.strict)
-      }, new RegExp(f.exception))
+        typeforce(type, value, f.strict)
+      }, new RegExp(exception))
     })
 
-    it('throws "' + f.exception + '" for (compiled) type ' + typeDescription + ' with value of ' + valueDescription, function () {
+    it('throws "' + exception + '" for (compiled) type ' + typeDescription + ' with value of ' + valueDescription, function () {
       assert.throws(function () {
-        typeforce(typeforce.compile(f.type), f.value, f.strict)
-      }, new RegExp(f.exception))
+        typeforce(typeforce.compile(type), value, f.strict)
+      }, new RegExp(exception))
     })
   })
 })
 
 describe('typeforce.compile', function () {
   fixtures.valid.forEach(function (f) {
-    var typeDescription = JSON.stringify(f.type)
+    var type = generate.types[f.typeId] || f.type
+    var typeDescription = JSON.stringify(type)
 
     it('when compiled with ' + typeDescription + ', toJSON\'s the same', function () {
-      assert.equal(JSON.stringify(typeforce.compile(f.type)), typeDescription)
+      assert.equal(JSON.stringify(typeforce.compile(type)), typeDescription)
     })
   })
 })
