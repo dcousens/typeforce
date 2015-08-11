@@ -45,36 +45,20 @@ var values = [
   { a: { b: { c: 0, d: 0 } } }
 ]
 
-var rTypes = {
-  '["?{\\"a\\":\\"Number\\"}"]': [ typeforce.maybe({ a: 'Number' }) ],
-  '["Boolean","Number","String"]': typeforce.oneOf(['Boolean', 'Number', 'String']),
-  '"?[\\"Boolean\\",\\"Number\\"]"': typeforce.maybe(typeforce.oneOf(['Boolean', 'Number'])),
-  '"?{\\"a\\":\\"?Number\\"}"': typeforce.maybe({ a: '?Number' }),
-  '"?{\\"a\\":\\"Number\\"}"': typeforce.maybe({ a: 'Number' }),
-  '{"a":["Number","Null"]}': { a: typeforce.oneOf([ 'Number', 'Null' ]) },
-  '{"a":["Number","{\\"b\\":\\"Number\\"}"]}': { a: typeforce.oneOf([ 'Number', { b: 'Number' } ]) },
-  '{"a":"?{\\"b\\":\\"Number\\"}"}': { a: typeforce.maybe({ b: 'Number' }) },
-  '{"a":"?{\\"b\\":\\"?{\\\\\\"c\\\\\\":\\\\\\"Number\\\\\\"}\\"}"}': { a: typeforce.maybe({ b: typeforce.maybe({ c: 'Number' }) }) }
-}
-var rValues = {
-  'function': function () {},
-  'customType': new function CustomType () {},
-  'buffer': new Buffer(0)
-}
-
+var tests = require('./')
 var fixtures = {
   valid: [],
   invalid: []
 }
 
-types.concat(Object.keys(rTypes)).forEach(function (type) {
-  values.concat(Object.keys(rValues)).forEach(function (value) {
+types.concat(Object.keys(tests.TYPES)).forEach(function (type) {
+  values.concat(Object.keys(tests.VALUES)).forEach(function (value) {
     var f = {}
     var atype, avalue
 
-    if (rTypes[type]) {
+    if (tests.TYPES[type]) {
       f.typeId = type
-      atype = rTypes[type]
+      atype = tests.TYPES[type]
 
       assert.equal(f.typeId, JSON.stringify(atype))
 
@@ -83,9 +67,9 @@ types.concat(Object.keys(rTypes)).forEach(function (type) {
       atype = type
     }
 
-    if (rValues[value]) {
+    if (tests.VALUES[value]) {
       f.valueId = value
-      avalue = rValues[value]
+      avalue = tests.VALUES[value]
 
     } else {
       f.value = value
@@ -116,9 +100,3 @@ types.concat(Object.keys(rTypes)).forEach(function (type) {
 })
 
 console.log(JSON.stringify(fixtures, null, 2))
-
-module.exports = {
-  types: rTypes,
-  values: rValues
-}
-
