@@ -4,7 +4,7 @@ function getFunctionName (fn) {
 
 function getTypeTypeName (type) {
   if (nativeTypes.Function(type)) {
-    type = (type.toJSON && type.toJSON()) || getFunctionName(type)
+    type = type.toJSON ? type.toJSON() : getFunctionName(type)
   }
   if (nativeTypes.Object(type)) return JSON.stringify(type)
 
