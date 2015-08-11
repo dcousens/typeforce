@@ -106,7 +106,7 @@ var otherTypes = {
     return object
   },
 
-  oneOf (types) {
+  oneOf (... types) {
     function oneOf (value, strict) {
       return types.some(type => {
         try {
