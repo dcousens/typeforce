@@ -117,7 +117,7 @@ var otherTypes = {
         }
       })
     }
-    oneOf.toJSON = () => types.map(sJSON)
+    oneOf.toJSON = () => types.map(sJSON).join('|')
 
     return oneOf
   },
