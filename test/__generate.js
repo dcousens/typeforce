@@ -1,8 +1,9 @@
 var assert = require('assert')
 var typeforce = require('../src')
 var xtend = require('xtend')
+var { TYPES, VALUES } = require('./types')
 
-var types = [
+var TYPES2 = [
   'Array',
   'Boolean',
   'Buffer',
@@ -18,10 +19,18 @@ var types = [
   { a: 'Number' },
   { a: { b: 'Number' } },
   { a: { b: { c: '?Number' } } },
-  { a: { b: { c: 'Number' } } }
+  { a: { b: { c: 'Number' } } },
+
+  // invalid types
+  undefined,
+  null,
+  true,
+  false,
+  0,
+  function () {}
 ]
 
-var values = [
+var VALUES2 = [
   '',
   'foobar',
   0,
@@ -32,6 +41,7 @@ var values = [
   [null],
   false,
   true,
+  undefined,
   null,
   {},
   { a: null },
@@ -45,20 +55,19 @@ var values = [
   { a: { b: { c: 0, d: 0 } } }
 ]
 
-var tests = require('./')
 var fixtures = {
   valid: [],
   invalid: []
 }
 
-types.concat(Object.keys(tests.TYPES)).forEach(function (type) {
-  values.concat(Object.keys(tests.VALUES)).forEach(function (value) {
+TYPES2.concat(Object.keys(TYPES)).forEach(function (type) {
+  VALUES2.concat(Object.keys(VALUES)).forEach(function (value) {
     var f = {}
     var atype, avalue
 
-    if (tests.TYPES[type]) {
+    if (TYPES[type]) {
       f.typeId = type
-      atype = tests.TYPES[type]
+      atype = TYPES[type]
 
       assert.equal(f.typeId, JSON.stringify(atype))
 
@@ -67,9 +76,9 @@ types.concat(Object.keys(tests.TYPES)).forEach(function (type) {
       atype = type
     }
 
-    if (tests.VALUES[value]) {
+    if (VALUES[value]) {
       f.valueId = value
-      avalue = tests.VALUES[value]
+      avalue = VALUES[value]
 
     } else {
       f.value = value
