@@ -21,7 +21,7 @@ var TYPES2 = [
   { a: { b: { c: '?Number' } } },
   { a: { b: { c: 'Number' } } },
 
-  // invalid types
+  // resolves to typeforce.value()
   undefined,
   null,
   true,

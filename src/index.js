@@ -132,9 +132,12 @@ var otherTypes = {
   },
 
   value (expected) {
-    return function value (actual) {
+    function value (actual) {
       return actual === expected
     }
+    value.toJSON = () => expected
+
+    return value
   }
 }
 
@@ -144,7 +147,7 @@ function compile (type) {
 
     return nativeTypes[type] || otherTypes.quacksLike(type)
 
-  } else if (nativeTypes.Object(type)) {
+  } else if (type && nativeTypes.Object(type)) {
     if (nativeTypes.Array(type)) return otherTypes.arrayOf(compile(type[0]))
 
     var compiled = {}
@@ -154,9 +157,12 @@ function compile (type) {
     }
 
     return otherTypes.object(compiled)
+
+  } else if (nativeTypes.Function(type)) {
+    return type
   }
 
-  return type
+  return otherTypes.value(type)
 }
 
 function typeforce (type, value, strict) {
