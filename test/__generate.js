@@ -37,6 +37,7 @@ var VALUES2 = [
   1,
   [],
   [0],
+  ['foobar'],
   [{ a: 0 }],
   [null],
   false,

@@ -131,6 +131,15 @@ var otherTypes = {
     return quacksLike
   },
 
+  tuple (... types) {
+    function tuple (value, strict) {
+      return types.every((type, i) => typeforce(type, value[i], strict))
+    }
+    tuple.toJSON = () => '(' + types.map(sJSON).join(', ') + ')'
+
+    return tuple
+  },
+
   value (expected) {
     function value (actual) {
       return actual === expected

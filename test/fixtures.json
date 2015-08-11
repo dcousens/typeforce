@@ -13,6 +13,12 @@
     {
       "type": "Array",
       "value": [
+        "foobar"
+      ]
+    },
+    {
+      "type": "Array",
+      "value": [
         {
           "a": 0
         }
@@ -63,6 +69,12 @@
       "type": "Object",
       "value": [
         0
+      ]
+    },
+    {
+      "type": "Object",
+      "value": [
+        "foobar"
       ]
     },
     {
@@ -375,6 +387,28 @@
       "value": 0
     },
     {
+      "typeId": "\"(Number|String)\"",
+      "value": "foobar"
+    },
+    {
+      "typeId": "\"(Number|String)\"",
+      "value": [
+        0
+      ]
+    },
+    {
+      "typeId": "\"(Number|String)\"",
+      "value": [
+        "foobar"
+      ]
+    },
+    {
+      "typeId": "\"(Number)\"",
+      "value": [
+        0
+      ]
+    },
+    {
       "typeId": "[\"?{\\\"a\\\":\\\"Number\\\"}\"]",
       "value": []
     },
@@ -447,6 +481,12 @@
       "typeId": "\"?{\\\"a\\\":\\\"?Number\\\"}\"",
       "value": [
         0
+      ]
+    },
+    {
+      "typeId": "\"?{\\\"a\\\":\\\"?Number\\\"}\"",
+      "value": [
+        "foobar"
       ]
     },
     {
@@ -540,6 +580,12 @@
     {
       "typeId": "{\"a\":\"Number|Null\"}",
       "value": [
+        "foobar"
+      ]
+    },
+    {
+      "typeId": "{\"a\":\"Number|Null\"}",
+      "value": [
         {
           "a": 0
         }
@@ -622,6 +668,12 @@
     {
       "typeId": "{\"a\":\"?{\\\"b\\\":\\\"Number\\\"}\"}",
       "value": [
+        "foobar"
+      ]
+    },
+    {
+      "typeId": "{\"a\":\"?{\\\"b\\\":\\\"Number\\\"}\"}",
+      "value": [
         {
           "a": 0
         }
@@ -673,6 +725,12 @@
       "typeId": "{\"a\":\"?{\\\"b\\\":\\\"?{\\\\\\\"c\\\\\\\":\\\\\\\"Number\\\\\\\"}\\\"}\"}",
       "value": [
         0
+      ]
+    },
+    {
+      "typeId": "{\"a\":\"?{\\\"b\\\":\\\"?{\\\\\\\"c\\\\\\\":\\\\\\\"Number\\\\\\\"}\\\"}\"}",
+      "value": [
+        "foobar"
       ]
     },
     {
@@ -917,6 +975,13 @@
       ]
     },
     {
+      "exception": "Expected Boolean, got Array [\"foobar\"]",
+      "type": "Boolean",
+      "value": [
+        "foobar"
+      ]
+    },
+    {
       "exception": "Expected Boolean, got Array [{\"a\":0}]",
       "type": "Boolean",
       "value": [
@@ -1072,6 +1137,13 @@
       "type": "Buffer",
       "value": [
         0
+      ]
+    },
+    {
+      "exception": "Expected Buffer, got Array [\"foobar\"]",
+      "type": "Buffer",
+      "value": [
+        "foobar"
       ]
     },
     {
@@ -1238,6 +1310,13 @@
       ]
     },
     {
+      "exception": "Expected Function, got Array [\"foobar\"]",
+      "type": "Function",
+      "value": [
+        "foobar"
+      ]
+    },
+    {
       "exception": "Expected Function, got Array [{\"a\":0}]",
       "type": "Function",
       "value": [
@@ -1401,6 +1480,13 @@
       ]
     },
     {
+      "exception": "Expected Null, got Array [\"foobar\"]",
+      "type": "Null",
+      "value": [
+        "foobar"
+      ]
+    },
+    {
       "exception": "Expected Null, got Array [{\"a\":0}]",
       "type": "Null",
       "value": [
@@ -1547,6 +1633,13 @@
       "type": "Number",
       "value": [
         0
+      ]
+    },
+    {
+      "exception": "Expected Number, got Array [\"foobar\"]",
+      "type": "Number",
+      "value": [
+        "foobar"
       ]
     },
     {
@@ -1747,6 +1840,13 @@
       ]
     },
     {
+      "exception": "Expected String, got Array [\"foobar\"]",
+      "type": "String",
+      "value": [
+        "foobar"
+      ]
+    },
+    {
       "exception": "Expected String, got Array [{\"a\":0}]",
       "type": "String",
       "value": [
@@ -1905,6 +2005,13 @@
       ]
     },
     {
+      "exception": "Expected Number, got Array [\"foobar\"]",
+      "type": "?Number",
+      "value": [
+        "foobar"
+      ]
+    },
+    {
       "exception": "Expected Number, got Array [{\"a\":0}]",
       "type": "?Number",
       "value": [
@@ -2058,6 +2165,15 @@
         "?Number"
       ],
       "value": 1
+    },
+    {
+      "exception": "Expected [\"?Number\"], got Array [\"foobar\"]",
+      "type": [
+        "?Number"
+      ],
+      "value": [
+        "foobar"
+      ]
     },
     {
       "exception": "Expected [\"?Number\"], got Array [{\"a\":0}]",
@@ -2251,6 +2367,15 @@
         "Number"
       ],
       "value": 1
+    },
+    {
+      "exception": "Expected [\"Number\"], got Array [\"foobar\"]",
+      "type": [
+        "Number"
+      ],
+      "value": [
+        "foobar"
+      ]
     },
     {
       "exception": "Expected [\"Number\"], got Array [{\"a\":0}]",
@@ -2471,6 +2596,17 @@
       ],
       "value": [
         0
+      ]
+    },
+    {
+      "exception": "Expected [{\"a\":\"Number\"}], got Array [\"foobar\"]",
+      "type": [
+        {
+          "a": "Number"
+        }
+      ],
+      "value": [
+        "foobar"
       ]
     },
     {
@@ -2722,6 +2858,15 @@
         "a": "Number"
       },
       "value": [
+        "foobar"
+      ]
+    },
+    {
+      "exception": "Expected property \"a\" of type Number, got undefined",
+      "type": {
+        "a": "Number"
+      },
+      "value": [
         {
           "a": 0
         }
@@ -2936,6 +3081,17 @@
       },
       "value": [
         0
+      ]
+    },
+    {
+      "exception": "Expected property \"a\" of type {\"b\":\"Number\"}, got undefined",
+      "type": {
+        "a": {
+          "b": "Number"
+        }
+      },
+      "value": [
+        "foobar"
       ]
     },
     {
@@ -3203,6 +3359,19 @@
       },
       "value": [
         0
+      ]
+    },
+    {
+      "exception": "Expected property \"a\" of type {\"b\":{\"c\":\"?Number\"}}, got undefined",
+      "type": {
+        "a": {
+          "b": {
+            "c": "?Number"
+          }
+        }
+      },
+      "value": [
+        "foobar"
       ]
     },
     {
@@ -3500,6 +3669,19 @@
         }
       },
       "value": [
+        "foobar"
+      ]
+    },
+    {
+      "exception": "Expected property \"a\" of type {\"b\":{\"c\":\"Number\"}}, got undefined",
+      "type": {
+        "a": {
+          "b": {
+            "c": "Number"
+          }
+        }
+      },
+      "value": [
         {
           "a": 0
         }
@@ -3751,6 +3933,12 @@
       ]
     },
     {
+      "exception": "Expected value, got Array [\"foobar\"]",
+      "value": [
+        "foobar"
+      ]
+    },
+    {
       "exception": "Expected value, got Array [{\"a\":0}]",
       "value": [
         {
@@ -3894,6 +4082,13 @@
       "type": null,
       "value": [
         0
+      ]
+    },
+    {
+      "exception": "Expected value, got Array [\"foobar\"]",
+      "type": null,
+      "value": [
+        "foobar"
       ]
     },
     {
@@ -4060,6 +4255,13 @@
       ]
     },
     {
+      "exception": "Expected true, got Array [\"foobar\"]",
+      "type": true,
+      "value": [
+        "foobar"
+      ]
+    },
+    {
       "exception": "Expected true, got Array [{\"a\":0}]",
       "type": true,
       "value": [
@@ -4223,6 +4425,13 @@
       ]
     },
     {
+      "exception": "Expected value, got Array [\"foobar\"]",
+      "type": false,
+      "value": [
+        "foobar"
+      ]
+    },
+    {
       "exception": "Expected value, got Array [{\"a\":0}]",
       "type": false,
       "value": [
@@ -4378,6 +4587,13 @@
       "type": 0,
       "value": [
         0
+      ]
+    },
+    {
+      "exception": "Expected value, got Array [\"foobar\"]",
+      "type": 0,
+      "value": [
+        "foobar"
       ]
     },
     {
@@ -4543,6 +4759,12 @@
       ]
     },
     {
+      "exception": "Expected , got Array [\"foobar\"]",
+      "value": [
+        "foobar"
+      ]
+    },
+    {
       "exception": "Expected , got Array [{\"a\":0}]",
       "value": [
         {
@@ -4660,6 +4882,505 @@
       "valueId": "buffer"
     },
     {
+      "exception": "Expected Boolean, got undefined",
+      "typeId": "\"(Boolean, Number)\"",
+      "value": ""
+    },
+    {
+      "exception": "Expected Boolean, got String \"f\"",
+      "typeId": "\"(Boolean, Number)\"",
+      "value": "foobar"
+    },
+    {
+      "exception": "Expected Boolean, got undefined",
+      "typeId": "\"(Boolean, Number)\"",
+      "value": 0
+    },
+    {
+      "exception": "Expected Boolean, got undefined",
+      "typeId": "\"(Boolean, Number)\"",
+      "value": 1
+    },
+    {
+      "exception": "Expected Boolean, got undefined",
+      "typeId": "\"(Boolean, Number)\"",
+      "value": []
+    },
+    {
+      "exception": "Expected Boolean, got Number 0",
+      "typeId": "\"(Boolean, Number)\"",
+      "value": [
+        0
+      ]
+    },
+    {
+      "exception": "Expected Boolean, got String \"foobar\"",
+      "typeId": "\"(Boolean, Number)\"",
+      "value": [
+        "foobar"
+      ]
+    },
+    {
+      "exception": "Expected Boolean, got Object {\"a\":0}",
+      "typeId": "\"(Boolean, Number)\"",
+      "value": [
+        {
+          "a": 0
+        }
+      ]
+    },
+    {
+      "exception": "Expected Boolean, got null",
+      "typeId": "\"(Boolean, Number)\"",
+      "value": [
+        null
+      ]
+    },
+    {
+      "exception": "Expected Boolean, got undefined",
+      "typeId": "\"(Boolean, Number)\"",
+      "value": false
+    },
+    {
+      "exception": "Expected Boolean, got undefined",
+      "typeId": "\"(Boolean, Number)\"",
+      "value": true
+    },
+    {
+      "exception": "Cannot read property '0' of undefined",
+      "typeId": "\"(Boolean, Number)\""
+    },
+    {
+      "exception": "Cannot read property '0' of null",
+      "typeId": "\"(Boolean, Number)\"",
+      "value": null
+    },
+    {
+      "exception": "Expected Boolean, got undefined",
+      "typeId": "\"(Boolean, Number)\"",
+      "value": {}
+    },
+    {
+      "exception": "Expected Boolean, got undefined",
+      "typeId": "\"(Boolean, Number)\"",
+      "value": {
+        "a": null
+      }
+    },
+    {
+      "exception": "Expected Boolean, got undefined",
+      "typeId": "\"(Boolean, Number)\"",
+      "value": {
+        "a": 0
+      }
+    },
+    {
+      "exception": "Expected Boolean, got undefined",
+      "typeId": "\"(Boolean, Number)\"",
+      "value": {
+        "a": 0,
+        "b": 0
+      }
+    },
+    {
+      "exception": "Expected Boolean, got undefined",
+      "typeId": "\"(Boolean, Number)\"",
+      "value": {
+        "b": 0
+      }
+    },
+    {
+      "exception": "Expected Boolean, got undefined",
+      "typeId": "\"(Boolean, Number)\"",
+      "value": {
+        "a": {
+          "b": 0
+        }
+      }
+    },
+    {
+      "exception": "Expected Boolean, got undefined",
+      "typeId": "\"(Boolean, Number)\"",
+      "value": {
+        "a": {
+          "b": null
+        }
+      }
+    },
+    {
+      "exception": "Expected Boolean, got undefined",
+      "typeId": "\"(Boolean, Number)\"",
+      "value": {
+        "a": {
+          "b": {
+            "c": 0
+          }
+        }
+      }
+    },
+    {
+      "exception": "Expected Boolean, got undefined",
+      "typeId": "\"(Boolean, Number)\"",
+      "value": {
+        "a": {
+          "b": {
+            "c": null
+          }
+        }
+      }
+    },
+    {
+      "exception": "Expected Boolean, got undefined",
+      "typeId": "\"(Boolean, Number)\"",
+      "value": {
+        "a": {
+          "b": {
+            "c": 0,
+            "d": 0
+          }
+        }
+      }
+    },
+    {
+      "exception": "Expected Boolean, got undefined",
+      "typeId": "\"(Boolean, Number)\"",
+      "valueId": "function"
+    },
+    {
+      "exception": "Expected Boolean, got undefined",
+      "typeId": "\"(Boolean, Number)\"",
+      "valueId": "customType"
+    },
+    {
+      "exception": "Expected Boolean, got undefined",
+      "typeId": "\"(Boolean, Number)\"",
+      "valueId": "buffer"
+    },
+    {
+      "exception": "Expected Number|String, got undefined",
+      "typeId": "\"(Number|String)\"",
+      "value": ""
+    },
+    {
+      "exception": "Expected Number|String, got undefined",
+      "typeId": "\"(Number|String)\"",
+      "value": 0
+    },
+    {
+      "exception": "Expected Number|String, got undefined",
+      "typeId": "\"(Number|String)\"",
+      "value": 1
+    },
+    {
+      "exception": "Expected Number|String, got undefined",
+      "typeId": "\"(Number|String)\"",
+      "value": []
+    },
+    {
+      "exception": "Expected Number|String, got Object {\"a\":0}",
+      "typeId": "\"(Number|String)\"",
+      "value": [
+        {
+          "a": 0
+        }
+      ]
+    },
+    {
+      "exception": "Expected Number|String, got null",
+      "typeId": "\"(Number|String)\"",
+      "value": [
+        null
+      ]
+    },
+    {
+      "exception": "Expected Number|String, got undefined",
+      "typeId": "\"(Number|String)\"",
+      "value": false
+    },
+    {
+      "exception": "Expected Number|String, got undefined",
+      "typeId": "\"(Number|String)\"",
+      "value": true
+    },
+    {
+      "exception": "Cannot read property '0' of undefined",
+      "typeId": "\"(Number|String)\""
+    },
+    {
+      "exception": "Cannot read property '0' of null",
+      "typeId": "\"(Number|String)\"",
+      "value": null
+    },
+    {
+      "exception": "Expected Number|String, got undefined",
+      "typeId": "\"(Number|String)\"",
+      "value": {}
+    },
+    {
+      "exception": "Expected Number|String, got undefined",
+      "typeId": "\"(Number|String)\"",
+      "value": {
+        "a": null
+      }
+    },
+    {
+      "exception": "Expected Number|String, got undefined",
+      "typeId": "\"(Number|String)\"",
+      "value": {
+        "a": 0
+      }
+    },
+    {
+      "exception": "Expected Number|String, got undefined",
+      "typeId": "\"(Number|String)\"",
+      "value": {
+        "a": 0,
+        "b": 0
+      }
+    },
+    {
+      "exception": "Expected Number|String, got undefined",
+      "typeId": "\"(Number|String)\"",
+      "value": {
+        "b": 0
+      }
+    },
+    {
+      "exception": "Expected Number|String, got undefined",
+      "typeId": "\"(Number|String)\"",
+      "value": {
+        "a": {
+          "b": 0
+        }
+      }
+    },
+    {
+      "exception": "Expected Number|String, got undefined",
+      "typeId": "\"(Number|String)\"",
+      "value": {
+        "a": {
+          "b": null
+        }
+      }
+    },
+    {
+      "exception": "Expected Number|String, got undefined",
+      "typeId": "\"(Number|String)\"",
+      "value": {
+        "a": {
+          "b": {
+            "c": 0
+          }
+        }
+      }
+    },
+    {
+      "exception": "Expected Number|String, got undefined",
+      "typeId": "\"(Number|String)\"",
+      "value": {
+        "a": {
+          "b": {
+            "c": null
+          }
+        }
+      }
+    },
+    {
+      "exception": "Expected Number|String, got undefined",
+      "typeId": "\"(Number|String)\"",
+      "value": {
+        "a": {
+          "b": {
+            "c": 0,
+            "d": 0
+          }
+        }
+      }
+    },
+    {
+      "exception": "Expected Number|String, got undefined",
+      "typeId": "\"(Number|String)\"",
+      "valueId": "function"
+    },
+    {
+      "exception": "Expected Number|String, got undefined",
+      "typeId": "\"(Number|String)\"",
+      "valueId": "customType"
+    },
+    {
+      "exception": "Expected Number|String, got undefined",
+      "typeId": "\"(Number|String)\"",
+      "valueId": "buffer"
+    },
+    {
+      "exception": "Expected Number, got undefined",
+      "typeId": "\"(Number)\"",
+      "value": ""
+    },
+    {
+      "exception": "Expected Number, got String \"f\"",
+      "typeId": "\"(Number)\"",
+      "value": "foobar"
+    },
+    {
+      "exception": "Expected Number, got undefined",
+      "typeId": "\"(Number)\"",
+      "value": 0
+    },
+    {
+      "exception": "Expected Number, got undefined",
+      "typeId": "\"(Number)\"",
+      "value": 1
+    },
+    {
+      "exception": "Expected Number, got undefined",
+      "typeId": "\"(Number)\"",
+      "value": []
+    },
+    {
+      "exception": "Expected Number, got String \"foobar\"",
+      "typeId": "\"(Number)\"",
+      "value": [
+        "foobar"
+      ]
+    },
+    {
+      "exception": "Expected Number, got Object {\"a\":0}",
+      "typeId": "\"(Number)\"",
+      "value": [
+        {
+          "a": 0
+        }
+      ]
+    },
+    {
+      "exception": "Expected Number, got null",
+      "typeId": "\"(Number)\"",
+      "value": [
+        null
+      ]
+    },
+    {
+      "exception": "Expected Number, got undefined",
+      "typeId": "\"(Number)\"",
+      "value": false
+    },
+    {
+      "exception": "Expected Number, got undefined",
+      "typeId": "\"(Number)\"",
+      "value": true
+    },
+    {
+      "exception": "Cannot read property '0' of undefined",
+      "typeId": "\"(Number)\""
+    },
+    {
+      "exception": "Cannot read property '0' of null",
+      "typeId": "\"(Number)\"",
+      "value": null
+    },
+    {
+      "exception": "Expected Number, got undefined",
+      "typeId": "\"(Number)\"",
+      "value": {}
+    },
+    {
+      "exception": "Expected Number, got undefined",
+      "typeId": "\"(Number)\"",
+      "value": {
+        "a": null
+      }
+    },
+    {
+      "exception": "Expected Number, got undefined",
+      "typeId": "\"(Number)\"",
+      "value": {
+        "a": 0
+      }
+    },
+    {
+      "exception": "Expected Number, got undefined",
+      "typeId": "\"(Number)\"",
+      "value": {
+        "a": 0,
+        "b": 0
+      }
+    },
+    {
+      "exception": "Expected Number, got undefined",
+      "typeId": "\"(Number)\"",
+      "value": {
+        "b": 0
+      }
+    },
+    {
+      "exception": "Expected Number, got undefined",
+      "typeId": "\"(Number)\"",
+      "value": {
+        "a": {
+          "b": 0
+        }
+      }
+    },
+    {
+      "exception": "Expected Number, got undefined",
+      "typeId": "\"(Number)\"",
+      "value": {
+        "a": {
+          "b": null
+        }
+      }
+    },
+    {
+      "exception": "Expected Number, got undefined",
+      "typeId": "\"(Number)\"",
+      "value": {
+        "a": {
+          "b": {
+            "c": 0
+          }
+        }
+      }
+    },
+    {
+      "exception": "Expected Number, got undefined",
+      "typeId": "\"(Number)\"",
+      "value": {
+        "a": {
+          "b": {
+            "c": null
+          }
+        }
+      }
+    },
+    {
+      "exception": "Expected Number, got undefined",
+      "typeId": "\"(Number)\"",
+      "value": {
+        "a": {
+          "b": {
+            "c": 0,
+            "d": 0
+          }
+        }
+      }
+    },
+    {
+      "exception": "Expected Number, got undefined",
+      "typeId": "\"(Number)\"",
+      "valueId": "function"
+    },
+    {
+      "exception": "Expected Number, got undefined",
+      "typeId": "\"(Number)\"",
+      "valueId": "customType"
+    },
+    {
+      "exception": "Expected Number, got undefined",
+      "typeId": "\"(Number)\"",
+      "valueId": "buffer"
+    },
+    {
       "exception": "Expected [\"?{\\\"a\\\":\\\"Number\\\"}\"], got String \"\"",
       "typeId": "[\"?{\\\"a\\\":\\\"Number\\\"}\"]",
       "value": ""
@@ -4684,6 +5405,13 @@
       "typeId": "[\"?{\\\"a\\\":\\\"Number\\\"}\"]",
       "value": [
         0
+      ]
+    },
+    {
+      "exception": "Expected [\"?{\\\"a\\\":\\\"Number\\\"}\"], got Array [\"foobar\"]",
+      "typeId": "[\"?{\\\"a\\\":\\\"Number\\\"}\"]",
+      "value": [
+        "foobar"
       ]
     },
     {
@@ -4816,6 +5544,13 @@
       "typeId": "\"Boolean|Number|String\"",
       "value": [
         0
+      ]
+    },
+    {
+      "exception": "Expected Boolean|Number|String, got Array [\"foobar\"]",
+      "typeId": "\"Boolean|Number|String\"",
+      "value": [
+        "foobar"
       ]
     },
     {
@@ -4964,6 +5699,13 @@
       "typeId": "\"?Boolean|Number\"",
       "value": [
         0
+      ]
+    },
+    {
+      "exception": "Expected Boolean|Number, got Array [\"foobar\"]",
+      "typeId": "\"?Boolean|Number\"",
+      "value": [
+        "foobar"
       ]
     },
     {
@@ -5116,6 +5858,14 @@
       "strict": true,
       "typeId": "\"?{\\\"a\\\":\\\"?Number\\\"}\"",
       "value": [
+        "foobar"
+      ]
+    },
+    {
+      "exception": "Unexpected property \"0\"",
+      "strict": true,
+      "typeId": "\"?{\\\"a\\\":\\\"?Number\\\"}\"",
+      "value": [
         {
           "a": 0
         }
@@ -5249,6 +5999,13 @@
       "typeId": "\"?{\\\"a\\\":\\\"Number\\\"}\"",
       "value": [
         0
+      ]
+    },
+    {
+      "exception": "Expected property \"a\" of type Number, got undefined",
+      "typeId": "\"?{\\\"a\\\":\\\"Number\\\"}\"",
+      "value": [
+        "foobar"
       ]
     },
     {
@@ -5405,6 +6162,14 @@
       "strict": true,
       "typeId": "{\"a\":\"Number|Null\"}",
       "value": [
+        "foobar"
+      ]
+    },
+    {
+      "exception": "Unexpected property \"0\"",
+      "strict": true,
+      "typeId": "{\"a\":\"Number|Null\"}",
+      "value": [
         {
           "a": 0
         }
@@ -5547,6 +6312,13 @@
       "typeId": "{\"a\":\"Number|{\\\"b\\\":\\\"Number\\\"}\"}",
       "value": [
         0
+      ]
+    },
+    {
+      "exception": "Expected property \"a\" of type Number|{\"b\":\"Number\"}, got undefined",
+      "typeId": "{\"a\":\"Number|{\\\"b\\\":\\\"Number\\\"}\"}",
+      "value": [
+        "foobar"
       ]
     },
     {
@@ -5703,6 +6475,14 @@
       "strict": true,
       "typeId": "{\"a\":\"?{\\\"b\\\":\\\"Number\\\"}\"}",
       "value": [
+        "foobar"
+      ]
+    },
+    {
+      "exception": "Unexpected property \"0\"",
+      "strict": true,
+      "typeId": "{\"a\":\"?{\\\"b\\\":\\\"Number\\\"}\"}",
+      "value": [
         {
           "a": 0
         }
@@ -5838,6 +6618,14 @@
       "typeId": "{\"a\":\"?{\\\"b\\\":\\\"?{\\\\\\\"c\\\\\\\":\\\\\\\"Number\\\\\\\"}\\\"}\"}",
       "value": [
         0
+      ]
+    },
+    {
+      "exception": "Unexpected property \"0\"",
+      "strict": true,
+      "typeId": "{\"a\":\"?{\\\"b\\\":\\\"?{\\\\\\\"c\\\\\\\":\\\\\\\"Number\\\\\\\"}\\\"}\"}",
+      "value": [
+        "foobar"
       ]
     },
     {

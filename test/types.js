@@ -1,5 +1,8 @@
 var typeforce = require('../src')
 var TYPES = {
+  '"(Boolean, Number)"': typeforce.tuple('Boolean', 'Number'),
+  '"(Number|String)"': typeforce.tuple(typeforce.oneOf('Number', 'String')),
+  '"(Number)"': typeforce.tuple('Number'),
   '["?{\\"a\\":\\"Number\\"}"]': [ typeforce.maybe({ a: 'Number' }) ],
   '"Boolean|Number|String"': typeforce.oneOf('Boolean', 'Number', 'String'),
   '"?Boolean|Number"': typeforce.maybe(typeforce.oneOf('Boolean', 'Number')),
