@@ -21,13 +21,12 @@ var TYPES2 = [
   { a: { b: { c: '?Number' } } },
   { a: { b: { c: 'Number' } } },
 
-  // resolves to typeforce.value()
+  // these will resolve to typeforce.value(...)
   undefined,
   null,
   true,
   false,
-  0,
-  function () {}
+  0
 ]
 
 var VALUES2 = [
