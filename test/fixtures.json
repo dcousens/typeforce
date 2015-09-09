@@ -853,6 +853,10 @@
     {
       "typeId": "{ a: ?Tt }",
       "valueId": "buffer"
+    },
+    {
+      "typeId": ">CustomType",
+      "valueId": "customType"
     }
   ],
   "invalid": [
@@ -7144,6 +7148,176 @@
     {
       "exception": "Expected property \"a\" of type Object, got undefined",
       "typeId": "{ a: { b: Tt } }",
+      "valueId": "buffer"
+    },
+    {
+      "exception": "Expected CustomType, got String \"\"",
+      "typeId": ">CustomType",
+      "value": ""
+    },
+    {
+      "exception": "Expected CustomType, got String \"foobar\"",
+      "typeId": ">CustomType",
+      "value": "foobar"
+    },
+    {
+      "exception": "Expected CustomType, got Number 0",
+      "typeId": ">CustomType",
+      "value": 0
+    },
+    {
+      "exception": "Expected CustomType, got Number 1",
+      "typeId": ">CustomType",
+      "value": 1
+    },
+    {
+      "exception": "Expected CustomType, got Array",
+      "typeId": ">CustomType",
+      "value": []
+    },
+    {
+      "exception": "Expected CustomType, got Array",
+      "typeId": ">CustomType",
+      "value": [
+        0
+      ]
+    },
+    {
+      "exception": "Expected CustomType, got Array",
+      "typeId": ">CustomType",
+      "value": [
+        "foobar"
+      ]
+    },
+    {
+      "exception": "Expected CustomType, got Array",
+      "typeId": ">CustomType",
+      "value": [
+        {
+          "a": 0
+        }
+      ]
+    },
+    {
+      "exception": "Expected CustomType, got Array",
+      "typeId": ">CustomType",
+      "value": [
+        null
+      ]
+    },
+    {
+      "exception": "Expected CustomType, got Boolean false",
+      "typeId": ">CustomType",
+      "value": false
+    },
+    {
+      "exception": "Expected CustomType, got Boolean true",
+      "typeId": ">CustomType",
+      "value": true
+    },
+    {
+      "exception": "Expected CustomType, got undefined",
+      "typeId": ">CustomType"
+    },
+    {
+      "exception": "Expected CustomType, got null",
+      "typeId": ">CustomType",
+      "value": null
+    },
+    {
+      "exception": "Expected CustomType, got Object",
+      "typeId": ">CustomType",
+      "value": {}
+    },
+    {
+      "exception": "Expected CustomType, got Object",
+      "typeId": ">CustomType",
+      "value": {
+        "a": null
+      }
+    },
+    {
+      "exception": "Expected CustomType, got Object",
+      "typeId": ">CustomType",
+      "value": {
+        "a": 0
+      }
+    },
+    {
+      "exception": "Expected CustomType, got Object",
+      "typeId": ">CustomType",
+      "value": {
+        "a": 0,
+        "b": 0
+      }
+    },
+    {
+      "exception": "Expected CustomType, got Object",
+      "typeId": ">CustomType",
+      "value": {
+        "b": 0
+      }
+    },
+    {
+      "exception": "Expected CustomType, got Object",
+      "typeId": ">CustomType",
+      "value": {
+        "a": {
+          "b": 0
+        }
+      }
+    },
+    {
+      "exception": "Expected CustomType, got Object",
+      "typeId": ">CustomType",
+      "value": {
+        "a": {
+          "b": null
+        }
+      }
+    },
+    {
+      "exception": "Expected CustomType, got Object",
+      "typeId": ">CustomType",
+      "value": {
+        "a": {
+          "b": {
+            "c": 0
+          }
+        }
+      }
+    },
+    {
+      "exception": "Expected CustomType, got Object",
+      "typeId": ">CustomType",
+      "value": {
+        "a": {
+          "b": {
+            "c": null
+          }
+        }
+      }
+    },
+    {
+      "exception": "Expected CustomType, got Object",
+      "typeId": ">CustomType",
+      "value": {
+        "a": {
+          "b": {
+            "c": 0,
+            "d": 0
+          }
+        }
+      }
+    },
+    {
+      "exception": "Expected CustomType, got Function",
+      "typeId": ">CustomType",
+      "valueId": "function"
+    },
+    {
+      "exception": "Expected CustomType, got Buffer",
+      "typeId": ">CustomType",
       "valueId": "buffer"
     }
   ]
