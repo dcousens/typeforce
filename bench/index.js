@@ -37,7 +37,6 @@ fixtures.forEach(function (f) {
     suite.add('  npm(e)#' + tdescription, function () { try { npm(f.type, actualValue, f.strict) } catch (e) {} })
     suite.add('local(c, e)#' + tdescription, function () { try { local(ctype, actualValue, f.strict) } catch (e) {} })
     suite.add('  npm(c, e)#' + tdescription, function () { try { npm(ctype, actualValue, f.strict) } catch (e) {} })
-
   } else {
     local(ctype, actualValue, f.strict)
     npm(ctype, actualValue, f.strict)
