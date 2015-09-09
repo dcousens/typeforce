@@ -54,7 +54,6 @@ var otherTypes = {
     function arrayOf (value, strict) {
       try {
         return nativeTypes.Array(value) && value.every(x => typeforce(type, x, strict))
-
       } catch (e) {
         return false
       }
@@ -86,7 +85,6 @@ var otherTypes = {
 
           typeforce(propertyType, propertyValue, strict)
         }
-
       } catch (e) {
         throw new TypeError(tfPropertyErrorString(propertyType, propertyName, propertyValue))
       }
@@ -111,7 +109,6 @@ var otherTypes = {
       return types.some(type => {
         try {
           return typeforce(type, value, strict)
-
         } catch (e) {
           return false
         }
@@ -155,7 +152,6 @@ function compile (type) {
     if (type[0] === '?') return otherTypes.maybe(compile(type.slice(1)))
 
     return nativeTypes[type] || otherTypes.quacksLike(type)
-
   } else if (type && nativeTypes.Object(type)) {
     if (nativeTypes.Array(type)) return otherTypes.arrayOf(compile(type[0]))
 
@@ -166,7 +162,6 @@ function compile (type) {
     }
 
     return otherTypes.object(compiled)
-
   } else if (nativeTypes.Function(type)) {
     return type
   }
