@@ -27,7 +27,7 @@ describe('typeforce', function () {
     var value = VALUES[f.valueId] || f.value
     var typeDescription = f.typeId || JSON.stringify(type)
     var valueDescription = JSON.stringify(value)
-    var exception = f.exception.replace(/([.*+?^=!:${}()|\[\]\/\\])/g, '\\$&')
+    var exception = f.exception.replace(/([.*+?^=!:${}\[\]\/\\])/g, '\\$&')
 
     it('throws "' + exception + '" for type ' + typeDescription + ' with value of ' + valueDescription, function () {
       assert.throws(function () {
