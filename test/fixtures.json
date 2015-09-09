@@ -5873,7 +5873,7 @@
       "valueId": "function"
     },
     {
-      "exception": "Unexpected property \"length\"",
+      "exception": "Unexpected property \"(asciiSlice|length)\"",
       "strict": true,
       "typeId": "?{ a: ?Number }",
       "valueId": "buffer"
@@ -6186,7 +6186,7 @@
       "valueId": "function"
     },
     {
-      "exception": "Unexpected property \"length\"",
+      "exception": "Unexpected property \"(asciiSlice|length)\"",
       "strict": true,
       "typeId": "{ a: Number|Null }",
       "valueId": "buffer"
@@ -6496,7 +6496,7 @@
       "valueId": "function"
     },
     {
-      "exception": "Unexpected property \"length\"",
+      "exception": "Unexpected property \"(asciiSlice|length)\"",
       "strict": true,
       "typeId": "{ a: ?{ b: Number } }",
       "valueId": "buffer"
@@ -6636,7 +6636,7 @@
       "valueId": "function"
     },
     {
-      "exception": "Unexpected property \"length\"",
+      "exception": "Unexpected property \"(asciiSlice|length)\"",
       "strict": true,
       "typeId": "{ a: ?{ b: ?{ c: Number } } }",
       "valueId": "buffer"
@@ -6970,7 +6970,7 @@
       "valueId": "function"
     },
     {
-      "exception": "Unexpected property \"length\"",
+      "exception": "Unexpected property \"(asciiSlice|length)\"",
       "strict": true,
       "typeId": "{ a: ?Tt }",
       "valueId": "buffer"
