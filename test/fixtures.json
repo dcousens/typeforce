@@ -896,26 +896,26 @@
       "value": null
     },
     {
-      "exception": "Expected Array, got Object {}",
+      "exception": "Expected Array, got Object",
       "type": "Array",
       "value": {}
     },
     {
-      "exception": "Expected Array, got Object {\"a\":null}",
+      "exception": "Expected Array, got Object",
       "type": "Array",
       "value": {
         "a": null
       }
     },
     {
-      "exception": "Expected Array, got Object {\"a\":0}",
+      "exception": "Expected Array, got Object",
       "type": "Array",
       "value": {
         "a": 0
       }
     },
     {
-      "exception": "Expected Array, got Object {\"a\":0,\"b\":0}",
+      "exception": "Expected Array, got Object",
       "type": "Array",
       "value": {
         "a": 0,
@@ -923,14 +923,14 @@
       }
     },
     {
-      "exception": "Expected Array, got Object {\"b\":0}",
+      "exception": "Expected Array, got Object",
       "type": "Array",
       "value": {
         "b": 0
       }
     },
     {
-      "exception": "Expected Array, got Object {\"a\":{\"b\":0}}",
+      "exception": "Expected Array, got Object",
       "type": "Array",
       "value": {
         "a": {
@@ -939,7 +939,7 @@
       }
     },
     {
-      "exception": "Expected Array, got Object {\"a\":{\"b\":null}}",
+      "exception": "Expected Array, got Object",
       "type": "Array",
       "value": {
         "a": {
@@ -948,7 +948,7 @@
       }
     },
     {
-      "exception": "Expected Array, got Object {\"a\":{\"b\":{\"c\":0}}}",
+      "exception": "Expected Array, got Object",
       "type": "Array",
       "value": {
         "a": {
@@ -959,7 +959,7 @@
       }
     },
     {
-      "exception": "Expected Array, got Object {\"a\":{\"b\":{\"c\":null}}}",
+      "exception": "Expected Array, got Object",
       "type": "Array",
       "value": {
         "a": {
@@ -970,7 +970,7 @@
       }
     },
     {
-      "exception": "Expected Array, got Object {\"a\":{\"b\":{\"c\":0,\"d\":0}}}",
+      "exception": "Expected Array, got Object",
       "type": "Array",
       "value": {
         "a": {
@@ -982,17 +982,17 @@
       }
     },
     {
-      "exception": "Expected Array, got Function undefined",
+      "exception": "Expected Array, got Function",
       "type": "Array",
       "valueId": "function"
     },
     {
-      "exception": "Expected Array, got CustomType {}",
+      "exception": "Expected Array, got CustomType",
       "type": "Array",
       "valueId": "customType"
     },
     {
-      "exception": "Expected Array, got Buffer {\"type\":\"Buffer\",\"data\":[]}",
+      "exception": "Expected Array, got Buffer",
       "type": "Array",
       "valueId": "buffer"
     },
@@ -1017,26 +1017,26 @@
       "value": 1
     },
     {
-      "exception": "Expected Boolean, got Array []",
+      "exception": "Expected Boolean, got Array",
       "type": "Boolean",
       "value": []
     },
     {
-      "exception": "Expected Boolean, got Array [0]",
+      "exception": "Expected Boolean, got Array",
       "type": "Boolean",
       "value": [
         0
       ]
     },
     {
-      "exception": "Expected Boolean, got Array [\"foobar\"]",
+      "exception": "Expected Boolean, got Array",
       "type": "Boolean",
       "value": [
         "foobar"
       ]
     },
     {
-      "exception": "Expected Boolean, got Array [{\"a\":0}]",
+      "exception": "Expected Boolean, got Array",
       "type": "Boolean",
       "value": [
         {
@@ -1045,7 +1045,7 @@
       ]
     },
     {
-      "exception": "Expected Boolean, got Array [null]",
+      "exception": "Expected Boolean, got Array",
       "type": "Boolean",
       "value": [
         null
@@ -1061,26 +1061,26 @@
       "value": null
     },
     {
-      "exception": "Expected Boolean, got Object {}",
+      "exception": "Expected Boolean, got Object",
       "type": "Boolean",
       "value": {}
     },
     {
-      "exception": "Expected Boolean, got Object {\"a\":null}",
+      "exception": "Expected Boolean, got Object",
       "type": "Boolean",
       "value": {
         "a": null
       }
     },
     {
-      "exception": "Expected Boolean, got Object {\"a\":0}",
+      "exception": "Expected Boolean, got Object",
       "type": "Boolean",
       "value": {
         "a": 0
       }
     },
     {
-      "exception": "Expected Boolean, got Object {\"a\":0,\"b\":0}",
+      "exception": "Expected Boolean, got Object",
       "type": "Boolean",
       "value": {
         "a": 0,
@@ -1088,14 +1088,14 @@
       }
     },
     {
-      "exception": "Expected Boolean, got Object {\"b\":0}",
+      "exception": "Expected Boolean, got Object",
       "type": "Boolean",
       "value": {
         "b": 0
       }
     },
     {
-      "exception": "Expected Boolean, got Object {\"a\":{\"b\":0}}",
+      "exception": "Expected Boolean, got Object",
       "type": "Boolean",
       "value": {
         "a": {
@@ -1104,7 +1104,7 @@
       }
     },
     {
-      "exception": "Expected Boolean, got Object {\"a\":{\"b\":null}}",
+      "exception": "Expected Boolean, got Object",
       "type": "Boolean",
       "value": {
         "a": {
@@ -1113,7 +1113,7 @@
       }
     },
     {
-      "exception": "Expected Boolean, got Object {\"a\":{\"b\":{\"c\":0}}}",
+      "exception": "Expected Boolean, got Object",
       "type": "Boolean",
       "value": {
         "a": {
@@ -1124,7 +1124,7 @@
       }
     },
     {
-      "exception": "Expected Boolean, got Object {\"a\":{\"b\":{\"c\":null}}}",
+      "exception": "Expected Boolean, got Object",
       "type": "Boolean",
       "value": {
         "a": {
@@ -1135,7 +1135,7 @@
       }
     },
     {
-      "exception": "Expected Boolean, got Object {\"a\":{\"b\":{\"c\":0,\"d\":0}}}",
+      "exception": "Expected Boolean, got Object",
       "type": "Boolean",
       "value": {
         "a": {
@@ -1147,17 +1147,17 @@
       }
     },
     {
-      "exception": "Expected Boolean, got Function undefined",
+      "exception": "Expected Boolean, got Function",
       "type": "Boolean",
       "valueId": "function"
     },
     {
-      "exception": "Expected Boolean, got CustomType {}",
+      "exception": "Expected Boolean, got CustomType",
       "type": "Boolean",
       "valueId": "customType"
     },
     {
-      "exception": "Expected Boolean, got Buffer {\"type\":\"Buffer\",\"data\":[]}",
+      "exception": "Expected Boolean, got Buffer",
       "type": "Boolean",
       "valueId": "buffer"
     },
@@ -1182,26 +1182,26 @@
       "value": 1
     },
     {
-      "exception": "Expected Buffer, got Array []",
+      "exception": "Expected Buffer, got Array",
       "type": "Buffer",
       "value": []
     },
     {
-      "exception": "Expected Buffer, got Array [0]",
+      "exception": "Expected Buffer, got Array",
       "type": "Buffer",
       "value": [
         0
       ]
     },
     {
-      "exception": "Expected Buffer, got Array [\"foobar\"]",
+      "exception": "Expected Buffer, got Array",
       "type": "Buffer",
       "value": [
         "foobar"
       ]
     },
     {
-      "exception": "Expected Buffer, got Array [{\"a\":0}]",
+      "exception": "Expected Buffer, got Array",
       "type": "Buffer",
       "value": [
         {
@@ -1210,7 +1210,7 @@
       ]
     },
     {
-      "exception": "Expected Buffer, got Array [null]",
+      "exception": "Expected Buffer, got Array",
       "type": "Buffer",
       "value": [
         null
@@ -1236,26 +1236,26 @@
       "value": null
     },
     {
-      "exception": "Expected Buffer, got Object {}",
+      "exception": "Expected Buffer, got Object",
       "type": "Buffer",
       "value": {}
     },
     {
-      "exception": "Expected Buffer, got Object {\"a\":null}",
+      "exception": "Expected Buffer, got Object",
       "type": "Buffer",
       "value": {
         "a": null
       }
     },
     {
-      "exception": "Expected Buffer, got Object {\"a\":0}",
+      "exception": "Expected Buffer, got Object",
       "type": "Buffer",
       "value": {
         "a": 0
       }
     },
     {
-      "exception": "Expected Buffer, got Object {\"a\":0,\"b\":0}",
+      "exception": "Expected Buffer, got Object",
       "type": "Buffer",
       "value": {
         "a": 0,
@@ -1263,14 +1263,14 @@
       }
     },
     {
-      "exception": "Expected Buffer, got Object {\"b\":0}",
+      "exception": "Expected Buffer, got Object",
       "type": "Buffer",
       "value": {
         "b": 0
       }
     },
     {
-      "exception": "Expected Buffer, got Object {\"a\":{\"b\":0}}",
+      "exception": "Expected Buffer, got Object",
       "type": "Buffer",
       "value": {
         "a": {
@@ -1279,7 +1279,7 @@
       }
     },
     {
-      "exception": "Expected Buffer, got Object {\"a\":{\"b\":null}}",
+      "exception": "Expected Buffer, got Object",
       "type": "Buffer",
       "value": {
         "a": {
@@ -1288,7 +1288,7 @@
       }
     },
     {
-      "exception": "Expected Buffer, got Object {\"a\":{\"b\":{\"c\":0}}}",
+      "exception": "Expected Buffer, got Object",
       "type": "Buffer",
       "value": {
         "a": {
@@ -1299,7 +1299,7 @@
       }
     },
     {
-      "exception": "Expected Buffer, got Object {\"a\":{\"b\":{\"c\":null}}}",
+      "exception": "Expected Buffer, got Object",
       "type": "Buffer",
       "value": {
         "a": {
@@ -1310,7 +1310,7 @@
       }
     },
     {
-      "exception": "Expected Buffer, got Object {\"a\":{\"b\":{\"c\":0,\"d\":0}}}",
+      "exception": "Expected Buffer, got Object",
       "type": "Buffer",
       "value": {
         "a": {
@@ -1322,12 +1322,12 @@
       }
     },
     {
-      "exception": "Expected Buffer, got Function undefined",
+      "exception": "Expected Buffer, got Function",
       "type": "Buffer",
       "valueId": "function"
     },
     {
-      "exception": "Expected Buffer, got CustomType {}",
+      "exception": "Expected Buffer, got CustomType",
       "type": "Buffer",
       "valueId": "customType"
     },
@@ -1352,26 +1352,26 @@
       "value": 1
     },
     {
-      "exception": "Expected Function, got Array []",
+      "exception": "Expected Function, got Array",
       "type": "Function",
       "value": []
     },
     {
-      "exception": "Expected Function, got Array [0]",
+      "exception": "Expected Function, got Array",
       "type": "Function",
       "value": [
         0
       ]
     },
     {
-      "exception": "Expected Function, got Array [\"foobar\"]",
+      "exception": "Expected Function, got Array",
       "type": "Function",
       "value": [
         "foobar"
       ]
     },
     {
-      "exception": "Expected Function, got Array [{\"a\":0}]",
+      "exception": "Expected Function, got Array",
       "type": "Function",
       "value": [
         {
@@ -1380,7 +1380,7 @@
       ]
     },
     {
-      "exception": "Expected Function, got Array [null]",
+      "exception": "Expected Function, got Array",
       "type": "Function",
       "value": [
         null
@@ -1406,26 +1406,26 @@
       "value": null
     },
     {
-      "exception": "Expected Function, got Object {}",
+      "exception": "Expected Function, got Object",
       "type": "Function",
       "value": {}
     },
     {
-      "exception": "Expected Function, got Object {\"a\":null}",
+      "exception": "Expected Function, got Object",
       "type": "Function",
       "value": {
         "a": null
       }
     },
     {
-      "exception": "Expected Function, got Object {\"a\":0}",
+      "exception": "Expected Function, got Object",
       "type": "Function",
       "value": {
         "a": 0
       }
     },
     {
-      "exception": "Expected Function, got Object {\"a\":0,\"b\":0}",
+      "exception": "Expected Function, got Object",
       "type": "Function",
       "value": {
         "a": 0,
@@ -1433,14 +1433,14 @@
       }
     },
     {
-      "exception": "Expected Function, got Object {\"b\":0}",
+      "exception": "Expected Function, got Object",
       "type": "Function",
       "value": {
         "b": 0
       }
     },
     {
-      "exception": "Expected Function, got Object {\"a\":{\"b\":0}}",
+      "exception": "Expected Function, got Object",
       "type": "Function",
       "value": {
         "a": {
@@ -1449,7 +1449,7 @@
       }
     },
     {
-      "exception": "Expected Function, got Object {\"a\":{\"b\":null}}",
+      "exception": "Expected Function, got Object",
       "type": "Function",
       "value": {
         "a": {
@@ -1458,7 +1458,7 @@
       }
     },
     {
-      "exception": "Expected Function, got Object {\"a\":{\"b\":{\"c\":0}}}",
+      "exception": "Expected Function, got Object",
       "type": "Function",
       "value": {
         "a": {
@@ -1469,7 +1469,7 @@
       }
     },
     {
-      "exception": "Expected Function, got Object {\"a\":{\"b\":{\"c\":null}}}",
+      "exception": "Expected Function, got Object",
       "type": "Function",
       "value": {
         "a": {
@@ -1480,7 +1480,7 @@
       }
     },
     {
-      "exception": "Expected Function, got Object {\"a\":{\"b\":{\"c\":0,\"d\":0}}}",
+      "exception": "Expected Function, got Object",
       "type": "Function",
       "value": {
         "a": {
@@ -1492,12 +1492,12 @@
       }
     },
     {
-      "exception": "Expected Function, got CustomType {}",
+      "exception": "Expected Function, got CustomType",
       "type": "Function",
       "valueId": "customType"
     },
     {
-      "exception": "Expected Function, got Buffer {\"type\":\"Buffer\",\"data\":[]}",
+      "exception": "Expected Function, got Buffer",
       "type": "Function",
       "valueId": "buffer"
     },
@@ -1522,26 +1522,26 @@
       "value": 1
     },
     {
-      "exception": "Expected Null, got Array []",
+      "exception": "Expected Null, got Array",
       "type": "Null",
       "value": []
     },
     {
-      "exception": "Expected Null, got Array [0]",
+      "exception": "Expected Null, got Array",
       "type": "Null",
       "value": [
         0
       ]
     },
     {
-      "exception": "Expected Null, got Array [\"foobar\"]",
+      "exception": "Expected Null, got Array",
       "type": "Null",
       "value": [
         "foobar"
       ]
     },
     {
-      "exception": "Expected Null, got Array [{\"a\":0}]",
+      "exception": "Expected Null, got Array",
       "type": "Null",
       "value": [
         {
@@ -1550,7 +1550,7 @@
       ]
     },
     {
-      "exception": "Expected Null, got Array [null]",
+      "exception": "Expected Null, got Array",
       "type": "Null",
       "value": [
         null
@@ -1567,26 +1567,26 @@
       "value": true
     },
     {
-      "exception": "Expected Null, got Object {}",
+      "exception": "Expected Null, got Object",
       "type": "Null",
       "value": {}
     },
     {
-      "exception": "Expected Null, got Object {\"a\":null}",
+      "exception": "Expected Null, got Object",
       "type": "Null",
       "value": {
         "a": null
       }
     },
     {
-      "exception": "Expected Null, got Object {\"a\":0}",
+      "exception": "Expected Null, got Object",
       "type": "Null",
       "value": {
         "a": 0
       }
     },
     {
-      "exception": "Expected Null, got Object {\"a\":0,\"b\":0}",
+      "exception": "Expected Null, got Object",
       "type": "Null",
       "value": {
         "a": 0,
@@ -1594,14 +1594,14 @@
       }
     },
     {
-      "exception": "Expected Null, got Object {\"b\":0}",
+      "exception": "Expected Null, got Object",
       "type": "Null",
       "value": {
         "b": 0
       }
     },
     {
-      "exception": "Expected Null, got Object {\"a\":{\"b\":0}}",
+      "exception": "Expected Null, got Object",
       "type": "Null",
       "value": {
         "a": {
@@ -1610,7 +1610,7 @@
       }
     },
     {
-      "exception": "Expected Null, got Object {\"a\":{\"b\":null}}",
+      "exception": "Expected Null, got Object",
       "type": "Null",
       "value": {
         "a": {
@@ -1619,7 +1619,7 @@
       }
     },
     {
-      "exception": "Expected Null, got Object {\"a\":{\"b\":{\"c\":0}}}",
+      "exception": "Expected Null, got Object",
       "type": "Null",
       "value": {
         "a": {
@@ -1630,7 +1630,7 @@
       }
     },
     {
-      "exception": "Expected Null, got Object {\"a\":{\"b\":{\"c\":null}}}",
+      "exception": "Expected Null, got Object",
       "type": "Null",
       "value": {
         "a": {
@@ -1641,7 +1641,7 @@
       }
     },
     {
-      "exception": "Expected Null, got Object {\"a\":{\"b\":{\"c\":0,\"d\":0}}}",
+      "exception": "Expected Null, got Object",
       "type": "Null",
       "value": {
         "a": {
@@ -1653,17 +1653,17 @@
       }
     },
     {
-      "exception": "Expected Null, got Function undefined",
+      "exception": "Expected Null, got Function",
       "type": "Null",
       "valueId": "function"
     },
     {
-      "exception": "Expected Null, got CustomType {}",
+      "exception": "Expected Null, got CustomType",
       "type": "Null",
       "valueId": "customType"
     },
     {
-      "exception": "Expected Null, got Buffer {\"type\":\"Buffer\",\"data\":[]}",
+      "exception": "Expected Null, got Buffer",
       "type": "Null",
       "valueId": "buffer"
     },
@@ -1678,26 +1678,26 @@
       "value": "foobar"
     },
     {
-      "exception": "Expected Number, got Array []",
+      "exception": "Expected Number, got Array",
       "type": "Number",
       "value": []
     },
     {
-      "exception": "Expected Number, got Array [0]",
+      "exception": "Expected Number, got Array",
       "type": "Number",
       "value": [
         0
       ]
     },
     {
-      "exception": "Expected Number, got Array [\"foobar\"]",
+      "exception": "Expected Number, got Array",
       "type": "Number",
       "value": [
         "foobar"
       ]
     },
     {
-      "exception": "Expected Number, got Array [{\"a\":0}]",
+      "exception": "Expected Number, got Array",
       "type": "Number",
       "value": [
         {
@@ -1706,7 +1706,7 @@
       ]
     },
     {
-      "exception": "Expected Number, got Array [null]",
+      "exception": "Expected Number, got Array",
       "type": "Number",
       "value": [
         null
@@ -1732,26 +1732,26 @@
       "value": null
     },
     {
-      "exception": "Expected Number, got Object {}",
+      "exception": "Expected Number, got Object",
       "type": "Number",
       "value": {}
     },
     {
-      "exception": "Expected Number, got Object {\"a\":null}",
+      "exception": "Expected Number, got Object",
       "type": "Number",
       "value": {
         "a": null
       }
     },
     {
-      "exception": "Expected Number, got Object {\"a\":0}",
+      "exception": "Expected Number, got Object",
       "type": "Number",
       "value": {
         "a": 0
       }
     },
     {
-      "exception": "Expected Number, got Object {\"a\":0,\"b\":0}",
+      "exception": "Expected Number, got Object",
       "type": "Number",
       "value": {
         "a": 0,
@@ -1759,14 +1759,14 @@
       }
     },
     {
-      "exception": "Expected Number, got Object {\"b\":0}",
+      "exception": "Expected Number, got Object",
       "type": "Number",
       "value": {
         "b": 0
       }
     },
     {
-      "exception": "Expected Number, got Object {\"a\":{\"b\":0}}",
+      "exception": "Expected Number, got Object",
       "type": "Number",
       "value": {
         "a": {
@@ -1775,7 +1775,7 @@
       }
     },
     {
-      "exception": "Expected Number, got Object {\"a\":{\"b\":null}}",
+      "exception": "Expected Number, got Object",
       "type": "Number",
       "value": {
         "a": {
@@ -1784,7 +1784,7 @@
       }
     },
     {
-      "exception": "Expected Number, got Object {\"a\":{\"b\":{\"c\":0}}}",
+      "exception": "Expected Number, got Object",
       "type": "Number",
       "value": {
         "a": {
@@ -1795,7 +1795,7 @@
       }
     },
     {
-      "exception": "Expected Number, got Object {\"a\":{\"b\":{\"c\":null}}}",
+      "exception": "Expected Number, got Object",
       "type": "Number",
       "value": {
         "a": {
@@ -1806,7 +1806,7 @@
       }
     },
     {
-      "exception": "Expected Number, got Object {\"a\":{\"b\":{\"c\":0,\"d\":0}}}",
+      "exception": "Expected Number, got Object",
       "type": "Number",
       "value": {
         "a": {
@@ -1818,17 +1818,17 @@
       }
     },
     {
-      "exception": "Expected Number, got Function undefined",
+      "exception": "Expected Number, got Function",
       "type": "Number",
       "valueId": "function"
     },
     {
-      "exception": "Expected Number, got CustomType {}",
+      "exception": "Expected Number, got CustomType",
       "type": "Number",
       "valueId": "customType"
     },
     {
-      "exception": "Expected Number, got Buffer {\"type\":\"Buffer\",\"data\":[]}",
+      "exception": "Expected Number, got Buffer",
       "type": "Number",
       "valueId": "buffer"
     },
@@ -1867,7 +1867,7 @@
       "type": "Object"
     },
     {
-      "exception": "Expected Object, got Function undefined",
+      "exception": "Expected Object, got Function",
       "type": "Object",
       "valueId": "function"
     },
@@ -1882,26 +1882,26 @@
       "value": 1
     },
     {
-      "exception": "Expected String, got Array []",
+      "exception": "Expected String, got Array",
       "type": "String",
       "value": []
     },
     {
-      "exception": "Expected String, got Array [0]",
+      "exception": "Expected String, got Array",
       "type": "String",
       "value": [
         0
       ]
     },
     {
-      "exception": "Expected String, got Array [\"foobar\"]",
+      "exception": "Expected String, got Array",
       "type": "String",
       "value": [
         "foobar"
       ]
     },
     {
-      "exception": "Expected String, got Array [{\"a\":0}]",
+      "exception": "Expected String, got Array",
       "type": "String",
       "value": [
         {
@@ -1910,7 +1910,7 @@
       ]
     },
     {
-      "exception": "Expected String, got Array [null]",
+      "exception": "Expected String, got Array",
       "type": "String",
       "value": [
         null
@@ -1936,26 +1936,26 @@
       "value": null
     },
     {
-      "exception": "Expected String, got Object {}",
+      "exception": "Expected String, got Object",
       "type": "String",
       "value": {}
     },
     {
-      "exception": "Expected String, got Object {\"a\":null}",
+      "exception": "Expected String, got Object",
       "type": "String",
       "value": {
         "a": null
       }
     },
     {
-      "exception": "Expected String, got Object {\"a\":0}",
+      "exception": "Expected String, got Object",
       "type": "String",
       "value": {
         "a": 0
       }
     },
     {
-      "exception": "Expected String, got Object {\"a\":0,\"b\":0}",
+      "exception": "Expected String, got Object",
       "type": "String",
       "value": {
         "a": 0,
@@ -1963,14 +1963,14 @@
       }
     },
     {
-      "exception": "Expected String, got Object {\"b\":0}",
+      "exception": "Expected String, got Object",
       "type": "String",
       "value": {
         "b": 0
       }
     },
     {
-      "exception": "Expected String, got Object {\"a\":{\"b\":0}}",
+      "exception": "Expected String, got Object",
       "type": "String",
       "value": {
         "a": {
@@ -1979,7 +1979,7 @@
       }
     },
     {
-      "exception": "Expected String, got Object {\"a\":{\"b\":null}}",
+      "exception": "Expected String, got Object",
       "type": "String",
       "value": {
         "a": {
@@ -1988,7 +1988,7 @@
       }
     },
     {
-      "exception": "Expected String, got Object {\"a\":{\"b\":{\"c\":0}}}",
+      "exception": "Expected String, got Object",
       "type": "String",
       "value": {
         "a": {
@@ -1999,7 +1999,7 @@
       }
     },
     {
-      "exception": "Expected String, got Object {\"a\":{\"b\":{\"c\":null}}}",
+      "exception": "Expected String, got Object",
       "type": "String",
       "value": {
         "a": {
@@ -2010,7 +2010,7 @@
       }
     },
     {
-      "exception": "Expected String, got Object {\"a\":{\"b\":{\"c\":0,\"d\":0}}}",
+      "exception": "Expected String, got Object",
       "type": "String",
       "value": {
         "a": {
@@ -2022,17 +2022,17 @@
       }
     },
     {
-      "exception": "Expected String, got Function undefined",
+      "exception": "Expected String, got Function",
       "type": "String",
       "valueId": "function"
     },
     {
-      "exception": "Expected String, got CustomType {}",
+      "exception": "Expected String, got CustomType",
       "type": "String",
       "valueId": "customType"
     },
     {
-      "exception": "Expected String, got Buffer {\"type\":\"Buffer\",\"data\":[]}",
+      "exception": "Expected String, got Buffer",
       "type": "String",
       "valueId": "buffer"
     },
@@ -2047,26 +2047,26 @@
       "value": "foobar"
     },
     {
-      "exception": "Expected Number, got Array []",
+      "exception": "Expected Number, got Array",
       "type": "?Number",
       "value": []
     },
     {
-      "exception": "Expected Number, got Array [0]",
+      "exception": "Expected Number, got Array",
       "type": "?Number",
       "value": [
         0
       ]
     },
     {
-      "exception": "Expected Number, got Array [\"foobar\"]",
+      "exception": "Expected Number, got Array",
       "type": "?Number",
       "value": [
         "foobar"
       ]
     },
     {
-      "exception": "Expected Number, got Array [{\"a\":0}]",
+      "exception": "Expected Number, got Array",
       "type": "?Number",
       "value": [
         {
@@ -2075,7 +2075,7 @@
       ]
     },
     {
-      "exception": "Expected Number, got Array [null]",
+      "exception": "Expected Number, got Array",
       "type": "?Number",
       "value": [
         null
@@ -2092,26 +2092,26 @@
       "value": true
     },
     {
-      "exception": "Expected Number, got Object {}",
+      "exception": "Expected Number, got Object",
       "type": "?Number",
       "value": {}
     },
     {
-      "exception": "Expected Number, got Object {\"a\":null}",
+      "exception": "Expected Number, got Object",
       "type": "?Number",
       "value": {
         "a": null
       }
     },
     {
-      "exception": "Expected Number, got Object {\"a\":0}",
+      "exception": "Expected Number, got Object",
       "type": "?Number",
       "value": {
         "a": 0
       }
     },
     {
-      "exception": "Expected Number, got Object {\"a\":0,\"b\":0}",
+      "exception": "Expected Number, got Object",
       "type": "?Number",
       "value": {
         "a": 0,
@@ -2119,14 +2119,14 @@
       }
     },
     {
-      "exception": "Expected Number, got Object {\"b\":0}",
+      "exception": "Expected Number, got Object",
       "type": "?Number",
       "value": {
         "b": 0
       }
     },
     {
-      "exception": "Expected Number, got Object {\"a\":{\"b\":0}}",
+      "exception": "Expected Number, got Object",
       "type": "?Number",
       "value": {
         "a": {
@@ -2135,7 +2135,7 @@
       }
     },
     {
-      "exception": "Expected Number, got Object {\"a\":{\"b\":null}}",
+      "exception": "Expected Number, got Object",
       "type": "?Number",
       "value": {
         "a": {
@@ -2144,7 +2144,7 @@
       }
     },
     {
-      "exception": "Expected Number, got Object {\"a\":{\"b\":{\"c\":0}}}",
+      "exception": "Expected Number, got Object",
       "type": "?Number",
       "value": {
         "a": {
@@ -2155,7 +2155,7 @@
       }
     },
     {
-      "exception": "Expected Number, got Object {\"a\":{\"b\":{\"c\":null}}}",
+      "exception": "Expected Number, got Object",
       "type": "?Number",
       "value": {
         "a": {
@@ -2166,7 +2166,7 @@
       }
     },
     {
-      "exception": "Expected Number, got Object {\"a\":{\"b\":{\"c\":0,\"d\":0}}}",
+      "exception": "Expected Number, got Object",
       "type": "?Number",
       "value": {
         "a": {
@@ -2178,17 +2178,17 @@
       }
     },
     {
-      "exception": "Expected Number, got Function undefined",
+      "exception": "Expected Number, got Function",
       "type": "?Number",
       "valueId": "function"
     },
     {
-      "exception": "Expected Number, got CustomType {}",
+      "exception": "Expected Number, got CustomType",
       "type": "?Number",
       "valueId": "customType"
     },
     {
-      "exception": "Expected Number, got Buffer {\"type\":\"Buffer\",\"data\":[]}",
+      "exception": "Expected Number, got Buffer",
       "type": "?Number",
       "valueId": "buffer"
     },
@@ -2221,7 +2221,7 @@
       "value": 1
     },
     {
-      "exception": "Expected [\"?Number\"], got Array [\"foobar\"]",
+      "exception": "Expected [\"?Number\"], got Array",
       "type": [
         "?Number"
       ],
@@ -2230,7 +2230,7 @@
       ]
     },
     {
-      "exception": "Expected [\"?Number\"], got Array [{\"a\":0}]",
+      "exception": "Expected [\"?Number\"], got Array",
       "type": [
         "?Number"
       ],
@@ -2268,14 +2268,14 @@
       "value": null
     },
     {
-      "exception": "Expected [\"?Number\"], got Object {}",
+      "exception": "Expected [\"?Number\"], got Object",
       "type": [
         "?Number"
       ],
       "value": {}
     },
     {
-      "exception": "Expected [\"?Number\"], got Object {\"a\":null}",
+      "exception": "Expected [\"?Number\"], got Object",
       "type": [
         "?Number"
       ],
@@ -2284,7 +2284,7 @@
       }
     },
     {
-      "exception": "Expected [\"?Number\"], got Object {\"a\":0}",
+      "exception": "Expected [\"?Number\"], got Object",
       "type": [
         "?Number"
       ],
@@ -2293,7 +2293,7 @@
       }
     },
     {
-      "exception": "Expected [\"?Number\"], got Object {\"a\":0,\"b\":0}",
+      "exception": "Expected [\"?Number\"], got Object",
       "type": [
         "?Number"
       ],
@@ -2303,7 +2303,7 @@
       }
     },
     {
-      "exception": "Expected [\"?Number\"], got Object {\"b\":0}",
+      "exception": "Expected [\"?Number\"], got Object",
       "type": [
         "?Number"
       ],
@@ -2312,7 +2312,7 @@
       }
     },
     {
-      "exception": "Expected [\"?Number\"], got Object {\"a\":{\"b\":0}}",
+      "exception": "Expected [\"?Number\"], got Object",
       "type": [
         "?Number"
       ],
@@ -2323,7 +2323,7 @@
       }
     },
     {
-      "exception": "Expected [\"?Number\"], got Object {\"a\":{\"b\":null}}",
+      "exception": "Expected [\"?Number\"], got Object",
       "type": [
         "?Number"
       ],
@@ -2334,7 +2334,7 @@
       }
     },
     {
-      "exception": "Expected [\"?Number\"], got Object {\"a\":{\"b\":{\"c\":0}}}",
+      "exception": "Expected [\"?Number\"], got Object",
       "type": [
         "?Number"
       ],
@@ -2347,7 +2347,7 @@
       }
     },
     {
-      "exception": "Expected [\"?Number\"], got Object {\"a\":{\"b\":{\"c\":null}}}",
+      "exception": "Expected [\"?Number\"], got Object",
       "type": [
         "?Number"
       ],
@@ -2360,7 +2360,7 @@
       }
     },
     {
-      "exception": "Expected [\"?Number\"], got Object {\"a\":{\"b\":{\"c\":0,\"d\":0}}}",
+      "exception": "Expected [\"?Number\"], got Object",
       "type": [
         "?Number"
       ],
@@ -2374,21 +2374,21 @@
       }
     },
     {
-      "exception": "Expected [\"?Number\"], got Function undefined",
+      "exception": "Expected [\"?Number\"], got Function",
       "type": [
         "?Number"
       ],
       "valueId": "function"
     },
     {
-      "exception": "Expected [\"?Number\"], got CustomType {}",
+      "exception": "Expected [\"?Number\"], got CustomType",
       "type": [
         "?Number"
       ],
       "valueId": "customType"
     },
     {
-      "exception": "Expected [\"?Number\"], got Buffer {\"type\":\"Buffer\",\"data\":[]}",
+      "exception": "Expected [\"?Number\"], got Buffer",
       "type": [
         "?Number"
       ],
@@ -2423,7 +2423,7 @@
       "value": 1
     },
     {
-      "exception": "Expected [\"Number\"], got Array [\"foobar\"]",
+      "exception": "Expected [\"Number\"], got Array",
       "type": [
         "Number"
       ],
@@ -2432,7 +2432,7 @@
       ]
     },
     {
-      "exception": "Expected [\"Number\"], got Array [{\"a\":0}]",
+      "exception": "Expected [\"Number\"], got Array",
       "type": [
         "Number"
       ],
@@ -2443,7 +2443,7 @@
       ]
     },
     {
-      "exception": "Expected [\"Number\"], got Array [null]",
+      "exception": "Expected [\"Number\"], got Array",
       "type": [
         "Number"
       ],
@@ -2479,14 +2479,14 @@
       "value": null
     },
     {
-      "exception": "Expected [\"Number\"], got Object {}",
+      "exception": "Expected [\"Number\"], got Object",
       "type": [
         "Number"
       ],
       "value": {}
     },
     {
-      "exception": "Expected [\"Number\"], got Object {\"a\":null}",
+      "exception": "Expected [\"Number\"], got Object",
       "type": [
         "Number"
       ],
@@ -2495,7 +2495,7 @@
       }
     },
     {
-      "exception": "Expected [\"Number\"], got Object {\"a\":0}",
+      "exception": "Expected [\"Number\"], got Object",
       "type": [
         "Number"
       ],
@@ -2504,7 +2504,7 @@
       }
     },
     {
-      "exception": "Expected [\"Number\"], got Object {\"a\":0,\"b\":0}",
+      "exception": "Expected [\"Number\"], got Object",
       "type": [
         "Number"
       ],
@@ -2514,7 +2514,7 @@
       }
     },
     {
-      "exception": "Expected [\"Number\"], got Object {\"b\":0}",
+      "exception": "Expected [\"Number\"], got Object",
       "type": [
         "Number"
       ],
@@ -2523,7 +2523,7 @@
       }
     },
     {
-      "exception": "Expected [\"Number\"], got Object {\"a\":{\"b\":0}}",
+      "exception": "Expected [\"Number\"], got Object",
       "type": [
         "Number"
       ],
@@ -2534,7 +2534,7 @@
       }
     },
     {
-      "exception": "Expected [\"Number\"], got Object {\"a\":{\"b\":null}}",
+      "exception": "Expected [\"Number\"], got Object",
       "type": [
         "Number"
       ],
@@ -2545,7 +2545,7 @@
       }
     },
     {
-      "exception": "Expected [\"Number\"], got Object {\"a\":{\"b\":{\"c\":0}}}",
+      "exception": "Expected [\"Number\"], got Object",
       "type": [
         "Number"
       ],
@@ -2558,7 +2558,7 @@
       }
     },
     {
-      "exception": "Expected [\"Number\"], got Object {\"a\":{\"b\":{\"c\":null}}}",
+      "exception": "Expected [\"Number\"], got Object",
       "type": [
         "Number"
       ],
@@ -2571,7 +2571,7 @@
       }
     },
     {
-      "exception": "Expected [\"Number\"], got Object {\"a\":{\"b\":{\"c\":0,\"d\":0}}}",
+      "exception": "Expected [\"Number\"], got Object",
       "type": [
         "Number"
       ],
@@ -2585,28 +2585,28 @@
       }
     },
     {
-      "exception": "Expected [\"Number\"], got Function undefined",
+      "exception": "Expected [\"Number\"], got Function",
       "type": [
         "Number"
       ],
       "valueId": "function"
     },
     {
-      "exception": "Expected [\"Number\"], got CustomType {}",
+      "exception": "Expected [\"Number\"], got CustomType",
       "type": [
         "Number"
       ],
       "valueId": "customType"
     },
     {
-      "exception": "Expected [\"Number\"], got Buffer {\"type\":\"Buffer\",\"data\":[]}",
+      "exception": "Expected [\"Number\"], got Buffer",
       "type": [
         "Number"
       ],
       "valueId": "buffer"
     },
     {
-      "exception": "Expected [{\"a\":\"Number\"}], got String \"\"",
+      "exception": "Expected [\"Object\"], got String \"\"",
       "type": [
         {
           "a": "Number"
@@ -2615,7 +2615,7 @@
       "value": ""
     },
     {
-      "exception": "Expected [{\"a\":\"Number\"}], got String \"foobar\"",
+      "exception": "Expected [\"Object\"], got String \"foobar\"",
       "type": [
         {
           "a": "Number"
@@ -2624,7 +2624,7 @@
       "value": "foobar"
     },
     {
-      "exception": "Expected [{\"a\":\"Number\"}], got Number 0",
+      "exception": "Expected [\"Object\"], got Number 0",
       "type": [
         {
           "a": "Number"
@@ -2633,7 +2633,7 @@
       "value": 0
     },
     {
-      "exception": "Expected [{\"a\":\"Number\"}], got Number 1",
+      "exception": "Expected [\"Object\"], got Number 1",
       "type": [
         {
           "a": "Number"
@@ -2642,7 +2642,7 @@
       "value": 1
     },
     {
-      "exception": "Expected [{\"a\":\"Number\"}], got Array [0]",
+      "exception": "Expected [\"Object\"], got Array",
       "type": [
         {
           "a": "Number"
@@ -2653,7 +2653,7 @@
       ]
     },
     {
-      "exception": "Expected [{\"a\":\"Number\"}], got Array [\"foobar\"]",
+      "exception": "Expected [\"Object\"], got Array",
       "type": [
         {
           "a": "Number"
@@ -2664,7 +2664,7 @@
       ]
     },
     {
-      "exception": "Expected [{\"a\":\"Number\"}], got Array [null]",
+      "exception": "Expected [\"Object\"], got Array",
       "type": [
         {
           "a": "Number"
@@ -2675,7 +2675,7 @@
       ]
     },
     {
-      "exception": "Expected [{\"a\":\"Number\"}], got Boolean false",
+      "exception": "Expected [\"Object\"], got Boolean false",
       "type": [
         {
           "a": "Number"
@@ -2684,7 +2684,7 @@
       "value": false
     },
     {
-      "exception": "Expected [{\"a\":\"Number\"}], got Boolean true",
+      "exception": "Expected [\"Object\"], got Boolean true",
       "type": [
         {
           "a": "Number"
@@ -2693,7 +2693,7 @@
       "value": true
     },
     {
-      "exception": "Expected [{\"a\":\"Number\"}], got undefined",
+      "exception": "Expected [\"Object\"], got undefined",
       "type": [
         {
           "a": "Number"
@@ -2701,7 +2701,7 @@
       ]
     },
     {
-      "exception": "Expected [{\"a\":\"Number\"}], got null",
+      "exception": "Expected [\"Object\"], got null",
       "type": [
         {
           "a": "Number"
@@ -2710,7 +2710,7 @@
       "value": null
     },
     {
-      "exception": "Expected [{\"a\":\"Number\"}], got Object {}",
+      "exception": "Expected [\"Object\"], got Object",
       "type": [
         {
           "a": "Number"
@@ -2719,7 +2719,7 @@
       "value": {}
     },
     {
-      "exception": "Expected [{\"a\":\"Number\"}], got Object {\"a\":null}",
+      "exception": "Expected [\"Object\"], got Object",
       "type": [
         {
           "a": "Number"
@@ -2730,7 +2730,7 @@
       }
     },
     {
-      "exception": "Expected [{\"a\":\"Number\"}], got Object {\"a\":0}",
+      "exception": "Expected [\"Object\"], got Object",
       "type": [
         {
           "a": "Number"
@@ -2741,7 +2741,7 @@
       }
     },
     {
-      "exception": "Expected [{\"a\":\"Number\"}], got Object {\"a\":0,\"b\":0}",
+      "exception": "Expected [\"Object\"], got Object",
       "type": [
         {
           "a": "Number"
@@ -2753,7 +2753,7 @@
       }
     },
     {
-      "exception": "Expected [{\"a\":\"Number\"}], got Object {\"b\":0}",
+      "exception": "Expected [\"Object\"], got Object",
       "type": [
         {
           "a": "Number"
@@ -2764,7 +2764,7 @@
       }
     },
     {
-      "exception": "Expected [{\"a\":\"Number\"}], got Object {\"a\":{\"b\":0}}",
+      "exception": "Expected [\"Object\"], got Object",
       "type": [
         {
           "a": "Number"
@@ -2777,7 +2777,7 @@
       }
     },
     {
-      "exception": "Expected [{\"a\":\"Number\"}], got Object {\"a\":{\"b\":null}}",
+      "exception": "Expected [\"Object\"], got Object",
       "type": [
         {
           "a": "Number"
@@ -2790,7 +2790,7 @@
       }
     },
     {
-      "exception": "Expected [{\"a\":\"Number\"}], got Object {\"a\":{\"b\":{\"c\":0}}}",
+      "exception": "Expected [\"Object\"], got Object",
       "type": [
         {
           "a": "Number"
@@ -2805,7 +2805,7 @@
       }
     },
     {
-      "exception": "Expected [{\"a\":\"Number\"}], got Object {\"a\":{\"b\":{\"c\":null}}}",
+      "exception": "Expected [\"Object\"], got Object",
       "type": [
         {
           "a": "Number"
@@ -2820,7 +2820,7 @@
       }
     },
     {
-      "exception": "Expected [{\"a\":\"Number\"}], got Object {\"a\":{\"b\":{\"c\":0,\"d\":0}}}",
+      "exception": "Expected [\"Object\"], got Object",
       "type": [
         {
           "a": "Number"
@@ -2836,7 +2836,7 @@
       }
     },
     {
-      "exception": "Expected [{\"a\":\"Number\"}], got Function undefined",
+      "exception": "Expected [\"Object\"], got Function",
       "type": [
         {
           "a": "Number"
@@ -2845,7 +2845,7 @@
       "valueId": "function"
     },
     {
-      "exception": "Expected [{\"a\":\"Number\"}], got CustomType {}",
+      "exception": "Expected [\"Object\"], got CustomType",
       "type": [
         {
           "a": "Number"
@@ -2854,7 +2854,7 @@
       "valueId": "customType"
     },
     {
-      "exception": "Expected [{\"a\":\"Number\"}], got Buffer {\"type\":\"Buffer\",\"data\":[]}",
+      "exception": "Expected [\"Object\"], got Buffer",
       "type": [
         {
           "a": "Number"
@@ -2999,7 +2999,7 @@
       }
     },
     {
-      "exception": "Expected property \"a\" of type Number, got Object {\"b\":0}",
+      "exception": "Expected property \"a\" of type Number, got Object",
       "type": {
         "a": "Number"
       },
@@ -3010,7 +3010,7 @@
       }
     },
     {
-      "exception": "Expected property \"a\" of type Number, got Object {\"b\":null}",
+      "exception": "Expected property \"a\" of type Number, got Object",
       "type": {
         "a": "Number"
       },
@@ -3021,7 +3021,7 @@
       }
     },
     {
-      "exception": "Expected property \"a\" of type Number, got Object {\"b\":{\"c\":0}}",
+      "exception": "Expected property \"a\" of type Number, got Object",
       "type": {
         "a": "Number"
       },
@@ -3034,7 +3034,7 @@
       }
     },
     {
-      "exception": "Expected property \"a\" of type Number, got Object {\"b\":{\"c\":null}}",
+      "exception": "Expected property \"a\" of type Number, got Object",
       "type": {
         "a": "Number"
       },
@@ -3047,7 +3047,7 @@
       }
     },
     {
-      "exception": "Expected property \"a\" of type Number, got Object {\"b\":{\"c\":0,\"d\":0}}",
+      "exception": "Expected property \"a\" of type Number, got Object",
       "type": {
         "a": "Number"
       },
@@ -3061,7 +3061,7 @@
       }
     },
     {
-      "exception": "Expected Object, got Function undefined",
+      "exception": "Expected Object, got Function",
       "type": {
         "a": "Number"
       },
@@ -3118,7 +3118,7 @@
       "value": 1
     },
     {
-      "exception": "Expected property \"a\" of type {\"b\":\"Number\"}, got undefined",
+      "exception": "Expected property \"a\" of type Object, got undefined",
       "type": {
         "a": {
           "b": "Number"
@@ -3127,7 +3127,7 @@
       "value": []
     },
     {
-      "exception": "Expected property \"a\" of type {\"b\":\"Number\"}, got undefined",
+      "exception": "Expected property \"a\" of type Object, got undefined",
       "type": {
         "a": {
           "b": "Number"
@@ -3138,7 +3138,7 @@
       ]
     },
     {
-      "exception": "Expected property \"a\" of type {\"b\":\"Number\"}, got undefined",
+      "exception": "Expected property \"a\" of type Object, got undefined",
       "type": {
         "a": {
           "b": "Number"
@@ -3149,7 +3149,7 @@
       ]
     },
     {
-      "exception": "Expected property \"a\" of type {\"b\":\"Number\"}, got undefined",
+      "exception": "Expected property \"a\" of type Object, got undefined",
       "type": {
         "a": {
           "b": "Number"
@@ -3162,7 +3162,7 @@
       ]
     },
     {
-      "exception": "Expected property \"a\" of type {\"b\":\"Number\"}, got undefined",
+      "exception": "Expected property \"a\" of type Object, got undefined",
       "type": {
         "a": {
           "b": "Number"
@@ -3199,7 +3199,7 @@
       }
     },
     {
-      "exception": "Expected property \"a\" of type {\"b\":\"Number\"}, got undefined",
+      "exception": "Expected property \"a\" of type Object, got undefined",
       "type": {
         "a": {
           "b": "Number"
@@ -3208,7 +3208,7 @@
       "value": null
     },
     {
-      "exception": "Expected property \"a\" of type {\"b\":\"Number\"}, got undefined",
+      "exception": "Expected property \"a\" of type Object, got undefined",
       "type": {
         "a": {
           "b": "Number"
@@ -3217,7 +3217,7 @@
       "value": {}
     },
     {
-      "exception": "Expected property \"a\" of type {\"b\":\"Number\"}, got null",
+      "exception": "Expected property \"a\" of type Object, got null",
       "type": {
         "a": {
           "b": "Number"
@@ -3228,7 +3228,7 @@
       }
     },
     {
-      "exception": "Expected property \"a\" of type {\"b\":\"Number\"}, got Number 0",
+      "exception": "Expected property \"a\" of type Object, got Number 0",
       "type": {
         "a": {
           "b": "Number"
@@ -3239,7 +3239,7 @@
       }
     },
     {
-      "exception": "Expected property \"a\" of type {\"b\":\"Number\"}, got Number 0",
+      "exception": "Expected property \"a\" of type Object, got Number 0",
       "type": {
         "a": {
           "b": "Number"
@@ -3251,7 +3251,7 @@
       }
     },
     {
-      "exception": "Expected property \"a\" of type {\"b\":\"Number\"}, got undefined",
+      "exception": "Expected property \"a\" of type Object, got undefined",
       "type": {
         "a": {
           "b": "Number"
@@ -3262,7 +3262,7 @@
       }
     },
     {
-      "exception": "Expected property \"a\" of type {\"b\":\"Number\"}, got Object {\"b\":null}",
+      "exception": "Expected property \"a\" of type Object, got Object",
       "type": {
         "a": {
           "b": "Number"
@@ -3275,7 +3275,7 @@
       }
     },
     {
-      "exception": "Expected property \"a\" of type {\"b\":\"Number\"}, got Object {\"b\":{\"c\":0}}",
+      "exception": "Expected property \"a\" of type Object, got Object",
       "type": {
         "a": {
           "b": "Number"
@@ -3290,7 +3290,7 @@
       }
     },
     {
-      "exception": "Expected property \"a\" of type {\"b\":\"Number\"}, got Object {\"b\":{\"c\":null}}",
+      "exception": "Expected property \"a\" of type Object, got Object",
       "type": {
         "a": {
           "b": "Number"
@@ -3305,7 +3305,7 @@
       }
     },
     {
-      "exception": "Expected property \"a\" of type {\"b\":\"Number\"}, got Object {\"b\":{\"c\":0,\"d\":0}}",
+      "exception": "Expected property \"a\" of type Object, got Object",
       "type": {
         "a": {
           "b": "Number"
@@ -3321,7 +3321,7 @@
       }
     },
     {
-      "exception": "Expected Object, got Function undefined",
+      "exception": "Expected Object, got Function",
       "type": {
         "a": {
           "b": "Number"
@@ -3330,7 +3330,7 @@
       "valueId": "function"
     },
     {
-      "exception": "Expected property \"a\" of type {\"b\":\"Number\"}, got undefined",
+      "exception": "Expected property \"a\" of type Object, got undefined",
       "type": {
         "a": {
           "b": "Number"
@@ -3339,7 +3339,7 @@
       "valueId": "customType"
     },
     {
-      "exception": "Expected property \"a\" of type {\"b\":\"Number\"}, got undefined",
+      "exception": "Expected property \"a\" of type Object, got undefined",
       "type": {
         "a": {
           "b": "Number"
@@ -3392,7 +3392,7 @@
       "value": 1
     },
     {
-      "exception": "Expected property \"a\" of type {\"b\":{\"c\":\"?Number\"}}, got undefined",
+      "exception": "Expected property \"a\" of type Object, got undefined",
       "type": {
         "a": {
           "b": {
@@ -3403,7 +3403,7 @@
       "value": []
     },
     {
-      "exception": "Expected property \"a\" of type {\"b\":{\"c\":\"?Number\"}}, got undefined",
+      "exception": "Expected property \"a\" of type Object, got undefined",
       "type": {
         "a": {
           "b": {
@@ -3416,7 +3416,7 @@
       ]
     },
     {
-      "exception": "Expected property \"a\" of type {\"b\":{\"c\":\"?Number\"}}, got undefined",
+      "exception": "Expected property \"a\" of type Object, got undefined",
       "type": {
         "a": {
           "b": {
@@ -3429,7 +3429,7 @@
       ]
     },
     {
-      "exception": "Expected property \"a\" of type {\"b\":{\"c\":\"?Number\"}}, got undefined",
+      "exception": "Expected property \"a\" of type Object, got undefined",
       "type": {
         "a": {
           "b": {
@@ -3444,7 +3444,7 @@
       ]
     },
     {
-      "exception": "Expected property \"a\" of type {\"b\":{\"c\":\"?Number\"}}, got undefined",
+      "exception": "Expected property \"a\" of type Object, got undefined",
       "type": {
         "a": {
           "b": {
@@ -3489,7 +3489,7 @@
       }
     },
     {
-      "exception": "Expected property \"a\" of type {\"b\":{\"c\":\"?Number\"}}, got undefined",
+      "exception": "Expected property \"a\" of type Object, got undefined",
       "type": {
         "a": {
           "b": {
@@ -3500,7 +3500,7 @@
       "value": null
     },
     {
-      "exception": "Expected property \"a\" of type {\"b\":{\"c\":\"?Number\"}}, got undefined",
+      "exception": "Expected property \"a\" of type Object, got undefined",
       "type": {
         "a": {
           "b": {
@@ -3511,7 +3511,7 @@
       "value": {}
     },
     {
-      "exception": "Expected property \"a\" of type {\"b\":{\"c\":\"?Number\"}}, got null",
+      "exception": "Expected property \"a\" of type Object, got null",
       "type": {
         "a": {
           "b": {
@@ -3524,7 +3524,7 @@
       }
     },
     {
-      "exception": "Expected property \"a\" of type {\"b\":{\"c\":\"?Number\"}}, got Number 0",
+      "exception": "Expected property \"a\" of type Object, got Number 0",
       "type": {
         "a": {
           "b": {
@@ -3537,7 +3537,7 @@
       }
     },
     {
-      "exception": "Expected property \"a\" of type {\"b\":{\"c\":\"?Number\"}}, got Number 0",
+      "exception": "Expected property \"a\" of type Object, got Number 0",
       "type": {
         "a": {
           "b": {
@@ -3551,7 +3551,7 @@
       }
     },
     {
-      "exception": "Expected property \"a\" of type {\"b\":{\"c\":\"?Number\"}}, got undefined",
+      "exception": "Expected property \"a\" of type Object, got undefined",
       "type": {
         "a": {
           "b": {
@@ -3564,7 +3564,7 @@
       }
     },
     {
-      "exception": "Expected property \"a\" of type {\"b\":{\"c\":\"?Number\"}}, got Object {\"b\":0}",
+      "exception": "Expected property \"a\" of type Object, got Object",
       "type": {
         "a": {
           "b": {
@@ -3579,7 +3579,7 @@
       }
     },
     {
-      "exception": "Expected property \"a\" of type {\"b\":{\"c\":\"?Number\"}}, got Object {\"b\":null}",
+      "exception": "Expected property \"a\" of type Object, got Object",
       "type": {
         "a": {
           "b": {
@@ -3594,7 +3594,7 @@
       }
     },
     {
-      "exception": "Expected property \"a\" of type {\"b\":{\"c\":\"?Number\"}}, got Object {\"b\":{\"c\":0,\"d\":0}}",
+      "exception": "Expected property \"a\" of type Object, got Object",
       "strict": true,
       "type": {
         "a": {
@@ -3613,7 +3613,7 @@
       }
     },
     {
-      "exception": "Expected Object, got Function undefined",
+      "exception": "Expected Object, got Function",
       "type": {
         "a": {
           "b": {
@@ -3624,7 +3624,7 @@
       "valueId": "function"
     },
     {
-      "exception": "Expected property \"a\" of type {\"b\":{\"c\":\"?Number\"}}, got undefined",
+      "exception": "Expected property \"a\" of type Object, got undefined",
       "type": {
         "a": {
           "b": {
@@ -3635,7 +3635,7 @@
       "valueId": "customType"
     },
     {
-      "exception": "Expected property \"a\" of type {\"b\":{\"c\":\"?Number\"}}, got undefined",
+      "exception": "Expected property \"a\" of type Object, got undefined",
       "type": {
         "a": {
           "b": {
@@ -3690,7 +3690,7 @@
       "value": 1
     },
     {
-      "exception": "Expected property \"a\" of type {\"b\":{\"c\":\"Number\"}}, got undefined",
+      "exception": "Expected property \"a\" of type Object, got undefined",
       "type": {
         "a": {
           "b": {
@@ -3701,7 +3701,7 @@
       "value": []
     },
     {
-      "exception": "Expected property \"a\" of type {\"b\":{\"c\":\"Number\"}}, got undefined",
+      "exception": "Expected property \"a\" of type Object, got undefined",
       "type": {
         "a": {
           "b": {
@@ -3714,7 +3714,7 @@
       ]
     },
     {
-      "exception": "Expected property \"a\" of type {\"b\":{\"c\":\"Number\"}}, got undefined",
+      "exception": "Expected property \"a\" of type Object, got undefined",
       "type": {
         "a": {
           "b": {
@@ -3727,7 +3727,7 @@
       ]
     },
     {
-      "exception": "Expected property \"a\" of type {\"b\":{\"c\":\"Number\"}}, got undefined",
+      "exception": "Expected property \"a\" of type Object, got undefined",
       "type": {
         "a": {
           "b": {
@@ -3742,7 +3742,7 @@
       ]
     },
     {
-      "exception": "Expected property \"a\" of type {\"b\":{\"c\":\"Number\"}}, got undefined",
+      "exception": "Expected property \"a\" of type Object, got undefined",
       "type": {
         "a": {
           "b": {
@@ -3787,7 +3787,7 @@
       }
     },
     {
-      "exception": "Expected property \"a\" of type {\"b\":{\"c\":\"Number\"}}, got undefined",
+      "exception": "Expected property \"a\" of type Object, got undefined",
       "type": {
         "a": {
           "b": {
@@ -3798,7 +3798,7 @@
       "value": null
     },
     {
-      "exception": "Expected property \"a\" of type {\"b\":{\"c\":\"Number\"}}, got undefined",
+      "exception": "Expected property \"a\" of type Object, got undefined",
       "type": {
         "a": {
           "b": {
@@ -3809,7 +3809,7 @@
       "value": {}
     },
     {
-      "exception": "Expected property \"a\" of type {\"b\":{\"c\":\"Number\"}}, got null",
+      "exception": "Expected property \"a\" of type Object, got null",
       "type": {
         "a": {
           "b": {
@@ -3822,7 +3822,7 @@
       }
     },
     {
-      "exception": "Expected property \"a\" of type {\"b\":{\"c\":\"Number\"}}, got Number 0",
+      "exception": "Expected property \"a\" of type Object, got Number 0",
       "type": {
         "a": {
           "b": {
@@ -3835,7 +3835,7 @@
       }
     },
     {
-      "exception": "Expected property \"a\" of type {\"b\":{\"c\":\"Number\"}}, got Number 0",
+      "exception": "Expected property \"a\" of type Object, got Number 0",
       "type": {
         "a": {
           "b": {
@@ -3849,7 +3849,7 @@
       }
     },
     {
-      "exception": "Expected property \"a\" of type {\"b\":{\"c\":\"Number\"}}, got undefined",
+      "exception": "Expected property \"a\" of type Object, got undefined",
       "type": {
         "a": {
           "b": {
@@ -3862,7 +3862,7 @@
       }
     },
     {
-      "exception": "Expected property \"a\" of type {\"b\":{\"c\":\"Number\"}}, got Object {\"b\":0}",
+      "exception": "Expected property \"a\" of type Object, got Object",
       "type": {
         "a": {
           "b": {
@@ -3877,7 +3877,7 @@
       }
     },
     {
-      "exception": "Expected property \"a\" of type {\"b\":{\"c\":\"Number\"}}, got Object {\"b\":null}",
+      "exception": "Expected property \"a\" of type Object, got Object",
       "type": {
         "a": {
           "b": {
@@ -3892,7 +3892,7 @@
       }
     },
     {
-      "exception": "Expected property \"a\" of type {\"b\":{\"c\":\"Number\"}}, got Object {\"b\":{\"c\":null}}",
+      "exception": "Expected property \"a\" of type Object, got Object",
       "type": {
         "a": {
           "b": {
@@ -3909,7 +3909,7 @@
       }
     },
     {
-      "exception": "Expected property \"a\" of type {\"b\":{\"c\":\"Number\"}}, got Object {\"b\":{\"c\":0,\"d\":0}}",
+      "exception": "Expected property \"a\" of type Object, got Object",
       "strict": true,
       "type": {
         "a": {
@@ -3928,7 +3928,7 @@
       }
     },
     {
-      "exception": "Expected Object, got Function undefined",
+      "exception": "Expected Object, got Function",
       "type": {
         "a": {
           "b": {
@@ -3939,7 +3939,7 @@
       "valueId": "function"
     },
     {
-      "exception": "Expected property \"a\" of type {\"b\":{\"c\":\"Number\"}}, got undefined",
+      "exception": "Expected property \"a\" of type Object, got undefined",
       "type": {
         "a": {
           "b": {
@@ -3950,7 +3950,7 @@
       "valueId": "customType"
     },
     {
-      "exception": "Expected property \"a\" of type {\"b\":{\"c\":\"Number\"}}, got undefined",
+      "exception": "Expected property \"a\" of type Object, got undefined",
       "type": {
         "a": {
           "b": {
@@ -3977,23 +3977,23 @@
       "value": 1
     },
     {
-      "exception": "Expected undefined, got Array []",
+      "exception": "Expected undefined, got Array",
       "value": []
     },
     {
-      "exception": "Expected undefined, got Array [0]",
+      "exception": "Expected undefined, got Array",
       "value": [
         0
       ]
     },
     {
-      "exception": "Expected undefined, got Array [\"foobar\"]",
+      "exception": "Expected undefined, got Array",
       "value": [
         "foobar"
       ]
     },
     {
-      "exception": "Expected undefined, got Array [{\"a\":0}]",
+      "exception": "Expected undefined, got Array",
       "value": [
         {
           "a": 0
@@ -4001,7 +4001,7 @@
       ]
     },
     {
-      "exception": "Expected undefined, got Array [null]",
+      "exception": "Expected undefined, got Array",
       "value": [
         null
       ]
@@ -4019,36 +4019,36 @@
       "value": null
     },
     {
-      "exception": "Expected undefined, got Object {}",
+      "exception": "Expected undefined, got Object",
       "value": {}
     },
     {
-      "exception": "Expected undefined, got Object {\"a\":null}",
+      "exception": "Expected undefined, got Object",
       "value": {
         "a": null
       }
     },
     {
-      "exception": "Expected undefined, got Object {\"a\":0}",
+      "exception": "Expected undefined, got Object",
       "value": {
         "a": 0
       }
     },
     {
-      "exception": "Expected undefined, got Object {\"a\":0,\"b\":0}",
+      "exception": "Expected undefined, got Object",
       "value": {
         "a": 0,
         "b": 0
       }
     },
     {
-      "exception": "Expected undefined, got Object {\"b\":0}",
+      "exception": "Expected undefined, got Object",
       "value": {
         "b": 0
       }
     },
     {
-      "exception": "Expected undefined, got Object {\"a\":{\"b\":0}}",
+      "exception": "Expected undefined, got Object",
       "value": {
         "a": {
           "b": 0
@@ -4056,7 +4056,7 @@
       }
     },
     {
-      "exception": "Expected undefined, got Object {\"a\":{\"b\":null}}",
+      "exception": "Expected undefined, got Object",
       "value": {
         "a": {
           "b": null
@@ -4064,7 +4064,7 @@
       }
     },
     {
-      "exception": "Expected undefined, got Object {\"a\":{\"b\":{\"c\":0}}}",
+      "exception": "Expected undefined, got Object",
       "value": {
         "a": {
           "b": {
@@ -4074,7 +4074,7 @@
       }
     },
     {
-      "exception": "Expected undefined, got Object {\"a\":{\"b\":{\"c\":null}}}",
+      "exception": "Expected undefined, got Object",
       "value": {
         "a": {
           "b": {
@@ -4084,7 +4084,7 @@
       }
     },
     {
-      "exception": "Expected undefined, got Object {\"a\":{\"b\":{\"c\":0,\"d\":0}}}",
+      "exception": "Expected undefined, got Object",
       "value": {
         "a": {
           "b": {
@@ -4095,15 +4095,15 @@
       }
     },
     {
-      "exception": "Expected undefined, got Function undefined",
+      "exception": "Expected undefined, got Function",
       "valueId": "function"
     },
     {
-      "exception": "Expected undefined, got CustomType {}",
+      "exception": "Expected undefined, got CustomType",
       "valueId": "customType"
     },
     {
-      "exception": "Expected undefined, got Buffer {\"type\":\"Buffer\",\"data\":[]}",
+      "exception": "Expected undefined, got Buffer",
       "valueId": "buffer"
     },
     {
@@ -4127,26 +4127,26 @@
       "value": 1
     },
     {
-      "exception": "Expected null, got Array []",
+      "exception": "Expected null, got Array",
       "type": null,
       "value": []
     },
     {
-      "exception": "Expected null, got Array [0]",
+      "exception": "Expected null, got Array",
       "type": null,
       "value": [
         0
       ]
     },
     {
-      "exception": "Expected null, got Array [\"foobar\"]",
+      "exception": "Expected null, got Array",
       "type": null,
       "value": [
         "foobar"
       ]
     },
     {
-      "exception": "Expected null, got Array [{\"a\":0}]",
+      "exception": "Expected null, got Array",
       "type": null,
       "value": [
         {
@@ -4155,7 +4155,7 @@
       ]
     },
     {
-      "exception": "Expected null, got Array [null]",
+      "exception": "Expected null, got Array",
       "type": null,
       "value": [
         null
@@ -4176,26 +4176,26 @@
       "type": null
     },
     {
-      "exception": "Expected null, got Object {}",
+      "exception": "Expected null, got Object",
       "type": null,
       "value": {}
     },
     {
-      "exception": "Expected null, got Object {\"a\":null}",
+      "exception": "Expected null, got Object",
       "type": null,
       "value": {
         "a": null
       }
     },
     {
-      "exception": "Expected null, got Object {\"a\":0}",
+      "exception": "Expected null, got Object",
       "type": null,
       "value": {
         "a": 0
       }
     },
     {
-      "exception": "Expected null, got Object {\"a\":0,\"b\":0}",
+      "exception": "Expected null, got Object",
       "type": null,
       "value": {
         "a": 0,
@@ -4203,14 +4203,14 @@
       }
     },
     {
-      "exception": "Expected null, got Object {\"b\":0}",
+      "exception": "Expected null, got Object",
       "type": null,
       "value": {
         "b": 0
       }
     },
     {
-      "exception": "Expected null, got Object {\"a\":{\"b\":0}}",
+      "exception": "Expected null, got Object",
       "type": null,
       "value": {
         "a": {
@@ -4219,7 +4219,7 @@
       }
     },
     {
-      "exception": "Expected null, got Object {\"a\":{\"b\":null}}",
+      "exception": "Expected null, got Object",
       "type": null,
       "value": {
         "a": {
@@ -4228,7 +4228,7 @@
       }
     },
     {
-      "exception": "Expected null, got Object {\"a\":{\"b\":{\"c\":0}}}",
+      "exception": "Expected null, got Object",
       "type": null,
       "value": {
         "a": {
@@ -4239,7 +4239,7 @@
       }
     },
     {
-      "exception": "Expected null, got Object {\"a\":{\"b\":{\"c\":null}}}",
+      "exception": "Expected null, got Object",
       "type": null,
       "value": {
         "a": {
@@ -4250,7 +4250,7 @@
       }
     },
     {
-      "exception": "Expected null, got Object {\"a\":{\"b\":{\"c\":0,\"d\":0}}}",
+      "exception": "Expected null, got Object",
       "type": null,
       "value": {
         "a": {
@@ -4262,17 +4262,17 @@
       }
     },
     {
-      "exception": "Expected null, got Function undefined",
+      "exception": "Expected null, got Function",
       "type": null,
       "valueId": "function"
     },
     {
-      "exception": "Expected null, got CustomType {}",
+      "exception": "Expected null, got CustomType",
       "type": null,
       "valueId": "customType"
     },
     {
-      "exception": "Expected null, got Buffer {\"type\":\"Buffer\",\"data\":[]}",
+      "exception": "Expected null, got Buffer",
       "type": null,
       "valueId": "buffer"
     },
@@ -4297,26 +4297,26 @@
       "value": 1
     },
     {
-      "exception": "Expected true, got Array []",
+      "exception": "Expected true, got Array",
       "type": true,
       "value": []
     },
     {
-      "exception": "Expected true, got Array [0]",
+      "exception": "Expected true, got Array",
       "type": true,
       "value": [
         0
       ]
     },
     {
-      "exception": "Expected true, got Array [\"foobar\"]",
+      "exception": "Expected true, got Array",
       "type": true,
       "value": [
         "foobar"
       ]
     },
     {
-      "exception": "Expected true, got Array [{\"a\":0}]",
+      "exception": "Expected true, got Array",
       "type": true,
       "value": [
         {
@@ -4325,7 +4325,7 @@
       ]
     },
     {
-      "exception": "Expected true, got Array [null]",
+      "exception": "Expected true, got Array",
       "type": true,
       "value": [
         null
@@ -4346,26 +4346,26 @@
       "value": null
     },
     {
-      "exception": "Expected true, got Object {}",
+      "exception": "Expected true, got Object",
       "type": true,
       "value": {}
     },
     {
-      "exception": "Expected true, got Object {\"a\":null}",
+      "exception": "Expected true, got Object",
       "type": true,
       "value": {
         "a": null
       }
     },
     {
-      "exception": "Expected true, got Object {\"a\":0}",
+      "exception": "Expected true, got Object",
       "type": true,
       "value": {
         "a": 0
       }
     },
     {
-      "exception": "Expected true, got Object {\"a\":0,\"b\":0}",
+      "exception": "Expected true, got Object",
       "type": true,
       "value": {
         "a": 0,
@@ -4373,14 +4373,14 @@
       }
     },
     {
-      "exception": "Expected true, got Object {\"b\":0}",
+      "exception": "Expected true, got Object",
       "type": true,
       "value": {
         "b": 0
       }
     },
     {
-      "exception": "Expected true, got Object {\"a\":{\"b\":0}}",
+      "exception": "Expected true, got Object",
       "type": true,
       "value": {
         "a": {
@@ -4389,7 +4389,7 @@
       }
     },
     {
-      "exception": "Expected true, got Object {\"a\":{\"b\":null}}",
+      "exception": "Expected true, got Object",
       "type": true,
       "value": {
         "a": {
@@ -4398,7 +4398,7 @@
       }
     },
     {
-      "exception": "Expected true, got Object {\"a\":{\"b\":{\"c\":0}}}",
+      "exception": "Expected true, got Object",
       "type": true,
       "value": {
         "a": {
@@ -4409,7 +4409,7 @@
       }
     },
     {
-      "exception": "Expected true, got Object {\"a\":{\"b\":{\"c\":null}}}",
+      "exception": "Expected true, got Object",
       "type": true,
       "value": {
         "a": {
@@ -4420,7 +4420,7 @@
       }
     },
     {
-      "exception": "Expected true, got Object {\"a\":{\"b\":{\"c\":0,\"d\":0}}}",
+      "exception": "Expected true, got Object",
       "type": true,
       "value": {
         "a": {
@@ -4432,17 +4432,17 @@
       }
     },
     {
-      "exception": "Expected true, got Function undefined",
+      "exception": "Expected true, got Function",
       "type": true,
       "valueId": "function"
     },
     {
-      "exception": "Expected true, got CustomType {}",
+      "exception": "Expected true, got CustomType",
       "type": true,
       "valueId": "customType"
     },
     {
-      "exception": "Expected true, got Buffer {\"type\":\"Buffer\",\"data\":[]}",
+      "exception": "Expected true, got Buffer",
       "type": true,
       "valueId": "buffer"
     },
@@ -4467,26 +4467,26 @@
       "value": 1
     },
     {
-      "exception": "Expected false, got Array []",
+      "exception": "Expected false, got Array",
       "type": false,
       "value": []
     },
     {
-      "exception": "Expected false, got Array [0]",
+      "exception": "Expected false, got Array",
       "type": false,
       "value": [
         0
       ]
     },
     {
-      "exception": "Expected false, got Array [\"foobar\"]",
+      "exception": "Expected false, got Array",
       "type": false,
       "value": [
         "foobar"
       ]
     },
     {
-      "exception": "Expected false, got Array [{\"a\":0}]",
+      "exception": "Expected false, got Array",
       "type": false,
       "value": [
         {
@@ -4495,7 +4495,7 @@
       ]
     },
     {
-      "exception": "Expected false, got Array [null]",
+      "exception": "Expected false, got Array",
       "type": false,
       "value": [
         null
@@ -4516,26 +4516,26 @@
       "value": null
     },
     {
-      "exception": "Expected false, got Object {}",
+      "exception": "Expected false, got Object",
       "type": false,
       "value": {}
     },
     {
-      "exception": "Expected false, got Object {\"a\":null}",
+      "exception": "Expected false, got Object",
       "type": false,
       "value": {
         "a": null
       }
     },
     {
-      "exception": "Expected false, got Object {\"a\":0}",
+      "exception": "Expected false, got Object",
       "type": false,
       "value": {
         "a": 0
       }
     },
     {
-      "exception": "Expected false, got Object {\"a\":0,\"b\":0}",
+      "exception": "Expected false, got Object",
       "type": false,
       "value": {
         "a": 0,
@@ -4543,14 +4543,14 @@
       }
     },
     {
-      "exception": "Expected false, got Object {\"b\":0}",
+      "exception": "Expected false, got Object",
       "type": false,
       "value": {
         "b": 0
       }
     },
     {
-      "exception": "Expected false, got Object {\"a\":{\"b\":0}}",
+      "exception": "Expected false, got Object",
       "type": false,
       "value": {
         "a": {
@@ -4559,7 +4559,7 @@
       }
     },
     {
-      "exception": "Expected false, got Object {\"a\":{\"b\":null}}",
+      "exception": "Expected false, got Object",
       "type": false,
       "value": {
         "a": {
@@ -4568,7 +4568,7 @@
       }
     },
     {
-      "exception": "Expected false, got Object {\"a\":{\"b\":{\"c\":0}}}",
+      "exception": "Expected false, got Object",
       "type": false,
       "value": {
         "a": {
@@ -4579,7 +4579,7 @@
       }
     },
     {
-      "exception": "Expected false, got Object {\"a\":{\"b\":{\"c\":null}}}",
+      "exception": "Expected false, got Object",
       "type": false,
       "value": {
         "a": {
@@ -4590,7 +4590,7 @@
       }
     },
     {
-      "exception": "Expected false, got Object {\"a\":{\"b\":{\"c\":0,\"d\":0}}}",
+      "exception": "Expected false, got Object",
       "type": false,
       "value": {
         "a": {
@@ -4602,17 +4602,17 @@
       }
     },
     {
-      "exception": "Expected false, got Function undefined",
+      "exception": "Expected false, got Function",
       "type": false,
       "valueId": "function"
     },
     {
-      "exception": "Expected false, got CustomType {}",
+      "exception": "Expected false, got CustomType",
       "type": false,
       "valueId": "customType"
     },
     {
-      "exception": "Expected false, got Buffer {\"type\":\"Buffer\",\"data\":[]}",
+      "exception": "Expected false, got Buffer",
       "type": false,
       "valueId": "buffer"
     },
@@ -4632,26 +4632,26 @@
       "value": 1
     },
     {
-      "exception": "Expected 0, got Array []",
+      "exception": "Expected 0, got Array",
       "type": 0,
       "value": []
     },
     {
-      "exception": "Expected 0, got Array [0]",
+      "exception": "Expected 0, got Array",
       "type": 0,
       "value": [
         0
       ]
     },
     {
-      "exception": "Expected 0, got Array [\"foobar\"]",
+      "exception": "Expected 0, got Array",
       "type": 0,
       "value": [
         "foobar"
       ]
     },
     {
-      "exception": "Expected 0, got Array [{\"a\":0}]",
+      "exception": "Expected 0, got Array",
       "type": 0,
       "value": [
         {
@@ -4660,7 +4660,7 @@
       ]
     },
     {
-      "exception": "Expected 0, got Array [null]",
+      "exception": "Expected 0, got Array",
       "type": 0,
       "value": [
         null
@@ -4686,26 +4686,26 @@
       "value": null
     },
     {
-      "exception": "Expected 0, got Object {}",
+      "exception": "Expected 0, got Object",
       "type": 0,
       "value": {}
     },
     {
-      "exception": "Expected 0, got Object {\"a\":null}",
+      "exception": "Expected 0, got Object",
       "type": 0,
       "value": {
         "a": null
       }
     },
     {
-      "exception": "Expected 0, got Object {\"a\":0}",
+      "exception": "Expected 0, got Object",
       "type": 0,
       "value": {
         "a": 0
       }
     },
     {
-      "exception": "Expected 0, got Object {\"a\":0,\"b\":0}",
+      "exception": "Expected 0, got Object",
       "type": 0,
       "value": {
         "a": 0,
@@ -4713,14 +4713,14 @@
       }
     },
     {
-      "exception": "Expected 0, got Object {\"b\":0}",
+      "exception": "Expected 0, got Object",
       "type": 0,
       "value": {
         "b": 0
       }
     },
     {
-      "exception": "Expected 0, got Object {\"a\":{\"b\":0}}",
+      "exception": "Expected 0, got Object",
       "type": 0,
       "value": {
         "a": {
@@ -4729,7 +4729,7 @@
       }
     },
     {
-      "exception": "Expected 0, got Object {\"a\":{\"b\":null}}",
+      "exception": "Expected 0, got Object",
       "type": 0,
       "value": {
         "a": {
@@ -4738,7 +4738,7 @@
       }
     },
     {
-      "exception": "Expected 0, got Object {\"a\":{\"b\":{\"c\":0}}}",
+      "exception": "Expected 0, got Object",
       "type": 0,
       "value": {
         "a": {
@@ -4749,7 +4749,7 @@
       }
     },
     {
-      "exception": "Expected 0, got Object {\"a\":{\"b\":{\"c\":null}}}",
+      "exception": "Expected 0, got Object",
       "type": 0,
       "value": {
         "a": {
@@ -4760,7 +4760,7 @@
       }
     },
     {
-      "exception": "Expected 0, got Object {\"a\":{\"b\":{\"c\":0,\"d\":0}}}",
+      "exception": "Expected 0, got Object",
       "type": 0,
       "value": {
         "a": {
@@ -4772,17 +4772,17 @@
       }
     },
     {
-      "exception": "Expected 0, got Function undefined",
+      "exception": "Expected 0, got Function",
       "type": 0,
       "valueId": "function"
     },
     {
-      "exception": "Expected 0, got CustomType {}",
+      "exception": "Expected 0, got CustomType",
       "type": 0,
       "valueId": "customType"
     },
     {
-      "exception": "Expected 0, got Buffer {\"type\":\"Buffer\",\"data\":[]}",
+      "exception": "Expected 0, got Buffer",
       "type": 0,
       "valueId": "buffer"
     },
@@ -4826,7 +4826,7 @@
       ]
     },
     {
-      "exception": "Expected Boolean, got Object {\"a\":0}",
+      "exception": "Expected Boolean, got Object",
       "typeId": "\"(Boolean, Number)\"",
       "value": [
         {
@@ -4982,7 +4982,7 @@
       "value": []
     },
     {
-      "exception": "Expected Number|String, got Object {\"a\":0}",
+      "exception": "Expected Number|String, got Object",
       "typeId": "\"(Number|String)\"",
       "value": [
         {
@@ -5150,7 +5150,7 @@
       ]
     },
     {
-      "exception": "Expected Number, got Object {\"a\":0}",
+      "exception": "Expected Number, got Object",
       "typeId": "\"(Number)\"",
       "value": [
         {
@@ -5286,79 +5286,79 @@
       "valueId": "buffer"
     },
     {
-      "exception": "Expected [\"?{\\\"a\\\":\\\"Number\\\"}\"], got String \"\"",
+      "exception": "Expected [\"?Object\"], got String \"\"",
       "typeId": "[\"?{\\\"a\\\":\\\"Number\\\"}\"]",
       "value": ""
     },
     {
-      "exception": "Expected [\"?{\\\"a\\\":\\\"Number\\\"}\"], got String \"foobar\"",
+      "exception": "Expected [\"?Object\"], got String \"foobar\"",
       "typeId": "[\"?{\\\"a\\\":\\\"Number\\\"}\"]",
       "value": "foobar"
     },
     {
-      "exception": "Expected [\"?{\\\"a\\\":\\\"Number\\\"}\"], got Number 0",
+      "exception": "Expected [\"?Object\"], got Number 0",
       "typeId": "[\"?{\\\"a\\\":\\\"Number\\\"}\"]",
       "value": 0
     },
     {
-      "exception": "Expected [\"?{\\\"a\\\":\\\"Number\\\"}\"], got Number 1",
+      "exception": "Expected [\"?Object\"], got Number 1",
       "typeId": "[\"?{\\\"a\\\":\\\"Number\\\"}\"]",
       "value": 1
     },
     {
-      "exception": "Expected [\"?{\\\"a\\\":\\\"Number\\\"}\"], got Array [0]",
+      "exception": "Expected [\"?Object\"], got Array",
       "typeId": "[\"?{\\\"a\\\":\\\"Number\\\"}\"]",
       "value": [
         0
       ]
     },
     {
-      "exception": "Expected [\"?{\\\"a\\\":\\\"Number\\\"}\"], got Array [\"foobar\"]",
+      "exception": "Expected [\"?Object\"], got Array",
       "typeId": "[\"?{\\\"a\\\":\\\"Number\\\"}\"]",
       "value": [
         "foobar"
       ]
     },
     {
-      "exception": "Expected [\"?{\\\"a\\\":\\\"Number\\\"}\"], got Boolean false",
+      "exception": "Expected [\"?Object\"], got Boolean false",
       "typeId": "[\"?{\\\"a\\\":\\\"Number\\\"}\"]",
       "value": false
     },
     {
-      "exception": "Expected [\"?{\\\"a\\\":\\\"Number\\\"}\"], got Boolean true",
+      "exception": "Expected [\"?Object\"], got Boolean true",
       "typeId": "[\"?{\\\"a\\\":\\\"Number\\\"}\"]",
       "value": true
     },
     {
-      "exception": "Expected [\"?{\\\"a\\\":\\\"Number\\\"}\"], got undefined",
+      "exception": "Expected [\"?Object\"], got undefined",
       "typeId": "[\"?{\\\"a\\\":\\\"Number\\\"}\"]"
     },
     {
-      "exception": "Expected [\"?{\\\"a\\\":\\\"Number\\\"}\"], got null",
+      "exception": "Expected [\"?Object\"], got null",
       "typeId": "[\"?{\\\"a\\\":\\\"Number\\\"}\"]",
       "value": null
     },
     {
-      "exception": "Expected [\"?{\\\"a\\\":\\\"Number\\\"}\"], got Object {}",
+      "exception": "Expected [\"?Object\"], got Object",
       "typeId": "[\"?{\\\"a\\\":\\\"Number\\\"}\"]",
       "value": {}
     },
     {
-      "exception": "Expected [\"?{\\\"a\\\":\\\"Number\\\"}\"], got Object {\"a\":null}",
+      "exception": "Expected [\"?Object\"], got Object",
       "typeId": "[\"?{\\\"a\\\":\\\"Number\\\"}\"]",
       "value": {
         "a": null
       }
     },
     {
-      "exception": "Expected [\"?{\\\"a\\\":\\\"Number\\\"}\"], got Object {\"a\":0}",
+      "exception": "Expected [\"?Object\"], got Object",
       "typeId": "[\"?{\\\"a\\\":\\\"Number\\\"}\"]",
       "value": {
         "a": 0
       }
     },
     {
-      "exception": "Expected [\"?{\\\"a\\\":\\\"Number\\\"}\"], got Object {\"a\":0,\"b\":0}",
+      "exception": "Expected [\"?Object\"], got Object",
       "typeId": "[\"?{\\\"a\\\":\\\"Number\\\"}\"]",
       "value": {
         "a": 0,
@@ -5366,14 +5366,14 @@
       }
     },
     {
-      "exception": "Expected [\"?{\\\"a\\\":\\\"Number\\\"}\"], got Object {\"b\":0}",
+      "exception": "Expected [\"?Object\"], got Object",
       "typeId": "[\"?{\\\"a\\\":\\\"Number\\\"}\"]",
       "value": {
         "b": 0
       }
     },
     {
-      "exception": "Expected [\"?{\\\"a\\\":\\\"Number\\\"}\"], got Object {\"a\":{\"b\":0}}",
+      "exception": "Expected [\"?Object\"], got Object",
       "typeId": "[\"?{\\\"a\\\":\\\"Number\\\"}\"]",
       "value": {
         "a": {
@@ -5382,7 +5382,7 @@
       }
     },
     {
-      "exception": "Expected [\"?{\\\"a\\\":\\\"Number\\\"}\"], got Object {\"a\":{\"b\":null}}",
+      "exception": "Expected [\"?Object\"], got Object",
       "typeId": "[\"?{\\\"a\\\":\\\"Number\\\"}\"]",
       "value": {
         "a": {
@@ -5391,7 +5391,7 @@
       }
     },
     {
-      "exception": "Expected [\"?{\\\"a\\\":\\\"Number\\\"}\"], got Object {\"a\":{\"b\":{\"c\":0}}}",
+      "exception": "Expected [\"?Object\"], got Object",
       "typeId": "[\"?{\\\"a\\\":\\\"Number\\\"}\"]",
       "value": {
         "a": {
@@ -5402,7 +5402,7 @@
       }
     },
     {
-      "exception": "Expected [\"?{\\\"a\\\":\\\"Number\\\"}\"], got Object {\"a\":{\"b\":{\"c\":null}}}",
+      "exception": "Expected [\"?Object\"], got Object",
       "typeId": "[\"?{\\\"a\\\":\\\"Number\\\"}\"]",
       "value": {
         "a": {
@@ -5413,7 +5413,7 @@
       }
     },
     {
-      "exception": "Expected [\"?{\\\"a\\\":\\\"Number\\\"}\"], got Object {\"a\":{\"b\":{\"c\":0,\"d\":0}}}",
+      "exception": "Expected [\"?Object\"], got Object",
       "typeId": "[\"?{\\\"a\\\":\\\"Number\\\"}\"]",
       "value": {
         "a": {
@@ -5425,41 +5425,41 @@
       }
     },
     {
-      "exception": "Expected [\"?{\\\"a\\\":\\\"Number\\\"}\"], got Function undefined",
+      "exception": "Expected [\"?Object\"], got Function",
       "typeId": "[\"?{\\\"a\\\":\\\"Number\\\"}\"]",
       "valueId": "function"
     },
     {
-      "exception": "Expected [\"?{\\\"a\\\":\\\"Number\\\"}\"], got CustomType {}",
+      "exception": "Expected [\"?Object\"], got CustomType",
       "typeId": "[\"?{\\\"a\\\":\\\"Number\\\"}\"]",
       "valueId": "customType"
     },
     {
-      "exception": "Expected [\"?{\\\"a\\\":\\\"Number\\\"}\"], got Buffer {\"type\":\"Buffer\",\"data\":[]}",
+      "exception": "Expected [\"?Object\"], got Buffer",
       "typeId": "[\"?{\\\"a\\\":\\\"Number\\\"}\"]",
       "valueId": "buffer"
     },
     {
-      "exception": "Expected Boolean|Number|String, got Array []",
+      "exception": "Expected Boolean|Number|String, got Array",
       "typeId": "\"Boolean|Number|String\"",
       "value": []
     },
     {
-      "exception": "Expected Boolean|Number|String, got Array [0]",
+      "exception": "Expected Boolean|Number|String, got Array",
       "typeId": "\"Boolean|Number|String\"",
       "value": [
         0
       ]
     },
     {
-      "exception": "Expected Boolean|Number|String, got Array [\"foobar\"]",
+      "exception": "Expected Boolean|Number|String, got Array",
       "typeId": "\"Boolean|Number|String\"",
       "value": [
         "foobar"
       ]
     },
     {
-      "exception": "Expected Boolean|Number|String, got Array [{\"a\":0}]",
+      "exception": "Expected Boolean|Number|String, got Array",
       "typeId": "\"Boolean|Number|String\"",
       "value": [
         {
@@ -5468,7 +5468,7 @@
       ]
     },
     {
-      "exception": "Expected Boolean|Number|String, got Array [null]",
+      "exception": "Expected Boolean|Number|String, got Array",
       "typeId": "\"Boolean|Number|String\"",
       "value": [
         null
@@ -5484,26 +5484,26 @@
       "value": null
     },
     {
-      "exception": "Expected Boolean|Number|String, got Object {}",
+      "exception": "Expected Boolean|Number|String, got Object",
       "typeId": "\"Boolean|Number|String\"",
       "value": {}
     },
     {
-      "exception": "Expected Boolean|Number|String, got Object {\"a\":null}",
+      "exception": "Expected Boolean|Number|String, got Object",
       "typeId": "\"Boolean|Number|String\"",
       "value": {
         "a": null
       }
     },
     {
-      "exception": "Expected Boolean|Number|String, got Object {\"a\":0}",
+      "exception": "Expected Boolean|Number|String, got Object",
       "typeId": "\"Boolean|Number|String\"",
       "value": {
         "a": 0
       }
     },
     {
-      "exception": "Expected Boolean|Number|String, got Object {\"a\":0,\"b\":0}",
+      "exception": "Expected Boolean|Number|String, got Object",
       "typeId": "\"Boolean|Number|String\"",
       "value": {
         "a": 0,
@@ -5511,14 +5511,14 @@
       }
     },
     {
-      "exception": "Expected Boolean|Number|String, got Object {\"b\":0}",
+      "exception": "Expected Boolean|Number|String, got Object",
       "typeId": "\"Boolean|Number|String\"",
       "value": {
         "b": 0
       }
     },
     {
-      "exception": "Expected Boolean|Number|String, got Object {\"a\":{\"b\":0}}",
+      "exception": "Expected Boolean|Number|String, got Object",
       "typeId": "\"Boolean|Number|String\"",
       "value": {
         "a": {
@@ -5527,7 +5527,7 @@
       }
     },
     {
-      "exception": "Expected Boolean|Number|String, got Object {\"a\":{\"b\":null}}",
+      "exception": "Expected Boolean|Number|String, got Object",
       "typeId": "\"Boolean|Number|String\"",
       "value": {
         "a": {
@@ -5536,7 +5536,7 @@
       }
     },
     {
-      "exception": "Expected Boolean|Number|String, got Object {\"a\":{\"b\":{\"c\":0}}}",
+      "exception": "Expected Boolean|Number|String, got Object",
       "typeId": "\"Boolean|Number|String\"",
       "value": {
         "a": {
@@ -5547,7 +5547,7 @@
       }
     },
     {
-      "exception": "Expected Boolean|Number|String, got Object {\"a\":{\"b\":{\"c\":null}}}",
+      "exception": "Expected Boolean|Number|String, got Object",
       "typeId": "\"Boolean|Number|String\"",
       "value": {
         "a": {
@@ -5558,7 +5558,7 @@
       }
     },
     {
-      "exception": "Expected Boolean|Number|String, got Object {\"a\":{\"b\":{\"c\":0,\"d\":0}}}",
+      "exception": "Expected Boolean|Number|String, got Object",
       "typeId": "\"Boolean|Number|String\"",
       "value": {
         "a": {
@@ -5570,17 +5570,17 @@
       }
     },
     {
-      "exception": "Expected Boolean|Number|String, got Function undefined",
+      "exception": "Expected Boolean|Number|String, got Function",
       "typeId": "\"Boolean|Number|String\"",
       "valueId": "function"
     },
     {
-      "exception": "Expected Boolean|Number|String, got CustomType {}",
+      "exception": "Expected Boolean|Number|String, got CustomType",
       "typeId": "\"Boolean|Number|String\"",
       "valueId": "customType"
     },
     {
-      "exception": "Expected Boolean|Number|String, got Buffer {\"type\":\"Buffer\",\"data\":[]}",
+      "exception": "Expected Boolean|Number|String, got Buffer",
       "typeId": "\"Boolean|Number|String\"",
       "valueId": "buffer"
     },
@@ -5595,26 +5595,26 @@
       "value": "foobar"
     },
     {
-      "exception": "Expected Boolean|Number, got Array []",
+      "exception": "Expected Boolean|Number, got Array",
       "typeId": "\"?Boolean|Number\"",
       "value": []
     },
     {
-      "exception": "Expected Boolean|Number, got Array [0]",
+      "exception": "Expected Boolean|Number, got Array",
       "typeId": "\"?Boolean|Number\"",
       "value": [
         0
       ]
     },
     {
-      "exception": "Expected Boolean|Number, got Array [\"foobar\"]",
+      "exception": "Expected Boolean|Number, got Array",
       "typeId": "\"?Boolean|Number\"",
       "value": [
         "foobar"
       ]
     },
     {
-      "exception": "Expected Boolean|Number, got Array [{\"a\":0}]",
+      "exception": "Expected Boolean|Number, got Array",
       "typeId": "\"?Boolean|Number\"",
       "value": [
         {
@@ -5623,33 +5623,33 @@
       ]
     },
     {
-      "exception": "Expected Boolean|Number, got Array [null]",
+      "exception": "Expected Boolean|Number, got Array",
       "typeId": "\"?Boolean|Number\"",
       "value": [
         null
       ]
     },
     {
-      "exception": "Expected Boolean|Number, got Object {}",
+      "exception": "Expected Boolean|Number, got Object",
       "typeId": "\"?Boolean|Number\"",
       "value": {}
     },
     {
-      "exception": "Expected Boolean|Number, got Object {\"a\":null}",
+      "exception": "Expected Boolean|Number, got Object",
       "typeId": "\"?Boolean|Number\"",
       "value": {
         "a": null
       }
     },
     {
-      "exception": "Expected Boolean|Number, got Object {\"a\":0}",
+      "exception": "Expected Boolean|Number, got Object",
       "typeId": "\"?Boolean|Number\"",
       "value": {
         "a": 0
       }
     },
     {
-      "exception": "Expected Boolean|Number, got Object {\"a\":0,\"b\":0}",
+      "exception": "Expected Boolean|Number, got Object",
       "typeId": "\"?Boolean|Number\"",
       "value": {
         "a": 0,
@@ -5657,14 +5657,14 @@
       }
     },
     {
-      "exception": "Expected Boolean|Number, got Object {\"b\":0}",
+      "exception": "Expected Boolean|Number, got Object",
       "typeId": "\"?Boolean|Number\"",
       "value": {
         "b": 0
       }
     },
     {
-      "exception": "Expected Boolean|Number, got Object {\"a\":{\"b\":0}}",
+      "exception": "Expected Boolean|Number, got Object",
       "typeId": "\"?Boolean|Number\"",
       "value": {
         "a": {
@@ -5673,7 +5673,7 @@
       }
     },
     {
-      "exception": "Expected Boolean|Number, got Object {\"a\":{\"b\":null}}",
+      "exception": "Expected Boolean|Number, got Object",
       "typeId": "\"?Boolean|Number\"",
       "value": {
         "a": {
@@ -5682,7 +5682,7 @@
       }
     },
     {
-      "exception": "Expected Boolean|Number, got Object {\"a\":{\"b\":{\"c\":0}}}",
+      "exception": "Expected Boolean|Number, got Object",
       "typeId": "\"?Boolean|Number\"",
       "value": {
         "a": {
@@ -5693,7 +5693,7 @@
       }
     },
     {
-      "exception": "Expected Boolean|Number, got Object {\"a\":{\"b\":{\"c\":null}}}",
+      "exception": "Expected Boolean|Number, got Object",
       "typeId": "\"?Boolean|Number\"",
       "value": {
         "a": {
@@ -5704,7 +5704,7 @@
       }
     },
     {
-      "exception": "Expected Boolean|Number, got Object {\"a\":{\"b\":{\"c\":0,\"d\":0}}}",
+      "exception": "Expected Boolean|Number, got Object",
       "typeId": "\"?Boolean|Number\"",
       "value": {
         "a": {
@@ -5716,17 +5716,17 @@
       }
     },
     {
-      "exception": "Expected Boolean|Number, got Function undefined",
+      "exception": "Expected Boolean|Number, got Function",
       "typeId": "\"?Boolean|Number\"",
       "valueId": "function"
     },
     {
-      "exception": "Expected Boolean|Number, got CustomType {}",
+      "exception": "Expected Boolean|Number, got CustomType",
       "typeId": "\"?Boolean|Number\"",
       "valueId": "customType"
     },
     {
-      "exception": "Expected Boolean|Number, got Buffer {\"type\":\"Buffer\",\"data\":[]}",
+      "exception": "Expected Boolean|Number, got Buffer",
       "typeId": "\"?Boolean|Number\"",
       "valueId": "buffer"
     },
@@ -5812,7 +5812,7 @@
       }
     },
     {
-      "exception": "Expected property \"a\" of type ?Number, got Object {\"b\":0}",
+      "exception": "Expected property \"a\" of type ?Number, got Object",
       "typeId": "\"?{\\\"a\\\":\\\"?Number\\\"}\"",
       "value": {
         "a": {
@@ -5821,7 +5821,7 @@
       }
     },
     {
-      "exception": "Expected property \"a\" of type ?Number, got Object {\"b\":null}",
+      "exception": "Expected property \"a\" of type ?Number, got Object",
       "typeId": "\"?{\\\"a\\\":\\\"?Number\\\"}\"",
       "value": {
         "a": {
@@ -5830,7 +5830,7 @@
       }
     },
     {
-      "exception": "Expected property \"a\" of type ?Number, got Object {\"b\":{\"c\":0}}",
+      "exception": "Expected property \"a\" of type ?Number, got Object",
       "typeId": "\"?{\\\"a\\\":\\\"?Number\\\"}\"",
       "value": {
         "a": {
@@ -5841,7 +5841,7 @@
       }
     },
     {
-      "exception": "Expected property \"a\" of type ?Number, got Object {\"b\":{\"c\":null}}",
+      "exception": "Expected property \"a\" of type ?Number, got Object",
       "typeId": "\"?{\\\"a\\\":\\\"?Number\\\"}\"",
       "value": {
         "a": {
@@ -5852,7 +5852,7 @@
       }
     },
     {
-      "exception": "Expected property \"a\" of type ?Number, got Object {\"b\":{\"c\":0,\"d\":0}}",
+      "exception": "Expected property \"a\" of type ?Number, got Object",
       "typeId": "\"?{\\\"a\\\":\\\"?Number\\\"}\"",
       "value": {
         "a": {
@@ -5864,7 +5864,7 @@
       }
     },
     {
-      "exception": "Expected Object, got Function undefined",
+      "exception": "Expected Object, got Function",
       "typeId": "\"?{\\\"a\\\":\\\"?Number\\\"}\"",
       "valueId": "function"
     },
@@ -5968,7 +5968,7 @@
       }
     },
     {
-      "exception": "Expected property \"a\" of type Number, got Object {\"b\":0}",
+      "exception": "Expected property \"a\" of type Number, got Object",
       "typeId": "\"?{\\\"a\\\":\\\"Number\\\"}\"",
       "value": {
         "a": {
@@ -5977,7 +5977,7 @@
       }
     },
     {
-      "exception": "Expected property \"a\" of type Number, got Object {\"b\":null}",
+      "exception": "Expected property \"a\" of type Number, got Object",
       "typeId": "\"?{\\\"a\\\":\\\"Number\\\"}\"",
       "value": {
         "a": {
@@ -5986,7 +5986,7 @@
       }
     },
     {
-      "exception": "Expected property \"a\" of type Number, got Object {\"b\":{\"c\":0}}",
+      "exception": "Expected property \"a\" of type Number, got Object",
       "typeId": "\"?{\\\"a\\\":\\\"Number\\\"}\"",
       "value": {
         "a": {
@@ -5997,7 +5997,7 @@
       }
     },
     {
-      "exception": "Expected property \"a\" of type Number, got Object {\"b\":{\"c\":null}}",
+      "exception": "Expected property \"a\" of type Number, got Object",
       "typeId": "\"?{\\\"a\\\":\\\"Number\\\"}\"",
       "value": {
         "a": {
@@ -6008,7 +6008,7 @@
       }
     },
     {
-      "exception": "Expected property \"a\" of type Number, got Object {\"b\":{\"c\":0,\"d\":0}}",
+      "exception": "Expected property \"a\" of type Number, got Object",
       "typeId": "\"?{\\\"a\\\":\\\"Number\\\"}\"",
       "value": {
         "a": {
@@ -6020,7 +6020,7 @@
       }
     },
     {
-      "exception": "Expected Object, got Function undefined",
+      "exception": "Expected Object, got Function",
       "typeId": "\"?{\\\"a\\\":\\\"Number\\\"}\"",
       "valueId": "function"
     },
@@ -6125,7 +6125,7 @@
       }
     },
     {
-      "exception": "Expected property \"a\" of type Number|Null, got Object {\"b\":0}",
+      "exception": "Expected property \"a\" of type Number|Null, got Object",
       "typeId": "{\"a\":\"Number|Null\"}",
       "value": {
         "a": {
@@ -6134,7 +6134,7 @@
       }
     },
     {
-      "exception": "Expected property \"a\" of type Number|Null, got Object {\"b\":null}",
+      "exception": "Expected property \"a\" of type Number|Null, got Object",
       "typeId": "{\"a\":\"Number|Null\"}",
       "value": {
         "a": {
@@ -6143,7 +6143,7 @@
       }
     },
     {
-      "exception": "Expected property \"a\" of type Number|Null, got Object {\"b\":{\"c\":0}}",
+      "exception": "Expected property \"a\" of type Number|Null, got Object",
       "typeId": "{\"a\":\"Number|Null\"}",
       "value": {
         "a": {
@@ -6154,7 +6154,7 @@
       }
     },
     {
-      "exception": "Expected property \"a\" of type Number|Null, got Object {\"b\":{\"c\":null}}",
+      "exception": "Expected property \"a\" of type Number|Null, got Object",
       "typeId": "{\"a\":\"Number|Null\"}",
       "value": {
         "a": {
@@ -6165,7 +6165,7 @@
       }
     },
     {
-      "exception": "Expected property \"a\" of type Number|Null, got Object {\"b\":{\"c\":0,\"d\":0}}",
+      "exception": "Expected property \"a\" of type Number|Null, got Object",
       "typeId": "{\"a\":\"Number|Null\"}",
       "value": {
         "a": {
@@ -6177,7 +6177,7 @@
       }
     },
     {
-      "exception": "Expected Object, got Function undefined",
+      "exception": "Expected Object, got Function",
       "typeId": "{\"a\":\"Number|Null\"}",
       "valueId": "function"
     },
@@ -6208,26 +6208,26 @@
       "value": 1
     },
     {
-      "exception": "Expected property \"a\" of type Number|{\"b\":\"Number\"}, got undefined",
+      "exception": "Expected property \"a\" of type Number|Object, got undefined",
       "typeId": "{\"a\":\"Number|{\\\"b\\\":\\\"Number\\\"}\"}",
       "value": []
     },
     {
-      "exception": "Expected property \"a\" of type Number|{\"b\":\"Number\"}, got undefined",
+      "exception": "Expected property \"a\" of type Number|Object, got undefined",
       "typeId": "{\"a\":\"Number|{\\\"b\\\":\\\"Number\\\"}\"}",
       "value": [
         0
       ]
     },
     {
-      "exception": "Expected property \"a\" of type Number|{\"b\":\"Number\"}, got undefined",
+      "exception": "Expected property \"a\" of type Number|Object, got undefined",
       "typeId": "{\"a\":\"Number|{\\\"b\\\":\\\"Number\\\"}\"}",
       "value": [
         "foobar"
       ]
     },
     {
-      "exception": "Expected property \"a\" of type Number|{\"b\":\"Number\"}, got undefined",
+      "exception": "Expected property \"a\" of type Number|Object, got undefined",
       "typeId": "{\"a\":\"Number|{\\\"b\\\":\\\"Number\\\"}\"}",
       "value": [
         {
@@ -6236,7 +6236,7 @@
       ]
     },
     {
-      "exception": "Expected property \"a\" of type Number|{\"b\":\"Number\"}, got undefined",
+      "exception": "Expected property \"a\" of type Number|Object, got undefined",
       "typeId": "{\"a\":\"Number|{\\\"b\\\":\\\"Number\\\"}\"}",
       "value": [
         null
@@ -6257,17 +6257,17 @@
       "typeId": "{\"a\":\"Number|{\\\"b\\\":\\\"Number\\\"}\"}"
     },
     {
-      "exception": "Expected property \"a\" of type Number|{\"b\":\"Number\"}, got undefined",
+      "exception": "Expected property \"a\" of type Number|Object, got undefined",
       "typeId": "{\"a\":\"Number|{\\\"b\\\":\\\"Number\\\"}\"}",
       "value": null
     },
     {
-      "exception": "Expected property \"a\" of type Number|{\"b\":\"Number\"}, got undefined",
+      "exception": "Expected property \"a\" of type Number|Object, got undefined",
       "typeId": "{\"a\":\"Number|{\\\"b\\\":\\\"Number\\\"}\"}",
       "value": {}
     },
     {
-      "exception": "Expected property \"a\" of type Number|{\"b\":\"Number\"}, got null",
+      "exception": "Expected property \"a\" of type Number|Object, got null",
       "typeId": "{\"a\":\"Number|{\\\"b\\\":\\\"Number\\\"}\"}",
       "value": {
         "a": null
@@ -6283,14 +6283,14 @@
       }
     },
     {
-      "exception": "Expected property \"a\" of type Number|{\"b\":\"Number\"}, got undefined",
+      "exception": "Expected property \"a\" of type Number|Object, got undefined",
       "typeId": "{\"a\":\"Number|{\\\"b\\\":\\\"Number\\\"}\"}",
       "value": {
         "b": 0
       }
     },
     {
-      "exception": "Expected property \"a\" of type Number|{\"b\":\"Number\"}, got Object {\"b\":null}",
+      "exception": "Expected property \"a\" of type Number|Object, got Object",
       "typeId": "{\"a\":\"Number|{\\\"b\\\":\\\"Number\\\"}\"}",
       "value": {
         "a": {
@@ -6299,7 +6299,7 @@
       }
     },
     {
-      "exception": "Expected property \"a\" of type Number|{\"b\":\"Number\"}, got Object {\"b\":{\"c\":0}}",
+      "exception": "Expected property \"a\" of type Number|Object, got Object",
       "typeId": "{\"a\":\"Number|{\\\"b\\\":\\\"Number\\\"}\"}",
       "value": {
         "a": {
@@ -6310,7 +6310,7 @@
       }
     },
     {
-      "exception": "Expected property \"a\" of type Number|{\"b\":\"Number\"}, got Object {\"b\":{\"c\":null}}",
+      "exception": "Expected property \"a\" of type Number|Object, got Object",
       "typeId": "{\"a\":\"Number|{\\\"b\\\":\\\"Number\\\"}\"}",
       "value": {
         "a": {
@@ -6321,7 +6321,7 @@
       }
     },
     {
-      "exception": "Expected property \"a\" of type Number|{\"b\":\"Number\"}, got Object {\"b\":{\"c\":0,\"d\":0}}",
+      "exception": "Expected property \"a\" of type Number|Object, got Object",
       "typeId": "{\"a\":\"Number|{\\\"b\\\":\\\"Number\\\"}\"}",
       "value": {
         "a": {
@@ -6333,17 +6333,17 @@
       }
     },
     {
-      "exception": "Expected Object, got Function undefined",
+      "exception": "Expected Object, got Function",
       "typeId": "{\"a\":\"Number|{\\\"b\\\":\\\"Number\\\"}\"}",
       "valueId": "function"
     },
     {
-      "exception": "Expected property \"a\" of type Number|{\"b\":\"Number\"}, got undefined",
+      "exception": "Expected property \"a\" of type Number|Object, got undefined",
       "typeId": "{\"a\":\"Number|{\\\"b\\\":\\\"Number\\\"}\"}",
       "valueId": "customType"
     },
     {
-      "exception": "Expected property \"a\" of type Number|{\"b\":\"Number\"}, got undefined",
+      "exception": "Expected property \"a\" of type Number|Object, got undefined",
       "typeId": "{\"a\":\"Number|{\\\"b\\\":\\\"Number\\\"}\"}",
       "valueId": "buffer"
     },
@@ -6416,19 +6416,19 @@
       "typeId": "{\"a\":\"?{\\\"b\\\":\\\"Number\\\"}\"}"
     },
     {
-      "exception": "Expected property \"a\" of type ?{\"b\":\"Number\"}, got undefined",
+      "exception": "Expected property \"a\" of type ?Object, got undefined",
       "typeId": "{\"a\":\"?{\\\"b\\\":\\\"Number\\\"}\"}",
       "value": null
     },
     {
-      "exception": "Expected property \"a\" of type ?{\"b\":\"Number\"}, got Number 0",
+      "exception": "Expected property \"a\" of type ?Object, got Number 0",
       "typeId": "{\"a\":\"?{\\\"b\\\":\\\"Number\\\"}\"}",
       "value": {
         "a": 0
       }
     },
     {
-      "exception": "Expected property \"a\" of type ?{\"b\":\"Number\"}, got Number 0",
+      "exception": "Expected property \"a\" of type ?Object, got Number 0",
       "typeId": "{\"a\":\"?{\\\"b\\\":\\\"Number\\\"}\"}",
       "value": {
         "a": 0,
@@ -6444,7 +6444,7 @@
       }
     },
     {
-      "exception": "Expected property \"a\" of type ?{\"b\":\"Number\"}, got Object {\"b\":null}",
+      "exception": "Expected property \"a\" of type ?Object, got Object",
       "typeId": "{\"a\":\"?{\\\"b\\\":\\\"Number\\\"}\"}",
       "value": {
         "a": {
@@ -6453,7 +6453,7 @@
       }
     },
     {
-      "exception": "Expected property \"a\" of type ?{\"b\":\"Number\"}, got Object {\"b\":{\"c\":0}}",
+      "exception": "Expected property \"a\" of type ?Object, got Object",
       "typeId": "{\"a\":\"?{\\\"b\\\":\\\"Number\\\"}\"}",
       "value": {
         "a": {
@@ -6464,7 +6464,7 @@
       }
     },
     {
-      "exception": "Expected property \"a\" of type ?{\"b\":\"Number\"}, got Object {\"b\":{\"c\":null}}",
+      "exception": "Expected property \"a\" of type ?Object, got Object",
       "typeId": "{\"a\":\"?{\\\"b\\\":\\\"Number\\\"}\"}",
       "value": {
         "a": {
@@ -6475,7 +6475,7 @@
       }
     },
     {
-      "exception": "Expected property \"a\" of type ?{\"b\":\"Number\"}, got Object {\"b\":{\"c\":0,\"d\":0}}",
+      "exception": "Expected property \"a\" of type ?Object, got Object",
       "typeId": "{\"a\":\"?{\\\"b\\\":\\\"Number\\\"}\"}",
       "value": {
         "a": {
@@ -6487,7 +6487,7 @@
       }
     },
     {
-      "exception": "Expected Object, got Function undefined",
+      "exception": "Expected Object, got Function",
       "typeId": "{\"a\":\"?{\\\"b\\\":\\\"Number\\\"}\"}",
       "valueId": "function"
     },
@@ -6566,19 +6566,19 @@
       "typeId": "{\"a\":\"?{\\\"b\\\":\\\"?{\\\\\\\"c\\\\\\\":\\\\\\\"Number\\\\\\\"}\\\"}\"}"
     },
     {
-      "exception": "Expected property \"a\" of type ?{\"b\":\"?{\\\"c\\\":\\\"Number\\\"}\"}, got undefined",
+      "exception": "Expected property \"a\" of type ?Object, got undefined",
       "typeId": "{\"a\":\"?{\\\"b\\\":\\\"?{\\\\\\\"c\\\\\\\":\\\\\\\"Number\\\\\\\"}\\\"}\"}",
       "value": null
     },
     {
-      "exception": "Expected property \"a\" of type ?{\"b\":\"?{\\\"c\\\":\\\"Number\\\"}\"}, got Number 0",
+      "exception": "Expected property \"a\" of type ?Object, got Number 0",
       "typeId": "{\"a\":\"?{\\\"b\\\":\\\"?{\\\\\\\"c\\\\\\\":\\\\\\\"Number\\\\\\\"}\\\"}\"}",
       "value": {
         "a": 0
       }
     },
     {
-      "exception": "Expected property \"a\" of type ?{\"b\":\"?{\\\"c\\\":\\\"Number\\\"}\"}, got Number 0",
+      "exception": "Expected property \"a\" of type ?Object, got Number 0",
       "typeId": "{\"a\":\"?{\\\"b\\\":\\\"?{\\\\\\\"c\\\\\\\":\\\\\\\"Number\\\\\\\"}\\\"}\"}",
       "value": {
         "a": 0,
@@ -6594,7 +6594,7 @@
       }
     },
     {
-      "exception": "Expected property \"a\" of type ?{\"b\":\"?{\\\"c\\\":\\\"Number\\\"}\"}, got Object {\"b\":0}",
+      "exception": "Expected property \"a\" of type ?Object, got Object",
       "typeId": "{\"a\":\"?{\\\"b\\\":\\\"?{\\\\\\\"c\\\\\\\":\\\\\\\"Number\\\\\\\"}\\\"}\"}",
       "value": {
         "a": {
@@ -6603,7 +6603,7 @@
       }
     },
     {
-      "exception": "Expected property \"a\" of type ?{\"b\":\"?{\\\"c\\\":\\\"Number\\\"}\"}, got Object {\"b\":{\"c\":null}}",
+      "exception": "Expected property \"a\" of type ?Object, got Object",
       "typeId": "{\"a\":\"?{\\\"b\\\":\\\"?{\\\\\\\"c\\\\\\\":\\\\\\\"Number\\\\\\\"}\\\"}\"}",
       "value": {
         "a": {
@@ -6614,7 +6614,7 @@
       }
     },
     {
-      "exception": "Expected property \"a\" of type ?{\"b\":\"?{\\\"c\\\":\\\"Number\\\"}\"}, got Object {\"b\":{\"c\":0,\"d\":0}}",
+      "exception": "Expected property \"a\" of type ?Object, got Object",
       "strict": true,
       "typeId": "{\"a\":\"?{\\\"b\\\":\\\"?{\\\\\\\"c\\\\\\\":\\\\\\\"Number\\\\\\\"}\\\"}\"}",
       "value": {
@@ -6627,7 +6627,7 @@
       }
     },
     {
-      "exception": "Expected Object, got Function undefined",
+      "exception": "Expected Object, got Function",
       "typeId": "{\"a\":\"?{\\\"b\\\":\\\"?{\\\\\\\"c\\\\\\\":\\\\\\\"Number\\\\\\\"}\\\"}\"}",
       "valueId": "function"
     },
@@ -6658,26 +6658,26 @@
       "value": 1
     },
     {
-      "exception": "Expected Tt, got Array []",
+      "exception": "Expected Tt, got Array",
       "typeId": "?Tt",
       "value": []
     },
     {
-      "exception": "Expected Tt, got Array [0]",
+      "exception": "Expected Tt, got Array",
       "typeId": "?Tt",
       "value": [
         0
       ]
     },
     {
-      "exception": "Expected Tt, got Array [\"foobar\"]",
+      "exception": "Expected Tt, got Array",
       "typeId": "?Tt",
       "value": [
         "foobar"
       ]
     },
     {
-      "exception": "Expected Tt, got Array [{\"a\":0}]",
+      "exception": "Expected Tt, got Array",
       "typeId": "?Tt",
       "value": [
         {
@@ -6686,7 +6686,7 @@
       ]
     },
     {
-      "exception": "Expected Tt, got Array [null]",
+      "exception": "Expected Tt, got Array",
       "typeId": "?Tt",
       "value": [
         null
@@ -6712,26 +6712,26 @@
       "value": null
     },
     {
-      "exception": "Expected Tt, got Object {}",
+      "exception": "Expected Tt, got Object",
       "typeId": "?Tt",
       "value": {}
     },
     {
-      "exception": "Expected Tt, got Object {\"a\":null}",
+      "exception": "Expected Tt, got Object",
       "typeId": "?Tt",
       "value": {
         "a": null
       }
     },
     {
-      "exception": "Expected Tt, got Object {\"a\":0}",
+      "exception": "Expected Tt, got Object",
       "typeId": "?Tt",
       "value": {
         "a": 0
       }
     },
     {
-      "exception": "Expected Tt, got Object {\"a\":0,\"b\":0}",
+      "exception": "Expected Tt, got Object",
       "typeId": "?Tt",
       "value": {
         "a": 0,
@@ -6739,14 +6739,14 @@
       }
     },
     {
-      "exception": "Expected Tt, got Object {\"b\":0}",
+      "exception": "Expected Tt, got Object",
       "typeId": "?Tt",
       "value": {
         "b": 0
       }
     },
     {
-      "exception": "Expected Tt, got Object {\"a\":{\"b\":0}}",
+      "exception": "Expected Tt, got Object",
       "typeId": "?Tt",
       "value": {
         "a": {
@@ -6755,7 +6755,7 @@
       }
     },
     {
-      "exception": "Expected Tt, got Object {\"a\":{\"b\":null}}",
+      "exception": "Expected Tt, got Object",
       "typeId": "?Tt",
       "value": {
         "a": {
@@ -6764,7 +6764,7 @@
       }
     },
     {
-      "exception": "Expected Tt, got Object {\"a\":{\"b\":{\"c\":0}}}",
+      "exception": "Expected Tt, got Object",
       "typeId": "?Tt",
       "value": {
         "a": {
@@ -6775,7 +6775,7 @@
       }
     },
     {
-      "exception": "Expected Tt, got Object {\"a\":{\"b\":{\"c\":null}}}",
+      "exception": "Expected Tt, got Object",
       "typeId": "?Tt",
       "value": {
         "a": {
@@ -6786,7 +6786,7 @@
       }
     },
     {
-      "exception": "Expected Tt, got Object {\"a\":{\"b\":{\"c\":0,\"d\":0}}}",
+      "exception": "Expected Tt, got Object",
       "typeId": "?Tt",
       "value": {
         "a": {
@@ -6798,17 +6798,17 @@
       }
     },
     {
-      "exception": "Expected Tt, got Function undefined",
+      "exception": "Expected Tt, got Function",
       "typeId": "?Tt",
       "valueId": "function"
     },
     {
-      "exception": "Expected Tt, got CustomType {}",
+      "exception": "Expected Tt, got CustomType",
       "typeId": "?Tt",
       "valueId": "customType"
     },
     {
-      "exception": "Expected Tt, got Buffer {\"type\":\"Buffer\",\"data\":[]}",
+      "exception": "Expected Tt, got Buffer",
       "typeId": "?Tt",
       "valueId": "buffer"
     },
@@ -6909,7 +6909,7 @@
       }
     },
     {
-      "exception": "Expected property \"a\" of type ?Tt, got Object {\"b\":0}",
+      "exception": "Expected property \"a\" of type ?Tt, got Object",
       "typeId": "{\"a\":\"?Tt\"}",
       "value": {
         "a": {
@@ -6918,7 +6918,7 @@
       }
     },
     {
-      "exception": "Expected property \"a\" of type ?Tt, got Object {\"b\":null}",
+      "exception": "Expected property \"a\" of type ?Tt, got Object",
       "typeId": "{\"a\":\"?Tt\"}",
       "value": {
         "a": {
@@ -6927,7 +6927,7 @@
       }
     },
     {
-      "exception": "Expected property \"a\" of type ?Tt, got Object {\"b\":{\"c\":0}}",
+      "exception": "Expected property \"a\" of type ?Tt, got Object",
       "typeId": "{\"a\":\"?Tt\"}",
       "value": {
         "a": {
@@ -6938,7 +6938,7 @@
       }
     },
     {
-      "exception": "Expected property \"a\" of type ?Tt, got Object {\"b\":{\"c\":null}}",
+      "exception": "Expected property \"a\" of type ?Tt, got Object",
       "typeId": "{\"a\":\"?Tt\"}",
       "value": {
         "a": {
@@ -6949,7 +6949,7 @@
       }
     },
     {
-      "exception": "Expected property \"a\" of type ?Tt, got Object {\"b\":{\"c\":0,\"d\":0}}",
+      "exception": "Expected property \"a\" of type ?Tt, got Object",
       "typeId": "{\"a\":\"?Tt\"}",
       "value": {
         "a": {
@@ -6961,7 +6961,7 @@
       }
     },
     {
-      "exception": "Expected Object, got Function undefined",
+      "exception": "Expected Object, got Function",
       "typeId": "{\"a\":\"?Tt\"}",
       "valueId": "function"
     },
@@ -6969,6 +6969,181 @@
       "exception": "Unexpected property \"length\"",
       "strict": true,
       "typeId": "{\"a\":\"?Tt\"}",
+      "valueId": "buffer"
+    },
+    {
+      "exception": "Expected Object, got String \"\"",
+      "typeId": "{\"a\":\"{\\\"b\\\":\\\"Tt\\\"}\"}",
+      "value": ""
+    },
+    {
+      "exception": "Expected Object, got String \"foobar\"",
+      "typeId": "{\"a\":\"{\\\"b\\\":\\\"Tt\\\"}\"}",
+      "value": "foobar"
+    },
+    {
+      "exception": "Expected Object, got Number 0",
+      "typeId": "{\"a\":\"{\\\"b\\\":\\\"Tt\\\"}\"}",
+      "value": 0
+    },
+    {
+      "exception": "Expected Object, got Number 1",
+      "typeId": "{\"a\":\"{\\\"b\\\":\\\"Tt\\\"}\"}",
+      "value": 1
+    },
+    {
+      "exception": "Expected property \"a\" of type Object, got undefined",
+      "typeId": "{\"a\":\"{\\\"b\\\":\\\"Tt\\\"}\"}",
+      "value": []
+    },
+    {
+      "exception": "Expected property \"a\" of type Object, got undefined",
+      "typeId": "{\"a\":\"{\\\"b\\\":\\\"Tt\\\"}\"}",
+      "value": [
+        0
+      ]
+    },
+    {
+      "exception": "Expected property \"a\" of type Object, got undefined",
+      "typeId": "{\"a\":\"{\\\"b\\\":\\\"Tt\\\"}\"}",
+      "value": [
+        "foobar"
+      ]
+    },
+    {
+      "exception": "Expected property \"a\" of type Object, got undefined",
+      "typeId": "{\"a\":\"{\\\"b\\\":\\\"Tt\\\"}\"}",
+      "value": [
+        {
+          "a": 0
+        }
+      ]
+    },
+    {
+      "exception": "Expected property \"a\" of type Object, got undefined",
+      "typeId": "{\"a\":\"{\\\"b\\\":\\\"Tt\\\"}\"}",
+      "value": [
+        null
+      ]
+    },
+    {
+      "exception": "Expected Object, got Boolean false",
+      "typeId": "{\"a\":\"{\\\"b\\\":\\\"Tt\\\"}\"}",
+      "value": false
+    },
+    {
+      "exception": "Expected Object, got Boolean true",
+      "typeId": "{\"a\":\"{\\\"b\\\":\\\"Tt\\\"}\"}",
+      "value": true
+    },
+    {
+      "exception": "Expected Object, got undefined",
+      "typeId": "{\"a\":\"{\\\"b\\\":\\\"Tt\\\"}\"}"
+    },
+    {
+      "exception": "Expected property \"a\" of type Object, got undefined",
+      "typeId": "{\"a\":\"{\\\"b\\\":\\\"Tt\\\"}\"}",
+      "value": null
+    },
+    {
+      "exception": "Expected property \"a\" of type Object, got undefined",
+      "typeId": "{\"a\":\"{\\\"b\\\":\\\"Tt\\\"}\"}",
+      "value": {}
+    },
+    {
+      "exception": "Expected property \"a\" of type Object, got null",
+      "typeId": "{\"a\":\"{\\\"b\\\":\\\"Tt\\\"}\"}",
+      "value": {
+        "a": null
+      }
+    },
+    {
+      "exception": "Expected property \"a\" of type Object, got Number 0",
+      "typeId": "{\"a\":\"{\\\"b\\\":\\\"Tt\\\"}\"}",
+      "value": {
+        "a": 0
+      }
+    },
+    {
+      "exception": "Expected property \"a\" of type Object, got Number 0",
+      "typeId": "{\"a\":\"{\\\"b\\\":\\\"Tt\\\"}\"}",
+      "value": {
+        "a": 0,
+        "b": 0
+      }
+    },
+    {
+      "exception": "Expected property \"a\" of type Object, got undefined",
+      "typeId": "{\"a\":\"{\\\"b\\\":\\\"Tt\\\"}\"}",
+      "value": {
+        "b": 0
+      }
+    },
+    {
+      "exception": "Expected property \"a\" of type Object, got Object",
+      "typeId": "{\"a\":\"{\\\"b\\\":\\\"Tt\\\"}\"}",
+      "value": {
+        "a": {
+          "b": 0
+        }
+      }
+    },
+    {
+      "exception": "Expected property \"a\" of type Object, got Object",
+      "typeId": "{\"a\":\"{\\\"b\\\":\\\"Tt\\\"}\"}",
+      "value": {
+        "a": {
+          "b": null
+        }
+      }
+    },
+    {
+      "exception": "Expected property \"a\" of type Object, got Object",
+      "typeId": "{\"a\":\"{\\\"b\\\":\\\"Tt\\\"}\"}",
+      "value": {
+        "a": {
+          "b": {
+            "c": 0
+          }
+        }
+      }
+    },
+    {
+      "exception": "Expected property \"a\" of type Object, got Object",
+      "typeId": "{\"a\":\"{\\\"b\\\":\\\"Tt\\\"}\"}",
+      "value": {
+        "a": {
+          "b": {
+            "c": null
+          }
+        }
+      }
+    },
+    {
+      "exception": "Expected property \"a\" of type Object, got Object",
+      "typeId": "{\"a\":\"{\\\"b\\\":\\\"Tt\\\"}\"}",
+      "value": {
+        "a": {
+          "b": {
+            "c": 0,
+            "d": 0
+          }
+        }
+      }
+    },
+    {
+      "exception": "Expected Object, got Function",
+      "typeId": "{\"a\":\"{\\\"b\\\":\\\"Tt\\\"}\"}",
+      "valueId": "function"
+    },
+    {
+      "exception": "Expected property \"a\" of type Object, got undefined",
+      "typeId": "{\"a\":\"{\\\"b\\\":\\\"Tt\\\"}\"}",
+      "valueId": "customType"
+    },
+    {
+      "exception": "Expected property \"a\" of type Object, got undefined",
+      "typeId": "{\"a\":\"{\\\"b\\\":\\\"Tt\\\"}\"}",
       "valueId": "buffer"
     }
   ]

@@ -2,42 +2,43 @@ function getFunctionName (fn) {
   return fn.name || fn.toString().match(/function (.*?)\s*\(/)[1]
 }
 
-function tfJSON (type) {
-  if (nativeTypes.Function(type)) return type.toJSON ? type.toJSON() : getFunctionName(type)
-  if (nativeTypes.Object(type)) {
-    var json = {}
-
-    for (var propertyName in type) {
-      json[propertyName] = tfJSON(type[propertyName])
-    }
-
-    return JSON.stringify(json)
-  }
-
-  return type
-}
-
-function getTypeTypeName (type) {
-  var typeJson = tfJSON(type)
-
-  return nativeTypes.Object(typeJson) ? JSON.stringify(typeJson) : typeJson
-}
-
 function getValueTypeName (value) {
   if (nativeTypes.Null(value)) return ''
 
   return getFunctionName(value.constructor)
 }
 
-function tfErrorString (type, value) {
-  var typeTypeName = getTypeTypeName(type)
-  var valueTypeName = getValueTypeName(value)
+function getValue (value) {
+  if (nativeTypes.Function(value)) return ''
+  if (nativeTypes.String(value)) return JSON.stringify(value)
+  if (value && nativeTypes.Object(value)) return ''
 
-  return 'Expected ' + typeTypeName + ', got ' + (valueTypeName && valueTypeName + ' ') + JSON.stringify(value)
+  return value
+}
+
+function tfJSON (type) {
+  if (nativeTypes.Function(type)) return type.toJSON ? type.toJSON() : getFunctionName(type)
+  if (nativeTypes.Array(type)) return 'Array'
+  if (type && nativeTypes.Object(type)) return 'Object'
+
+  return type || ''
+}
+
+function stfJSON (type) {
+  type = tfJSON(type)
+
+  return nativeTypes.Object(type) ? JSON.stringify(type) : type
+}
+
+function tfErrorString (type, value) {
+  var valueTypeName = getValueTypeName(value)
+  var valueValue = getValue(value)
+
+  return 'Expected ' + stfJSON(type) + ', got' + (valueTypeName !== '' ? ' ' + valueTypeName : '') + (valueValue !== '' ? ' ' + valueValue : '')
 }
 
 function tfPropertyErrorString (type, name, value) {
-  return tfErrorString('property \"' + name + '\" of type ' + getTypeTypeName(type), value)
+  return tfErrorString('property \"' + name + '\" of type ' + stfJSON(type), value)
 }
 
 var nativeTypes = {
@@ -70,7 +71,7 @@ var otherTypes = {
     function maybe (value, strict) {
       return nativeTypes.Null(value) || typeforce(type, value, strict)
     }
-    maybe.toJSON = () => '?' + tfJSON(type)
+    maybe.toJSON = () => '?' + stfJSON(type)
 
     return maybe
   },
@@ -102,7 +103,7 @@ var otherTypes = {
 
       return true
     }
-    object.toJSON = () => type
+    object.toJSON = () => tfJSON(type)
 
     return object
   },
@@ -117,14 +118,14 @@ var otherTypes = {
         }
       })
     }
-    oneOf.toJSON = () => types.map(tfJSON).join('|')
+    oneOf.toJSON = () => types.map(stfJSON).join('|')
 
     return oneOf
   },
 
   quacksLike (type) {
     function quacksLike (value, strict) {
-      return type === getValueTypeName(value)
+      return type === getFunctionName(value)
     }
     quacksLike.toJSON = () => type
 
@@ -135,7 +136,7 @@ var otherTypes = {
     function tuple (value, strict) {
       return types.every((type, i) => typeforce(type, value[i], strict))
     }
-    tuple.toJSON = () => '(' + types.map(tfJSON).join(', ') + ')'
+    tuple.toJSON = () => '(' + types.map(stfJSON).join(', ') + ')'
 
     return tuple
   },

@@ -16,7 +16,8 @@ var TYPES = {
   '{"a":"?{\\"b\\":\\"Number\\"}"}': { a: typeforce.maybe({ b: 'Number' }) },
   '{"a":"?{\\"b\\":\\"?{\\\\\\"c\\\\\\":\\\\\\"Number\\\\\\"}\\"}"}': { a: typeforce.maybe({ b: typeforce.maybe({ c: 'Number' }) }) },
   '?Tt': Tt,
-  '{"a":"?Tt"}': { a: typeforce.maybe(Tt) }
+  '{"a":"?Tt"}': { a: typeforce.maybe(Tt) },
+  '{"a":"{\\"b\\":\\"Tt\\"}"}': { a: { b: Tt } }
 }
 
 var VALUES = {
