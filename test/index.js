@@ -42,14 +42,3 @@ describe('typeforce', function () {
     })
   })
 })
-
-describe('typeforce.compile', function () {
-  fixtures.valid.forEach(function (f) {
-    var type = TYPES[f.typeId] || f.type
-    var typeDescription = JSON.stringify(type)
-
-    it('when compiled with ' + typeDescription + ', toJSON\'s the same', function () {
-      assert.equal(JSON.stringify(typeforce.compile(type)), typeDescription)
-    })
-  })
-})
