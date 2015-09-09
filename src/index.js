@@ -130,7 +130,7 @@ var otherTypes = {
 
   quacksLike (type) {
     function quacksLike (value, strict) {
-      return type === getFunctionName(value)
+      return type === getValueTypeName(value)
     }
     quacksLike.toJSON = () => type
 
