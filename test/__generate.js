@@ -1,4 +1,3 @@
-var assert = require('assert')
 var typeforce = require('../src')
 var xtend = require('xtend')
 var { TYPES, VALUES } = require('./types')
@@ -68,9 +67,6 @@ TYPES2.concat(Object.keys(TYPES)).forEach(function (type) {
     if (TYPES[type]) {
       f.typeId = type
       atype = TYPES[type]
-
-      assert.equal(f.typeId, JSON.stringify(atype))
-
     } else {
       f.type = type
       atype = type
@@ -79,7 +75,6 @@ TYPES2.concat(Object.keys(TYPES)).forEach(function (type) {
     if (VALUES[value]) {
       f.valueId = value
       avalue = VALUES[value]
-
     } else {
       f.value = value
       avalue = value
@@ -88,7 +83,6 @@ TYPES2.concat(Object.keys(TYPES)).forEach(function (type) {
     try {
       typeforce(atype, avalue, true)
       fixtures.valid.push(f)
-
     } catch (e) {
       try {
         typeforce(atype, avalue, false)
@@ -98,7 +92,6 @@ TYPES2.concat(Object.keys(TYPES)).forEach(function (type) {
           exception: e.message,
           strict: true
         }, f))
-
       } catch (e) {
         fixtures.invalid.push(xtend({
           exception: e.message

@@ -11,7 +11,9 @@ var TYPES = {
   '{"a":"Number|Null"}': { a: typeforce.oneOf('Number', 'Null') },
   '{"a":"Number|{\\"b\\":\\"Number\\"}"}': { a: typeforce.oneOf('Number', { b: 'Number' }) },
   '{"a":"?{\\"b\\":\\"Number\\"}"}': { a: typeforce.maybe({ b: 'Number' }) },
-  '{"a":"?{\\"b\\":\\"?{\\\\\\"c\\\\\\":\\\\\\"Number\\\\\\"}\\"}"}': { a: typeforce.maybe({ b: typeforce.maybe({ c: 'Number' }) }) }
+  '{"a":"?{\\"b\\":\\"?{\\\\\\"c\\\\\\":\\\\\\"Number\\\\\\"}\\"}"}': { a: typeforce.maybe({ b: typeforce.maybe({ c: 'Number' }) }) },
+  '?Tz': function Tz () { return false },
+  '{"a":"?Tt"}': { a: typeforce.maybe(function Tt () { return false }) }
 }
 
 var VALUES = {
