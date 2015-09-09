@@ -25,7 +25,7 @@ describe('typeforce', function () {
     assert(f.exception)
     var type = TYPES[f.typeId] || f.type
     var value = VALUES[f.valueId] || f.value
-    var typeDescription = JSON.stringify(type)
+    var typeDescription = f.typeId || JSON.stringify(type)
     var valueDescription = JSON.stringify(value)
     var exception = f.exception.replace(/([.*+?^=!:${}()|\[\]\/\\])/g, '\\$&')
 
