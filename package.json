@@ -31,6 +31,7 @@
     "generate-test": "mocha --compilers js:babel/register test/__generate.js",
     "prepublish": "npm run build",
     "standard": "standard",
+    "start": "npm run watch",
     "test": "npm run standard && npm run unit",
     "unit": "mocha --compilers js:babel/register test/index.js",
     "watch": "babel --watch --out-dir lib/ src/"
