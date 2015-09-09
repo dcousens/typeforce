@@ -90,6 +90,11 @@ var otherTypes = {
           typeforce(propertyType, propertyValue, strict)
         }
       } catch (e) {
+        if (/Expected property "/.test(e.message)) {
+          e.message = e.message.replace(/Expected property "(.+)" of/, 'Expected property "' + propertyName + '.$1" of')
+          throw e
+        }
+
         throw new TypeError(tfPropertyErrorString(propertyType, propertyName, propertyValue))
       }
 
