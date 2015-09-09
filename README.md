@@ -18,7 +18,7 @@ var array = [element, element, elementNumber]
 typeforce('Array', array)
 
 typeforce('Number', array)
-// TypeError: Expected Number, got Array [ ... ]
+// TypeError: Expected Number, got Array
 
 // array types
 typeforce(['Object'], array)
