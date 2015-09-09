@@ -40,13 +40,20 @@ var nativeTypes = {
   '' () { return true }
 }
 
-function tJSON (type) {
-  return (type && type.toJSON) ? type.toJSON() : type
-}
+function mJSON (type) {
+  if (type && type.toJSON) return type.toJSON()
+  if (nativeTypes.Function(type)) return getFunctionName(type)
+  if (nativeTypes.Object(type)) {
+    var json = {}
 
-function sJSON (type) {
-  var json = tJSON(type)
-  return nativeTypes.Object(json) ? JSON.stringify(json) : json
+    for (var propertyName in type) {
+      json[propertyName] = mJSON(type[propertyName])
+    }
+
+    return JSON.stringify(json)
+  }
+
+  return type
 }
 
 var otherTypes = {
@@ -58,7 +65,7 @@ var otherTypes = {
         return false
       }
     }
-    arrayOf.toJSON = () => [tJSON(type)]
+    arrayOf.toJSON = () => [mJSON(type)]
 
     return arrayOf
   },
@@ -67,7 +74,7 @@ var otherTypes = {
     function maybe (value, strict) {
       return nativeTypes.Null(value) || typeforce(type, value, strict)
     }
-    maybe.toJSON = () => '?' + sJSON(type)
+    maybe.toJSON = () => '?' + mJSON(type)
 
     return maybe
   },
@@ -114,7 +121,7 @@ var otherTypes = {
         }
       })
     }
-    oneOf.toJSON = () => types.map(sJSON).join('|')
+    oneOf.toJSON = () => types.map(mJSON).join('|')
 
     return oneOf
   },
@@ -132,7 +139,7 @@ var otherTypes = {
     function tuple (value, strict) {
       return types.every((type, i) => typeforce(type, value[i], strict))
     }
-    tuple.toJSON = () => '(' + types.map(sJSON).join(', ') + ')'
+    tuple.toJSON = () => '(' + types.map(mJSON).join(', ') + ')'
 
     return tuple
   },
