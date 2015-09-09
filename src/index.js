@@ -2,13 +2,25 @@ function getFunctionName (fn) {
   return fn.name || fn.toString().match(/function (.*?)\s*\(/)[1]
 }
 
-function getTypeTypeName (type) {
-  if (nativeTypes.Function(type)) {
-    type = type.toJSON ? type.toJSON() : getFunctionName(type)
+function tfJSON (type) {
+  if (nativeTypes.Function(type)) return type.toJSON ? type.toJSON() : getFunctionName(type)
+  if (nativeTypes.Object(type)) {
+    var json = {}
+
+    for (var propertyName in type) {
+      json[propertyName] = tfJSON(type[propertyName])
+    }
+
+    return JSON.stringify(json)
   }
-  if (nativeTypes.Object(type)) return JSON.stringify(type)
 
   return type
+}
+
+function getTypeTypeName (type) {
+  var typeJson = tfJSON(type)
+
+  return nativeTypes.Object(typeJson) ? JSON.stringify(typeJson) : typeJson
 }
 
 function getValueTypeName (value) {
@@ -26,22 +38,6 @@ function tfErrorString (type, value) {
 
 function tfPropertyErrorString (type, name, value) {
   return tfErrorString('property \"' + name + '\" of type ' + getTypeTypeName(type), value)
-}
-
-function tfJSON (type) {
-  if (type && type.toJSON) return type.toJSON()
-  if (nativeTypes.Function(type)) return getFunctionName(type)
-  if (nativeTypes.Object(type)) {
-    var json = {}
-
-    for (var propertyName in type) {
-      json[propertyName] = tfJSON(type[propertyName])
-    }
-
-    return JSON.stringify(json)
-  }
-
-  return type
 }
 
 var nativeTypes = {
