@@ -28,6 +28,7 @@
     "build": "babel --out-dir lib/ src/",
     "coverage": "mocha --compilers js:babel/register --require blanket -R travis-cov",
     "coverage-local": "mocha --compilers js:babel/register --require blanket -R html-cov",
+    "generate-test": "mocha --compilers js:babel/register test/__generate.js",
     "prepublish": "npm run build",
     "standard": "standard",
     "test": "npm run standard && npm run unit",
