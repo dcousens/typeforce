@@ -28,6 +28,22 @@ function tfPropertyErrorString (type, name, value) {
   return tfErrorString('property \"' + name + '\" of type ' + getTypeTypeName(type), value)
 }
 
+function tfJSON (type) {
+  if (type && type.toJSON) return type.toJSON()
+  if (nativeTypes.Function(type)) return getFunctionName(type)
+  if (nativeTypes.Object(type)) {
+    var json = {}
+
+    for (var propertyName in type) {
+      json[propertyName] = tfJSON(type[propertyName])
+    }
+
+    return JSON.stringify(json)
+  }
+
+  return type
+}
+
 var nativeTypes = {
   Array (value) { return value !== null && value !== undefined && value.constructor === Array },
   Boolean (value) { return typeof value === 'boolean' },
@@ -40,22 +56,6 @@ var nativeTypes = {
   '' () { return true }
 }
 
-function mJSON (type) {
-  if (type && type.toJSON) return type.toJSON()
-  if (nativeTypes.Function(type)) return getFunctionName(type)
-  if (nativeTypes.Object(type)) {
-    var json = {}
-
-    for (var propertyName in type) {
-      json[propertyName] = mJSON(type[propertyName])
-    }
-
-    return JSON.stringify(json)
-  }
-
-  return type
-}
-
 var otherTypes = {
   arrayOf (type) {
     function arrayOf (value, strict) {
@@ -65,7 +65,7 @@ var otherTypes = {
         return false
       }
     }
-    arrayOf.toJSON = () => [mJSON(type)]
+    arrayOf.toJSON = () => [tfJSON(type)]
 
     return arrayOf
   },
@@ -74,7 +74,7 @@ var otherTypes = {
     function maybe (value, strict) {
       return nativeTypes.Null(value) || typeforce(type, value, strict)
     }
-    maybe.toJSON = () => '?' + mJSON(type)
+    maybe.toJSON = () => '?' + tfJSON(type)
 
     return maybe
   },
@@ -121,7 +121,7 @@ var otherTypes = {
         }
       })
     }
-    oneOf.toJSON = () => types.map(mJSON).join('|')
+    oneOf.toJSON = () => types.map(tfJSON).join('|')
 
     return oneOf
   },
@@ -139,7 +139,7 @@ var otherTypes = {
     function tuple (value, strict) {
       return types.every((type, i) => typeforce(type, value[i], strict))
     }
-    tuple.toJSON = () => '(' + types.map(mJSON).join(', ') + ')'
+    tuple.toJSON = () => '(' + types.map(tfJSON).join(', ') + ')'
 
     return tuple
   },
