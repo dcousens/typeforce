@@ -113,6 +113,34 @@ var otherTypes = {
     return object
   },
 
+  map (propertyType) {
+    function map (value, strict) {
+      typeforce(nativeTypes.Object, value, strict)
+
+      var propertyName, propertyValue
+
+      try {
+        for (propertyName in value) {
+          propertyValue = value[propertyName]
+
+          typeforce(propertyType, propertyValue, strict)
+        }
+      } catch (e) {
+        if (/Expected property "/.test(e.message)) {
+          e.message = e.message.replace(/Expected property "(.+)" of/, 'Expected property "' + propertyName + '.$1" of')
+          throw e
+        }
+
+        throw new TypeError(tfPropertyErrorString(propertyType, propertyName, propertyValue))
+      }
+
+      return true
+    }
+    map.toJSON = () => '{' + tfJSON(propertyType) + '}'
+
+    return map
+  },
+
   oneOf (... types) {
     function oneOf (value, strict) {
       return types.some(type => {

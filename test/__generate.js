@@ -51,7 +51,9 @@ var VALUES2 = [
   { a: { b: null } },
   { a: { b: { c: 0 } } },
   { a: { b: { c: null } } },
-  { a: { b: { c: 0, d: 0 } } }
+  { a: { b: { c: 0, d: 0 } } },
+  { a: 'foo', b: 'bar' },
+  { a: 'foo', b: { c: 'bar' } }
 ]
 
 var fixtures = {

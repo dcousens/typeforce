@@ -18,7 +18,9 @@ var TYPES = {
   '?Tt': Tt,
   '{ a: ?Tt }': { a: typeforce.maybe(Tt) },
   '{ a: { b: Tt } }': { a: { b: Tt } },
-  '>CustomType': typeforce.quacksLike('CustomType')
+  '>CustomType': typeforce.quacksLike('CustomType'),
+  '{ String }': typeforce.map('String'),
+  '{ String|Number }': typeforce.map(typeforce.oneOf('String', 'Number'))
 }
 
 var VALUES = {
