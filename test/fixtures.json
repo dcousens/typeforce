@@ -6781,7 +6781,7 @@
       "valueId": "customType"
     },
     {
-      "exception": "Unexpected property \"asciiSlice\"",
+      "exception": "Unexpected property \"(asciiSlice|length)\"",
       "strict": true,
       "typeId": "?{ a: ?Number }",
       "valueId": "buffer"
@@ -7141,7 +7141,7 @@
       "valueId": "customType"
     },
     {
-      "exception": "Unexpected property \"asciiSlice\"",
+      "exception": "Unexpected property \"(asciiSlice|length)\"",
       "strict": true,
       "typeId": "{ a: Number|Null }",
       "valueId": "buffer"
@@ -7498,7 +7498,7 @@
       "valueId": "customType"
     },
     {
-      "exception": "Unexpected property \"asciiSlice\"",
+      "exception": "Unexpected property \"(asciiSlice|length)\"",
       "strict": true,
       "typeId": "{ a: ?{ b: Number } }",
       "valueId": "buffer"
@@ -7662,7 +7662,7 @@
       "valueId": "customType"
     },
     {
-      "exception": "Unexpected property \"asciiSlice\"",
+      "exception": "Unexpected property \"(asciiSlice|length)\"",
       "strict": true,
       "typeId": "{ a: ?{ b: ?{ c: Number } } }",
       "valueId": "buffer"
@@ -8043,7 +8043,7 @@
       "valueId": "customType"
     },
     {
-      "exception": "Unexpected property \"asciiSlice\"",
+      "exception": "Unexpected property \"(asciiSlice|length)\"",
       "strict": true,
       "typeId": "{ a: ?Tt }",
       "valueId": "buffer"
@@ -8598,7 +8598,7 @@
       "valueId": "customType"
     },
     {
-      "exception": "Expected property \"asciiSlice\" of type String, got Function",
+      "exception": "Expected property \"(asciiSlice|length)\" of type String, got Function",
       "typeId": "{ String }",
       "valueId": "buffer"
     },
@@ -8727,7 +8727,7 @@
       "valueId": "function"
     },
     {
-      "exception": "Expected property \"asciiSlice\" of type String|Number, got Function",
+      "exception": "Expected property \"(asciiSlice|length)\" of type String|Number, got Function",
       "typeId": "{ String|Number }",
       "valueId": "buffer"
     },
