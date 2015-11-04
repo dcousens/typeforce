@@ -2,6 +2,10 @@ var typeforce = require('../src')
 
 function Tt () { return false }
 
+function Letter (value) {
+  return /^[a-z]$/i.test(value)
+}
+
 var TYPES = {
   '(Boolean, Number)': typeforce.tuple('Boolean', 'Number'),
   '(Number|String)': typeforce.tuple(typeforce.oneOf('Number', 'String')),
@@ -20,12 +24,15 @@ var TYPES = {
   '{ a: { b: Tt } }': { a: { b: Tt } },
   '>CustomType': typeforce.quacksLike('CustomType'),
   '{ String }': typeforce.map('String'),
-  '{ String|Number }': typeforce.map(typeforce.oneOf('String', 'Number'))
+  '{ String|Number }': typeforce.map(typeforce.oneOf('String', 'Number')),
+  '{ String: Number }': typeforce.map('Number', 'String'),
+  '{ Letter: Number }': typeforce.map('Number', Letter)
 }
 
 var VALUES = {
   'function': function () {},
-  'customType': new function CustomType () {},
+  'emptyType': new function EmptyType () {},
+  'customType': new function CustomType () { this.x = 2 },
   'buffer': new Buffer(0)
 }
 

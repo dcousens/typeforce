@@ -38,7 +38,7 @@ function tfErrorString (type, value) {
 }
 
 function tfPropertyErrorString (type, name, value) {
-  return tfErrorString('property \"' + name + '\" of type ' + stfJSON(type), value)
+  return tfErrorString('property \"' + stfJSON(name) + '\" of type ' + stfJSON(type), value)
 }
 
 var nativeTypes = {
@@ -113,7 +113,7 @@ var otherTypes = {
     return object
   },
 
-  map (propertyType) {
+  map (propertyType, propertyKeyType) {
     function map (value, strict) {
       typeforce(nativeTypes.Object, value, strict)
 
@@ -121,8 +121,11 @@ var otherTypes = {
 
       try {
         for (propertyName in value) {
-          propertyValue = value[propertyName]
+          if (propertyKeyType) {
+            typeforce(propertyKeyType, propertyName, strict)
+          }
 
+          propertyValue = value[propertyName]
           typeforce(propertyType, propertyValue, strict)
         }
       } catch (e) {
@@ -131,12 +134,16 @@ var otherTypes = {
           throw e
         }
 
-        throw new TypeError(tfPropertyErrorString(propertyType, propertyName, propertyValue))
+        throw new TypeError(tfPropertyErrorString(propertyType, propertyKeyType || propertyName, propertyValue))
       }
 
       return true
     }
-    map.toJSON = () => '{' + tfJSON(propertyType) + '}'
+    if (propertyKeyType) {
+      map.toJSON = () => '{' + stfJSON(propertyKeyType) + ': ' + stfJSON(propertyType) + '}'
+    } else {
+      map.toJSON = () => '{' + stfJSON(propertyType) + '}'
+    }
 
     return map
   },

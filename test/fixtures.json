@@ -189,6 +189,10 @@
     },
     {
       "type": "Object",
+      "valueId": "emptyType"
+    },
+    {
+      "type": "Object",
       "valueId": "customType"
     },
     {
@@ -557,6 +561,10 @@
     },
     {
       "typeId": "?{ a: ?Number }",
+      "valueId": "emptyType"
+    },
+    {
+      "typeId": "?{ a: ?Number }",
       "valueId": "customType"
     },
     {
@@ -644,6 +652,10 @@
     },
     {
       "typeId": "{ a: Number|Null }",
+      "valueId": "emptyType"
+    },
+    {
+      "typeId": "{ a: Number|Null }",
       "valueId": "customType"
     },
     {
@@ -724,6 +736,10 @@
           "b": 0
         }
       }
+    },
+    {
+      "typeId": "{ a: ?{ b: Number } }",
+      "valueId": "emptyType"
     },
     {
       "typeId": "{ a: ?{ b: Number } }",
@@ -810,6 +826,10 @@
     },
     {
       "typeId": "{ a: ?{ b: ?{ c: Number } } }",
+      "valueId": "emptyType"
+    },
+    {
+      "typeId": "{ a: ?{ b: ?{ c: Number } } }",
       "valueId": "customType"
     },
     {
@@ -864,6 +884,10 @@
     },
     {
       "typeId": "{ a: ?Tt }",
+      "valueId": "emptyType"
+    },
+    {
+      "typeId": "{ a: ?Tt }",
       "valueId": "customType"
     },
     {
@@ -901,7 +925,7 @@
     },
     {
       "typeId": "{ String }",
-      "valueId": "customType"
+      "valueId": "emptyType"
     },
     {
       "typeId": "{ String|Number }",
@@ -955,6 +979,94 @@
     },
     {
       "typeId": "{ String|Number }",
+      "valueId": "emptyType"
+    },
+    {
+      "typeId": "{ String|Number }",
+      "valueId": "customType"
+    },
+    {
+      "typeId": "{ String: Number }",
+      "value": []
+    },
+    {
+      "typeId": "{ String: Number }",
+      "value": [
+        0
+      ]
+    },
+    {
+      "typeId": "{ String: Number }",
+      "value": null
+    },
+    {
+      "typeId": "{ String: Number }",
+      "value": {}
+    },
+    {
+      "typeId": "{ String: Number }",
+      "value": {
+        "a": 0
+      }
+    },
+    {
+      "typeId": "{ String: Number }",
+      "value": {
+        "a": 0,
+        "b": 0
+      }
+    },
+    {
+      "typeId": "{ String: Number }",
+      "value": {
+        "b": 0
+      }
+    },
+    {
+      "typeId": "{ String: Number }",
+      "valueId": "emptyType"
+    },
+    {
+      "typeId": "{ String: Number }",
+      "valueId": "customType"
+    },
+    {
+      "typeId": "{ Letter: Number }",
+      "value": []
+    },
+    {
+      "typeId": "{ Letter: Number }",
+      "value": null
+    },
+    {
+      "typeId": "{ Letter: Number }",
+      "value": {}
+    },
+    {
+      "typeId": "{ Letter: Number }",
+      "value": {
+        "a": 0
+      }
+    },
+    {
+      "typeId": "{ Letter: Number }",
+      "value": {
+        "a": 0,
+        "b": 0
+      }
+    },
+    {
+      "typeId": "{ Letter: Number }",
+      "value": {
+        "b": 0
+      }
+    },
+    {
+      "typeId": "{ Letter: Number }",
+      "valueId": "emptyType"
+    },
+    {
+      "typeId": "{ Letter: Number }",
       "valueId": "customType"
     }
   ],
@@ -1106,6 +1218,11 @@
       "exception": "Expected Array, got Function",
       "type": "Array",
       "valueId": "function"
+    },
+    {
+      "exception": "Expected Array, got EmptyType",
+      "type": "Array",
+      "valueId": "emptyType"
     },
     {
       "exception": "Expected Array, got CustomType",
@@ -1289,6 +1406,11 @@
       "exception": "Expected Boolean, got Function",
       "type": "Boolean",
       "valueId": "function"
+    },
+    {
+      "exception": "Expected Boolean, got EmptyType",
+      "type": "Boolean",
+      "valueId": "emptyType"
     },
     {
       "exception": "Expected Boolean, got CustomType",
@@ -1484,6 +1606,11 @@
       "valueId": "function"
     },
     {
+      "exception": "Expected Buffer, got EmptyType",
+      "type": "Buffer",
+      "valueId": "emptyType"
+    },
+    {
       "exception": "Expected Buffer, got CustomType",
       "type": "Buffer",
       "valueId": "customType"
@@ -1665,6 +1792,11 @@
           "c": "bar"
         }
       }
+    },
+    {
+      "exception": "Expected Function, got EmptyType",
+      "type": "Function",
+      "valueId": "emptyType"
     },
     {
       "exception": "Expected Function, got CustomType",
@@ -1851,6 +1983,11 @@
       "valueId": "function"
     },
     {
+      "exception": "Expected Null, got EmptyType",
+      "type": "Null",
+      "valueId": "emptyType"
+    },
+    {
       "exception": "Expected Null, got CustomType",
       "type": "Null",
       "valueId": "customType"
@@ -2032,6 +2169,11 @@
       "exception": "Expected Number, got Function",
       "type": "Number",
       "valueId": "function"
+    },
+    {
+      "exception": "Expected Number, got EmptyType",
+      "type": "Number",
+      "valueId": "emptyType"
     },
     {
       "exception": "Expected Number, got CustomType",
@@ -2256,6 +2398,11 @@
       "valueId": "function"
     },
     {
+      "exception": "Expected String, got EmptyType",
+      "type": "String",
+      "valueId": "emptyType"
+    },
+    {
       "exception": "Expected String, got CustomType",
       "type": "String",
       "valueId": "customType"
@@ -2428,6 +2575,11 @@
       "exception": "Expected Number, got Function",
       "type": "?Number",
       "valueId": "function"
+    },
+    {
+      "exception": "Expected Number, got EmptyType",
+      "type": "?Number",
+      "valueId": "emptyType"
     },
     {
       "exception": "Expected Number, got CustomType",
@@ -2648,6 +2800,13 @@
         "?Number"
       ],
       "valueId": "function"
+    },
+    {
+      "exception": "Expected [\"?Number\"], got EmptyType",
+      "type": [
+        "?Number"
+      ],
+      "valueId": "emptyType"
     },
     {
       "exception": "Expected [\"?Number\"], got CustomType",
@@ -2881,6 +3040,13 @@
         "Number"
       ],
       "valueId": "function"
+    },
+    {
+      "exception": "Expected [\"Number\"], got EmptyType",
+      "type": [
+        "Number"
+      ],
+      "valueId": "emptyType"
     },
     {
       "exception": "Expected [\"Number\"], got CustomType",
@@ -3162,6 +3328,15 @@
       "valueId": "function"
     },
     {
+      "exception": "Expected [\"Object\"], got EmptyType",
+      "type": [
+        {
+          "a": "Number"
+        }
+      ],
+      "valueId": "emptyType"
+    },
+    {
       "exception": "Expected [\"Object\"], got CustomType",
       "type": [
         {
@@ -3405,6 +3580,13 @@
         "a": "Number"
       },
       "valueId": "function"
+    },
+    {
+      "exception": "Expected property \"a\" of type Number, got undefined",
+      "type": {
+        "a": "Number"
+      },
+      "valueId": "emptyType"
     },
     {
       "exception": "Expected property \"a\" of type Number, got undefined",
@@ -3693,6 +3875,15 @@
         }
       },
       "valueId": "function"
+    },
+    {
+      "exception": "Expected property \"a\" of type Object, got undefined",
+      "type": {
+        "a": {
+          "b": "Number"
+        }
+      },
+      "valueId": "emptyType"
     },
     {
       "exception": "Expected property \"a\" of type Object, got undefined",
@@ -4017,6 +4208,17 @@
         }
       },
       "valueId": "function"
+    },
+    {
+      "exception": "Expected property \"a\" of type Object, got undefined",
+      "type": {
+        "a": {
+          "b": {
+            "c": "?Number"
+          }
+        }
+      },
+      "valueId": "emptyType"
     },
     {
       "exception": "Expected property \"a\" of type Object, got undefined",
@@ -4372,6 +4574,17 @@
           }
         }
       },
+      "valueId": "emptyType"
+    },
+    {
+      "exception": "Expected property \"a\" of type Object, got undefined",
+      "type": {
+        "a": {
+          "b": {
+            "c": "Number"
+          }
+        }
+      },
       "valueId": "customType"
     },
     {
@@ -4538,6 +4751,10 @@
     {
       "exception": "Expected undefined, got Function",
       "valueId": "function"
+    },
+    {
+      "exception": "Expected undefined, got EmptyType",
+      "valueId": "emptyType"
     },
     {
       "exception": "Expected undefined, got CustomType",
@@ -4724,6 +4941,11 @@
       "exception": "Expected null, got Function",
       "type": null,
       "valueId": "function"
+    },
+    {
+      "exception": "Expected null, got EmptyType",
+      "type": null,
+      "valueId": "emptyType"
     },
     {
       "exception": "Expected null, got CustomType",
@@ -4914,6 +5136,11 @@
       "valueId": "function"
     },
     {
+      "exception": "Expected true, got EmptyType",
+      "type": true,
+      "valueId": "emptyType"
+    },
+    {
       "exception": "Expected true, got CustomType",
       "type": true,
       "valueId": "customType"
@@ -5102,6 +5329,11 @@
       "valueId": "function"
     },
     {
+      "exception": "Expected false, got EmptyType",
+      "type": false,
+      "valueId": "emptyType"
+    },
+    {
       "exception": "Expected false, got CustomType",
       "type": false,
       "valueId": "customType"
@@ -5288,6 +5520,11 @@
       "exception": "Expected 0, got Function",
       "type": 0,
       "valueId": "function"
+    },
+    {
+      "exception": "Expected 0, got EmptyType",
+      "type": 0,
+      "valueId": "emptyType"
     },
     {
       "exception": "Expected 0, got CustomType",
@@ -5485,6 +5722,11 @@
     {
       "exception": "Expected Boolean, got undefined",
       "typeId": "(Boolean, Number)",
+      "valueId": "emptyType"
+    },
+    {
+      "exception": "Expected Boolean, got undefined",
+      "typeId": "(Boolean, Number)",
       "valueId": "customType"
     },
     {
@@ -5655,6 +5897,11 @@
       "exception": "Expected Number|String, got undefined",
       "typeId": "(Number|String)",
       "valueId": "function"
+    },
+    {
+      "exception": "Expected Number|String, got undefined",
+      "typeId": "(Number|String)",
+      "valueId": "emptyType"
     },
     {
       "exception": "Expected Number|String, got undefined",
@@ -5845,6 +6092,11 @@
     {
       "exception": "Expected Number, got undefined",
       "typeId": "(Number)",
+      "valueId": "emptyType"
+    },
+    {
+      "exception": "Expected Number, got undefined",
+      "typeId": "(Number)",
       "valueId": "customType"
     },
     {
@@ -6015,6 +6267,11 @@
       "valueId": "function"
     },
     {
+      "exception": "Expected [\"?Object\"], got EmptyType",
+      "typeId": "[?{ a: Number }]",
+      "valueId": "emptyType"
+    },
+    {
       "exception": "Expected [\"?Object\"], got CustomType",
       "typeId": "[?{ a: Number }]",
       "valueId": "customType"
@@ -6176,6 +6433,11 @@
       "exception": "Expected Boolean|Number|String, got Function",
       "typeId": "Boolean|Number|String",
       "valueId": "function"
+    },
+    {
+      "exception": "Expected Boolean|Number|String, got EmptyType",
+      "typeId": "Boolean|Number|String",
+      "valueId": "emptyType"
     },
     {
       "exception": "Expected Boolean|Number|String, got CustomType",
@@ -6342,6 +6604,11 @@
       "valueId": "function"
     },
     {
+      "exception": "Expected Boolean|Number, got EmptyType",
+      "typeId": "?Boolean|Number",
+      "valueId": "emptyType"
+    },
+    {
       "exception": "Expected Boolean|Number, got CustomType",
       "typeId": "?Boolean|Number",
       "valueId": "customType"
@@ -6506,6 +6773,12 @@
       "exception": "Expected Object, got Function",
       "typeId": "?{ a: ?Number }",
       "valueId": "function"
+    },
+    {
+      "exception": "Unexpected property \"x\"",
+      "strict": true,
+      "typeId": "?{ a: ?Number }",
+      "valueId": "customType"
     },
     {
       "exception": "Unexpected property \"asciiSlice\"",
@@ -6684,6 +6957,11 @@
     {
       "exception": "Expected property \"a\" of type Number, got undefined",
       "typeId": "?{ a: Number }",
+      "valueId": "emptyType"
+    },
+    {
+      "exception": "Expected property \"a\" of type Number, got undefined",
+      "typeId": "?{ a: Number }",
       "valueId": "customType"
     },
     {
@@ -6855,6 +7133,12 @@
       "exception": "Expected Object, got Function",
       "typeId": "{ a: Number|Null }",
       "valueId": "function"
+    },
+    {
+      "exception": "Unexpected property \"x\"",
+      "strict": true,
+      "typeId": "{ a: Number|Null }",
+      "valueId": "customType"
     },
     {
       "exception": "Unexpected property \"asciiSlice\"",
@@ -7033,6 +7317,11 @@
     {
       "exception": "Expected property \"a\" of type Number|Object, got undefined",
       "typeId": "{ a: Number|{ b: Number } }",
+      "valueId": "emptyType"
+    },
+    {
+      "exception": "Expected property \"a\" of type Number|Object, got undefined",
+      "typeId": "{ a: Number|{ b: Number } }",
       "valueId": "customType"
     },
     {
@@ -7203,6 +7492,12 @@
       "valueId": "function"
     },
     {
+      "exception": "Unexpected property \"x\"",
+      "strict": true,
+      "typeId": "{ a: ?{ b: Number } }",
+      "valueId": "customType"
+    },
+    {
       "exception": "Unexpected property \"asciiSlice\"",
       "strict": true,
       "typeId": "{ a: ?{ b: Number } }",
@@ -7359,6 +7654,12 @@
       "exception": "Expected Object, got Function",
       "typeId": "{ a: ?{ b: ?{ c: Number } } }",
       "valueId": "function"
+    },
+    {
+      "exception": "Unexpected property \"x\"",
+      "strict": true,
+      "typeId": "{ a: ?{ b: ?{ c: Number } } }",
+      "valueId": "customType"
     },
     {
       "exception": "Unexpected property \"asciiSlice\"",
@@ -7550,6 +7851,11 @@
       "valueId": "function"
     },
     {
+      "exception": "Expected Tt, got EmptyType",
+      "typeId": "?Tt",
+      "valueId": "emptyType"
+    },
+    {
       "exception": "Expected Tt, got CustomType",
       "typeId": "?Tt",
       "valueId": "customType"
@@ -7729,6 +8035,12 @@
       "exception": "Expected Object, got Function",
       "typeId": "{ a: ?Tt }",
       "valueId": "function"
+    },
+    {
+      "exception": "Unexpected property \"x\"",
+      "strict": true,
+      "typeId": "{ a: ?Tt }",
+      "valueId": "customType"
     },
     {
       "exception": "Unexpected property \"asciiSlice\"",
@@ -7918,6 +8230,11 @@
       "exception": "Expected Object, got Function",
       "typeId": "{ a: { b: Tt } }",
       "valueId": "function"
+    },
+    {
+      "exception": "Expected property \"a\" of type Object, got undefined",
+      "typeId": "{ a: { b: Tt } }",
+      "valueId": "emptyType"
     },
     {
       "exception": "Expected property \"a\" of type Object, got undefined",
@@ -8113,6 +8430,11 @@
       "valueId": "function"
     },
     {
+      "exception": "Expected CustomType, got EmptyType",
+      "typeId": ">CustomType",
+      "valueId": "emptyType"
+    },
+    {
       "exception": "Expected CustomType, got Buffer",
       "typeId": ">CustomType",
       "valueId": "buffer"
@@ -8271,6 +8593,11 @@
       "valueId": "function"
     },
     {
+      "exception": "Expected property \"x\" of type String, got Number 2",
+      "typeId": "{ String }",
+      "valueId": "customType"
+    },
+    {
       "exception": "Expected property \"asciiSlice\" of type String, got Function",
       "typeId": "{ String }",
       "valueId": "buffer"
@@ -8402,6 +8729,301 @@
     {
       "exception": "Expected property \"asciiSlice\" of type String|Number, got Function",
       "typeId": "{ String|Number }",
+      "valueId": "buffer"
+    },
+    {
+      "exception": "Expected Object, got String \"\"",
+      "typeId": "{ String: Number }",
+      "value": ""
+    },
+    {
+      "exception": "Expected Object, got String \"foobar\"",
+      "typeId": "{ String: Number }",
+      "value": "foobar"
+    },
+    {
+      "exception": "Expected Object, got Number 0",
+      "typeId": "{ String: Number }",
+      "value": 0
+    },
+    {
+      "exception": "Expected Object, got Number 1",
+      "typeId": "{ String: Number }",
+      "value": 1
+    },
+    {
+      "exception": "Expected property \"String\" of type Number, got String \"foobar\"",
+      "typeId": "{ String: Number }",
+      "value": [
+        "foobar"
+      ]
+    },
+    {
+      "exception": "Expected property \"String\" of type Number, got Object",
+      "typeId": "{ String: Number }",
+      "value": [
+        {
+          "a": 0
+        }
+      ]
+    },
+    {
+      "exception": "Expected property \"String\" of type Number, got null",
+      "typeId": "{ String: Number }",
+      "value": [
+        null
+      ]
+    },
+    {
+      "exception": "Expected Object, got Boolean false",
+      "typeId": "{ String: Number }",
+      "value": false
+    },
+    {
+      "exception": "Expected Object, got Boolean true",
+      "typeId": "{ String: Number }",
+      "value": true
+    },
+    {
+      "exception": "Expected Object, got undefined",
+      "typeId": "{ String: Number }"
+    },
+    {
+      "exception": "Expected property \"String\" of type Number, got null",
+      "typeId": "{ String: Number }",
+      "value": {
+        "a": null
+      }
+    },
+    {
+      "exception": "Expected property \"String\" of type Number, got Object",
+      "typeId": "{ String: Number }",
+      "value": {
+        "a": {
+          "b": 0
+        }
+      }
+    },
+    {
+      "exception": "Expected property \"String\" of type Number, got Object",
+      "typeId": "{ String: Number }",
+      "value": {
+        "a": {
+          "b": null
+        }
+      }
+    },
+    {
+      "exception": "Expected property \"String\" of type Number, got Object",
+      "typeId": "{ String: Number }",
+      "value": {
+        "a": {
+          "b": {
+            "c": 0
+          }
+        }
+      }
+    },
+    {
+      "exception": "Expected property \"String\" of type Number, got Object",
+      "typeId": "{ String: Number }",
+      "value": {
+        "a": {
+          "b": {
+            "c": null
+          }
+        }
+      }
+    },
+    {
+      "exception": "Expected property \"String\" of type Number, got Object",
+      "typeId": "{ String: Number }",
+      "value": {
+        "a": {
+          "b": {
+            "c": 0,
+            "d": 0
+          }
+        }
+      }
+    },
+    {
+      "exception": "Expected property \"String\" of type Number, got String \"foo\"",
+      "typeId": "{ String: Number }",
+      "value": {
+        "a": "foo",
+        "b": "bar"
+      }
+    },
+    {
+      "exception": "Expected property \"String\" of type Number, got String \"foo\"",
+      "typeId": "{ String: Number }",
+      "value": {
+        "a": "foo",
+        "b": {
+          "c": "bar"
+        }
+      }
+    },
+    {
+      "exception": "Expected Object, got Function",
+      "typeId": "{ String: Number }",
+      "valueId": "function"
+    },
+    {
+      "exception": "Expected property \"String\" of type Number, got Function",
+      "typeId": "{ String: Number }",
+      "valueId": "buffer"
+    },
+    {
+      "exception": "Expected Object, got String \"\"",
+      "typeId": "{ Letter: Number }",
+      "value": ""
+    },
+    {
+      "exception": "Expected Object, got String \"foobar\"",
+      "typeId": "{ Letter: Number }",
+      "value": "foobar"
+    },
+    {
+      "exception": "Expected Object, got Number 0",
+      "typeId": "{ Letter: Number }",
+      "value": 0
+    },
+    {
+      "exception": "Expected Object, got Number 1",
+      "typeId": "{ Letter: Number }",
+      "value": 1
+    },
+    {
+      "exception": "Expected property \"Letter\" of type Number, got undefined",
+      "typeId": "{ Letter: Number }",
+      "value": [
+        0
+      ]
+    },
+    {
+      "exception": "Expected property \"Letter\" of type Number, got undefined",
+      "typeId": "{ Letter: Number }",
+      "value": [
+        "foobar"
+      ]
+    },
+    {
+      "exception": "Expected property \"Letter\" of type Number, got undefined",
+      "typeId": "{ Letter: Number }",
+      "value": [
+        {
+          "a": 0
+        }
+      ]
+    },
+    {
+      "exception": "Expected property \"Letter\" of type Number, got undefined",
+      "typeId": "{ Letter: Number }",
+      "value": [
+        null
+      ]
+    },
+    {
+      "exception": "Expected Object, got Boolean false",
+      "typeId": "{ Letter: Number }",
+      "value": false
+    },
+    {
+      "exception": "Expected Object, got Boolean true",
+      "typeId": "{ Letter: Number }",
+      "value": true
+    },
+    {
+      "exception": "Expected Object, got undefined",
+      "typeId": "{ Letter: Number }"
+    },
+    {
+      "exception": "Expected property \"Letter\" of type Number, got null",
+      "typeId": "{ Letter: Number }",
+      "value": {
+        "a": null
+      }
+    },
+    {
+      "exception": "Expected property \"Letter\" of type Number, got Object",
+      "typeId": "{ Letter: Number }",
+      "value": {
+        "a": {
+          "b": 0
+        }
+      }
+    },
+    {
+      "exception": "Expected property \"Letter\" of type Number, got Object",
+      "typeId": "{ Letter: Number }",
+      "value": {
+        "a": {
+          "b": null
+        }
+      }
+    },
+    {
+      "exception": "Expected property \"Letter\" of type Number, got Object",
+      "typeId": "{ Letter: Number }",
+      "value": {
+        "a": {
+          "b": {
+            "c": 0
+          }
+        }
+      }
+    },
+    {
+      "exception": "Expected property \"Letter\" of type Number, got Object",
+      "typeId": "{ Letter: Number }",
+      "value": {
+        "a": {
+          "b": {
+            "c": null
+          }
+        }
+      }
+    },
+    {
+      "exception": "Expected property \"Letter\" of type Number, got Object",
+      "typeId": "{ Letter: Number }",
+      "value": {
+        "a": {
+          "b": {
+            "c": 0,
+            "d": 0
+          }
+        }
+      }
+    },
+    {
+      "exception": "Expected property \"Letter\" of type Number, got String \"foo\"",
+      "typeId": "{ Letter: Number }",
+      "value": {
+        "a": "foo",
+        "b": "bar"
+      }
+    },
+    {
+      "exception": "Expected property \"Letter\" of type Number, got String \"foo\"",
+      "typeId": "{ Letter: Number }",
+      "value": {
+        "a": "foo",
+        "b": {
+          "c": "bar"
+        }
+      }
+    },
+    {
+      "exception": "Expected Object, got Function",
+      "typeId": "{ Letter: Number }",
+      "valueId": "function"
+    },
+    {
+      "exception": "Expected property \"Letter\" of type Number, got undefined",
+      "typeId": "{ Letter: Number }",
       "valueId": "buffer"
     }
   ]
