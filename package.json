@@ -26,14 +26,14 @@
   ],
   "scripts": {
     "build": "babel --out-dir lib/ src/",
-    "coverage": "mocha --compilers js:babel/register --require blanket -R travis-cov",
-    "coverage-local": "mocha --compilers js:babel/register --require blanket -R html-cov",
-    "generate-test": "mocha --compilers js:babel/register test/__generate.js",
+    "coverage": "mocha --compilers js:babel-core/register --require blanket -R travis-cov",
+    "coverage-local": "mocha --compilers js:babel-core/register --require blanket -R html-cov",
+    "generate-test": "mocha --compilers js:babel-core/register test/__generate.js",
     "prepublish": "npm run build",
     "standard": "standard",
     "start": "npm run watch",
     "test": "npm run standard && npm run unit",
-    "unit": "mocha --compilers js:babel/register test/index.js",
+    "unit": "mocha --compilers js:babel-core/register test/index.js",
     "watch": "babel --watch --out-dir lib/ src/"
   },
   "config": {
@@ -58,6 +58,7 @@
   "dependencies": {},
   "devDependencies": {
     "babel": "*",
+    "babel-cli": "*",
     "blanket": "*",
     "mocha": "*",
     "standard": "*",
