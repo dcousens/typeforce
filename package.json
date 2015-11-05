@@ -1,6 +1,6 @@
 {
   "name": "typeforce",
-  "version": "1.5.4",
+  "version": "1.5.5",
   "description": "Another biased type checking solution for Javascript",
   "author": "Daniel Cousens",
   "license": "MIT",
