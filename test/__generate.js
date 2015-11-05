@@ -1,6 +1,7 @@
 var typeforce = require('../src')
-var xtend = require('xtend')
-var { TYPES, VALUES } = require('./types')
+var types = require('./types')
+var TYPES = types.TYPES
+var VALUES = types.VALUES
 
 var TYPES2 = [
   'Array',
@@ -90,12 +91,12 @@ TYPES2.concat(Object.keys(TYPES)).forEach(function (type) {
         typeforce(atype, avalue, false)
 
         fixtures.valid.push(f)
-        fixtures.invalid.push(xtend({
+        fixtures.invalid.push(Object.assign({
           exception: e.message,
           strict: true
         }, f))
       } catch (e) {
-        fixtures.invalid.push(xtend({
+        fixtures.invalid.push(Object.assign({
           exception: e.message
         }, f))
       }

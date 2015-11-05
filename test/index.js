@@ -3,7 +3,9 @@
 var assert = require('assert')
 var typeforce = require('../src')
 var fixtures = require('./fixtures')
-var { TYPES, VALUES } = require('./types')
+var types = require('./types')
+var TYPES = types.TYPES
+var VALUES = types.VALUES
 
 describe('typeforce', function () {
   fixtures.valid.forEach(function (f) {

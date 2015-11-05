@@ -20,21 +20,13 @@
     "exceptions",
     "force"
   ],
-  "main": "lib/index.js",
-  "files": [
-    "lib/"
-  ],
   "scripts": {
-    "build": "babel --out-dir lib/ src/",
-    "coverage": "mocha --compilers js:babel/register --require blanket -R travis-cov",
-    "coverage-local": "mocha --compilers js:babel/register --require blanket -R html-cov",
-    "generate-test": "mocha --compilers js:babel/register test/__generate.js",
-    "prepublish": "npm run build",
+    "coverage": "mocha --require blanket -R travis-cov",
+    "coverage-local": "mocha --require blanket -R html-cov",
+    "generate-test": "mocha test/__generate.js",
     "standard": "standard",
-    "start": "npm run watch",
     "test": "npm run standard && npm run unit",
-    "unit": "mocha --compilers js:babel/register test/index.js",
-    "watch": "babel --watch --out-dir lib/ src/"
+    "unit": "mocha test/index.js"
   },
   "config": {
     "blanket": {
@@ -50,18 +42,11 @@
       "threshold": 100
     }
   },
-  "standard": {
-    "ignore": [
-      "lib/"
-    ]
-  },
   "dependencies": {},
   "devDependencies": {
-    "babel": "^5.8.0",
     "blanket": "*",
     "mocha": "*",
     "standard": "*",
-    "travis-cov": "*",
-    "xtend": "^4.0.0"
+    "travis-cov": "*"
   }
 }

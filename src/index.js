@@ -42,41 +42,41 @@ function tfPropertyErrorString (type, name, value) {
 }
 
 var nativeTypes = {
-  Array (value) { return value !== null && value !== undefined && value.constructor === Array },
-  Boolean (value) { return typeof value === 'boolean' },
-  Buffer (value) { return Buffer.isBuffer(value) },
-  Function (value) { return typeof value === 'function' },
-  Null (value) { return value === undefined || value === null },
-  Number (value) { return typeof value === 'number' },
-  Object (value) { return typeof value === 'object' },
-  String (value) { return typeof value === 'string' },
+  Array: function (value) { return value !== null && value !== undefined && value.constructor === Array },
+  Boolean: function (value) { return typeof value === 'boolean' },
+  Buffer: function (value) { return Buffer.isBuffer(value) },
+  Function: function (value) { return typeof value === 'function' },
+  Null: function (value) { return value === undefined || value === null },
+  Number: function (value) { return typeof value === 'number' },
+  Object: function (value) { return typeof value === 'object' },
+  String: function (value) { return typeof value === 'string' },
   '' () { return true }
 }
 
 var otherTypes = {
-  arrayOf (type) {
+  arrayOf: function arrayOf (type) {
     function arrayOf (value, strict) {
       try {
-        return nativeTypes.Array(value) && value.every(x => typeforce(type, x, strict))
+        return nativeTypes.Array(value) && value.every(function (x) { return typeforce(type, x, strict) })
       } catch (e) {
         return false
       }
     }
-    arrayOf.toJSON = () => [tfJSON(type)]
+    arrayOf.toJSON = function () { return [tfJSON(type)] }
 
     return arrayOf
   },
 
-  maybe (type) {
+  maybe: function maybe (type) {
     function maybe (value, strict) {
       return nativeTypes.Null(value) || typeforce(type, value, strict)
     }
-    maybe.toJSON = () => '?' + stfJSON(type)
+    maybe.toJSON = function () { return '?' + stfJSON(type) }
 
     return maybe
   },
 
-  object (type) {
+  object: function object (type) {
     function object (value, strict) {
       typeforce(nativeTypes.Object, value, strict)
 
@@ -108,12 +108,12 @@ var otherTypes = {
 
       return true
     }
-    object.toJSON = () => tfJSON(type)
+    object.toJSON = function () { return tfJSON(type) }
 
     return object
   },
 
-  map (propertyType, propertyKeyType) {
+  map: function map (propertyType, propertyKeyType) {
     function map (value, strict) {
       typeforce(nativeTypes.Object, value, strict)
 
@@ -140,17 +140,19 @@ var otherTypes = {
       return true
     }
     if (propertyKeyType) {
-      map.toJSON = () => '{' + stfJSON(propertyKeyType) + ': ' + stfJSON(propertyType) + '}'
+      map.toJSON = function () { return '{' + stfJSON(propertyKeyType) + ': ' + stfJSON(propertyType) + '}' }
     } else {
-      map.toJSON = () => '{' + stfJSON(propertyType) + '}'
+      map.toJSON = function () { return '{' + stfJSON(propertyType) + '}' }
     }
 
     return map
   },
 
-  oneOf (... types) {
+  oneOf: function oneOf () {
+    var types = [].slice.call(arguments)
+
     function oneOf (value, strict) {
-      return types.some(type => {
+      return types.some(function (type) {
         try {
           return typeforce(type, value, strict)
         } catch (e) {
@@ -158,34 +160,38 @@ var otherTypes = {
         }
       })
     }
-    oneOf.toJSON = () => types.map(stfJSON).join('|')
+    oneOf.toJSON = function () { return types.map(stfJSON).join('|') }
 
     return oneOf
   },
 
-  quacksLike (type) {
+  quacksLike: function quacksLike (type) {
     function quacksLike (value, strict) {
       return type === getValueTypeName(value)
     }
-    quacksLike.toJSON = () => type
+    quacksLike.toJSON = function () { return type }
 
     return quacksLike
   },
 
-  tuple (... types) {
+  tuple: function tuple () {
+    var types = [].slice.call(arguments)
+
     function tuple (value, strict) {
-      return types.every((type, i) => typeforce(type, value[i], strict))
+      return types.every(function (type, i) {
+        return typeforce(type, value[i], strict)
+      })
     }
-    tuple.toJSON = () => '(' + types.map(stfJSON).join(', ') + ')'
+    tuple.toJSON = function () { return '(' + types.map(stfJSON).join(', ') + ')' }
 
     return tuple
   },
 
-  value (expected) {
+  value: function value (expected) {
     function value (actual) {
       return actual === expected
     }
-    value.toJSON = () => expected
+    value.toJSON = function () { return expected }
 
     return value
   }
@@ -226,9 +232,9 @@ function typeforce (type, value, strict) {
 
 // assign all types to typeforce function
 var typeName
-Object.keys(nativeTypes).forEach(typeName => {
+Object.keys(nativeTypes).forEach(function (typeName) {
   var nativeType = nativeTypes[typeName]
-  nativeType.toJSON = () => typeName
+  nativeType.toJSON = function () { return typeName }
 
   typeforce[typeName] = nativeType
 })
