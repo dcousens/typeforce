@@ -57,8 +57,7 @@
   },
   "dependencies": {},
   "devDependencies": {
-    "babel": "*",
-    "babel-cli": "*",
+    "babel": "^5.8.0",
     "blanket": "*",
     "mocha": "*",
     "standard": "*",
