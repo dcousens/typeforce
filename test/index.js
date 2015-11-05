@@ -35,7 +35,7 @@ describe('typeforce', function () {
       }, new RegExp(exception))
     })
 
-    it('throws "' + exception + '" for (compiled) type ' + typeDescription + ' with value of ' + valueDescription, function () {
+    it('throws "' + exception + '" for type ' + typeDescription + ' (compiled) with value of ' + valueDescription, function () {
       assert.throws(function () {
         typeforce(typeforce.compile(type), value, f.strict)
       }, new RegExp(exception))
