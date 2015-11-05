@@ -50,7 +50,7 @@ var nativeTypes = {
   Number: function (value) { return typeof value === 'number' },
   Object: function (value) { return typeof value === 'object' },
   String: function (value) { return typeof value === 'string' },
-  '' () { return true }
+  '': function () { return true }
 }
 
 var otherTypes = {
