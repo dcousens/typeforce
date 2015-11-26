@@ -17,7 +17,7 @@ function TfUnexpectedPropertyError (property) {
   this.message = this.error.message
 }
 
-// inherit Error
+// inherit from Error
 ;[TfTypeError, TfPropertyTypeError, TfUnexpectedPropertyError].forEach(function (f) {
   f.prototype = Object.create(Error.prototype)
   f.prototype.constructor = f
@@ -288,3 +288,8 @@ for (typeName in otherTypes) {
 
 module.exports = typeforce
 module.exports.compile = compile
+
+// export Error objects
+module.exports.TfTypeError = TfTypeError
+module.exports.TfPropertyTypeError = TfPropertyTypeError
+module.exports.TfUnexpectedPropertyError = TfUnexpectedPropertyError
