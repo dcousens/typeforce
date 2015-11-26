@@ -1,3 +1,52 @@
+function TfTypeError (type, value) {
+  this.error = Error.call(this)
+  this.type = type
+  this.value = value
+}
+
+function TfPropertyTypeError (type, property, value, error) {
+  this.error = error || Error.call(this)
+  this.property = property
+  this.type = type
+  this.value = value
+}
+
+function TfUnexpectedPropertyError (property) {
+  this.error = Error.call(this, 'Unexpected property "' + property + '"')
+  this.property = property
+  this.message = this.error.message
+}
+
+// inherit Error
+;[TfTypeError, TfPropertyTypeError, TfUnexpectedPropertyError].forEach(function (f) {
+  f.prototype = Object.create(Error.prototype)
+  f.prototype.constructor = f
+
+  Object.defineProperty(f.prototype, 'stack', { get: function () { return this.error.stack } })
+})
+
+Object.defineProperty(TfTypeError.prototype, 'message', {
+  get: function () {
+    if (this.__message) return this.__message
+    this.__message = tfErrorString(this.type, this.value)
+
+    return this.__message
+  }
+})
+
+Object.defineProperty(TfPropertyTypeError.prototype, 'message', {
+  get: function () {
+    if (this.__message) return this.__message
+    this.__message = tfPropertyErrorString(this.type, this.property, this.value)
+
+    return this.__message
+  }
+})
+
+TfPropertyTypeError.prototype.asChildOf = function (property) {
+  return new TfPropertyTypeError(this.type, property + '.' + this.property, this.value, this.error)
+}
+
 function getFunctionName (fn) {
   return fn.name || fn.toString().match(/function (.*?)\s*\(/)[1]
 }
@@ -90,19 +139,16 @@ var otherTypes = {
           typeforce(propertyType, propertyValue, strict)
         }
       } catch (e) {
-        if (/Expected property "/.test(e.message)) {
-          e.message = e.message.replace(/Expected property "(.+)" of/, 'Expected property "' + propertyName + '.$1" of')
-          throw e
-        }
+        if (e instanceof TfPropertyTypeError) throw e.asChildOf(propertyName)
 
-        throw new TypeError(tfPropertyErrorString(propertyType, propertyName, propertyValue))
+        throw new TfPropertyTypeError(propertyType, propertyName, propertyValue)
       }
 
       if (strict) {
         for (propertyName in value) {
           if (type[propertyName]) continue
 
-          throw new TypeError('Unexpected property "' + propertyName + '"')
+          throw new TfUnexpectedPropertyError(propertyName)
         }
       }
 
@@ -129,12 +175,9 @@ var otherTypes = {
           typeforce(propertyType, propertyValue, strict)
         }
       } catch (e) {
-        if (/Expected property "/.test(e.message)) {
-          e.message = e.message.replace(/Expected property "(.+)" of/, 'Expected property "' + propertyName + '.$1" of')
-          throw e
-        }
+        if (e instanceof TfPropertyTypeError) throw e.asChildOf(propertyName)
 
-        throw new TypeError(tfPropertyErrorString(propertyType, propertyKeyType || propertyName, propertyValue))
+        throw new TfPropertyTypeError(propertyType, propertyKeyType || propertyName, propertyValue)
       }
 
       return true
@@ -223,7 +266,7 @@ function typeforce (type, value, strict) {
   if (nativeTypes.Function(type)) {
     if (type(value, strict)) return true
 
-    throw new TypeError(tfErrorString(type, value))
+    throw new TfTypeError(type, value)
   }
 
   // JIT
