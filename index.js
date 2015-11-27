@@ -127,6 +127,7 @@ var otherTypes = {
   object: function object (type) {
     function object (value, strict) {
       typeforce(nativeTypes.Object, value, strict)
+      if (nativeTypes.Null(value)) return false
 
       var propertyName, propertyType, propertyValue
 

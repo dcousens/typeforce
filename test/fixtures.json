@@ -3448,7 +3448,7 @@
       }
     },
     {
-      "exception": "Expected property \"a\" of type Number, got undefined",
+      "exception": "Expected Object, got null",
       "type": {
         "a": "Number"
       },
@@ -3720,7 +3720,7 @@
       }
     },
     {
-      "exception": "Expected property \"a\" of type Object, got undefined",
+      "exception": "Expected Object, got null",
       "type": {
         "a": {
           "b": "Number"
@@ -3738,7 +3738,7 @@
       "value": {}
     },
     {
-      "exception": "Expected property \"a.b\" of type Number, got undefined",
+      "exception": "Expected property \"a\" of type Object, got null",
       "type": {
         "a": {
           "b": "Number"
@@ -4045,7 +4045,7 @@
       }
     },
     {
-      "exception": "Expected property \"a\" of type Object, got undefined",
+      "exception": "Expected Object, got null",
       "type": {
         "a": {
           "b": {
@@ -4067,7 +4067,7 @@
       "value": {}
     },
     {
-      "exception": "Expected property \"a.b\" of type Object, got undefined",
+      "exception": "Expected property \"a\" of type Object, got null",
       "type": {
         "a": {
           "b": {
@@ -4135,7 +4135,7 @@
       }
     },
     {
-      "exception": "Expected property \"a.b.c\" of type ?Number, got undefined",
+      "exception": "Expected property \"a.b\" of type Object, got null",
       "type": {
         "a": {
           "b": {
@@ -4150,7 +4150,7 @@
       }
     },
     {
-      "exception": "Expected property \"a.b\" of type Object, got Object",
+      "exception": "Unexpected property \"a.b.d\"",
       "strict": true,
       "type": {
         "a": {
@@ -4384,7 +4384,7 @@
       }
     },
     {
-      "exception": "Expected property \"a\" of type Object, got undefined",
+      "exception": "Expected Object, got null",
       "type": {
         "a": {
           "b": {
@@ -4406,7 +4406,7 @@
       "value": {}
     },
     {
-      "exception": "Expected property \"a.b\" of type Object, got undefined",
+      "exception": "Expected property \"a\" of type Object, got null",
       "type": {
         "a": {
           "b": {
@@ -4474,7 +4474,7 @@
       }
     },
     {
-      "exception": "Expected property \"a.b.c\" of type Number, got undefined",
+      "exception": "Expected property \"a.b\" of type Object, got null",
       "type": {
         "a": {
           "b": {
@@ -4506,7 +4506,7 @@
       }
     },
     {
-      "exception": "Expected property \"a.b\" of type Object, got Object",
+      "exception": "Unexpected property \"a.b.d\"",
       "strict": true,
       "type": {
         "a": {
@@ -6700,7 +6700,7 @@
       }
     },
     {
-      "exception": "Expected property \"a\" of type ?Number, got Object",
+      "exception": "Expected property \"a\" of type Number, got Object",
       "typeId": "?{ a: ?Number }",
       "value": {
         "a": {
@@ -6709,7 +6709,7 @@
       }
     },
     {
-      "exception": "Expected property \"a\" of type ?Number, got Object",
+      "exception": "Expected property \"a\" of type Number, got Object",
       "typeId": "?{ a: ?Number }",
       "value": {
         "a": {
@@ -6718,7 +6718,7 @@
       }
     },
     {
-      "exception": "Expected property \"a\" of type ?Number, got Object",
+      "exception": "Expected property \"a\" of type Number, got Object",
       "typeId": "?{ a: ?Number }",
       "value": {
         "a": {
@@ -6729,7 +6729,7 @@
       }
     },
     {
-      "exception": "Expected property \"a\" of type ?Number, got Object",
+      "exception": "Expected property \"a\" of type Number, got Object",
       "typeId": "?{ a: ?Number }",
       "value": {
         "a": {
@@ -6740,7 +6740,7 @@
       }
     },
     {
-      "exception": "Expected property \"a\" of type ?Number, got Object",
+      "exception": "Expected property \"a\" of type Number, got Object",
       "typeId": "?{ a: ?Number }",
       "value": {
         "a": {
@@ -6752,7 +6752,7 @@
       }
     },
     {
-      "exception": "Expected property \"a\" of type ?Number, got String \"foo\"",
+      "exception": "Expected property \"a\" of type Number, got String \"foo\"",
       "typeId": "?{ a: ?Number }",
       "value": {
         "a": "foo",
@@ -6760,7 +6760,7 @@
       }
     },
     {
-      "exception": "Expected property \"a\" of type ?Number, got String \"foo\"",
+      "exception": "Expected property \"a\" of type Number, got String \"foo\"",
       "typeId": "?{ a: ?Number }",
       "value": {
         "a": "foo",
@@ -7038,7 +7038,7 @@
       "typeId": "{ a: Number|Null }"
     },
     {
-      "exception": "Expected property \"a\" of type Number|Null, got undefined",
+      "exception": "Expected Object, got null",
       "typeId": "{ a: Number|Null }",
       "value": null
     },
@@ -7216,7 +7216,7 @@
       "typeId": "{ a: Number|{ b: Number } }"
     },
     {
-      "exception": "Expected property \"a\" of type Number|Object, got undefined",
+      "exception": "Expected Object, got null",
       "typeId": "{ a: Number|{ b: Number } }",
       "value": null
     },
@@ -7398,19 +7398,19 @@
       "typeId": "{ a: ?{ b: Number } }"
     },
     {
-      "exception": "Expected property \"a\" of type ?Object, got undefined",
+      "exception": "Expected Object, got null",
       "typeId": "{ a: ?{ b: Number } }",
       "value": null
     },
     {
-      "exception": "Expected property \"a\" of type ?Object, got Number 0",
+      "exception": "Expected property \"a\" of type Object, got Number 0",
       "typeId": "{ a: ?{ b: Number } }",
       "value": {
         "a": 0
       }
     },
     {
-      "exception": "Expected property \"a\" of type ?Object, got Number 0",
+      "exception": "Expected property \"a\" of type Object, got Number 0",
       "typeId": "{ a: ?{ b: Number } }",
       "value": {
         "a": 0,
@@ -7469,7 +7469,7 @@
       }
     },
     {
-      "exception": "Expected property \"a\" of type ?Object, got String \"foo\"",
+      "exception": "Expected property \"a\" of type Object, got String \"foo\"",
       "typeId": "{ a: ?{ b: Number } }",
       "value": {
         "a": "foo",
@@ -7477,7 +7477,7 @@
       }
     },
     {
-      "exception": "Expected property \"a\" of type ?Object, got String \"foo\"",
+      "exception": "Expected property \"a\" of type Object, got String \"foo\"",
       "typeId": "{ a: ?{ b: Number } }",
       "value": {
         "a": "foo",
@@ -7572,19 +7572,19 @@
       "typeId": "{ a: ?{ b: ?{ c: Number } } }"
     },
     {
-      "exception": "Expected property \"a\" of type ?Object, got undefined",
+      "exception": "Expected Object, got null",
       "typeId": "{ a: ?{ b: ?{ c: Number } } }",
       "value": null
     },
     {
-      "exception": "Expected property \"a\" of type ?Object, got Number 0",
+      "exception": "Expected property \"a\" of type Object, got Number 0",
       "typeId": "{ a: ?{ b: ?{ c: Number } } }",
       "value": {
         "a": 0
       }
     },
     {
-      "exception": "Expected property \"a\" of type ?Object, got Number 0",
+      "exception": "Expected property \"a\" of type Object, got Number 0",
       "typeId": "{ a: ?{ b: ?{ c: Number } } }",
       "value": {
         "a": 0,
@@ -7600,7 +7600,7 @@
       }
     },
     {
-      "exception": "Expected property \"a.b\" of type ?Object, got Number 0",
+      "exception": "Expected property \"a.b\" of type Object, got Number 0",
       "typeId": "{ a: ?{ b: ?{ c: Number } } }",
       "value": {
         "a": {
@@ -7620,7 +7620,7 @@
       }
     },
     {
-      "exception": "Expected property \"a.b\" of type ?Object, got Object",
+      "exception": "Unexpected property \"a.b.d\"",
       "strict": true,
       "typeId": "{ a: ?{ b: ?{ c: Number } } }",
       "value": {
@@ -7633,7 +7633,7 @@
       }
     },
     {
-      "exception": "Expected property \"a\" of type ?Object, got String \"foo\"",
+      "exception": "Expected property \"a\" of type Object, got String \"foo\"",
       "typeId": "{ a: ?{ b: ?{ c: Number } } }",
       "value": {
         "a": "foo",
@@ -7641,7 +7641,7 @@
       }
     },
     {
-      "exception": "Expected property \"a\" of type ?Object, got String \"foo\"",
+      "exception": "Expected property \"a\" of type Object, got String \"foo\"",
       "typeId": "{ a: ?{ b: ?{ c: Number } } }",
       "value": {
         "a": "foo",
@@ -7934,19 +7934,19 @@
       "typeId": "{ a: ?Tt }"
     },
     {
-      "exception": "Expected property \"a\" of type ?Tt, got undefined",
+      "exception": "Expected Object, got null",
       "typeId": "{ a: ?Tt }",
       "value": null
     },
     {
-      "exception": "Expected property \"a\" of type ?Tt, got Number 0",
+      "exception": "Expected property \"a\" of type Tt, got Number 0",
       "typeId": "{ a: ?Tt }",
       "value": {
         "a": 0
       }
     },
     {
-      "exception": "Expected property \"a\" of type ?Tt, got Number 0",
+      "exception": "Expected property \"a\" of type Tt, got Number 0",
       "typeId": "{ a: ?Tt }",
       "value": {
         "a": 0,
@@ -7962,7 +7962,7 @@
       }
     },
     {
-      "exception": "Expected property \"a\" of type ?Tt, got Object",
+      "exception": "Expected property \"a\" of type Tt, got Object",
       "typeId": "{ a: ?Tt }",
       "value": {
         "a": {
@@ -7971,7 +7971,7 @@
       }
     },
     {
-      "exception": "Expected property \"a\" of type ?Tt, got Object",
+      "exception": "Expected property \"a\" of type Tt, got Object",
       "typeId": "{ a: ?Tt }",
       "value": {
         "a": {
@@ -7980,7 +7980,7 @@
       }
     },
     {
-      "exception": "Expected property \"a\" of type ?Tt, got Object",
+      "exception": "Expected property \"a\" of type Tt, got Object",
       "typeId": "{ a: ?Tt }",
       "value": {
         "a": {
@@ -7991,7 +7991,7 @@
       }
     },
     {
-      "exception": "Expected property \"a\" of type ?Tt, got Object",
+      "exception": "Expected property \"a\" of type Tt, got Object",
       "typeId": "{ a: ?Tt }",
       "value": {
         "a": {
@@ -8002,7 +8002,7 @@
       }
     },
     {
-      "exception": "Expected property \"a\" of type ?Tt, got Object",
+      "exception": "Expected property \"a\" of type Tt, got Object",
       "typeId": "{ a: ?Tt }",
       "value": {
         "a": {
@@ -8014,7 +8014,7 @@
       }
     },
     {
-      "exception": "Expected property \"a\" of type ?Tt, got String \"foo\"",
+      "exception": "Expected property \"a\" of type Tt, got String \"foo\"",
       "typeId": "{ a: ?Tt }",
       "value": {
         "a": "foo",
@@ -8022,7 +8022,7 @@
       }
     },
     {
-      "exception": "Expected property \"a\" of type ?Tt, got String \"foo\"",
+      "exception": "Expected property \"a\" of type Tt, got String \"foo\"",
       "typeId": "{ a: ?Tt }",
       "value": {
         "a": "foo",
@@ -8118,7 +8118,7 @@
       "typeId": "{ a: { b: Tt } }"
     },
     {
-      "exception": "Expected property \"a\" of type Object, got undefined",
+      "exception": "Expected Object, got null",
       "typeId": "{ a: { b: Tt } }",
       "value": null
     },
@@ -8128,7 +8128,7 @@
       "value": {}
     },
     {
-      "exception": "Expected property \"a.b\" of type Tt, got undefined",
+      "exception": "Expected property \"a\" of type Object, got null",
       "typeId": "{ a: { b: Tt } }",
       "value": {
         "a": null
