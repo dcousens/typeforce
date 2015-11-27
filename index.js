@@ -4,21 +4,16 @@ function TfTypeError (type, value) {
   this.value = value
 }
 
-function TfPropertyTypeError (type, property, value, error) {
+function TfPropertyTypeError (type, property, value, expected, error) {
   this.error = error || Error.call(this)
+  this.expected = expected === undefined ? true : expected
   this.property = property
   this.type = type
   this.value = value
 }
 
-function TfUnexpectedPropertyError (property) {
-  this.error = Error.call(this, 'Unexpected property "' + property + '"')
-  this.property = property
-  this.message = this.error.message
-}
-
 // inherit from Error
-;[TfTypeError, TfPropertyTypeError, TfUnexpectedPropertyError].forEach(function (f) {
+;[TfTypeError, TfPropertyTypeError].forEach(function (f) {
   f.prototype = Object.create(Error.prototype)
   f.prototype.constructor = f
 
@@ -37,14 +32,18 @@ Object.defineProperty(TfTypeError.prototype, 'message', {
 Object.defineProperty(TfPropertyTypeError.prototype, 'message', {
   get: function () {
     if (this.__message) return this.__message
-    this.__message = tfPropertyErrorString(this.type, this.property, this.value)
+    if (!this.expected) {
+      this.__message = 'Unexpected property "' + this.property + '"'
+    } else {
+      this.__message = tfPropertyErrorString(this.type, this.property, this.value)
+    }
 
     return this.__message
   }
 })
 
 TfPropertyTypeError.prototype.asChildOf = function (property) {
-  return new TfPropertyTypeError(this.type, property + '.' + this.property, this.value, this.error)
+  return new TfPropertyTypeError(this.type, property + '.' + this.property, this.value, this.expected, this.error)
 }
 
 function getFunctionName (fn) {
@@ -139,16 +138,20 @@ var otherTypes = {
           typeforce(propertyType, propertyValue, strict)
         }
       } catch (e) {
-        if (e instanceof TfPropertyTypeError) throw e.asChildOf(propertyName)
+        if (e instanceof TfPropertyTypeError) {
+          throw e.asChildOf(propertyName)
+        } else if (e instanceof TfTypeError) {
+          throw new TfPropertyTypeError(e.type, propertyName, e.value)
+        }
 
-        throw new TfPropertyTypeError(propertyType, propertyName, propertyValue)
+        throw e
       }
 
       if (strict) {
         for (propertyName in value) {
           if (type[propertyName]) continue
 
-          throw new TfUnexpectedPropertyError(propertyName)
+          throw new TfPropertyTypeError(undefined, propertyName, value[propertyName], false)
         }
       }
 
@@ -292,4 +295,3 @@ module.exports.compile = compile
 // export Error objects
 module.exports.TfTypeError = TfTypeError
 module.exports.TfPropertyTypeError = TfPropertyTypeError
-module.exports.TfUnexpectedPropertyError = TfUnexpectedPropertyError
