@@ -210,7 +210,9 @@ var otherTypes = {
         try {
           return typeforce(type, value, strict)
         } catch (e) {
-          return false
+          if (e instanceof TfTypeError || e instanceof TfPropertyTypeError) return false
+
+          throw e
         }
       })
     }
