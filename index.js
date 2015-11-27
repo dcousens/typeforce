@@ -19,11 +19,8 @@ function TfTypeError (type, value) {
 inherits(TfTypeError, Error)
 Object.defineProperty(TfTypeError, 'stack', { get: function () { return this.tfError.stack } })
 
-function TfPropertyTypeError (type, property, value, expected, error) {
-  expected = expected === undefined ? true : expected
-
+function TfPropertyTypeError (type, property, value, error) {
   this.tfError = error || Error.call(this)
-  this.tfExpected = expected
   this.tfProperty = property
   this.tfType = type
   this.tfValue = value
@@ -32,7 +29,7 @@ function TfPropertyTypeError (type, property, value, expected, error) {
   Object.defineProperty(this, 'message', {
     get: function () {
       if (message) return message
-      if (expected) {
+      if (type) {
         message = tfPropertyErrorString(type, property, value)
       } else {
         message = 'Unexpected property "' + property + '"'
@@ -47,7 +44,7 @@ inherits(TfPropertyTypeError, Error)
 Object.defineProperty(TfPropertyTypeError, 'stack', { get: function () { return this.tfError.stack } })
 
 TfPropertyTypeError.prototype.asChildOf = function (property) {
-  return new TfPropertyTypeError(this.tfType, property + '.' + this.tfProperty, this.tfValue, this.tfExpected, this.tfError)
+  return new TfPropertyTypeError(this.tfType, property + '.' + this.tfProperty, this.tfValue, this.tfError)
 }
 
 function getFunctionName (fn) {
@@ -156,7 +153,7 @@ var otherTypes = {
         for (propertyName in value) {
           if (type[propertyName]) continue
 
-          throw new TfPropertyTypeError(undefined, propertyName, undefined, false)
+          throw new TfPropertyTypeError(undefined, propertyName)
         }
       }
 
