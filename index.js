@@ -1,15 +1,15 @@
 function TfTypeError (type, value) {
-  this.error = Error.call(this)
-  this.type = type
-  this.value = value
+  this.tfError = Error.call(this)
+  this.tfType = type
+  this.tfValue = value
 }
 
 function TfPropertyTypeError (type, property, value, expected, error) {
-  this.error = error || Error.call(this)
-  this.expected = expected === undefined ? true : expected
-  this.property = property
-  this.type = type
-  this.value = value
+  this.tfError = error || Error.call(this)
+  this.tfExpected = expected === undefined ? true : expected
+  this.tfProperty = property
+  this.tfType = type
+  this.tfValue = value
 }
 
 // inherit from Error
@@ -17,13 +17,13 @@ function TfPropertyTypeError (type, property, value, expected, error) {
   f.prototype = Object.create(Error.prototype)
   f.prototype.constructor = f
 
-  Object.defineProperty(f.prototype, 'stack', { get: function () { return this.error.stack } })
+  Object.defineProperty(f.prototype, 'stack', { get: function () { return this.tfError.stack } })
 })
 
 Object.defineProperty(TfTypeError.prototype, 'message', {
   get: function () {
     if (this.__message) return this.__message
-    this.__message = tfErrorString(this.type, this.value)
+    this.__message = tfErrorString(this.tfType, this.tfValue)
 
     return this.__message
   }
@@ -32,10 +32,10 @@ Object.defineProperty(TfTypeError.prototype, 'message', {
 Object.defineProperty(TfPropertyTypeError.prototype, 'message', {
   get: function () {
     if (this.__message) return this.__message
-    if (!this.expected) {
-      this.__message = 'Unexpected property "' + this.property + '"'
+    if (!this.tfExpected) {
+      this.__message = 'Unexpected property "' + this.tfProperty + '"'
     } else {
-      this.__message = tfPropertyErrorString(this.type, this.property, this.value)
+      this.__message = tfPropertyErrorString(this.tfType, this.tfProperty, this.tfValue)
     }
 
     return this.__message
@@ -43,7 +43,7 @@ Object.defineProperty(TfPropertyTypeError.prototype, 'message', {
 })
 
 TfPropertyTypeError.prototype.asChildOf = function (property) {
-  return new TfPropertyTypeError(this.type, property + '.' + this.property, this.value, this.expected, this.error)
+  return new TfPropertyTypeError(this.tfType, property + '.' + this.tfProperty, this.tfValue, this.tfExpected, this.tfError)
 }
 
 function getFunctionName (fn) {
@@ -142,7 +142,7 @@ var otherTypes = {
         if (e instanceof TfPropertyTypeError) {
           throw e.asChildOf(propertyName)
         } else if (e instanceof TfTypeError) {
-          throw new TfPropertyTypeError(e.type, propertyName, e.value)
+          throw new TfPropertyTypeError(e.tfType, propertyName, e.tfValue)
         }
 
         throw e
@@ -183,7 +183,7 @@ var otherTypes = {
         if (e instanceof TfPropertyTypeError) {
           throw e.asChildOf(propertyName)
         } else if (e instanceof TfTypeError) {
-          throw new TfPropertyTypeError(e.type, propertyKeyType || propertyName, e.value)
+          throw new TfPropertyTypeError(e.tfType, propertyKeyType || propertyName, e.tfValue)
         }
 
         throw e
