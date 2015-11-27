@@ -1,6 +1,6 @@
 var typeforce = require('../')
-var TYPES = require('./types')
-var VALUES = require('./values')
+var TYPES = require('../test/types')
+var VALUES = require('../test/values')
 
 var TYPES2 = [
   'Array',
