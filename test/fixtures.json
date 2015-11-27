@@ -837,23 +837,23 @@
       "valueId": "buffer"
     },
     {
-      "typeId": "{ a: ?Tt }",
+      "typeId": "{ a: ?Unmatchable }",
       "value": []
     },
     {
-      "typeId": "{ a: ?Tt }",
+      "typeId": "{ a: ?Unmatchable }",
       "value": [
         0
       ]
     },
     {
-      "typeId": "{ a: ?Tt }",
+      "typeId": "{ a: ?Unmatchable }",
       "value": [
         "foobar"
       ]
     },
     {
-      "typeId": "{ a: ?Tt }",
+      "typeId": "{ a: ?Unmatchable }",
       "value": [
         {
           "a": 0
@@ -861,37 +861,37 @@
       ]
     },
     {
-      "typeId": "{ a: ?Tt }",
+      "typeId": "{ a: ?Unmatchable }",
       "value": [
         null
       ]
     },
     {
-      "typeId": "{ a: ?Tt }",
+      "typeId": "{ a: ?Unmatchable }",
       "value": {}
     },
     {
-      "typeId": "{ a: ?Tt }",
+      "typeId": "{ a: ?Unmatchable }",
       "value": {
         "a": null
       }
     },
     {
-      "typeId": "{ a: ?Tt }",
+      "typeId": "{ a: ?Unmatchable }",
       "value": {
         "b": 0
       }
     },
     {
-      "typeId": "{ a: ?Tt }",
+      "typeId": "{ a: ?Unmatchable }",
       "valueId": "emptyType"
     },
     {
-      "typeId": "{ a: ?Tt }",
+      "typeId": "{ a: ?Unmatchable }",
       "valueId": "customType"
     },
     {
-      "typeId": "{ a: ?Tt }",
+      "typeId": "{ a: ?Unmatchable }",
       "valueId": "buffer"
     },
     {
@@ -910,10 +910,6 @@
     },
     {
       "typeId": "{ String }",
-      "value": null
-    },
-    {
-      "typeId": "{ String }",
       "value": {}
     },
     {
@@ -945,10 +941,6 @@
     },
     {
       "typeId": "{ String|Number }",
-      "value": null
-    },
-    {
-      "typeId": "{ String|Number }",
       "value": {}
     },
     {
@@ -997,10 +989,6 @@
     },
     {
       "typeId": "{ String: Number }",
-      "value": null
-    },
-    {
-      "typeId": "{ String: Number }",
       "value": {}
     },
     {
@@ -1033,10 +1021,6 @@
     {
       "typeId": "{ Letter: Number }",
       "value": []
-    },
-    {
-      "typeId": "{ Letter: Number }",
-      "value": null
     },
     {
       "typeId": "{ Letter: Number }",
@@ -3448,7 +3432,7 @@
       }
     },
     {
-      "exception": "Expected property \"a\" of type Number, got undefined",
+      "exception": "Expected Object, got null",
       "type": {
         "a": "Number"
       },
@@ -3720,7 +3704,7 @@
       }
     },
     {
-      "exception": "Expected property \"a\" of type Object, got undefined",
+      "exception": "Expected Object, got null",
       "type": {
         "a": {
           "b": "Number"
@@ -3738,7 +3722,7 @@
       "value": {}
     },
     {
-      "exception": "Expected property \"a.b\" of type Number, got undefined",
+      "exception": "Expected property \"a\" of type Object, got null",
       "type": {
         "a": {
           "b": "Number"
@@ -4045,7 +4029,7 @@
       }
     },
     {
-      "exception": "Expected property \"a\" of type Object, got undefined",
+      "exception": "Expected Object, got null",
       "type": {
         "a": {
           "b": {
@@ -4067,7 +4051,7 @@
       "value": {}
     },
     {
-      "exception": "Expected property \"a.b\" of type Object, got undefined",
+      "exception": "Expected property \"a\" of type Object, got null",
       "type": {
         "a": {
           "b": {
@@ -4135,7 +4119,7 @@
       }
     },
     {
-      "exception": "Expected property \"a.b.c\" of type ?Number, got undefined",
+      "exception": "Expected property \"a.b\" of type Object, got null",
       "type": {
         "a": {
           "b": {
@@ -4150,7 +4134,7 @@
       }
     },
     {
-      "exception": "Expected property \"a.b\" of type Object, got Object",
+      "exception": "Unexpected property \"a.b.d\"",
       "strict": true,
       "type": {
         "a": {
@@ -4384,7 +4368,7 @@
       }
     },
     {
-      "exception": "Expected property \"a\" of type Object, got undefined",
+      "exception": "Expected Object, got null",
       "type": {
         "a": {
           "b": {
@@ -4406,7 +4390,7 @@
       "value": {}
     },
     {
-      "exception": "Expected property \"a.b\" of type Object, got undefined",
+      "exception": "Expected property \"a\" of type Object, got null",
       "type": {
         "a": {
           "b": {
@@ -4474,7 +4458,7 @@
       }
     },
     {
-      "exception": "Expected property \"a.b.c\" of type Number, got undefined",
+      "exception": "Expected property \"a.b\" of type Object, got null",
       "type": {
         "a": {
           "b": {
@@ -4506,7 +4490,7 @@
       }
     },
     {
-      "exception": "Expected property \"a.b\" of type Object, got Object",
+      "exception": "Unexpected property \"a.b.d\"",
       "strict": true,
       "type": {
         "a": {
@@ -6700,7 +6684,7 @@
       }
     },
     {
-      "exception": "Expected property \"a\" of type ?Number, got Object",
+      "exception": "Expected property \"a\" of type Number, got Object",
       "typeId": "?{ a: ?Number }",
       "value": {
         "a": {
@@ -6709,7 +6693,7 @@
       }
     },
     {
-      "exception": "Expected property \"a\" of type ?Number, got Object",
+      "exception": "Expected property \"a\" of type Number, got Object",
       "typeId": "?{ a: ?Number }",
       "value": {
         "a": {
@@ -6718,7 +6702,7 @@
       }
     },
     {
-      "exception": "Expected property \"a\" of type ?Number, got Object",
+      "exception": "Expected property \"a\" of type Number, got Object",
       "typeId": "?{ a: ?Number }",
       "value": {
         "a": {
@@ -6729,7 +6713,7 @@
       }
     },
     {
-      "exception": "Expected property \"a\" of type ?Number, got Object",
+      "exception": "Expected property \"a\" of type Number, got Object",
       "typeId": "?{ a: ?Number }",
       "value": {
         "a": {
@@ -6740,7 +6724,7 @@
       }
     },
     {
-      "exception": "Expected property \"a\" of type ?Number, got Object",
+      "exception": "Expected property \"a\" of type Number, got Object",
       "typeId": "?{ a: ?Number }",
       "value": {
         "a": {
@@ -6752,7 +6736,7 @@
       }
     },
     {
-      "exception": "Expected property \"a\" of type ?Number, got String \"foo\"",
+      "exception": "Expected property \"a\" of type Number, got String \"foo\"",
       "typeId": "?{ a: ?Number }",
       "value": {
         "a": "foo",
@@ -6760,7 +6744,7 @@
       }
     },
     {
-      "exception": "Expected property \"a\" of type ?Number, got String \"foo\"",
+      "exception": "Expected property \"a\" of type Number, got String \"foo\"",
       "typeId": "?{ a: ?Number }",
       "value": {
         "a": "foo",
@@ -7038,7 +7022,7 @@
       "typeId": "{ a: Number|Null }"
     },
     {
-      "exception": "Expected property \"a\" of type Number|Null, got undefined",
+      "exception": "Expected Object, got null",
       "typeId": "{ a: Number|Null }",
       "value": null
     },
@@ -7216,7 +7200,7 @@
       "typeId": "{ a: Number|{ b: Number } }"
     },
     {
-      "exception": "Expected property \"a\" of type Number|Object, got undefined",
+      "exception": "Expected Object, got null",
       "typeId": "{ a: Number|{ b: Number } }",
       "value": null
     },
@@ -7398,19 +7382,19 @@
       "typeId": "{ a: ?{ b: Number } }"
     },
     {
-      "exception": "Expected property \"a\" of type ?Object, got undefined",
+      "exception": "Expected Object, got null",
       "typeId": "{ a: ?{ b: Number } }",
       "value": null
     },
     {
-      "exception": "Expected property \"a\" of type ?Object, got Number 0",
+      "exception": "Expected property \"a\" of type Object, got Number 0",
       "typeId": "{ a: ?{ b: Number } }",
       "value": {
         "a": 0
       }
     },
     {
-      "exception": "Expected property \"a\" of type ?Object, got Number 0",
+      "exception": "Expected property \"a\" of type Object, got Number 0",
       "typeId": "{ a: ?{ b: Number } }",
       "value": {
         "a": 0,
@@ -7469,7 +7453,7 @@
       }
     },
     {
-      "exception": "Expected property \"a\" of type ?Object, got String \"foo\"",
+      "exception": "Expected property \"a\" of type Object, got String \"foo\"",
       "typeId": "{ a: ?{ b: Number } }",
       "value": {
         "a": "foo",
@@ -7477,7 +7461,7 @@
       }
     },
     {
-      "exception": "Expected property \"a\" of type ?Object, got String \"foo\"",
+      "exception": "Expected property \"a\" of type Object, got String \"foo\"",
       "typeId": "{ a: ?{ b: Number } }",
       "value": {
         "a": "foo",
@@ -7572,19 +7556,19 @@
       "typeId": "{ a: ?{ b: ?{ c: Number } } }"
     },
     {
-      "exception": "Expected property \"a\" of type ?Object, got undefined",
+      "exception": "Expected Object, got null",
       "typeId": "{ a: ?{ b: ?{ c: Number } } }",
       "value": null
     },
     {
-      "exception": "Expected property \"a\" of type ?Object, got Number 0",
+      "exception": "Expected property \"a\" of type Object, got Number 0",
       "typeId": "{ a: ?{ b: ?{ c: Number } } }",
       "value": {
         "a": 0
       }
     },
     {
-      "exception": "Expected property \"a\" of type ?Object, got Number 0",
+      "exception": "Expected property \"a\" of type Object, got Number 0",
       "typeId": "{ a: ?{ b: ?{ c: Number } } }",
       "value": {
         "a": 0,
@@ -7600,7 +7584,7 @@
       }
     },
     {
-      "exception": "Expected property \"a.b\" of type ?Object, got Number 0",
+      "exception": "Expected property \"a.b\" of type Object, got Number 0",
       "typeId": "{ a: ?{ b: ?{ c: Number } } }",
       "value": {
         "a": {
@@ -7620,7 +7604,7 @@
       }
     },
     {
-      "exception": "Expected property \"a.b\" of type ?Object, got Object",
+      "exception": "Unexpected property \"a.b.d\"",
       "strict": true,
       "typeId": "{ a: ?{ b: ?{ c: Number } } }",
       "value": {
@@ -7633,7 +7617,7 @@
       }
     },
     {
-      "exception": "Expected property \"a\" of type ?Object, got String \"foo\"",
+      "exception": "Expected property \"a\" of type Object, got String \"foo\"",
       "typeId": "{ a: ?{ b: ?{ c: Number } } }",
       "value": {
         "a": "foo",
@@ -7641,7 +7625,7 @@
       }
     },
     {
-      "exception": "Expected property \"a\" of type ?Object, got String \"foo\"",
+      "exception": "Expected property \"a\" of type Object, got String \"foo\"",
       "typeId": "{ a: ?{ b: ?{ c: Number } } }",
       "value": {
         "a": "foo",
@@ -7668,47 +7652,47 @@
       "valueId": "buffer"
     },
     {
-      "exception": "Expected Tt, got String \"\"",
-      "typeId": "?Tt",
+      "exception": "Expected Unmatchable, got String \"\"",
+      "typeId": "?Unmatchable",
       "value": ""
     },
     {
-      "exception": "Expected Tt, got String \"foobar\"",
-      "typeId": "?Tt",
+      "exception": "Expected Unmatchable, got String \"foobar\"",
+      "typeId": "?Unmatchable",
       "value": "foobar"
     },
     {
-      "exception": "Expected Tt, got Number 0",
-      "typeId": "?Tt",
+      "exception": "Expected Unmatchable, got Number 0",
+      "typeId": "?Unmatchable",
       "value": 0
     },
     {
-      "exception": "Expected Tt, got Number 1",
-      "typeId": "?Tt",
+      "exception": "Expected Unmatchable, got Number 1",
+      "typeId": "?Unmatchable",
       "value": 1
     },
     {
-      "exception": "Expected Tt, got Array",
-      "typeId": "?Tt",
+      "exception": "Expected Unmatchable, got Array",
+      "typeId": "?Unmatchable",
       "value": []
     },
     {
-      "exception": "Expected Tt, got Array",
-      "typeId": "?Tt",
+      "exception": "Expected Unmatchable, got Array",
+      "typeId": "?Unmatchable",
       "value": [
         0
       ]
     },
     {
-      "exception": "Expected Tt, got Array",
-      "typeId": "?Tt",
+      "exception": "Expected Unmatchable, got Array",
+      "typeId": "?Unmatchable",
       "value": [
         "foobar"
       ]
     },
     {
-      "exception": "Expected Tt, got Array",
-      "typeId": "?Tt",
+      "exception": "Expected Unmatchable, got Array",
+      "typeId": "?Unmatchable",
       "value": [
         {
           "a": 0
@@ -7716,68 +7700,68 @@
       ]
     },
     {
-      "exception": "Expected Tt, got Array",
-      "typeId": "?Tt",
+      "exception": "Expected Unmatchable, got Array",
+      "typeId": "?Unmatchable",
       "value": [
         null
       ]
     },
     {
-      "exception": "Expected Tt, got Boolean false",
-      "typeId": "?Tt",
+      "exception": "Expected Unmatchable, got Boolean false",
+      "typeId": "?Unmatchable",
       "value": false
     },
     {
-      "exception": "Expected Tt, got Boolean true",
-      "typeId": "?Tt",
+      "exception": "Expected Unmatchable, got Boolean true",
+      "typeId": "?Unmatchable",
       "value": true
     },
     {
-      "exception": "Expected Tt, got undefined",
-      "typeId": "?Tt"
+      "exception": "Expected Unmatchable, got undefined",
+      "typeId": "?Unmatchable"
     },
     {
-      "exception": "Expected Tt, got null",
-      "typeId": "?Tt",
+      "exception": "Expected Unmatchable, got null",
+      "typeId": "?Unmatchable",
       "value": null
     },
     {
-      "exception": "Expected Tt, got Object",
-      "typeId": "?Tt",
+      "exception": "Expected Unmatchable, got Object",
+      "typeId": "?Unmatchable",
       "value": {}
     },
     {
-      "exception": "Expected Tt, got Object",
-      "typeId": "?Tt",
+      "exception": "Expected Unmatchable, got Object",
+      "typeId": "?Unmatchable",
       "value": {
         "a": null
       }
     },
     {
-      "exception": "Expected Tt, got Object",
-      "typeId": "?Tt",
+      "exception": "Expected Unmatchable, got Object",
+      "typeId": "?Unmatchable",
       "value": {
         "a": 0
       }
     },
     {
-      "exception": "Expected Tt, got Object",
-      "typeId": "?Tt",
+      "exception": "Expected Unmatchable, got Object",
+      "typeId": "?Unmatchable",
       "value": {
         "a": 0,
         "b": 0
       }
     },
     {
-      "exception": "Expected Tt, got Object",
-      "typeId": "?Tt",
+      "exception": "Expected Unmatchable, got Object",
+      "typeId": "?Unmatchable",
       "value": {
         "b": 0
       }
     },
     {
-      "exception": "Expected Tt, got Object",
-      "typeId": "?Tt",
+      "exception": "Expected Unmatchable, got Object",
+      "typeId": "?Unmatchable",
       "value": {
         "a": {
           "b": 0
@@ -7785,8 +7769,8 @@
       }
     },
     {
-      "exception": "Expected Tt, got Object",
-      "typeId": "?Tt",
+      "exception": "Expected Unmatchable, got Object",
+      "typeId": "?Unmatchable",
       "value": {
         "a": {
           "b": null
@@ -7794,8 +7778,8 @@
       }
     },
     {
-      "exception": "Expected Tt, got Object",
-      "typeId": "?Tt",
+      "exception": "Expected Unmatchable, got Object",
+      "typeId": "?Unmatchable",
       "value": {
         "a": {
           "b": {
@@ -7805,8 +7789,8 @@
       }
     },
     {
-      "exception": "Expected Tt, got Object",
-      "typeId": "?Tt",
+      "exception": "Expected Unmatchable, got Object",
+      "typeId": "?Unmatchable",
       "value": {
         "a": {
           "b": {
@@ -7816,8 +7800,8 @@
       }
     },
     {
-      "exception": "Expected Tt, got Object",
-      "typeId": "?Tt",
+      "exception": "Expected Unmatchable, got Object",
+      "typeId": "?Unmatchable",
       "value": {
         "a": {
           "b": {
@@ -7828,16 +7812,16 @@
       }
     },
     {
-      "exception": "Expected Tt, got Object",
-      "typeId": "?Tt",
+      "exception": "Expected Unmatchable, got Object",
+      "typeId": "?Unmatchable",
       "value": {
         "a": "foo",
         "b": "bar"
       }
     },
     {
-      "exception": "Expected Tt, got Object",
-      "typeId": "?Tt",
+      "exception": "Expected Unmatchable, got Object",
+      "typeId": "?Unmatchable",
       "value": {
         "a": "foo",
         "b": {
@@ -7846,49 +7830,49 @@
       }
     },
     {
-      "exception": "Expected Tt, got Function",
-      "typeId": "?Tt",
+      "exception": "Expected Unmatchable, got Function",
+      "typeId": "?Unmatchable",
       "valueId": "function"
     },
     {
-      "exception": "Expected Tt, got EmptyType",
-      "typeId": "?Tt",
+      "exception": "Expected Unmatchable, got EmptyType",
+      "typeId": "?Unmatchable",
       "valueId": "emptyType"
     },
     {
-      "exception": "Expected Tt, got CustomType",
-      "typeId": "?Tt",
+      "exception": "Expected Unmatchable, got CustomType",
+      "typeId": "?Unmatchable",
       "valueId": "customType"
     },
     {
-      "exception": "Expected Tt, got Buffer",
-      "typeId": "?Tt",
+      "exception": "Expected Unmatchable, got Buffer",
+      "typeId": "?Unmatchable",
       "valueId": "buffer"
     },
     {
       "exception": "Expected Object, got String \"\"",
-      "typeId": "{ a: ?Tt }",
+      "typeId": "{ a: ?Unmatchable }",
       "value": ""
     },
     {
       "exception": "Expected Object, got String \"foobar\"",
-      "typeId": "{ a: ?Tt }",
+      "typeId": "{ a: ?Unmatchable }",
       "value": "foobar"
     },
     {
       "exception": "Expected Object, got Number 0",
-      "typeId": "{ a: ?Tt }",
+      "typeId": "{ a: ?Unmatchable }",
       "value": 0
     },
     {
       "exception": "Expected Object, got Number 1",
-      "typeId": "{ a: ?Tt }",
+      "typeId": "{ a: ?Unmatchable }",
       "value": 1
     },
     {
       "exception": "Unexpected property \"0\"",
       "strict": true,
-      "typeId": "{ a: ?Tt }",
+      "typeId": "{ a: ?Unmatchable }",
       "value": [
         0
       ]
@@ -7896,7 +7880,7 @@
     {
       "exception": "Unexpected property \"0\"",
       "strict": true,
-      "typeId": "{ a: ?Tt }",
+      "typeId": "{ a: ?Unmatchable }",
       "value": [
         "foobar"
       ]
@@ -7904,7 +7888,7 @@
     {
       "exception": "Unexpected property \"0\"",
       "strict": true,
-      "typeId": "{ a: ?Tt }",
+      "typeId": "{ a: ?Unmatchable }",
       "value": [
         {
           "a": 0
@@ -7914,40 +7898,40 @@
     {
       "exception": "Unexpected property \"0\"",
       "strict": true,
-      "typeId": "{ a: ?Tt }",
+      "typeId": "{ a: ?Unmatchable }",
       "value": [
         null
       ]
     },
     {
       "exception": "Expected Object, got Boolean false",
-      "typeId": "{ a: ?Tt }",
+      "typeId": "{ a: ?Unmatchable }",
       "value": false
     },
     {
       "exception": "Expected Object, got Boolean true",
-      "typeId": "{ a: ?Tt }",
+      "typeId": "{ a: ?Unmatchable }",
       "value": true
     },
     {
       "exception": "Expected Object, got undefined",
-      "typeId": "{ a: ?Tt }"
+      "typeId": "{ a: ?Unmatchable }"
     },
     {
-      "exception": "Expected property \"a\" of type ?Tt, got undefined",
-      "typeId": "{ a: ?Tt }",
+      "exception": "Expected Object, got null",
+      "typeId": "{ a: ?Unmatchable }",
       "value": null
     },
     {
-      "exception": "Expected property \"a\" of type ?Tt, got Number 0",
-      "typeId": "{ a: ?Tt }",
+      "exception": "Expected property \"a\" of type Unmatchable, got Number 0",
+      "typeId": "{ a: ?Unmatchable }",
       "value": {
         "a": 0
       }
     },
     {
-      "exception": "Expected property \"a\" of type ?Tt, got Number 0",
-      "typeId": "{ a: ?Tt }",
+      "exception": "Expected property \"a\" of type Unmatchable, got Number 0",
+      "typeId": "{ a: ?Unmatchable }",
       "value": {
         "a": 0,
         "b": 0
@@ -7956,14 +7940,14 @@
     {
       "exception": "Unexpected property \"b\"",
       "strict": true,
-      "typeId": "{ a: ?Tt }",
+      "typeId": "{ a: ?Unmatchable }",
       "value": {
         "b": 0
       }
     },
     {
-      "exception": "Expected property \"a\" of type ?Tt, got Object",
-      "typeId": "{ a: ?Tt }",
+      "exception": "Expected property \"a\" of type Unmatchable, got Object",
+      "typeId": "{ a: ?Unmatchable }",
       "value": {
         "a": {
           "b": 0
@@ -7971,8 +7955,8 @@
       }
     },
     {
-      "exception": "Expected property \"a\" of type ?Tt, got Object",
-      "typeId": "{ a: ?Tt }",
+      "exception": "Expected property \"a\" of type Unmatchable, got Object",
+      "typeId": "{ a: ?Unmatchable }",
       "value": {
         "a": {
           "b": null
@@ -7980,8 +7964,8 @@
       }
     },
     {
-      "exception": "Expected property \"a\" of type ?Tt, got Object",
-      "typeId": "{ a: ?Tt }",
+      "exception": "Expected property \"a\" of type Unmatchable, got Object",
+      "typeId": "{ a: ?Unmatchable }",
       "value": {
         "a": {
           "b": {
@@ -7991,8 +7975,8 @@
       }
     },
     {
-      "exception": "Expected property \"a\" of type ?Tt, got Object",
-      "typeId": "{ a: ?Tt }",
+      "exception": "Expected property \"a\" of type Unmatchable, got Object",
+      "typeId": "{ a: ?Unmatchable }",
       "value": {
         "a": {
           "b": {
@@ -8002,8 +7986,8 @@
       }
     },
     {
-      "exception": "Expected property \"a\" of type ?Tt, got Object",
-      "typeId": "{ a: ?Tt }",
+      "exception": "Expected property \"a\" of type Unmatchable, got Object",
+      "typeId": "{ a: ?Unmatchable }",
       "value": {
         "a": {
           "b": {
@@ -8014,16 +7998,16 @@
       }
     },
     {
-      "exception": "Expected property \"a\" of type ?Tt, got String \"foo\"",
-      "typeId": "{ a: ?Tt }",
+      "exception": "Expected property \"a\" of type Unmatchable, got String \"foo\"",
+      "typeId": "{ a: ?Unmatchable }",
       "value": {
         "a": "foo",
         "b": "bar"
       }
     },
     {
-      "exception": "Expected property \"a\" of type ?Tt, got String \"foo\"",
-      "typeId": "{ a: ?Tt }",
+      "exception": "Expected property \"a\" of type Unmatchable, got String \"foo\"",
+      "typeId": "{ a: ?Unmatchable }",
       "value": {
         "a": "foo",
         "b": {
@@ -8033,63 +8017,63 @@
     },
     {
       "exception": "Expected Object, got Function",
-      "typeId": "{ a: ?Tt }",
+      "typeId": "{ a: ?Unmatchable }",
       "valueId": "function"
     },
     {
       "exception": "Unexpected property \"x\"",
       "strict": true,
-      "typeId": "{ a: ?Tt }",
+      "typeId": "{ a: ?Unmatchable }",
       "valueId": "customType"
     },
     {
       "exception": "Unexpected property \"(asciiSlice|length)\"",
       "strict": true,
-      "typeId": "{ a: ?Tt }",
+      "typeId": "{ a: ?Unmatchable }",
       "valueId": "buffer"
     },
     {
       "exception": "Expected Object, got String \"\"",
-      "typeId": "{ a: { b: Tt } }",
+      "typeId": "{ a: { b: Unmatchable } }",
       "value": ""
     },
     {
       "exception": "Expected Object, got String \"foobar\"",
-      "typeId": "{ a: { b: Tt } }",
+      "typeId": "{ a: { b: Unmatchable } }",
       "value": "foobar"
     },
     {
       "exception": "Expected Object, got Number 0",
-      "typeId": "{ a: { b: Tt } }",
+      "typeId": "{ a: { b: Unmatchable } }",
       "value": 0
     },
     {
       "exception": "Expected Object, got Number 1",
-      "typeId": "{ a: { b: Tt } }",
+      "typeId": "{ a: { b: Unmatchable } }",
       "value": 1
     },
     {
       "exception": "Expected property \"a\" of type Object, got undefined",
-      "typeId": "{ a: { b: Tt } }",
+      "typeId": "{ a: { b: Unmatchable } }",
       "value": []
     },
     {
       "exception": "Expected property \"a\" of type Object, got undefined",
-      "typeId": "{ a: { b: Tt } }",
+      "typeId": "{ a: { b: Unmatchable } }",
       "value": [
         0
       ]
     },
     {
       "exception": "Expected property \"a\" of type Object, got undefined",
-      "typeId": "{ a: { b: Tt } }",
+      "typeId": "{ a: { b: Unmatchable } }",
       "value": [
         "foobar"
       ]
     },
     {
       "exception": "Expected property \"a\" of type Object, got undefined",
-      "typeId": "{ a: { b: Tt } }",
+      "typeId": "{ a: { b: Unmatchable } }",
       "value": [
         {
           "a": 0
@@ -8098,52 +8082,52 @@
     },
     {
       "exception": "Expected property \"a\" of type Object, got undefined",
-      "typeId": "{ a: { b: Tt } }",
+      "typeId": "{ a: { b: Unmatchable } }",
       "value": [
         null
       ]
     },
     {
       "exception": "Expected Object, got Boolean false",
-      "typeId": "{ a: { b: Tt } }",
+      "typeId": "{ a: { b: Unmatchable } }",
       "value": false
     },
     {
       "exception": "Expected Object, got Boolean true",
-      "typeId": "{ a: { b: Tt } }",
+      "typeId": "{ a: { b: Unmatchable } }",
       "value": true
     },
     {
       "exception": "Expected Object, got undefined",
-      "typeId": "{ a: { b: Tt } }"
+      "typeId": "{ a: { b: Unmatchable } }"
     },
     {
-      "exception": "Expected property \"a\" of type Object, got undefined",
-      "typeId": "{ a: { b: Tt } }",
+      "exception": "Expected Object, got null",
+      "typeId": "{ a: { b: Unmatchable } }",
       "value": null
     },
     {
       "exception": "Expected property \"a\" of type Object, got undefined",
-      "typeId": "{ a: { b: Tt } }",
+      "typeId": "{ a: { b: Unmatchable } }",
       "value": {}
     },
     {
-      "exception": "Expected property \"a.b\" of type Tt, got undefined",
-      "typeId": "{ a: { b: Tt } }",
+      "exception": "Expected property \"a\" of type Object, got null",
+      "typeId": "{ a: { b: Unmatchable } }",
       "value": {
         "a": null
       }
     },
     {
       "exception": "Expected property \"a\" of type Object, got Number 0",
-      "typeId": "{ a: { b: Tt } }",
+      "typeId": "{ a: { b: Unmatchable } }",
       "value": {
         "a": 0
       }
     },
     {
       "exception": "Expected property \"a\" of type Object, got Number 0",
-      "typeId": "{ a: { b: Tt } }",
+      "typeId": "{ a: { b: Unmatchable } }",
       "value": {
         "a": 0,
         "b": 0
@@ -8151,14 +8135,14 @@
     },
     {
       "exception": "Expected property \"a\" of type Object, got undefined",
-      "typeId": "{ a: { b: Tt } }",
+      "typeId": "{ a: { b: Unmatchable } }",
       "value": {
         "b": 0
       }
     },
     {
-      "exception": "Expected property \"a.b\" of type Tt, got Number 0",
-      "typeId": "{ a: { b: Tt } }",
+      "exception": "Expected property \"a.b\" of type Unmatchable, got Number 0",
+      "typeId": "{ a: { b: Unmatchable } }",
       "value": {
         "a": {
           "b": 0
@@ -8166,8 +8150,8 @@
       }
     },
     {
-      "exception": "Expected property \"a.b\" of type Tt, got null",
-      "typeId": "{ a: { b: Tt } }",
+      "exception": "Expected property \"a.b\" of type Unmatchable, got null",
+      "typeId": "{ a: { b: Unmatchable } }",
       "value": {
         "a": {
           "b": null
@@ -8175,8 +8159,8 @@
       }
     },
     {
-      "exception": "Expected property \"a.b\" of type Tt, got Object",
-      "typeId": "{ a: { b: Tt } }",
+      "exception": "Expected property \"a.b\" of type Unmatchable, got Object",
+      "typeId": "{ a: { b: Unmatchable } }",
       "value": {
         "a": {
           "b": {
@@ -8186,8 +8170,8 @@
       }
     },
     {
-      "exception": "Expected property \"a.b\" of type Tt, got Object",
-      "typeId": "{ a: { b: Tt } }",
+      "exception": "Expected property \"a.b\" of type Unmatchable, got Object",
+      "typeId": "{ a: { b: Unmatchable } }",
       "value": {
         "a": {
           "b": {
@@ -8197,8 +8181,8 @@
       }
     },
     {
-      "exception": "Expected property \"a.b\" of type Tt, got Object",
-      "typeId": "{ a: { b: Tt } }",
+      "exception": "Expected property \"a.b\" of type Unmatchable, got Object",
+      "typeId": "{ a: { b: Unmatchable } }",
       "value": {
         "a": {
           "b": {
@@ -8210,7 +8194,7 @@
     },
     {
       "exception": "Expected property \"a\" of type Object, got String \"foo\"",
-      "typeId": "{ a: { b: Tt } }",
+      "typeId": "{ a: { b: Unmatchable } }",
       "value": {
         "a": "foo",
         "b": "bar"
@@ -8218,7 +8202,7 @@
     },
     {
       "exception": "Expected property \"a\" of type Object, got String \"foo\"",
-      "typeId": "{ a: { b: Tt } }",
+      "typeId": "{ a: { b: Unmatchable } }",
       "value": {
         "a": "foo",
         "b": {
@@ -8228,22 +8212,22 @@
     },
     {
       "exception": "Expected Object, got Function",
-      "typeId": "{ a: { b: Tt } }",
+      "typeId": "{ a: { b: Unmatchable } }",
       "valueId": "function"
     },
     {
       "exception": "Expected property \"a\" of type Object, got undefined",
-      "typeId": "{ a: { b: Tt } }",
+      "typeId": "{ a: { b: Unmatchable } }",
       "valueId": "emptyType"
     },
     {
       "exception": "Expected property \"a\" of type Object, got undefined",
-      "typeId": "{ a: { b: Tt } }",
+      "typeId": "{ a: { b: Unmatchable } }",
       "valueId": "customType"
     },
     {
       "exception": "Expected property \"a\" of type Object, got undefined",
-      "typeId": "{ a: { b: Tt } }",
+      "typeId": "{ a: { b: Unmatchable } }",
       "valueId": "buffer"
     },
     {
@@ -8497,6 +8481,11 @@
       "typeId": "{ String }"
     },
     {
+      "exception": "Expected {String}, got null",
+      "typeId": "{ String }",
+      "value": null
+    },
+    {
       "exception": "Expected property \"a\" of type String, got null",
       "typeId": "{ String }",
       "value": {
@@ -8653,6 +8642,11 @@
       "typeId": "{ String|Number }"
     },
     {
+      "exception": "Expected {String|Number}, got null",
+      "typeId": "{ String|Number }",
+      "value": null
+    },
+    {
       "exception": "Expected property \"a\" of type String|Number, got null",
       "typeId": "{ String|Number }",
       "value": {
@@ -8789,6 +8783,11 @@
       "typeId": "{ String: Number }"
     },
     {
+      "exception": "Expected {String: Number}, got null",
+      "typeId": "{ String: Number }",
+      "value": null
+    },
+    {
       "exception": "Expected property \"String\" of type Number, got null",
       "typeId": "{ String: Number }",
       "value": {
@@ -8896,21 +8895,21 @@
       "value": 1
     },
     {
-      "exception": "Expected property \"Letter\" of type Number, got undefined",
+      "exception": "Expected property \"Letter\" of type Letter, got String \"0\"",
       "typeId": "{ Letter: Number }",
       "value": [
         0
       ]
     },
     {
-      "exception": "Expected property \"Letter\" of type Number, got undefined",
+      "exception": "Expected property \"Letter\" of type Letter, got String \"0\"",
       "typeId": "{ Letter: Number }",
       "value": [
         "foobar"
       ]
     },
     {
-      "exception": "Expected property \"Letter\" of type Number, got undefined",
+      "exception": "Expected property \"Letter\" of type Letter, got String \"0\"",
       "typeId": "{ Letter: Number }",
       "value": [
         {
@@ -8919,7 +8918,7 @@
       ]
     },
     {
-      "exception": "Expected property \"Letter\" of type Number, got undefined",
+      "exception": "Expected property \"Letter\" of type Letter, got String \"0\"",
       "typeId": "{ Letter: Number }",
       "value": [
         null
@@ -8938,6 +8937,11 @@
     {
       "exception": "Expected Object, got undefined",
       "typeId": "{ Letter: Number }"
+    },
+    {
+      "exception": "Expected {Letter: Number}, got null",
+      "typeId": "{ Letter: Number }",
+      "value": null
     },
     {
       "exception": "Expected property \"Letter\" of type Number, got null",
@@ -9022,7 +9026,7 @@
       "valueId": "function"
     },
     {
-      "exception": "Expected property \"Letter\" of type Number, got undefined",
+      "exception": "Expected property \"Letter\" of type Letter, got String \"(asciiSlice|length|parent)\"",
       "typeId": "{ Letter: Number }",
       "valueId": "buffer"
     }

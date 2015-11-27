@@ -1,3 +1,55 @@
+var inherits = require('inherits')
+
+function TfTypeError (type, value) {
+  this.tfError = Error.call(this)
+  this.tfType = type
+  this.tfValue = value
+
+  var message
+  Object.defineProperty(this, 'message', {
+    get: function () {
+      if (message) return message
+      message = tfErrorString(type, value)
+
+      return message
+    }
+  })
+}
+
+inherits(TfTypeError, Error)
+Object.defineProperty(TfTypeError, 'stack', { get: function () { return this.tfError.stack } })
+
+function TfPropertyTypeError (type, property, value, expected, error) {
+  expected = expected === undefined ? true : expected
+
+  this.tfError = error || Error.call(this)
+  this.tfExpected = expected
+  this.tfProperty = property
+  this.tfType = type
+  this.tfValue = value
+
+  var message
+  Object.defineProperty(this, 'message', {
+    get: function () {
+      if (message) return message
+      if (expected) {
+        message = tfPropertyErrorString(type, property, value)
+      } else {
+        message = 'Unexpected property "' + property + '"'
+      }
+
+      return message
+    }
+  })
+}
+
+inherits(TfPropertyTypeError, Error)
+Object.defineProperty(TfPropertyTypeError, 'stack', { get: function () { return this.tfError.stack } })
+
+TfPropertyTypeError.prototype.asChildOf = function (property) {
+  return new TfPropertyTypeError(this.tfType, property + '.' + this.tfProperty, this.tfValue, this.tfExpected, this.tfError)
+}
+
 function getFunctionName (fn) {
   return fn.name || fn.toString().match(/function (.*?)\s*\(/)[1]
 }
@@ -79,30 +131,32 @@ var otherTypes = {
   object: function object (type) {
     function object (value, strict) {
       typeforce(nativeTypes.Object, value, strict)
+      if (nativeTypes.Null(value)) return false
 
-      var propertyName, propertyType, propertyValue
+      var propertyName
 
       try {
         for (propertyName in type) {
-          propertyType = type[propertyName]
-          propertyValue = value[propertyName]
+          var propertyType = type[propertyName]
+          var propertyValue = value[propertyName]
 
           typeforce(propertyType, propertyValue, strict)
         }
       } catch (e) {
-        if (/Expected property "/.test(e.message)) {
-          e.message = e.message.replace(/Expected property "(.+)" of/, 'Expected property "' + propertyName + '.$1" of')
-          throw e
+        if (e instanceof TfPropertyTypeError) {
+          throw e.asChildOf(propertyName)
+        } else if (e instanceof TfTypeError) {
+          throw new TfPropertyTypeError(e.tfType, propertyName, e.tfValue)
         }
 
-        throw new TypeError(tfPropertyErrorString(propertyType, propertyName, propertyValue))
+        throw e
       }
 
       if (strict) {
         for (propertyName in value) {
           if (type[propertyName]) continue
 
-          throw new TypeError('Unexpected property "' + propertyName + '"')
+          throw new TfPropertyTypeError(undefined, propertyName, undefined, false)
         }
       }
 
@@ -116,8 +170,9 @@ var otherTypes = {
   map: function map (propertyType, propertyKeyType) {
     function map (value, strict) {
       typeforce(nativeTypes.Object, value, strict)
+      if (nativeTypes.Null(value)) return false
 
-      var propertyName, propertyValue
+      var propertyName
 
       try {
         for (propertyName in value) {
@@ -125,20 +180,22 @@ var otherTypes = {
             typeforce(propertyKeyType, propertyName, strict)
           }
 
-          propertyValue = value[propertyName]
+          var propertyValue = value[propertyName]
           typeforce(propertyType, propertyValue, strict)
         }
       } catch (e) {
-        if (/Expected property "/.test(e.message)) {
-          e.message = e.message.replace(/Expected property "(.+)" of/, 'Expected property "' + propertyName + '.$1" of')
-          throw e
+        if (e instanceof TfPropertyTypeError) {
+          throw e.asChildOf(propertyName)
+        } else if (e instanceof TfTypeError) {
+          throw new TfPropertyTypeError(e.tfType, propertyKeyType || propertyName, e.tfValue)
         }
 
-        throw new TypeError(tfPropertyErrorString(propertyType, propertyKeyType || propertyName, propertyValue))
+        throw e
       }
 
       return true
     }
+
     if (propertyKeyType) {
       map.toJSON = function () { return '{' + stfJSON(propertyKeyType) + ': ' + stfJSON(propertyType) + '}' }
     } else {
@@ -223,7 +280,7 @@ function typeforce (type, value, strict) {
   if (nativeTypes.Function(type)) {
     if (type(value, strict)) return true
 
-    throw new TypeError(tfErrorString(type, value))
+    throw new TfTypeError(type, value)
   }
 
   // JIT
@@ -245,3 +302,7 @@ for (typeName in otherTypes) {
 
 module.exports = typeforce
 module.exports.compile = compile
+
+// export Error objects
+module.exports.TfTypeError = TfTypeError
+module.exports.TfPropertyTypeError = TfPropertyTypeError

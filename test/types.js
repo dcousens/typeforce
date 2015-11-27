@@ -1,6 +1,6 @@
 var typeforce = require('../')
 
-function Tt () { return false }
+function Unmatchable () { return false }
 
 function Letter (value) {
   return /^[a-z]$/i.test(value)
@@ -19,9 +19,9 @@ module.exports = {
   '{ a: Number|{ b: Number } }': { a: typeforce.oneOf('Number', { b: 'Number' }) },
   '{ a: ?{ b: Number } }': { a: typeforce.maybe({ b: 'Number' }) },
   '{ a: ?{ b: ?{ c: Number } } }': { a: typeforce.maybe({ b: typeforce.maybe({ c: 'Number' }) }) },
-  '?Tt': Tt,
-  '{ a: ?Tt }': { a: typeforce.maybe(Tt) },
-  '{ a: { b: Tt } }': { a: { b: Tt } },
+  '?Unmatchable': Unmatchable,
+  '{ a: ?Unmatchable }': { a: typeforce.maybe(Unmatchable) },
+  '{ a: { b: Unmatchable } }': { a: { b: Unmatchable } },
   '>CustomType': typeforce.quacksLike('CustomType'),
   '{ String }': typeforce.map('String'),
   '{ String|Number }': typeforce.map(typeforce.oneOf('String', 'Number')),

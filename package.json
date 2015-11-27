@@ -42,7 +42,9 @@
       "threshold": 100
     }
   },
-  "dependencies": {},
+  "dependencies": {
+    "inherits": "^2.0.1"
+  },
   "devDependencies": {
     "blanket": "*",
     "mocha": "*",
