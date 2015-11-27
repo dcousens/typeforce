@@ -23,10 +23,10 @@
   "scripts": {
     "coverage": "mocha --require blanket -R travis-cov",
     "coverage-local": "mocha --require blanket -R html-cov",
-    "generate-test": "mocha test/__generate.js",
+    "generate-test": "mocha scripts/__generate.js",
     "standard": "standard",
     "test": "npm run standard && npm run unit",
-    "unit": "mocha test/index.js"
+    "unit": "mocha"
   },
   "config": {
     "blanket": {
