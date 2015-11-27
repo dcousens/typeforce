@@ -1,46 +1,50 @@
+var inherits = require('inherits')
+
 function TfTypeError (type, value) {
   this.tfError = Error.call(this)
   this.tfType = type
   this.tfValue = value
+
+  var message
+  Object.defineProperty(this, 'message', {
+    get: function () {
+      if (message) return message
+      message = tfErrorString(type, value)
+
+      return message
+    }
+  })
 }
 
+inherits(TfTypeError, Error)
+Object.defineProperty(TfTypeError, 'stack', { get: function () { return this.tfError.stack } })
+
 function TfPropertyTypeError (type, property, value, expected, error) {
+  expected = expected === undefined ? true : expected
+
   this.tfError = error || Error.call(this)
-  this.tfExpected = expected === undefined ? true : expected
+  this.tfExpected = expected
   this.tfProperty = property
   this.tfType = type
   this.tfValue = value
+
+  var message
+  Object.defineProperty(this, 'message', {
+    get: function () {
+      if (message) return message
+      if (expected) {
+        message = tfPropertyErrorString(type, property, value)
+      } else {
+        message = 'Unexpected property "' + property + '"'
+      }
+
+      return message
+    }
+  })
 }
 
-// inherit from Error
-;[TfTypeError, TfPropertyTypeError].forEach(function (f) {
-  f.prototype = Object.create(Error.prototype)
-  f.prototype.constructor = f
-
-  Object.defineProperty(f.prototype, 'stack', { get: function () { return this.tfError.stack } })
-})
-
-Object.defineProperty(TfTypeError.prototype, 'message', {
-  get: function () {
-    if (this.__message) return this.__message
-    this.__message = tfErrorString(this.tfType, this.tfValue)
-
-    return this.__message
-  }
-})
-
-Object.defineProperty(TfPropertyTypeError.prototype, 'message', {
-  get: function () {
-    if (this.__message) return this.__message
-    if (!this.tfExpected) {
-      this.__message = 'Unexpected property "' + this.tfProperty + '"'
-    } else {
-      this.__message = tfPropertyErrorString(this.tfType, this.tfProperty, this.tfValue)
-    }
-
-    return this.__message
-  }
-})
+inherits(TfPropertyTypeError, Error)
+Object.defineProperty(TfPropertyTypeError, 'stack', { get: function () { return this.tfError.stack } })
 
 TfPropertyTypeError.prototype.asChildOf = function (property) {
   return new TfPropertyTypeError(this.tfType, property + '.' + this.tfProperty, this.tfValue, this.tfExpected, this.tfError)
