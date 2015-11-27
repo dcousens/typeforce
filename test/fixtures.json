@@ -910,10 +910,6 @@
     },
     {
       "typeId": "{ String }",
-      "value": null
-    },
-    {
-      "typeId": "{ String }",
       "value": {}
     },
     {
@@ -945,10 +941,6 @@
     },
     {
       "typeId": "{ String|Number }",
-      "value": null
-    },
-    {
-      "typeId": "{ String|Number }",
       "value": {}
     },
     {
@@ -997,10 +989,6 @@
     },
     {
       "typeId": "{ String: Number }",
-      "value": null
-    },
-    {
-      "typeId": "{ String: Number }",
       "value": {}
     },
     {
@@ -1033,10 +1021,6 @@
     {
       "typeId": "{ Letter: Number }",
       "value": []
-    },
-    {
-      "typeId": "{ Letter: Number }",
-      "value": null
     },
     {
       "typeId": "{ Letter: Number }",
@@ -8497,6 +8481,11 @@
       "typeId": "{ String }"
     },
     {
+      "exception": "Expected {String}, got null",
+      "typeId": "{ String }",
+      "value": null
+    },
+    {
       "exception": "Expected property \"a\" of type String, got null",
       "typeId": "{ String }",
       "value": {
@@ -8653,6 +8642,11 @@
       "typeId": "{ String|Number }"
     },
     {
+      "exception": "Expected {String|Number}, got null",
+      "typeId": "{ String|Number }",
+      "value": null
+    },
+    {
       "exception": "Expected property \"a\" of type String|Number, got null",
       "typeId": "{ String|Number }",
       "value": {
@@ -8789,6 +8783,11 @@
       "typeId": "{ String: Number }"
     },
     {
+      "exception": "Expected {String: Number}, got null",
+      "typeId": "{ String: Number }",
+      "value": null
+    },
+    {
       "exception": "Expected property \"String\" of type Number, got null",
       "typeId": "{ String: Number }",
       "value": {
@@ -8896,21 +8895,21 @@
       "value": 1
     },
     {
-      "exception": "Expected property \"Letter\" of type Number, got undefined",
+      "exception": "Expected property \"Letter\" of type Letter, got String \"0\"",
       "typeId": "{ Letter: Number }",
       "value": [
         0
       ]
     },
     {
-      "exception": "Expected property \"Letter\" of type Number, got undefined",
+      "exception": "Expected property \"Letter\" of type Letter, got String \"0\"",
       "typeId": "{ Letter: Number }",
       "value": [
         "foobar"
       ]
     },
     {
-      "exception": "Expected property \"Letter\" of type Number, got undefined",
+      "exception": "Expected property \"Letter\" of type Letter, got String \"0\"",
       "typeId": "{ Letter: Number }",
       "value": [
         {
@@ -8919,7 +8918,7 @@
       ]
     },
     {
-      "exception": "Expected property \"Letter\" of type Number, got undefined",
+      "exception": "Expected property \"Letter\" of type Letter, got String \"0\"",
       "typeId": "{ Letter: Number }",
       "value": [
         null
@@ -8938,6 +8937,11 @@
     {
       "exception": "Expected Object, got undefined",
       "typeId": "{ Letter: Number }"
+    },
+    {
+      "exception": "Expected {Letter: Number}, got null",
+      "typeId": "{ Letter: Number }",
+      "value": null
     },
     {
       "exception": "Expected property \"Letter\" of type Number, got null",
@@ -9022,7 +9026,7 @@
       "valueId": "function"
     },
     {
-      "exception": "Expected property \"Letter\" of type Number, got undefined",
+      "exception": "Expected property \"Letter\" of type Letter, got String \"(asciiSlice|length|parent)\"",
       "typeId": "{ Letter: Number }",
       "valueId": "buffer"
     }

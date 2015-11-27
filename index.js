@@ -129,12 +129,12 @@ var otherTypes = {
       typeforce(nativeTypes.Object, value, strict)
       if (nativeTypes.Null(value)) return false
 
-      var propertyName, propertyType, propertyValue
+      var propertyName
 
       try {
         for (propertyName in type) {
-          propertyType = type[propertyName]
-          propertyValue = value[propertyName]
+          var propertyType = type[propertyName]
+          var propertyValue = value[propertyName]
 
           typeforce(propertyType, propertyValue, strict)
         }
@@ -152,7 +152,7 @@ var otherTypes = {
         for (propertyName in value) {
           if (type[propertyName]) continue
 
-          throw new TfPropertyTypeError(undefined, propertyName, value[propertyName], false)
+          throw new TfPropertyTypeError(undefined, propertyName, undefined, false)
         }
       }
 
@@ -166,8 +166,9 @@ var otherTypes = {
   map: function map (propertyType, propertyKeyType) {
     function map (value, strict) {
       typeforce(nativeTypes.Object, value, strict)
+      if (nativeTypes.Null(value)) return false
 
-      var propertyName, propertyValue
+      var propertyName
 
       try {
         for (propertyName in value) {
@@ -175,17 +176,22 @@ var otherTypes = {
             typeforce(propertyKeyType, propertyName, strict)
           }
 
-          propertyValue = value[propertyName]
+          var propertyValue = value[propertyName]
           typeforce(propertyType, propertyValue, strict)
         }
       } catch (e) {
-        if (e instanceof TfPropertyTypeError) throw e.asChildOf(propertyName)
+        if (e instanceof TfPropertyTypeError) {
+          throw e.asChildOf(propertyName)
+        } else if (e instanceof TfTypeError) {
+          throw new TfPropertyTypeError(e.type, propertyKeyType || propertyName, e.value)
+        }
 
-        throw new TfPropertyTypeError(propertyType, propertyKeyType || propertyName, propertyValue)
+        throw e
       }
 
       return true
     }
+
     if (propertyKeyType) {
       map.toJSON = function () { return '{' + stfJSON(propertyKeyType) + ': ' + stfJSON(propertyType) + '}' }
     } else {
