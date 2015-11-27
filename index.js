@@ -143,7 +143,7 @@ var otherTypes = {
         if (e instanceof TfPropertyTypeError) {
           throw e.asChildOf(propertyName)
         } else if (e instanceof TfTypeError) {
-          throw new TfPropertyTypeError(e.tfType, propertyName, e.tfValue)
+          throw new TfPropertyTypeError(e.tfType, propertyName, e.tfValue, e.tfError)
         }
 
         throw e
