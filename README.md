@@ -66,10 +66,10 @@ var type = {
 }
 
 var fastType = typeforce.compile(type)
-// fastType => {
+// fastType => typeforce.object({
 //   foo: typeforce.Number,
 //   bar: typeforce.maybe(typeforce.String)
-// }
+// })
 
 // use strictness for recursive types to enforce whitelisting properties
 typeforce({
