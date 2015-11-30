@@ -222,7 +222,7 @@ var otherTypes = {
   },
 
   quacksLike: function quacksLike (type) {
-    function quacksLike (value, strict) {
+    function quacksLike (value) {
       return type === getValueTypeName(value)
     }
     quacksLike.toJSON = function () { return type }
