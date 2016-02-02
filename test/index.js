@@ -42,4 +42,31 @@ describe('typeforce', function () {
       }, new RegExp(exception))
     })
   })
+
+  describe('custom errors', function () {
+    var err = new typeforce.TfTypeError('custom error')
+    var everFailingType = function () { throw new typeforce.TfTypeError('custom error') }
+
+    it('has the custom message', function () {
+      assert(err.message === 'custom error')
+    })
+
+    it('is instance of TfTypeError', function () {
+      assert(err instanceof typeforce.TfTypeError)
+    })
+
+    it('assert.throws knows how to handle it', function () {
+      assert.throws(function () {
+        typeforce(everFailingType, 'value')
+      }, new RegExp('custom error'))
+    })
+
+    it('is caught in oneOf', function () {
+      assert(!typeforce.oneOf(everFailingType)('value'))
+    })
+
+    it('does not break oneOf', function () {
+      assert(!typeforce.oneOf(everFailingType, typeforce.string)('value'))
+    })
+  })
 })
