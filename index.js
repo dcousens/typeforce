@@ -2,18 +2,23 @@ var inherits = require('inherits')
 
 function TfTypeError (type, value) {
   this.tfError = Error.call(this)
-  this.tfType = type
-  this.tfValue = value
 
-  var message
-  Object.defineProperty(this, 'message', {
-    get: function () {
-      if (message) return message
-      message = tfErrorString(type, value)
+  if (arguments.length === 1 && typeof type === 'string') {
+    this.message = type
+  } else {
+    this.tfType = type
+    this.tfValue = value
 
-      return message
-    }
-  })
+    var message
+    Object.defineProperty(this, 'message', {
+      get: function () {
+        if (message) return message
+        message = tfErrorString(type, value)
+
+        return message
+      }
+    })
+  }
 }
 
 inherits(TfTypeError, Error)
