@@ -69,4 +69,21 @@ describe('typeforce', function () {
       assert(!typeforce.oneOf(everFailingType, typeforce.string)('value'))
     })
   })
+
+  describe('disable', function () {
+    var everFailingType = function () { throw new typeforce.TfTypeError('custom error') }
+    it('does not throw when disabled', function () {
+      typeforce.disable()
+
+      assert.doesNotThrow(function () {
+        typeforce(everFailingType, 1)
+      })
+
+      typeforce.enable()
+
+      assert.throws(function () {
+        typeforce(everFailingType, 1)
+      })
+    })
+  })
 })

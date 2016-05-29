@@ -1,4 +1,5 @@
 var inherits = require('inherits')
+var disabled
 
 function TfTypeError (type, value) {
   this.tfError = Error.call(this)
@@ -281,6 +282,7 @@ function compile (type) {
 }
 
 function typeforce (type, value, strict, surrogate) {
+  if (disabled) return true
   if (nativeTypes.Function(type)) {
     if (type(value, strict)) return true
 
@@ -289,6 +291,14 @@ function typeforce (type, value, strict, surrogate) {
 
   // JIT
   return typeforce(compile(type), value, strict)
+}
+
+function enable () {
+  disabled = false
+}
+
+function disable () {
+  disabled = true
 }
 
 // assign all types to typeforce function
@@ -310,3 +320,5 @@ module.exports.compile = compile
 // export Error objects
 module.exports.TfTypeError = TfTypeError
 module.exports.TfPropertyTypeError = TfPropertyTypeError
+module.exports.disable = disable
+module.exports.enable = enable
