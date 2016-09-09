@@ -92,7 +92,7 @@ function tfErrorString (type, value) {
 }
 
 function tfPropertyErrorString (type, name, value) {
-  return tfErrorString('property \"' + stfJSON(name) + '\" of type ' + stfJSON(type), value)
+  return tfErrorString('property "' + stfJSON(name) + '" of type ' + stfJSON(type), value)
 }
 
 var nativeTypes = {
