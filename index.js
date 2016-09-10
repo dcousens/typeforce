@@ -11,6 +11,7 @@ function TfTypeError (type, value) {
 
     var message
     Object.defineProperty(this, 'message', {
+      enumerable: true,
       get: function () {
         if (message) return message
         message = tfErrorString(type, value)
@@ -32,6 +33,7 @@ function TfPropertyTypeError (type, property, value, error) {
 
   var message
   Object.defineProperty(this, 'message', {
+    enumerable: true,
     get: function () {
       if (message) return message
       if (type) {

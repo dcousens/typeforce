@@ -1,72 +1,85 @@
-/* global describe, it */
-
-var assert = require('assert')
+var tape = require('tape')
 var typeforce = require('../')
 var fixtures = require('./fixtures')
 var TYPES = require('./types')
 var VALUES = require('./values')
 
-describe('typeforce', function () {
-  fixtures.valid.forEach(function (f) {
-    var type = TYPES[f.typeId] || f.type
-    var value = VALUES[f.valueId] || f.value
-    var typeDescription = JSON.stringify(type)
-    var valueDescription = JSON.stringify(value)
+fixtures.valid.forEach(function (f) {
+  var type = TYPES[f.typeId] || f.type
+  var value = VALUES[f.valueId] || f.value
+  var typeDescription = JSON.stringify(type)
+  var valueDescription = JSON.stringify(value)
 
-    it('passes ' + typeDescription + ' with ' + valueDescription, function () {
+  tape('passes ' + typeDescription + ' with ' + valueDescription, function (t) {
+    t.plan(1)
+    t.doesNotThrow(function () {
       typeforce(type, value, f.strict)
     })
+  })
 
-    it('passes ' + typeDescription + ' (compiled) with ' + valueDescription, function () {
+  tape('passes ' + typeDescription + ' (compiled) with ' + valueDescription, function (t) {
+    t.plan(1)
+    t.doesNotThrow(function () {
       typeforce(typeforce.compile(type), value, f.strict)
     })
   })
+})
 
-  fixtures.invalid.forEach(function (f) {
-    assert(f.exception)
-    var type = TYPES[f.typeId] || f.type
-    var value = VALUES[f.valueId] || f.value
-    var typeDescription = f.typeId || JSON.stringify(type)
-    var valueDescription = JSON.stringify(value)
-    var exception = f.exception.replace(/([.*+?^=!:${}\[\]\/\\])/g, '\\$&')
+fixtures.invalid.forEach(function (f) {
+  if (!f.exception) throw new TypeError('Expected exception')
 
-    it('throws "' + exception + '" for type ' + typeDescription + ' with value of ' + valueDescription, function () {
-      assert.throws(function () {
-        typeforce(type, value, f.strict)
-      }, new RegExp(exception))
-    })
+  var type = TYPES[f.typeId] || f.type
+  var value = VALUES[f.valueId] || f.value
+  var typeDescription = f.typeId || JSON.stringify(type)
+  var valueDescription = JSON.stringify(value)
+  var exception = f.exception.replace(/([.*+?^=!:${}\[\]\/\\])/g, '\\$&')
 
-    it('throws "' + exception + '" for type ' + typeDescription + ' (compiled) with value of ' + valueDescription, function () {
-      assert.throws(function () {
-        typeforce(typeforce.compile(type), value, f.strict)
-      }, new RegExp(exception))
-    })
+  tape('throws "' + exception + '" for type ' + typeDescription + ' with value of ' + valueDescription, function (t) {
+    t.plan(1)
+
+    t.throws(function () {
+      typeforce(type, value, f.strict)
+    }, new RegExp(exception))
   })
 
-  describe('custom errors', function () {
-    var err = new typeforce.TfTypeError('custom error')
-    var everFailingType = function () { throw new typeforce.TfTypeError('custom error') }
+  tape('throws "' + exception + '" for type ' + typeDescription + ' (compiled) with value of ' + valueDescription, function (t) {
+    t.plan(1)
 
-    it('has the custom message', function () {
-      assert(err.message === 'custom error')
-    })
-
-    it('is instance of TfTypeError', function () {
-      assert(err instanceof typeforce.TfTypeError)
-    })
-
-    it('assert.throws knows how to handle it', function () {
-      assert.throws(function () {
-        typeforce(everFailingType, 'value')
-      }, new RegExp('custom error'))
-    })
-
-    it('is caught in oneOf', function () {
-      assert(!typeforce.oneOf(everFailingType)('value'))
-    })
-
-    it('does not break oneOf', function () {
-      assert(!typeforce.oneOf(everFailingType, typeforce.string)('value'))
-    })
+    t.throws(function () {
+      typeforce(typeforce.compile(type), value, f.strict)
+    }, new RegExp(exception))
   })
+})
+
+var err = new typeforce.TfTypeError('custom error')
+var failType = function () { throw new typeforce.TfTypeError('custom error') }
+
+tape('TfTypeError has .message', function (t) {
+  t.plan(1)
+  t.equal(err.message, 'custom error')
+})
+
+tape('TfTypeError is instance of Error', function (t) {
+  t.plan(1)
+  t.ok(err instanceof Error)
+})
+
+tape('t.throws can handle TfTypeError', function (t) {
+  t.plan(1)
+  t.throws(function () {
+    typeforce(failType, 'value')
+  }, new RegExp('custom error'))
+})
+
+tape('TfTypeError is caught by typeforce.oneOf', function (t) {
+  t.plan(1)
+
+  t.doesNotThrow(function () {
+    typeforce.oneOf(failType)('value')
+  })
+})
+
+tape('TfTypeError does not break typeforce.oneOf', function (t) {
+  t.plan(1)
+  t.ok(!typeforce.oneOf(failType, typeforce.string)('value'))
 })
