@@ -77,6 +77,23 @@ tape('TfTypeError is caught by typeforce.oneOf', function (t) {
   t.doesNotThrow(function () {
     typeforce.oneOf(failType)('value')
   })
+
+  describe('disable', function () {
+    var everFailingType = function () { throw new typeforce.TfTypeError('custom error') }
+    it('does not throw when disabled', function () {
+      typeforce.disable()
+
+      assert.doesNotThrow(function () {
+        typeforce(everFailingType, 1)
+      })
+
+      typeforce.enable()
+
+      assert.throws(function () {
+        typeforce(everFailingType, 1)
+      })
+    })
+  })
 })
 
 tape('TfTypeError does not break typeforce.oneOf', function (t) {
