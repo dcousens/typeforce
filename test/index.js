@@ -51,8 +51,8 @@ fixtures.invalid.forEach(function (f) {
   })
 })
 
-var err = new typeforce.TfTypeError('custom error')
-var failType = function () { throw new typeforce.TfTypeError('mytype') }
+var err = new typeforce.TfTypeError('mytype')
+var failType = function () { throw err }
 
 tape('TfTypeError has .message', function (t) {
   t.plan(1)
