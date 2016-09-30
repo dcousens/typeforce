@@ -8587,7 +8587,7 @@
       "valueId": "customType"
     },
     {
-      "exception": "Expected property \"(asciiSlice|length|parent)\" of type String, got Function",
+      "exception": "Expected property \"(asciiSlice|length|parent)\" of type String, got (Function|Number)",
       "typeId": "{ String }",
       "valueId": "buffer"
     },
