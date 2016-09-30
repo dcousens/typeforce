@@ -1,7 +1,6 @@
 var typeforce = require('../')
 
 function Unmatchable () { return false }
-
 function Letter (value) {
   return /^[a-z]$/i.test(value)
 }
@@ -26,5 +25,15 @@ module.exports = {
   '{ String }': typeforce.map('String'),
   '{ String|Number }': typeforce.map(typeforce.oneOf('String', 'Number')),
   '{ String: Number }': typeforce.map('Number', 'String'),
-  '{ Letter: Number }': typeforce.map('Number', Letter)
+  '{ Letter: Number }': typeforce.map('Number', Letter),
+  'Buffer0': typeforce.BufferN(0),
+  'Buffer10': typeforce.BufferN(10),
+  'Hex': typeforce.Hex,
+  'Int8': typeforce.Int8,
+  'Int16': typeforce.Int16,
+  'Int32': typeforce.Int32,
+  'UInt8': typeforce.UInt8,
+  'UInt16': typeforce.UInt16,
+  'UInt32': typeforce.UInt32,
+  'UInt53': typeforce.UInt53
 }

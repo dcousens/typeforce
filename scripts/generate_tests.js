@@ -56,6 +56,26 @@ const VALUES2 = [
   { a: 'foo', b: { c: 'bar' } }
 ]
 
+// extra
+const VALUESX = [
+  'buffer10',
+  'fff',
+  'cafe1122deadbeef',
+  -1,
+  127,
+  128,
+  255,
+  256,
+  -128,
+  -129,
+  0xfffe,
+  0xffff,
+  0x10000,
+  0xffffffff,
+  9007199254740991,
+  9007199254740994
+]
+
 const fixtures = {
   valid: [],
   invalid: []
@@ -105,5 +125,6 @@ const ALLTYPES = TYPES2.concat(Object.keys(TYPES))
 const ALLVALUES = VALUES2.concat(Object.keys(VALUES))
 
 ALLTYPES.forEach(type => ALLVALUES.forEach(value => addFixture(type, value)))
+ALLTYPES.forEach(type => VALUESX.forEach(value => addFixture(type, value)))
 
 console.log(JSON.stringify(fixtures, null, 2))
