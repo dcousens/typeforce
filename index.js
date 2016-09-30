@@ -1,4 +1,15 @@
 var inherits = require('inherits')
+var nativeTypes = {
+  Array: function (value) { return value !== null && value !== undefined && value.constructor === Array },
+  Boolean: function (value) { return typeof value === 'boolean' },
+  Buffer: function (value) { return Buffer.isBuffer(value) },
+  Function: function (value) { return typeof value === 'function' },
+  Null: function (value) { return value === undefined || value === null },
+  Number: function (value) { return typeof value === 'number' },
+  Object: function (value) { return typeof value === 'object' },
+  String: function (value) { return typeof value === 'string' },
+  '': function () { return true }
+}
 
 function TfTypeError (type, value) {
   this.tfError = Error.call(this)
@@ -25,9 +36,10 @@ function TfTypeError (type, value) {
 inherits(TfTypeError, Error)
 Object.defineProperty(TfTypeError, 'stack', { get: function () { return this.tfError.stack } })
 
-function TfPropertyTypeError (type, property, value, error) {
+function TfPropertyTypeError (type, property, side, value, error) {
   this.tfError = error || Error.call(this)
   this.tfProperty = property
+  this.tfSide = side
   this.tfType = type
   this.tfValue = value
 
@@ -37,7 +49,7 @@ function TfPropertyTypeError (type, property, value, error) {
     get: function () {
       if (message) return message
       if (type) {
-        message = tfPropertyErrorString(type, property, value)
+        message = tfPropertyErrorString(type, side, property, value)
       } else {
         message = 'Unexpected property "' + property + '"'
       }
@@ -48,10 +60,12 @@ function TfPropertyTypeError (type, property, value, error) {
 }
 
 inherits(TfPropertyTypeError, Error)
-Object.defineProperty(TfPropertyTypeError, 'stack', { get: function () { return this.tfError.stack } })
+Object.defineProperty(TfPropertyTypeError, 'stack', {
+  get: function () { return this.tfError.stack }
+})
 
 TfPropertyTypeError.prototype.asChildOf = function (property) {
-  return new TfPropertyTypeError(this.tfType, property + '.' + this.tfProperty, this.tfValue, this.tfError)
+  return new TfPropertyTypeError(this.tfType, property + '.' + this.tfProperty, this.tfSide, this.tfValue, this.tfError)
 }
 
 function getFunctionName (fn) {
@@ -93,29 +107,36 @@ function tfErrorString (type, value) {
   return 'Expected ' + stfJSON(type) + ', got' + (valueTypeName !== '' ? ' ' + valueTypeName : '') + (valueValue !== '' ? ' ' + valueValue : '')
 }
 
-function tfPropertyErrorString (type, name, value) {
-  return tfErrorString('property "' + stfJSON(name) + '" of type ' + stfJSON(type), value)
+function tfPropertyErrorString (type, side, name, value) {
+  var description = '" of type '
+  if (side === 'key') description = '" with key type '
+
+  return tfErrorString('property "' + stfJSON(name) + description + stfJSON(type), value)
 }
 
-var nativeTypes = {
-  Array: function (value) { return value !== null && value !== undefined && value.constructor === Array },
-  Boolean: function (value) { return typeof value === 'boolean' },
-  Buffer: function (value) { return Buffer.isBuffer(value) },
-  Function: function (value) { return typeof value === 'function' },
-  Null: function (value) { return value === undefined || value === null },
-  Number: function (value) { return typeof value === 'number' },
-  Object: function (value) { return typeof value === 'object' },
-  String: function (value) { return typeof value === 'string' },
-  '': function () { return true }
+function tfSubError (e, propertyName, sideLabel) {
+  if (typeof propertyName === 'number') propertyName = '[' + propertyName + ']'
+  if (e instanceof TfPropertyTypeError) return e.asChildOf(propertyName)
+  if (e instanceof TfTypeError) {
+    return new TfPropertyTypeError(e.tfType, propertyName, sideLabel, e.tfValue, e.tfError)
+  }
+
+  return e
 }
 
 var otherTypes = {
   arrayOf: function arrayOf (type) {
-    function arrayOf (value, strict) {
-      if (!nativeTypes.Array(value)) return false
+    type = compile(type)
 
-      return value.every(function (x) {
-        return typeforce(type, x, strict, arrayOf)
+    function arrayOf (array, strict) {
+      if (!nativeTypes.Array(array)) return false
+
+      return array.every(function (value, i) {
+        try {
+          return typeforce(type, value, strict)
+        } catch (e) {
+          throw tfSubError(e, i, 'element')
+        }
       })
     }
     arrayOf.toJSON = function () { return [tfJSON(type)] }
@@ -124,8 +145,10 @@ var otherTypes = {
   },
 
   maybe: function maybe (type) {
+    type = compile(type)
+
     function maybe (value, strict) {
-      return nativeTypes.Null(value) || typeforce(type, value, strict, maybe)
+      return nativeTypes.Null(value) || type(value, strict, maybe)
     }
     maybe.toJSON = function () { return '?' + stfJSON(type) }
 
@@ -147,13 +170,7 @@ var otherTypes = {
           typeforce(propertyType, propertyValue, strict)
         }
       } catch (e) {
-        if (e instanceof TfPropertyTypeError) {
-          throw e.asChildOf(propertyName)
-        } else if (e instanceof TfTypeError) {
-          throw new TfPropertyTypeError(e.tfType, propertyName, e.tfValue, e.tfError)
-        }
-
-        throw e
+        throw tfSubError(e, propertyName, 'value')
       }
 
       if (strict) {
@@ -172,29 +189,28 @@ var otherTypes = {
   },
 
   map: function map (propertyType, propertyKeyType) {
+    propertyType = compile(propertyType)
+    if (propertyKeyType) propertyKeyType = compile(propertyKeyType)
+
     function map (value, strict) {
-      typeforce(nativeTypes.Object, value, strict)
-      if (nativeTypes.Null(value)) return false
+      if (!nativeTypes.Object(value, strict)) return false
+      if (nativeTypes.Null(value, strict)) return false
 
-      var propertyName
-
-      try {
-        for (propertyName in value) {
+      for (var propertyName in value) {
+        try {
           if (propertyKeyType) {
             typeforce(propertyKeyType, propertyName, strict)
           }
+        } catch (e) {
+          throw tfSubError(e, propertyName, 'key')
+        }
 
+        try {
           var propertyValue = value[propertyName]
           typeforce(propertyType, propertyValue, strict)
+        } catch (e) {
+          throw tfSubError(e, propertyName, 'value')
         }
-      } catch (e) {
-        if (e instanceof TfPropertyTypeError) {
-          throw e.asChildOf(propertyName)
-        } else if (e instanceof TfTypeError) {
-          throw new TfPropertyTypeError(e.tfType, propertyKeyType || propertyName, e.tfValue)
-        }
-
-        throw e
       }
 
       return true
@@ -210,17 +226,11 @@ var otherTypes = {
   },
 
   oneOf: function oneOf () {
-    var types = [].slice.call(arguments)
+    var types = [].slice.call(arguments).map(compile)
 
     function oneOf (value, strict) {
       return types.some(function (type) {
-        try {
-          return typeforce(type, value, strict)
-        } catch (e) {
-          if (e instanceof TfTypeError || e instanceof TfPropertyTypeError) return false
-
-          throw e
-        }
+        return type(value, strict)
       })
     }
     oneOf.toJSON = function () { return types.map(stfJSON).join('|') }
@@ -240,9 +250,13 @@ var otherTypes = {
   tuple: function tuple () {
     var types = [].slice.call(arguments).map(compile)
 
-    function tuple (value, strict) {
+    function tuple (values, strict) {
       return types.every(function (type, i) {
-        return typeforce(type, value[i], strict, tuple)
+        try {
+          return typeforce(type, values[i], strict)
+        } catch (e) {
+          throw tfSubError(e, i, 'element')
+        }
       })
     }
     tuple.toJSON = function () { return '(' + types.map(stfJSON).join(', ') + ')' }
