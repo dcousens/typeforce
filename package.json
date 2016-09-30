@@ -22,11 +22,10 @@
     "url": "https://github.com/dcousens/typeforce.git"
   },
   "scripts": {
-    "prepublish": "npm run test",
     "coverage": "nyc --check-coverage --branches 100 --functions 100 tape test/*.js",
-    "lint": "standard",
     "test": "npm run lint && npm run unit",
-    "unit": "tape test/*.js"
+    "standard": "standard",
+    "unit": "tape test/*.js | tap-dot"
   },
   "dependencies": {
     "inherits": "^2.0.1"
@@ -34,6 +33,7 @@
   "devDependencies": {
     "nyc": "^6.4.0",
     "standard": "*",
+    "tap-dot": "^1.0.5",
     "tape": "^4.6.0"
   }
 }
