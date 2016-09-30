@@ -11235,6 +11235,3946 @@
       "exception": "Expected UInt53, got Buffer",
       "typeId": "UInt53",
       "valueId": "buffer3"
+    },
+    {
+      "exception": "Expected Array, got String \"buffer10\"",
+      "type": "Array",
+      "value": "buffer10"
+    },
+    {
+      "exception": "Expected Array, got String \"fff\"",
+      "type": "Array",
+      "value": "fff"
+    },
+    {
+      "exception": "Expected Array, got String \"cafe1122deadbeef\"",
+      "type": "Array",
+      "value": "cafe1122deadbeef"
+    },
+    {
+      "exception": "Expected Array, got Number -1",
+      "type": "Array",
+      "value": -1
+    },
+    {
+      "exception": "Expected Array, got Number 127",
+      "type": "Array",
+      "value": 127
+    },
+    {
+      "exception": "Expected Array, got Number 128",
+      "type": "Array",
+      "value": 128
+    },
+    {
+      "exception": "Expected Array, got Number 255",
+      "type": "Array",
+      "value": 255
+    },
+    {
+      "exception": "Expected Array, got Number 256",
+      "type": "Array",
+      "value": 256
+    },
+    {
+      "exception": "Expected Array, got Number -128",
+      "type": "Array",
+      "value": -128
+    },
+    {
+      "exception": "Expected Array, got Number -129",
+      "type": "Array",
+      "value": -129
+    },
+    {
+      "exception": "Expected Array, got Number 65534",
+      "type": "Array",
+      "value": 65534
+    },
+    {
+      "exception": "Expected Array, got Number 65535",
+      "type": "Array",
+      "value": 65535
+    },
+    {
+      "exception": "Expected Array, got Number 65536",
+      "type": "Array",
+      "value": 65536
+    },
+    {
+      "exception": "Expected Array, got Number 4294967295",
+      "type": "Array",
+      "value": 4294967295
+    },
+    {
+      "exception": "Expected Array, got Number 9007199254740991",
+      "type": "Array",
+      "value": 9007199254740991
+    },
+    {
+      "exception": "Expected Array, got Number 9007199254740994",
+      "type": "Array",
+      "value": 9007199254740994
+    },
+    {
+      "exception": "Expected Boolean, got String \"buffer10\"",
+      "type": "Boolean",
+      "value": "buffer10"
+    },
+    {
+      "exception": "Expected Boolean, got String \"fff\"",
+      "type": "Boolean",
+      "value": "fff"
+    },
+    {
+      "exception": "Expected Boolean, got String \"cafe1122deadbeef\"",
+      "type": "Boolean",
+      "value": "cafe1122deadbeef"
+    },
+    {
+      "exception": "Expected Boolean, got Number -1",
+      "type": "Boolean",
+      "value": -1
+    },
+    {
+      "exception": "Expected Boolean, got Number 127",
+      "type": "Boolean",
+      "value": 127
+    },
+    {
+      "exception": "Expected Boolean, got Number 128",
+      "type": "Boolean",
+      "value": 128
+    },
+    {
+      "exception": "Expected Boolean, got Number 255",
+      "type": "Boolean",
+      "value": 255
+    },
+    {
+      "exception": "Expected Boolean, got Number 256",
+      "type": "Boolean",
+      "value": 256
+    },
+    {
+      "exception": "Expected Boolean, got Number -128",
+      "type": "Boolean",
+      "value": -128
+    },
+    {
+      "exception": "Expected Boolean, got Number -129",
+      "type": "Boolean",
+      "value": -129
+    },
+    {
+      "exception": "Expected Boolean, got Number 65534",
+      "type": "Boolean",
+      "value": 65534
+    },
+    {
+      "exception": "Expected Boolean, got Number 65535",
+      "type": "Boolean",
+      "value": 65535
+    },
+    {
+      "exception": "Expected Boolean, got Number 65536",
+      "type": "Boolean",
+      "value": 65536
+    },
+    {
+      "exception": "Expected Boolean, got Number 4294967295",
+      "type": "Boolean",
+      "value": 4294967295
+    },
+    {
+      "exception": "Expected Boolean, got Number 9007199254740991",
+      "type": "Boolean",
+      "value": 9007199254740991
+    },
+    {
+      "exception": "Expected Boolean, got Number 9007199254740994",
+      "type": "Boolean",
+      "value": 9007199254740994
+    },
+    {
+      "exception": "Expected Buffer, got String \"buffer10\"",
+      "type": "Buffer",
+      "value": "buffer10"
+    },
+    {
+      "exception": "Expected Buffer, got String \"fff\"",
+      "type": "Buffer",
+      "value": "fff"
+    },
+    {
+      "exception": "Expected Buffer, got String \"cafe1122deadbeef\"",
+      "type": "Buffer",
+      "value": "cafe1122deadbeef"
+    },
+    {
+      "exception": "Expected Buffer, got Number -1",
+      "type": "Buffer",
+      "value": -1
+    },
+    {
+      "exception": "Expected Buffer, got Number 127",
+      "type": "Buffer",
+      "value": 127
+    },
+    {
+      "exception": "Expected Buffer, got Number 128",
+      "type": "Buffer",
+      "value": 128
+    },
+    {
+      "exception": "Expected Buffer, got Number 255",
+      "type": "Buffer",
+      "value": 255
+    },
+    {
+      "exception": "Expected Buffer, got Number 256",
+      "type": "Buffer",
+      "value": 256
+    },
+    {
+      "exception": "Expected Buffer, got Number -128",
+      "type": "Buffer",
+      "value": -128
+    },
+    {
+      "exception": "Expected Buffer, got Number -129",
+      "type": "Buffer",
+      "value": -129
+    },
+    {
+      "exception": "Expected Buffer, got Number 65534",
+      "type": "Buffer",
+      "value": 65534
+    },
+    {
+      "exception": "Expected Buffer, got Number 65535",
+      "type": "Buffer",
+      "value": 65535
+    },
+    {
+      "exception": "Expected Buffer, got Number 65536",
+      "type": "Buffer",
+      "value": 65536
+    },
+    {
+      "exception": "Expected Buffer, got Number 4294967295",
+      "type": "Buffer",
+      "value": 4294967295
+    },
+    {
+      "exception": "Expected Buffer, got Number 9007199254740991",
+      "type": "Buffer",
+      "value": 9007199254740991
+    },
+    {
+      "exception": "Expected Buffer, got Number 9007199254740994",
+      "type": "Buffer",
+      "value": 9007199254740994
+    },
+    {
+      "exception": "Expected Function, got String \"buffer10\"",
+      "type": "Function",
+      "value": "buffer10"
+    },
+    {
+      "exception": "Expected Function, got String \"fff\"",
+      "type": "Function",
+      "value": "fff"
+    },
+    {
+      "exception": "Expected Function, got String \"cafe1122deadbeef\"",
+      "type": "Function",
+      "value": "cafe1122deadbeef"
+    },
+    {
+      "exception": "Expected Function, got Number -1",
+      "type": "Function",
+      "value": -1
+    },
+    {
+      "exception": "Expected Function, got Number 127",
+      "type": "Function",
+      "value": 127
+    },
+    {
+      "exception": "Expected Function, got Number 128",
+      "type": "Function",
+      "value": 128
+    },
+    {
+      "exception": "Expected Function, got Number 255",
+      "type": "Function",
+      "value": 255
+    },
+    {
+      "exception": "Expected Function, got Number 256",
+      "type": "Function",
+      "value": 256
+    },
+    {
+      "exception": "Expected Function, got Number -128",
+      "type": "Function",
+      "value": -128
+    },
+    {
+      "exception": "Expected Function, got Number -129",
+      "type": "Function",
+      "value": -129
+    },
+    {
+      "exception": "Expected Function, got Number 65534",
+      "type": "Function",
+      "value": 65534
+    },
+    {
+      "exception": "Expected Function, got Number 65535",
+      "type": "Function",
+      "value": 65535
+    },
+    {
+      "exception": "Expected Function, got Number 65536",
+      "type": "Function",
+      "value": 65536
+    },
+    {
+      "exception": "Expected Function, got Number 4294967295",
+      "type": "Function",
+      "value": 4294967295
+    },
+    {
+      "exception": "Expected Function, got Number 9007199254740991",
+      "type": "Function",
+      "value": 9007199254740991
+    },
+    {
+      "exception": "Expected Function, got Number 9007199254740994",
+      "type": "Function",
+      "value": 9007199254740994
+    },
+    {
+      "exception": "Expected Null, got String \"buffer10\"",
+      "type": "Null",
+      "value": "buffer10"
+    },
+    {
+      "exception": "Expected Null, got String \"fff\"",
+      "type": "Null",
+      "value": "fff"
+    },
+    {
+      "exception": "Expected Null, got String \"cafe1122deadbeef\"",
+      "type": "Null",
+      "value": "cafe1122deadbeef"
+    },
+    {
+      "exception": "Expected Null, got Number -1",
+      "type": "Null",
+      "value": -1
+    },
+    {
+      "exception": "Expected Null, got Number 127",
+      "type": "Null",
+      "value": 127
+    },
+    {
+      "exception": "Expected Null, got Number 128",
+      "type": "Null",
+      "value": 128
+    },
+    {
+      "exception": "Expected Null, got Number 255",
+      "type": "Null",
+      "value": 255
+    },
+    {
+      "exception": "Expected Null, got Number 256",
+      "type": "Null",
+      "value": 256
+    },
+    {
+      "exception": "Expected Null, got Number -128",
+      "type": "Null",
+      "value": -128
+    },
+    {
+      "exception": "Expected Null, got Number -129",
+      "type": "Null",
+      "value": -129
+    },
+    {
+      "exception": "Expected Null, got Number 65534",
+      "type": "Null",
+      "value": 65534
+    },
+    {
+      "exception": "Expected Null, got Number 65535",
+      "type": "Null",
+      "value": 65535
+    },
+    {
+      "exception": "Expected Null, got Number 65536",
+      "type": "Null",
+      "value": 65536
+    },
+    {
+      "exception": "Expected Null, got Number 4294967295",
+      "type": "Null",
+      "value": 4294967295
+    },
+    {
+      "exception": "Expected Null, got Number 9007199254740991",
+      "type": "Null",
+      "value": 9007199254740991
+    },
+    {
+      "exception": "Expected Null, got Number 9007199254740994",
+      "type": "Null",
+      "value": 9007199254740994
+    },
+    {
+      "exception": "Expected Number, got String \"buffer10\"",
+      "type": "Number",
+      "value": "buffer10"
+    },
+    {
+      "exception": "Expected Number, got String \"fff\"",
+      "type": "Number",
+      "value": "fff"
+    },
+    {
+      "exception": "Expected Number, got String \"cafe1122deadbeef\"",
+      "type": "Number",
+      "value": "cafe1122deadbeef"
+    },
+    {
+      "exception": "Expected Object, got String \"buffer10\"",
+      "type": "Object",
+      "value": "buffer10"
+    },
+    {
+      "exception": "Expected Object, got String \"fff\"",
+      "type": "Object",
+      "value": "fff"
+    },
+    {
+      "exception": "Expected Object, got String \"cafe1122deadbeef\"",
+      "type": "Object",
+      "value": "cafe1122deadbeef"
+    },
+    {
+      "exception": "Expected Object, got Number -1",
+      "type": "Object",
+      "value": -1
+    },
+    {
+      "exception": "Expected Object, got Number 127",
+      "type": "Object",
+      "value": 127
+    },
+    {
+      "exception": "Expected Object, got Number 128",
+      "type": "Object",
+      "value": 128
+    },
+    {
+      "exception": "Expected Object, got Number 255",
+      "type": "Object",
+      "value": 255
+    },
+    {
+      "exception": "Expected Object, got Number 256",
+      "type": "Object",
+      "value": 256
+    },
+    {
+      "exception": "Expected Object, got Number -128",
+      "type": "Object",
+      "value": -128
+    },
+    {
+      "exception": "Expected Object, got Number -129",
+      "type": "Object",
+      "value": -129
+    },
+    {
+      "exception": "Expected Object, got Number 65534",
+      "type": "Object",
+      "value": 65534
+    },
+    {
+      "exception": "Expected Object, got Number 65535",
+      "type": "Object",
+      "value": 65535
+    },
+    {
+      "exception": "Expected Object, got Number 65536",
+      "type": "Object",
+      "value": 65536
+    },
+    {
+      "exception": "Expected Object, got Number 4294967295",
+      "type": "Object",
+      "value": 4294967295
+    },
+    {
+      "exception": "Expected Object, got Number 9007199254740991",
+      "type": "Object",
+      "value": 9007199254740991
+    },
+    {
+      "exception": "Expected Object, got Number 9007199254740994",
+      "type": "Object",
+      "value": 9007199254740994
+    },
+    {
+      "exception": "Expected String, got Number -1",
+      "type": "String",
+      "value": -1
+    },
+    {
+      "exception": "Expected String, got Number 127",
+      "type": "String",
+      "value": 127
+    },
+    {
+      "exception": "Expected String, got Number 128",
+      "type": "String",
+      "value": 128
+    },
+    {
+      "exception": "Expected String, got Number 255",
+      "type": "String",
+      "value": 255
+    },
+    {
+      "exception": "Expected String, got Number 256",
+      "type": "String",
+      "value": 256
+    },
+    {
+      "exception": "Expected String, got Number -128",
+      "type": "String",
+      "value": -128
+    },
+    {
+      "exception": "Expected String, got Number -129",
+      "type": "String",
+      "value": -129
+    },
+    {
+      "exception": "Expected String, got Number 65534",
+      "type": "String",
+      "value": 65534
+    },
+    {
+      "exception": "Expected String, got Number 65535",
+      "type": "String",
+      "value": 65535
+    },
+    {
+      "exception": "Expected String, got Number 65536",
+      "type": "String",
+      "value": 65536
+    },
+    {
+      "exception": "Expected String, got Number 4294967295",
+      "type": "String",
+      "value": 4294967295
+    },
+    {
+      "exception": "Expected String, got Number 9007199254740991",
+      "type": "String",
+      "value": 9007199254740991
+    },
+    {
+      "exception": "Expected String, got Number 9007199254740994",
+      "type": "String",
+      "value": 9007199254740994
+    },
+    {
+      "exception": "Expected \\?Number, got String \"buffer10\"",
+      "type": "?Number",
+      "value": "buffer10"
+    },
+    {
+      "exception": "Expected \\?Number, got String \"fff\"",
+      "type": "?Number",
+      "value": "fff"
+    },
+    {
+      "exception": "Expected \\?Number, got String \"cafe1122deadbeef\"",
+      "type": "?Number",
+      "value": "cafe1122deadbeef"
+    },
+    {
+      "exception": "Expected \\[\"\\?Number\"\\], got String \"buffer10\"",
+      "type": [
+        "?Number"
+      ],
+      "value": "buffer10"
+    },
+    {
+      "exception": "Expected \\[\"\\?Number\"\\], got String \"fff\"",
+      "type": [
+        "?Number"
+      ],
+      "value": "fff"
+    },
+    {
+      "exception": "Expected \\[\"\\?Number\"\\], got String \"cafe1122deadbeef\"",
+      "type": [
+        "?Number"
+      ],
+      "value": "cafe1122deadbeef"
+    },
+    {
+      "exception": "Expected \\[\"\\?Number\"\\], got Number -1",
+      "type": [
+        "?Number"
+      ],
+      "value": -1
+    },
+    {
+      "exception": "Expected \\[\"\\?Number\"\\], got Number 127",
+      "type": [
+        "?Number"
+      ],
+      "value": 127
+    },
+    {
+      "exception": "Expected \\[\"\\?Number\"\\], got Number 128",
+      "type": [
+        "?Number"
+      ],
+      "value": 128
+    },
+    {
+      "exception": "Expected \\[\"\\?Number\"\\], got Number 255",
+      "type": [
+        "?Number"
+      ],
+      "value": 255
+    },
+    {
+      "exception": "Expected \\[\"\\?Number\"\\], got Number 256",
+      "type": [
+        "?Number"
+      ],
+      "value": 256
+    },
+    {
+      "exception": "Expected \\[\"\\?Number\"\\], got Number -128",
+      "type": [
+        "?Number"
+      ],
+      "value": -128
+    },
+    {
+      "exception": "Expected \\[\"\\?Number\"\\], got Number -129",
+      "type": [
+        "?Number"
+      ],
+      "value": -129
+    },
+    {
+      "exception": "Expected \\[\"\\?Number\"\\], got Number 65534",
+      "type": [
+        "?Number"
+      ],
+      "value": 65534
+    },
+    {
+      "exception": "Expected \\[\"\\?Number\"\\], got Number 65535",
+      "type": [
+        "?Number"
+      ],
+      "value": 65535
+    },
+    {
+      "exception": "Expected \\[\"\\?Number\"\\], got Number 65536",
+      "type": [
+        "?Number"
+      ],
+      "value": 65536
+    },
+    {
+      "exception": "Expected \\[\"\\?Number\"\\], got Number 4294967295",
+      "type": [
+        "?Number"
+      ],
+      "value": 4294967295
+    },
+    {
+      "exception": "Expected \\[\"\\?Number\"\\], got Number 9007199254740991",
+      "type": [
+        "?Number"
+      ],
+      "value": 9007199254740991
+    },
+    {
+      "exception": "Expected \\[\"\\?Number\"\\], got Number 9007199254740994",
+      "type": [
+        "?Number"
+      ],
+      "value": 9007199254740994
+    },
+    {
+      "exception": "Expected \\[\"Number\"\\], got String \"buffer10\"",
+      "type": [
+        "Number"
+      ],
+      "value": "buffer10"
+    },
+    {
+      "exception": "Expected \\[\"Number\"\\], got String \"fff\"",
+      "type": [
+        "Number"
+      ],
+      "value": "fff"
+    },
+    {
+      "exception": "Expected \\[\"Number\"\\], got String \"cafe1122deadbeef\"",
+      "type": [
+        "Number"
+      ],
+      "value": "cafe1122deadbeef"
+    },
+    {
+      "exception": "Expected \\[\"Number\"\\], got Number -1",
+      "type": [
+        "Number"
+      ],
+      "value": -1
+    },
+    {
+      "exception": "Expected \\[\"Number\"\\], got Number 127",
+      "type": [
+        "Number"
+      ],
+      "value": 127
+    },
+    {
+      "exception": "Expected \\[\"Number\"\\], got Number 128",
+      "type": [
+        "Number"
+      ],
+      "value": 128
+    },
+    {
+      "exception": "Expected \\[\"Number\"\\], got Number 255",
+      "type": [
+        "Number"
+      ],
+      "value": 255
+    },
+    {
+      "exception": "Expected \\[\"Number\"\\], got Number 256",
+      "type": [
+        "Number"
+      ],
+      "value": 256
+    },
+    {
+      "exception": "Expected \\[\"Number\"\\], got Number -128",
+      "type": [
+        "Number"
+      ],
+      "value": -128
+    },
+    {
+      "exception": "Expected \\[\"Number\"\\], got Number -129",
+      "type": [
+        "Number"
+      ],
+      "value": -129
+    },
+    {
+      "exception": "Expected \\[\"Number\"\\], got Number 65534",
+      "type": [
+        "Number"
+      ],
+      "value": 65534
+    },
+    {
+      "exception": "Expected \\[\"Number\"\\], got Number 65535",
+      "type": [
+        "Number"
+      ],
+      "value": 65535
+    },
+    {
+      "exception": "Expected \\[\"Number\"\\], got Number 65536",
+      "type": [
+        "Number"
+      ],
+      "value": 65536
+    },
+    {
+      "exception": "Expected \\[\"Number\"\\], got Number 4294967295",
+      "type": [
+        "Number"
+      ],
+      "value": 4294967295
+    },
+    {
+      "exception": "Expected \\[\"Number\"\\], got Number 9007199254740991",
+      "type": [
+        "Number"
+      ],
+      "value": 9007199254740991
+    },
+    {
+      "exception": "Expected \\[\"Number\"\\], got Number 9007199254740994",
+      "type": [
+        "Number"
+      ],
+      "value": 9007199254740994
+    },
+    {
+      "exception": "Expected \\[\"Object\"\\], got String \"buffer10\"",
+      "type": [
+        {
+          "a": "Number"
+        }
+      ],
+      "value": "buffer10"
+    },
+    {
+      "exception": "Expected \\[\"Object\"\\], got String \"fff\"",
+      "type": [
+        {
+          "a": "Number"
+        }
+      ],
+      "value": "fff"
+    },
+    {
+      "exception": "Expected \\[\"Object\"\\], got String \"cafe1122deadbeef\"",
+      "type": [
+        {
+          "a": "Number"
+        }
+      ],
+      "value": "cafe1122deadbeef"
+    },
+    {
+      "exception": "Expected \\[\"Object\"\\], got Number -1",
+      "type": [
+        {
+          "a": "Number"
+        }
+      ],
+      "value": -1
+    },
+    {
+      "exception": "Expected \\[\"Object\"\\], got Number 127",
+      "type": [
+        {
+          "a": "Number"
+        }
+      ],
+      "value": 127
+    },
+    {
+      "exception": "Expected \\[\"Object\"\\], got Number 128",
+      "type": [
+        {
+          "a": "Number"
+        }
+      ],
+      "value": 128
+    },
+    {
+      "exception": "Expected \\[\"Object\"\\], got Number 255",
+      "type": [
+        {
+          "a": "Number"
+        }
+      ],
+      "value": 255
+    },
+    {
+      "exception": "Expected \\[\"Object\"\\], got Number 256",
+      "type": [
+        {
+          "a": "Number"
+        }
+      ],
+      "value": 256
+    },
+    {
+      "exception": "Expected \\[\"Object\"\\], got Number -128",
+      "type": [
+        {
+          "a": "Number"
+        }
+      ],
+      "value": -128
+    },
+    {
+      "exception": "Expected \\[\"Object\"\\], got Number -129",
+      "type": [
+        {
+          "a": "Number"
+        }
+      ],
+      "value": -129
+    },
+    {
+      "exception": "Expected \\[\"Object\"\\], got Number 65534",
+      "type": [
+        {
+          "a": "Number"
+        }
+      ],
+      "value": 65534
+    },
+    {
+      "exception": "Expected \\[\"Object\"\\], got Number 65535",
+      "type": [
+        {
+          "a": "Number"
+        }
+      ],
+      "value": 65535
+    },
+    {
+      "exception": "Expected \\[\"Object\"\\], got Number 65536",
+      "type": [
+        {
+          "a": "Number"
+        }
+      ],
+      "value": 65536
+    },
+    {
+      "exception": "Expected \\[\"Object\"\\], got Number 4294967295",
+      "type": [
+        {
+          "a": "Number"
+        }
+      ],
+      "value": 4294967295
+    },
+    {
+      "exception": "Expected \\[\"Object\"\\], got Number 9007199254740991",
+      "type": [
+        {
+          "a": "Number"
+        }
+      ],
+      "value": 9007199254740991
+    },
+    {
+      "exception": "Expected \\[\"Object\"\\], got Number 9007199254740994",
+      "type": [
+        {
+          "a": "Number"
+        }
+      ],
+      "value": 9007199254740994
+    },
+    {
+      "exception": "Expected Object, got String \"buffer10\"",
+      "type": {
+        "a": "Number"
+      },
+      "value": "buffer10"
+    },
+    {
+      "exception": "Expected Object, got String \"fff\"",
+      "type": {
+        "a": "Number"
+      },
+      "value": "fff"
+    },
+    {
+      "exception": "Expected Object, got String \"cafe1122deadbeef\"",
+      "type": {
+        "a": "Number"
+      },
+      "value": "cafe1122deadbeef"
+    },
+    {
+      "exception": "Expected Object, got Number -1",
+      "type": {
+        "a": "Number"
+      },
+      "value": -1
+    },
+    {
+      "exception": "Expected Object, got Number 127",
+      "type": {
+        "a": "Number"
+      },
+      "value": 127
+    },
+    {
+      "exception": "Expected Object, got Number 128",
+      "type": {
+        "a": "Number"
+      },
+      "value": 128
+    },
+    {
+      "exception": "Expected Object, got Number 255",
+      "type": {
+        "a": "Number"
+      },
+      "value": 255
+    },
+    {
+      "exception": "Expected Object, got Number 256",
+      "type": {
+        "a": "Number"
+      },
+      "value": 256
+    },
+    {
+      "exception": "Expected Object, got Number -128",
+      "type": {
+        "a": "Number"
+      },
+      "value": -128
+    },
+    {
+      "exception": "Expected Object, got Number -129",
+      "type": {
+        "a": "Number"
+      },
+      "value": -129
+    },
+    {
+      "exception": "Expected Object, got Number 65534",
+      "type": {
+        "a": "Number"
+      },
+      "value": 65534
+    },
+    {
+      "exception": "Expected Object, got Number 65535",
+      "type": {
+        "a": "Number"
+      },
+      "value": 65535
+    },
+    {
+      "exception": "Expected Object, got Number 65536",
+      "type": {
+        "a": "Number"
+      },
+      "value": 65536
+    },
+    {
+      "exception": "Expected Object, got Number 4294967295",
+      "type": {
+        "a": "Number"
+      },
+      "value": 4294967295
+    },
+    {
+      "exception": "Expected Object, got Number 9007199254740991",
+      "type": {
+        "a": "Number"
+      },
+      "value": 9007199254740991
+    },
+    {
+      "exception": "Expected Object, got Number 9007199254740994",
+      "type": {
+        "a": "Number"
+      },
+      "value": 9007199254740994
+    },
+    {
+      "exception": "Expected Object, got String \"buffer10\"",
+      "type": {
+        "a": {
+          "b": "Number"
+        }
+      },
+      "value": "buffer10"
+    },
+    {
+      "exception": "Expected Object, got String \"fff\"",
+      "type": {
+        "a": {
+          "b": "Number"
+        }
+      },
+      "value": "fff"
+    },
+    {
+      "exception": "Expected Object, got String \"cafe1122deadbeef\"",
+      "type": {
+        "a": {
+          "b": "Number"
+        }
+      },
+      "value": "cafe1122deadbeef"
+    },
+    {
+      "exception": "Expected Object, got Number -1",
+      "type": {
+        "a": {
+          "b": "Number"
+        }
+      },
+      "value": -1
+    },
+    {
+      "exception": "Expected Object, got Number 127",
+      "type": {
+        "a": {
+          "b": "Number"
+        }
+      },
+      "value": 127
+    },
+    {
+      "exception": "Expected Object, got Number 128",
+      "type": {
+        "a": {
+          "b": "Number"
+        }
+      },
+      "value": 128
+    },
+    {
+      "exception": "Expected Object, got Number 255",
+      "type": {
+        "a": {
+          "b": "Number"
+        }
+      },
+      "value": 255
+    },
+    {
+      "exception": "Expected Object, got Number 256",
+      "type": {
+        "a": {
+          "b": "Number"
+        }
+      },
+      "value": 256
+    },
+    {
+      "exception": "Expected Object, got Number -128",
+      "type": {
+        "a": {
+          "b": "Number"
+        }
+      },
+      "value": -128
+    },
+    {
+      "exception": "Expected Object, got Number -129",
+      "type": {
+        "a": {
+          "b": "Number"
+        }
+      },
+      "value": -129
+    },
+    {
+      "exception": "Expected Object, got Number 65534",
+      "type": {
+        "a": {
+          "b": "Number"
+        }
+      },
+      "value": 65534
+    },
+    {
+      "exception": "Expected Object, got Number 65535",
+      "type": {
+        "a": {
+          "b": "Number"
+        }
+      },
+      "value": 65535
+    },
+    {
+      "exception": "Expected Object, got Number 65536",
+      "type": {
+        "a": {
+          "b": "Number"
+        }
+      },
+      "value": 65536
+    },
+    {
+      "exception": "Expected Object, got Number 4294967295",
+      "type": {
+        "a": {
+          "b": "Number"
+        }
+      },
+      "value": 4294967295
+    },
+    {
+      "exception": "Expected Object, got Number 9007199254740991",
+      "type": {
+        "a": {
+          "b": "Number"
+        }
+      },
+      "value": 9007199254740991
+    },
+    {
+      "exception": "Expected Object, got Number 9007199254740994",
+      "type": {
+        "a": {
+          "b": "Number"
+        }
+      },
+      "value": 9007199254740994
+    },
+    {
+      "exception": "Expected Object, got String \"buffer10\"",
+      "type": {
+        "a": {
+          "b": {
+            "c": "?Number"
+          }
+        }
+      },
+      "value": "buffer10"
+    },
+    {
+      "exception": "Expected Object, got String \"fff\"",
+      "type": {
+        "a": {
+          "b": {
+            "c": "?Number"
+          }
+        }
+      },
+      "value": "fff"
+    },
+    {
+      "exception": "Expected Object, got String \"cafe1122deadbeef\"",
+      "type": {
+        "a": {
+          "b": {
+            "c": "?Number"
+          }
+        }
+      },
+      "value": "cafe1122deadbeef"
+    },
+    {
+      "exception": "Expected Object, got Number -1",
+      "type": {
+        "a": {
+          "b": {
+            "c": "?Number"
+          }
+        }
+      },
+      "value": -1
+    },
+    {
+      "exception": "Expected Object, got Number 127",
+      "type": {
+        "a": {
+          "b": {
+            "c": "?Number"
+          }
+        }
+      },
+      "value": 127
+    },
+    {
+      "exception": "Expected Object, got Number 128",
+      "type": {
+        "a": {
+          "b": {
+            "c": "?Number"
+          }
+        }
+      },
+      "value": 128
+    },
+    {
+      "exception": "Expected Object, got Number 255",
+      "type": {
+        "a": {
+          "b": {
+            "c": "?Number"
+          }
+        }
+      },
+      "value": 255
+    },
+    {
+      "exception": "Expected Object, got Number 256",
+      "type": {
+        "a": {
+          "b": {
+            "c": "?Number"
+          }
+        }
+      },
+      "value": 256
+    },
+    {
+      "exception": "Expected Object, got Number -128",
+      "type": {
+        "a": {
+          "b": {
+            "c": "?Number"
+          }
+        }
+      },
+      "value": -128
+    },
+    {
+      "exception": "Expected Object, got Number -129",
+      "type": {
+        "a": {
+          "b": {
+            "c": "?Number"
+          }
+        }
+      },
+      "value": -129
+    },
+    {
+      "exception": "Expected Object, got Number 65534",
+      "type": {
+        "a": {
+          "b": {
+            "c": "?Number"
+          }
+        }
+      },
+      "value": 65534
+    },
+    {
+      "exception": "Expected Object, got Number 65535",
+      "type": {
+        "a": {
+          "b": {
+            "c": "?Number"
+          }
+        }
+      },
+      "value": 65535
+    },
+    {
+      "exception": "Expected Object, got Number 65536",
+      "type": {
+        "a": {
+          "b": {
+            "c": "?Number"
+          }
+        }
+      },
+      "value": 65536
+    },
+    {
+      "exception": "Expected Object, got Number 4294967295",
+      "type": {
+        "a": {
+          "b": {
+            "c": "?Number"
+          }
+        }
+      },
+      "value": 4294967295
+    },
+    {
+      "exception": "Expected Object, got Number 9007199254740991",
+      "type": {
+        "a": {
+          "b": {
+            "c": "?Number"
+          }
+        }
+      },
+      "value": 9007199254740991
+    },
+    {
+      "exception": "Expected Object, got Number 9007199254740994",
+      "type": {
+        "a": {
+          "b": {
+            "c": "?Number"
+          }
+        }
+      },
+      "value": 9007199254740994
+    },
+    {
+      "exception": "Expected Object, got String \"buffer10\"",
+      "type": {
+        "a": {
+          "b": {
+            "c": "Number"
+          }
+        }
+      },
+      "value": "buffer10"
+    },
+    {
+      "exception": "Expected Object, got String \"fff\"",
+      "type": {
+        "a": {
+          "b": {
+            "c": "Number"
+          }
+        }
+      },
+      "value": "fff"
+    },
+    {
+      "exception": "Expected Object, got String \"cafe1122deadbeef\"",
+      "type": {
+        "a": {
+          "b": {
+            "c": "Number"
+          }
+        }
+      },
+      "value": "cafe1122deadbeef"
+    },
+    {
+      "exception": "Expected Object, got Number -1",
+      "type": {
+        "a": {
+          "b": {
+            "c": "Number"
+          }
+        }
+      },
+      "value": -1
+    },
+    {
+      "exception": "Expected Object, got Number 127",
+      "type": {
+        "a": {
+          "b": {
+            "c": "Number"
+          }
+        }
+      },
+      "value": 127
+    },
+    {
+      "exception": "Expected Object, got Number 128",
+      "type": {
+        "a": {
+          "b": {
+            "c": "Number"
+          }
+        }
+      },
+      "value": 128
+    },
+    {
+      "exception": "Expected Object, got Number 255",
+      "type": {
+        "a": {
+          "b": {
+            "c": "Number"
+          }
+        }
+      },
+      "value": 255
+    },
+    {
+      "exception": "Expected Object, got Number 256",
+      "type": {
+        "a": {
+          "b": {
+            "c": "Number"
+          }
+        }
+      },
+      "value": 256
+    },
+    {
+      "exception": "Expected Object, got Number -128",
+      "type": {
+        "a": {
+          "b": {
+            "c": "Number"
+          }
+        }
+      },
+      "value": -128
+    },
+    {
+      "exception": "Expected Object, got Number -129",
+      "type": {
+        "a": {
+          "b": {
+            "c": "Number"
+          }
+        }
+      },
+      "value": -129
+    },
+    {
+      "exception": "Expected Object, got Number 65534",
+      "type": {
+        "a": {
+          "b": {
+            "c": "Number"
+          }
+        }
+      },
+      "value": 65534
+    },
+    {
+      "exception": "Expected Object, got Number 65535",
+      "type": {
+        "a": {
+          "b": {
+            "c": "Number"
+          }
+        }
+      },
+      "value": 65535
+    },
+    {
+      "exception": "Expected Object, got Number 65536",
+      "type": {
+        "a": {
+          "b": {
+            "c": "Number"
+          }
+        }
+      },
+      "value": 65536
+    },
+    {
+      "exception": "Expected Object, got Number 4294967295",
+      "type": {
+        "a": {
+          "b": {
+            "c": "Number"
+          }
+        }
+      },
+      "value": 4294967295
+    },
+    {
+      "exception": "Expected Object, got Number 9007199254740991",
+      "type": {
+        "a": {
+          "b": {
+            "c": "Number"
+          }
+        }
+      },
+      "value": 9007199254740991
+    },
+    {
+      "exception": "Expected Object, got Number 9007199254740994",
+      "type": {
+        "a": {
+          "b": {
+            "c": "Number"
+          }
+        }
+      },
+      "value": 9007199254740994
+    },
+    {
+      "exception": "Expected undefined, got String \"buffer10\"",
+      "value": "buffer10"
+    },
+    {
+      "exception": "Expected undefined, got String \"fff\"",
+      "value": "fff"
+    },
+    {
+      "exception": "Expected undefined, got String \"cafe1122deadbeef\"",
+      "value": "cafe1122deadbeef"
+    },
+    {
+      "exception": "Expected undefined, got Number -1",
+      "value": -1
+    },
+    {
+      "exception": "Expected undefined, got Number 127",
+      "value": 127
+    },
+    {
+      "exception": "Expected undefined, got Number 128",
+      "value": 128
+    },
+    {
+      "exception": "Expected undefined, got Number 255",
+      "value": 255
+    },
+    {
+      "exception": "Expected undefined, got Number 256",
+      "value": 256
+    },
+    {
+      "exception": "Expected undefined, got Number -128",
+      "value": -128
+    },
+    {
+      "exception": "Expected undefined, got Number -129",
+      "value": -129
+    },
+    {
+      "exception": "Expected undefined, got Number 65534",
+      "value": 65534
+    },
+    {
+      "exception": "Expected undefined, got Number 65535",
+      "value": 65535
+    },
+    {
+      "exception": "Expected undefined, got Number 65536",
+      "value": 65536
+    },
+    {
+      "exception": "Expected undefined, got Number 4294967295",
+      "value": 4294967295
+    },
+    {
+      "exception": "Expected undefined, got Number 9007199254740991",
+      "value": 9007199254740991
+    },
+    {
+      "exception": "Expected undefined, got Number 9007199254740994",
+      "value": 9007199254740994
+    },
+    {
+      "exception": "Expected null, got String \"buffer10\"",
+      "type": null,
+      "value": "buffer10"
+    },
+    {
+      "exception": "Expected null, got String \"fff\"",
+      "type": null,
+      "value": "fff"
+    },
+    {
+      "exception": "Expected null, got String \"cafe1122deadbeef\"",
+      "type": null,
+      "value": "cafe1122deadbeef"
+    },
+    {
+      "exception": "Expected null, got Number -1",
+      "type": null,
+      "value": -1
+    },
+    {
+      "exception": "Expected null, got Number 127",
+      "type": null,
+      "value": 127
+    },
+    {
+      "exception": "Expected null, got Number 128",
+      "type": null,
+      "value": 128
+    },
+    {
+      "exception": "Expected null, got Number 255",
+      "type": null,
+      "value": 255
+    },
+    {
+      "exception": "Expected null, got Number 256",
+      "type": null,
+      "value": 256
+    },
+    {
+      "exception": "Expected null, got Number -128",
+      "type": null,
+      "value": -128
+    },
+    {
+      "exception": "Expected null, got Number -129",
+      "type": null,
+      "value": -129
+    },
+    {
+      "exception": "Expected null, got Number 65534",
+      "type": null,
+      "value": 65534
+    },
+    {
+      "exception": "Expected null, got Number 65535",
+      "type": null,
+      "value": 65535
+    },
+    {
+      "exception": "Expected null, got Number 65536",
+      "type": null,
+      "value": 65536
+    },
+    {
+      "exception": "Expected null, got Number 4294967295",
+      "type": null,
+      "value": 4294967295
+    },
+    {
+      "exception": "Expected null, got Number 9007199254740991",
+      "type": null,
+      "value": 9007199254740991
+    },
+    {
+      "exception": "Expected null, got Number 9007199254740994",
+      "type": null,
+      "value": 9007199254740994
+    },
+    {
+      "exception": "Expected true, got String \"buffer10\"",
+      "type": true,
+      "value": "buffer10"
+    },
+    {
+      "exception": "Expected true, got String \"fff\"",
+      "type": true,
+      "value": "fff"
+    },
+    {
+      "exception": "Expected true, got String \"cafe1122deadbeef\"",
+      "type": true,
+      "value": "cafe1122deadbeef"
+    },
+    {
+      "exception": "Expected true, got Number -1",
+      "type": true,
+      "value": -1
+    },
+    {
+      "exception": "Expected true, got Number 127",
+      "type": true,
+      "value": 127
+    },
+    {
+      "exception": "Expected true, got Number 128",
+      "type": true,
+      "value": 128
+    },
+    {
+      "exception": "Expected true, got Number 255",
+      "type": true,
+      "value": 255
+    },
+    {
+      "exception": "Expected true, got Number 256",
+      "type": true,
+      "value": 256
+    },
+    {
+      "exception": "Expected true, got Number -128",
+      "type": true,
+      "value": -128
+    },
+    {
+      "exception": "Expected true, got Number -129",
+      "type": true,
+      "value": -129
+    },
+    {
+      "exception": "Expected true, got Number 65534",
+      "type": true,
+      "value": 65534
+    },
+    {
+      "exception": "Expected true, got Number 65535",
+      "type": true,
+      "value": 65535
+    },
+    {
+      "exception": "Expected true, got Number 65536",
+      "type": true,
+      "value": 65536
+    },
+    {
+      "exception": "Expected true, got Number 4294967295",
+      "type": true,
+      "value": 4294967295
+    },
+    {
+      "exception": "Expected true, got Number 9007199254740991",
+      "type": true,
+      "value": 9007199254740991
+    },
+    {
+      "exception": "Expected true, got Number 9007199254740994",
+      "type": true,
+      "value": 9007199254740994
+    },
+    {
+      "exception": "Expected false, got String \"buffer10\"",
+      "type": false,
+      "value": "buffer10"
+    },
+    {
+      "exception": "Expected false, got String \"fff\"",
+      "type": false,
+      "value": "fff"
+    },
+    {
+      "exception": "Expected false, got String \"cafe1122deadbeef\"",
+      "type": false,
+      "value": "cafe1122deadbeef"
+    },
+    {
+      "exception": "Expected false, got Number -1",
+      "type": false,
+      "value": -1
+    },
+    {
+      "exception": "Expected false, got Number 127",
+      "type": false,
+      "value": 127
+    },
+    {
+      "exception": "Expected false, got Number 128",
+      "type": false,
+      "value": 128
+    },
+    {
+      "exception": "Expected false, got Number 255",
+      "type": false,
+      "value": 255
+    },
+    {
+      "exception": "Expected false, got Number 256",
+      "type": false,
+      "value": 256
+    },
+    {
+      "exception": "Expected false, got Number -128",
+      "type": false,
+      "value": -128
+    },
+    {
+      "exception": "Expected false, got Number -129",
+      "type": false,
+      "value": -129
+    },
+    {
+      "exception": "Expected false, got Number 65534",
+      "type": false,
+      "value": 65534
+    },
+    {
+      "exception": "Expected false, got Number 65535",
+      "type": false,
+      "value": 65535
+    },
+    {
+      "exception": "Expected false, got Number 65536",
+      "type": false,
+      "value": 65536
+    },
+    {
+      "exception": "Expected false, got Number 4294967295",
+      "type": false,
+      "value": 4294967295
+    },
+    {
+      "exception": "Expected false, got Number 9007199254740991",
+      "type": false,
+      "value": 9007199254740991
+    },
+    {
+      "exception": "Expected false, got Number 9007199254740994",
+      "type": false,
+      "value": 9007199254740994
+    },
+    {
+      "exception": "Expected 0, got String \"buffer10\"",
+      "type": 0,
+      "value": "buffer10"
+    },
+    {
+      "exception": "Expected 0, got String \"fff\"",
+      "type": 0,
+      "value": "fff"
+    },
+    {
+      "exception": "Expected 0, got String \"cafe1122deadbeef\"",
+      "type": 0,
+      "value": "cafe1122deadbeef"
+    },
+    {
+      "exception": "Expected 0, got Number -1",
+      "type": 0,
+      "value": -1
+    },
+    {
+      "exception": "Expected 0, got Number 127",
+      "type": 0,
+      "value": 127
+    },
+    {
+      "exception": "Expected 0, got Number 128",
+      "type": 0,
+      "value": 128
+    },
+    {
+      "exception": "Expected 0, got Number 255",
+      "type": 0,
+      "value": 255
+    },
+    {
+      "exception": "Expected 0, got Number 256",
+      "type": 0,
+      "value": 256
+    },
+    {
+      "exception": "Expected 0, got Number -128",
+      "type": 0,
+      "value": -128
+    },
+    {
+      "exception": "Expected 0, got Number -129",
+      "type": 0,
+      "value": -129
+    },
+    {
+      "exception": "Expected 0, got Number 65534",
+      "type": 0,
+      "value": 65534
+    },
+    {
+      "exception": "Expected 0, got Number 65535",
+      "type": 0,
+      "value": 65535
+    },
+    {
+      "exception": "Expected 0, got Number 65536",
+      "type": 0,
+      "value": 65536
+    },
+    {
+      "exception": "Expected 0, got Number 4294967295",
+      "type": 0,
+      "value": 4294967295
+    },
+    {
+      "exception": "Expected 0, got Number 9007199254740991",
+      "type": 0,
+      "value": 9007199254740991
+    },
+    {
+      "exception": "Expected 0, got Number 9007199254740994",
+      "type": 0,
+      "value": 9007199254740994
+    },
+    {
+      "exception": "Expected property \"0\" of type Boolean, got String \"b\"",
+      "typeId": "(Boolean, Number)",
+      "value": "buffer10"
+    },
+    {
+      "exception": "Expected property \"0\" of type Boolean, got String \"f\"",
+      "typeId": "(Boolean, Number)",
+      "value": "fff"
+    },
+    {
+      "exception": "Expected property \"0\" of type Boolean, got String \"c\"",
+      "typeId": "(Boolean, Number)",
+      "value": "cafe1122deadbeef"
+    },
+    {
+      "exception": "Expected property \"0\" of type Boolean, got undefined",
+      "typeId": "(Boolean, Number)",
+      "value": -1
+    },
+    {
+      "exception": "Expected property \"0\" of type Boolean, got undefined",
+      "typeId": "(Boolean, Number)",
+      "value": 127
+    },
+    {
+      "exception": "Expected property \"0\" of type Boolean, got undefined",
+      "typeId": "(Boolean, Number)",
+      "value": 128
+    },
+    {
+      "exception": "Expected property \"0\" of type Boolean, got undefined",
+      "typeId": "(Boolean, Number)",
+      "value": 255
+    },
+    {
+      "exception": "Expected property \"0\" of type Boolean, got undefined",
+      "typeId": "(Boolean, Number)",
+      "value": 256
+    },
+    {
+      "exception": "Expected property \"0\" of type Boolean, got undefined",
+      "typeId": "(Boolean, Number)",
+      "value": -128
+    },
+    {
+      "exception": "Expected property \"0\" of type Boolean, got undefined",
+      "typeId": "(Boolean, Number)",
+      "value": -129
+    },
+    {
+      "exception": "Expected property \"0\" of type Boolean, got undefined",
+      "typeId": "(Boolean, Number)",
+      "value": 65534
+    },
+    {
+      "exception": "Expected property \"0\" of type Boolean, got undefined",
+      "typeId": "(Boolean, Number)",
+      "value": 65535
+    },
+    {
+      "exception": "Expected property \"0\" of type Boolean, got undefined",
+      "typeId": "(Boolean, Number)",
+      "value": 65536
+    },
+    {
+      "exception": "Expected property \"0\" of type Boolean, got undefined",
+      "typeId": "(Boolean, Number)",
+      "value": 4294967295
+    },
+    {
+      "exception": "Expected property \"0\" of type Boolean, got undefined",
+      "typeId": "(Boolean, Number)",
+      "value": 9007199254740991
+    },
+    {
+      "exception": "Expected property \"0\" of type Boolean, got undefined",
+      "typeId": "(Boolean, Number)",
+      "value": 9007199254740994
+    },
+    {
+      "exception": "Expected property \"0\" of type Number|String, got undefined",
+      "typeId": "(Number|String)",
+      "value": -1
+    },
+    {
+      "exception": "Expected property \"0\" of type Number|String, got undefined",
+      "typeId": "(Number|String)",
+      "value": 127
+    },
+    {
+      "exception": "Expected property \"0\" of type Number|String, got undefined",
+      "typeId": "(Number|String)",
+      "value": 128
+    },
+    {
+      "exception": "Expected property \"0\" of type Number|String, got undefined",
+      "typeId": "(Number|String)",
+      "value": 255
+    },
+    {
+      "exception": "Expected property \"0\" of type Number|String, got undefined",
+      "typeId": "(Number|String)",
+      "value": 256
+    },
+    {
+      "exception": "Expected property \"0\" of type Number|String, got undefined",
+      "typeId": "(Number|String)",
+      "value": -128
+    },
+    {
+      "exception": "Expected property \"0\" of type Number|String, got undefined",
+      "typeId": "(Number|String)",
+      "value": -129
+    },
+    {
+      "exception": "Expected property \"0\" of type Number|String, got undefined",
+      "typeId": "(Number|String)",
+      "value": 65534
+    },
+    {
+      "exception": "Expected property \"0\" of type Number|String, got undefined",
+      "typeId": "(Number|String)",
+      "value": 65535
+    },
+    {
+      "exception": "Expected property \"0\" of type Number|String, got undefined",
+      "typeId": "(Number|String)",
+      "value": 65536
+    },
+    {
+      "exception": "Expected property \"0\" of type Number|String, got undefined",
+      "typeId": "(Number|String)",
+      "value": 4294967295
+    },
+    {
+      "exception": "Expected property \"0\" of type Number|String, got undefined",
+      "typeId": "(Number|String)",
+      "value": 9007199254740991
+    },
+    {
+      "exception": "Expected property \"0\" of type Number|String, got undefined",
+      "typeId": "(Number|String)",
+      "value": 9007199254740994
+    },
+    {
+      "exception": "Expected property \"0\" of type Number, got String \"b\"",
+      "typeId": "(Number)",
+      "value": "buffer10"
+    },
+    {
+      "exception": "Expected property \"0\" of type Number, got String \"f\"",
+      "typeId": "(Number)",
+      "value": "fff"
+    },
+    {
+      "exception": "Expected property \"0\" of type Number, got String \"c\"",
+      "typeId": "(Number)",
+      "value": "cafe1122deadbeef"
+    },
+    {
+      "exception": "Expected property \"0\" of type Number, got undefined",
+      "typeId": "(Number)",
+      "value": -1
+    },
+    {
+      "exception": "Expected property \"0\" of type Number, got undefined",
+      "typeId": "(Number)",
+      "value": 127
+    },
+    {
+      "exception": "Expected property \"0\" of type Number, got undefined",
+      "typeId": "(Number)",
+      "value": 128
+    },
+    {
+      "exception": "Expected property \"0\" of type Number, got undefined",
+      "typeId": "(Number)",
+      "value": 255
+    },
+    {
+      "exception": "Expected property \"0\" of type Number, got undefined",
+      "typeId": "(Number)",
+      "value": 256
+    },
+    {
+      "exception": "Expected property \"0\" of type Number, got undefined",
+      "typeId": "(Number)",
+      "value": -128
+    },
+    {
+      "exception": "Expected property \"0\" of type Number, got undefined",
+      "typeId": "(Number)",
+      "value": -129
+    },
+    {
+      "exception": "Expected property \"0\" of type Number, got undefined",
+      "typeId": "(Number)",
+      "value": 65534
+    },
+    {
+      "exception": "Expected property \"0\" of type Number, got undefined",
+      "typeId": "(Number)",
+      "value": 65535
+    },
+    {
+      "exception": "Expected property \"0\" of type Number, got undefined",
+      "typeId": "(Number)",
+      "value": 65536
+    },
+    {
+      "exception": "Expected property \"0\" of type Number, got undefined",
+      "typeId": "(Number)",
+      "value": 4294967295
+    },
+    {
+      "exception": "Expected property \"0\" of type Number, got undefined",
+      "typeId": "(Number)",
+      "value": 9007199254740991
+    },
+    {
+      "exception": "Expected property \"0\" of type Number, got undefined",
+      "typeId": "(Number)",
+      "value": 9007199254740994
+    },
+    {
+      "exception": "Expected \\[\"\\?Object\"\\], got String \"buffer10\"",
+      "typeId": "[?{ a: Number }]",
+      "value": "buffer10"
+    },
+    {
+      "exception": "Expected \\[\"\\?Object\"\\], got String \"fff\"",
+      "typeId": "[?{ a: Number }]",
+      "value": "fff"
+    },
+    {
+      "exception": "Expected \\[\"\\?Object\"\\], got String \"cafe1122deadbeef\"",
+      "typeId": "[?{ a: Number }]",
+      "value": "cafe1122deadbeef"
+    },
+    {
+      "exception": "Expected \\[\"\\?Object\"\\], got Number -1",
+      "typeId": "[?{ a: Number }]",
+      "value": -1
+    },
+    {
+      "exception": "Expected \\[\"\\?Object\"\\], got Number 127",
+      "typeId": "[?{ a: Number }]",
+      "value": 127
+    },
+    {
+      "exception": "Expected \\[\"\\?Object\"\\], got Number 128",
+      "typeId": "[?{ a: Number }]",
+      "value": 128
+    },
+    {
+      "exception": "Expected \\[\"\\?Object\"\\], got Number 255",
+      "typeId": "[?{ a: Number }]",
+      "value": 255
+    },
+    {
+      "exception": "Expected \\[\"\\?Object\"\\], got Number 256",
+      "typeId": "[?{ a: Number }]",
+      "value": 256
+    },
+    {
+      "exception": "Expected \\[\"\\?Object\"\\], got Number -128",
+      "typeId": "[?{ a: Number }]",
+      "value": -128
+    },
+    {
+      "exception": "Expected \\[\"\\?Object\"\\], got Number -129",
+      "typeId": "[?{ a: Number }]",
+      "value": -129
+    },
+    {
+      "exception": "Expected \\[\"\\?Object\"\\], got Number 65534",
+      "typeId": "[?{ a: Number }]",
+      "value": 65534
+    },
+    {
+      "exception": "Expected \\[\"\\?Object\"\\], got Number 65535",
+      "typeId": "[?{ a: Number }]",
+      "value": 65535
+    },
+    {
+      "exception": "Expected \\[\"\\?Object\"\\], got Number 65536",
+      "typeId": "[?{ a: Number }]",
+      "value": 65536
+    },
+    {
+      "exception": "Expected \\[\"\\?Object\"\\], got Number 4294967295",
+      "typeId": "[?{ a: Number }]",
+      "value": 4294967295
+    },
+    {
+      "exception": "Expected \\[\"\\?Object\"\\], got Number 9007199254740991",
+      "typeId": "[?{ a: Number }]",
+      "value": 9007199254740991
+    },
+    {
+      "exception": "Expected \\[\"\\?Object\"\\], got Number 9007199254740994",
+      "typeId": "[?{ a: Number }]",
+      "value": 9007199254740994
+    },
+    {
+      "exception": "Expected \\?Boolean|Number, got String \"buffer10\"",
+      "typeId": "?Boolean|Number",
+      "value": "buffer10"
+    },
+    {
+      "exception": "Expected \\?Boolean|Number, got String \"fff\"",
+      "typeId": "?Boolean|Number",
+      "value": "fff"
+    },
+    {
+      "exception": "Expected \\?Boolean|Number, got String \"cafe1122deadbeef\"",
+      "typeId": "?Boolean|Number",
+      "value": "cafe1122deadbeef"
+    },
+    {
+      "exception": "Expected \\?Object, got String \"buffer10\"",
+      "typeId": "?{ a: ?Number }",
+      "value": "buffer10"
+    },
+    {
+      "exception": "Expected \\?Object, got String \"fff\"",
+      "typeId": "?{ a: ?Number }",
+      "value": "fff"
+    },
+    {
+      "exception": "Expected \\?Object, got String \"cafe1122deadbeef\"",
+      "typeId": "?{ a: ?Number }",
+      "value": "cafe1122deadbeef"
+    },
+    {
+      "exception": "Expected \\?Object, got Number -1",
+      "typeId": "?{ a: ?Number }",
+      "value": -1
+    },
+    {
+      "exception": "Expected \\?Object, got Number 127",
+      "typeId": "?{ a: ?Number }",
+      "value": 127
+    },
+    {
+      "exception": "Expected \\?Object, got Number 128",
+      "typeId": "?{ a: ?Number }",
+      "value": 128
+    },
+    {
+      "exception": "Expected \\?Object, got Number 255",
+      "typeId": "?{ a: ?Number }",
+      "value": 255
+    },
+    {
+      "exception": "Expected \\?Object, got Number 256",
+      "typeId": "?{ a: ?Number }",
+      "value": 256
+    },
+    {
+      "exception": "Expected \\?Object, got Number -128",
+      "typeId": "?{ a: ?Number }",
+      "value": -128
+    },
+    {
+      "exception": "Expected \\?Object, got Number -129",
+      "typeId": "?{ a: ?Number }",
+      "value": -129
+    },
+    {
+      "exception": "Expected \\?Object, got Number 65534",
+      "typeId": "?{ a: ?Number }",
+      "value": 65534
+    },
+    {
+      "exception": "Expected \\?Object, got Number 65535",
+      "typeId": "?{ a: ?Number }",
+      "value": 65535
+    },
+    {
+      "exception": "Expected \\?Object, got Number 65536",
+      "typeId": "?{ a: ?Number }",
+      "value": 65536
+    },
+    {
+      "exception": "Expected \\?Object, got Number 4294967295",
+      "typeId": "?{ a: ?Number }",
+      "value": 4294967295
+    },
+    {
+      "exception": "Expected \\?Object, got Number 9007199254740991",
+      "typeId": "?{ a: ?Number }",
+      "value": 9007199254740991
+    },
+    {
+      "exception": "Expected \\?Object, got Number 9007199254740994",
+      "typeId": "?{ a: ?Number }",
+      "value": 9007199254740994
+    },
+    {
+      "exception": "Expected \\?Object, got String \"buffer10\"",
+      "typeId": "?{ a: Number }",
+      "value": "buffer10"
+    },
+    {
+      "exception": "Expected \\?Object, got String \"fff\"",
+      "typeId": "?{ a: Number }",
+      "value": "fff"
+    },
+    {
+      "exception": "Expected \\?Object, got String \"cafe1122deadbeef\"",
+      "typeId": "?{ a: Number }",
+      "value": "cafe1122deadbeef"
+    },
+    {
+      "exception": "Expected \\?Object, got Number -1",
+      "typeId": "?{ a: Number }",
+      "value": -1
+    },
+    {
+      "exception": "Expected \\?Object, got Number 127",
+      "typeId": "?{ a: Number }",
+      "value": 127
+    },
+    {
+      "exception": "Expected \\?Object, got Number 128",
+      "typeId": "?{ a: Number }",
+      "value": 128
+    },
+    {
+      "exception": "Expected \\?Object, got Number 255",
+      "typeId": "?{ a: Number }",
+      "value": 255
+    },
+    {
+      "exception": "Expected \\?Object, got Number 256",
+      "typeId": "?{ a: Number }",
+      "value": 256
+    },
+    {
+      "exception": "Expected \\?Object, got Number -128",
+      "typeId": "?{ a: Number }",
+      "value": -128
+    },
+    {
+      "exception": "Expected \\?Object, got Number -129",
+      "typeId": "?{ a: Number }",
+      "value": -129
+    },
+    {
+      "exception": "Expected \\?Object, got Number 65534",
+      "typeId": "?{ a: Number }",
+      "value": 65534
+    },
+    {
+      "exception": "Expected \\?Object, got Number 65535",
+      "typeId": "?{ a: Number }",
+      "value": 65535
+    },
+    {
+      "exception": "Expected \\?Object, got Number 65536",
+      "typeId": "?{ a: Number }",
+      "value": 65536
+    },
+    {
+      "exception": "Expected \\?Object, got Number 4294967295",
+      "typeId": "?{ a: Number }",
+      "value": 4294967295
+    },
+    {
+      "exception": "Expected \\?Object, got Number 9007199254740991",
+      "typeId": "?{ a: Number }",
+      "value": 9007199254740991
+    },
+    {
+      "exception": "Expected \\?Object, got Number 9007199254740994",
+      "typeId": "?{ a: Number }",
+      "value": 9007199254740994
+    },
+    {
+      "exception": "Expected Object, got String \"buffer10\"",
+      "typeId": "{ a: Number|Null }",
+      "value": "buffer10"
+    },
+    {
+      "exception": "Expected Object, got String \"fff\"",
+      "typeId": "{ a: Number|Null }",
+      "value": "fff"
+    },
+    {
+      "exception": "Expected Object, got String \"cafe1122deadbeef\"",
+      "typeId": "{ a: Number|Null }",
+      "value": "cafe1122deadbeef"
+    },
+    {
+      "exception": "Expected Object, got Number -1",
+      "typeId": "{ a: Number|Null }",
+      "value": -1
+    },
+    {
+      "exception": "Expected Object, got Number 127",
+      "typeId": "{ a: Number|Null }",
+      "value": 127
+    },
+    {
+      "exception": "Expected Object, got Number 128",
+      "typeId": "{ a: Number|Null }",
+      "value": 128
+    },
+    {
+      "exception": "Expected Object, got Number 255",
+      "typeId": "{ a: Number|Null }",
+      "value": 255
+    },
+    {
+      "exception": "Expected Object, got Number 256",
+      "typeId": "{ a: Number|Null }",
+      "value": 256
+    },
+    {
+      "exception": "Expected Object, got Number -128",
+      "typeId": "{ a: Number|Null }",
+      "value": -128
+    },
+    {
+      "exception": "Expected Object, got Number -129",
+      "typeId": "{ a: Number|Null }",
+      "value": -129
+    },
+    {
+      "exception": "Expected Object, got Number 65534",
+      "typeId": "{ a: Number|Null }",
+      "value": 65534
+    },
+    {
+      "exception": "Expected Object, got Number 65535",
+      "typeId": "{ a: Number|Null }",
+      "value": 65535
+    },
+    {
+      "exception": "Expected Object, got Number 65536",
+      "typeId": "{ a: Number|Null }",
+      "value": 65536
+    },
+    {
+      "exception": "Expected Object, got Number 4294967295",
+      "typeId": "{ a: Number|Null }",
+      "value": 4294967295
+    },
+    {
+      "exception": "Expected Object, got Number 9007199254740991",
+      "typeId": "{ a: Number|Null }",
+      "value": 9007199254740991
+    },
+    {
+      "exception": "Expected Object, got Number 9007199254740994",
+      "typeId": "{ a: Number|Null }",
+      "value": 9007199254740994
+    },
+    {
+      "exception": "Expected Object, got String \"buffer10\"",
+      "typeId": "{ a: Number|{ b: Number } }",
+      "value": "buffer10"
+    },
+    {
+      "exception": "Expected Object, got String \"fff\"",
+      "typeId": "{ a: Number|{ b: Number } }",
+      "value": "fff"
+    },
+    {
+      "exception": "Expected Object, got String \"cafe1122deadbeef\"",
+      "typeId": "{ a: Number|{ b: Number } }",
+      "value": "cafe1122deadbeef"
+    },
+    {
+      "exception": "Expected Object, got Number -1",
+      "typeId": "{ a: Number|{ b: Number } }",
+      "value": -1
+    },
+    {
+      "exception": "Expected Object, got Number 127",
+      "typeId": "{ a: Number|{ b: Number } }",
+      "value": 127
+    },
+    {
+      "exception": "Expected Object, got Number 128",
+      "typeId": "{ a: Number|{ b: Number } }",
+      "value": 128
+    },
+    {
+      "exception": "Expected Object, got Number 255",
+      "typeId": "{ a: Number|{ b: Number } }",
+      "value": 255
+    },
+    {
+      "exception": "Expected Object, got Number 256",
+      "typeId": "{ a: Number|{ b: Number } }",
+      "value": 256
+    },
+    {
+      "exception": "Expected Object, got Number -128",
+      "typeId": "{ a: Number|{ b: Number } }",
+      "value": -128
+    },
+    {
+      "exception": "Expected Object, got Number -129",
+      "typeId": "{ a: Number|{ b: Number } }",
+      "value": -129
+    },
+    {
+      "exception": "Expected Object, got Number 65534",
+      "typeId": "{ a: Number|{ b: Number } }",
+      "value": 65534
+    },
+    {
+      "exception": "Expected Object, got Number 65535",
+      "typeId": "{ a: Number|{ b: Number } }",
+      "value": 65535
+    },
+    {
+      "exception": "Expected Object, got Number 65536",
+      "typeId": "{ a: Number|{ b: Number } }",
+      "value": 65536
+    },
+    {
+      "exception": "Expected Object, got Number 4294967295",
+      "typeId": "{ a: Number|{ b: Number } }",
+      "value": 4294967295
+    },
+    {
+      "exception": "Expected Object, got Number 9007199254740991",
+      "typeId": "{ a: Number|{ b: Number } }",
+      "value": 9007199254740991
+    },
+    {
+      "exception": "Expected Object, got Number 9007199254740994",
+      "typeId": "{ a: Number|{ b: Number } }",
+      "value": 9007199254740994
+    },
+    {
+      "exception": "Expected Object, got String \"buffer10\"",
+      "typeId": "{ a: ?{ b: Number } }",
+      "value": "buffer10"
+    },
+    {
+      "exception": "Expected Object, got String \"fff\"",
+      "typeId": "{ a: ?{ b: Number } }",
+      "value": "fff"
+    },
+    {
+      "exception": "Expected Object, got String \"cafe1122deadbeef\"",
+      "typeId": "{ a: ?{ b: Number } }",
+      "value": "cafe1122deadbeef"
+    },
+    {
+      "exception": "Expected Object, got Number -1",
+      "typeId": "{ a: ?{ b: Number } }",
+      "value": -1
+    },
+    {
+      "exception": "Expected Object, got Number 127",
+      "typeId": "{ a: ?{ b: Number } }",
+      "value": 127
+    },
+    {
+      "exception": "Expected Object, got Number 128",
+      "typeId": "{ a: ?{ b: Number } }",
+      "value": 128
+    },
+    {
+      "exception": "Expected Object, got Number 255",
+      "typeId": "{ a: ?{ b: Number } }",
+      "value": 255
+    },
+    {
+      "exception": "Expected Object, got Number 256",
+      "typeId": "{ a: ?{ b: Number } }",
+      "value": 256
+    },
+    {
+      "exception": "Expected Object, got Number -128",
+      "typeId": "{ a: ?{ b: Number } }",
+      "value": -128
+    },
+    {
+      "exception": "Expected Object, got Number -129",
+      "typeId": "{ a: ?{ b: Number } }",
+      "value": -129
+    },
+    {
+      "exception": "Expected Object, got Number 65534",
+      "typeId": "{ a: ?{ b: Number } }",
+      "value": 65534
+    },
+    {
+      "exception": "Expected Object, got Number 65535",
+      "typeId": "{ a: ?{ b: Number } }",
+      "value": 65535
+    },
+    {
+      "exception": "Expected Object, got Number 65536",
+      "typeId": "{ a: ?{ b: Number } }",
+      "value": 65536
+    },
+    {
+      "exception": "Expected Object, got Number 4294967295",
+      "typeId": "{ a: ?{ b: Number } }",
+      "value": 4294967295
+    },
+    {
+      "exception": "Expected Object, got Number 9007199254740991",
+      "typeId": "{ a: ?{ b: Number } }",
+      "value": 9007199254740991
+    },
+    {
+      "exception": "Expected Object, got Number 9007199254740994",
+      "typeId": "{ a: ?{ b: Number } }",
+      "value": 9007199254740994
+    },
+    {
+      "exception": "Expected Object, got String \"buffer10\"",
+      "typeId": "{ a: ?{ b: ?{ c: Number } } }",
+      "value": "buffer10"
+    },
+    {
+      "exception": "Expected Object, got String \"fff\"",
+      "typeId": "{ a: ?{ b: ?{ c: Number } } }",
+      "value": "fff"
+    },
+    {
+      "exception": "Expected Object, got String \"cafe1122deadbeef\"",
+      "typeId": "{ a: ?{ b: ?{ c: Number } } }",
+      "value": "cafe1122deadbeef"
+    },
+    {
+      "exception": "Expected Object, got Number -1",
+      "typeId": "{ a: ?{ b: ?{ c: Number } } }",
+      "value": -1
+    },
+    {
+      "exception": "Expected Object, got Number 127",
+      "typeId": "{ a: ?{ b: ?{ c: Number } } }",
+      "value": 127
+    },
+    {
+      "exception": "Expected Object, got Number 128",
+      "typeId": "{ a: ?{ b: ?{ c: Number } } }",
+      "value": 128
+    },
+    {
+      "exception": "Expected Object, got Number 255",
+      "typeId": "{ a: ?{ b: ?{ c: Number } } }",
+      "value": 255
+    },
+    {
+      "exception": "Expected Object, got Number 256",
+      "typeId": "{ a: ?{ b: ?{ c: Number } } }",
+      "value": 256
+    },
+    {
+      "exception": "Expected Object, got Number -128",
+      "typeId": "{ a: ?{ b: ?{ c: Number } } }",
+      "value": -128
+    },
+    {
+      "exception": "Expected Object, got Number -129",
+      "typeId": "{ a: ?{ b: ?{ c: Number } } }",
+      "value": -129
+    },
+    {
+      "exception": "Expected Object, got Number 65534",
+      "typeId": "{ a: ?{ b: ?{ c: Number } } }",
+      "value": 65534
+    },
+    {
+      "exception": "Expected Object, got Number 65535",
+      "typeId": "{ a: ?{ b: ?{ c: Number } } }",
+      "value": 65535
+    },
+    {
+      "exception": "Expected Object, got Number 65536",
+      "typeId": "{ a: ?{ b: ?{ c: Number } } }",
+      "value": 65536
+    },
+    {
+      "exception": "Expected Object, got Number 4294967295",
+      "typeId": "{ a: ?{ b: ?{ c: Number } } }",
+      "value": 4294967295
+    },
+    {
+      "exception": "Expected Object, got Number 9007199254740991",
+      "typeId": "{ a: ?{ b: ?{ c: Number } } }",
+      "value": 9007199254740991
+    },
+    {
+      "exception": "Expected Object, got Number 9007199254740994",
+      "typeId": "{ a: ?{ b: ?{ c: Number } } }",
+      "value": 9007199254740994
+    },
+    {
+      "exception": "Expected Unmatchable, got String \"buffer10\"",
+      "typeId": "?Unmatchable",
+      "value": "buffer10"
+    },
+    {
+      "exception": "Expected Unmatchable, got String \"fff\"",
+      "typeId": "?Unmatchable",
+      "value": "fff"
+    },
+    {
+      "exception": "Expected Unmatchable, got String \"cafe1122deadbeef\"",
+      "typeId": "?Unmatchable",
+      "value": "cafe1122deadbeef"
+    },
+    {
+      "exception": "Expected Unmatchable, got Number -1",
+      "typeId": "?Unmatchable",
+      "value": -1
+    },
+    {
+      "exception": "Expected Unmatchable, got Number 127",
+      "typeId": "?Unmatchable",
+      "value": 127
+    },
+    {
+      "exception": "Expected Unmatchable, got Number 128",
+      "typeId": "?Unmatchable",
+      "value": 128
+    },
+    {
+      "exception": "Expected Unmatchable, got Number 255",
+      "typeId": "?Unmatchable",
+      "value": 255
+    },
+    {
+      "exception": "Expected Unmatchable, got Number 256",
+      "typeId": "?Unmatchable",
+      "value": 256
+    },
+    {
+      "exception": "Expected Unmatchable, got Number -128",
+      "typeId": "?Unmatchable",
+      "value": -128
+    },
+    {
+      "exception": "Expected Unmatchable, got Number -129",
+      "typeId": "?Unmatchable",
+      "value": -129
+    },
+    {
+      "exception": "Expected Unmatchable, got Number 65534",
+      "typeId": "?Unmatchable",
+      "value": 65534
+    },
+    {
+      "exception": "Expected Unmatchable, got Number 65535",
+      "typeId": "?Unmatchable",
+      "value": 65535
+    },
+    {
+      "exception": "Expected Unmatchable, got Number 65536",
+      "typeId": "?Unmatchable",
+      "value": 65536
+    },
+    {
+      "exception": "Expected Unmatchable, got Number 4294967295",
+      "typeId": "?Unmatchable",
+      "value": 4294967295
+    },
+    {
+      "exception": "Expected Unmatchable, got Number 9007199254740991",
+      "typeId": "?Unmatchable",
+      "value": 9007199254740991
+    },
+    {
+      "exception": "Expected Unmatchable, got Number 9007199254740994",
+      "typeId": "?Unmatchable",
+      "value": 9007199254740994
+    },
+    {
+      "exception": "Expected Object, got String \"buffer10\"",
+      "typeId": "{ a: ?Unmatchable }",
+      "value": "buffer10"
+    },
+    {
+      "exception": "Expected Object, got String \"fff\"",
+      "typeId": "{ a: ?Unmatchable }",
+      "value": "fff"
+    },
+    {
+      "exception": "Expected Object, got String \"cafe1122deadbeef\"",
+      "typeId": "{ a: ?Unmatchable }",
+      "value": "cafe1122deadbeef"
+    },
+    {
+      "exception": "Expected Object, got Number -1",
+      "typeId": "{ a: ?Unmatchable }",
+      "value": -1
+    },
+    {
+      "exception": "Expected Object, got Number 127",
+      "typeId": "{ a: ?Unmatchable }",
+      "value": 127
+    },
+    {
+      "exception": "Expected Object, got Number 128",
+      "typeId": "{ a: ?Unmatchable }",
+      "value": 128
+    },
+    {
+      "exception": "Expected Object, got Number 255",
+      "typeId": "{ a: ?Unmatchable }",
+      "value": 255
+    },
+    {
+      "exception": "Expected Object, got Number 256",
+      "typeId": "{ a: ?Unmatchable }",
+      "value": 256
+    },
+    {
+      "exception": "Expected Object, got Number -128",
+      "typeId": "{ a: ?Unmatchable }",
+      "value": -128
+    },
+    {
+      "exception": "Expected Object, got Number -129",
+      "typeId": "{ a: ?Unmatchable }",
+      "value": -129
+    },
+    {
+      "exception": "Expected Object, got Number 65534",
+      "typeId": "{ a: ?Unmatchable }",
+      "value": 65534
+    },
+    {
+      "exception": "Expected Object, got Number 65535",
+      "typeId": "{ a: ?Unmatchable }",
+      "value": 65535
+    },
+    {
+      "exception": "Expected Object, got Number 65536",
+      "typeId": "{ a: ?Unmatchable }",
+      "value": 65536
+    },
+    {
+      "exception": "Expected Object, got Number 4294967295",
+      "typeId": "{ a: ?Unmatchable }",
+      "value": 4294967295
+    },
+    {
+      "exception": "Expected Object, got Number 9007199254740991",
+      "typeId": "{ a: ?Unmatchable }",
+      "value": 9007199254740991
+    },
+    {
+      "exception": "Expected Object, got Number 9007199254740994",
+      "typeId": "{ a: ?Unmatchable }",
+      "value": 9007199254740994
+    },
+    {
+      "exception": "Expected Object, got String \"buffer10\"",
+      "typeId": "{ a: { b: Unmatchable } }",
+      "value": "buffer10"
+    },
+    {
+      "exception": "Expected Object, got String \"fff\"",
+      "typeId": "{ a: { b: Unmatchable } }",
+      "value": "fff"
+    },
+    {
+      "exception": "Expected Object, got String \"cafe1122deadbeef\"",
+      "typeId": "{ a: { b: Unmatchable } }",
+      "value": "cafe1122deadbeef"
+    },
+    {
+      "exception": "Expected Object, got Number -1",
+      "typeId": "{ a: { b: Unmatchable } }",
+      "value": -1
+    },
+    {
+      "exception": "Expected Object, got Number 127",
+      "typeId": "{ a: { b: Unmatchable } }",
+      "value": 127
+    },
+    {
+      "exception": "Expected Object, got Number 128",
+      "typeId": "{ a: { b: Unmatchable } }",
+      "value": 128
+    },
+    {
+      "exception": "Expected Object, got Number 255",
+      "typeId": "{ a: { b: Unmatchable } }",
+      "value": 255
+    },
+    {
+      "exception": "Expected Object, got Number 256",
+      "typeId": "{ a: { b: Unmatchable } }",
+      "value": 256
+    },
+    {
+      "exception": "Expected Object, got Number -128",
+      "typeId": "{ a: { b: Unmatchable } }",
+      "value": -128
+    },
+    {
+      "exception": "Expected Object, got Number -129",
+      "typeId": "{ a: { b: Unmatchable } }",
+      "value": -129
+    },
+    {
+      "exception": "Expected Object, got Number 65534",
+      "typeId": "{ a: { b: Unmatchable } }",
+      "value": 65534
+    },
+    {
+      "exception": "Expected Object, got Number 65535",
+      "typeId": "{ a: { b: Unmatchable } }",
+      "value": 65535
+    },
+    {
+      "exception": "Expected Object, got Number 65536",
+      "typeId": "{ a: { b: Unmatchable } }",
+      "value": 65536
+    },
+    {
+      "exception": "Expected Object, got Number 4294967295",
+      "typeId": "{ a: { b: Unmatchable } }",
+      "value": 4294967295
+    },
+    {
+      "exception": "Expected Object, got Number 9007199254740991",
+      "typeId": "{ a: { b: Unmatchable } }",
+      "value": 9007199254740991
+    },
+    {
+      "exception": "Expected Object, got Number 9007199254740994",
+      "typeId": "{ a: { b: Unmatchable } }",
+      "value": 9007199254740994
+    },
+    {
+      "exception": "Expected CustomType, got String \"buffer10\"",
+      "typeId": ">CustomType",
+      "value": "buffer10"
+    },
+    {
+      "exception": "Expected CustomType, got String \"fff\"",
+      "typeId": ">CustomType",
+      "value": "fff"
+    },
+    {
+      "exception": "Expected CustomType, got String \"cafe1122deadbeef\"",
+      "typeId": ">CustomType",
+      "value": "cafe1122deadbeef"
+    },
+    {
+      "exception": "Expected CustomType, got Number -1",
+      "typeId": ">CustomType",
+      "value": -1
+    },
+    {
+      "exception": "Expected CustomType, got Number 127",
+      "typeId": ">CustomType",
+      "value": 127
+    },
+    {
+      "exception": "Expected CustomType, got Number 128",
+      "typeId": ">CustomType",
+      "value": 128
+    },
+    {
+      "exception": "Expected CustomType, got Number 255",
+      "typeId": ">CustomType",
+      "value": 255
+    },
+    {
+      "exception": "Expected CustomType, got Number 256",
+      "typeId": ">CustomType",
+      "value": 256
+    },
+    {
+      "exception": "Expected CustomType, got Number -128",
+      "typeId": ">CustomType",
+      "value": -128
+    },
+    {
+      "exception": "Expected CustomType, got Number -129",
+      "typeId": ">CustomType",
+      "value": -129
+    },
+    {
+      "exception": "Expected CustomType, got Number 65534",
+      "typeId": ">CustomType",
+      "value": 65534
+    },
+    {
+      "exception": "Expected CustomType, got Number 65535",
+      "typeId": ">CustomType",
+      "value": 65535
+    },
+    {
+      "exception": "Expected CustomType, got Number 65536",
+      "typeId": ">CustomType",
+      "value": 65536
+    },
+    {
+      "exception": "Expected CustomType, got Number 4294967295",
+      "typeId": ">CustomType",
+      "value": 4294967295
+    },
+    {
+      "exception": "Expected CustomType, got Number 9007199254740991",
+      "typeId": ">CustomType",
+      "value": 9007199254740991
+    },
+    {
+      "exception": "Expected CustomType, got Number 9007199254740994",
+      "typeId": ">CustomType",
+      "value": 9007199254740994
+    },
+    {
+      "exception": "Expected \\{String\\}, got String \"buffer10\"",
+      "typeId": "{ String }",
+      "value": "buffer10"
+    },
+    {
+      "exception": "Expected \\{String\\}, got String \"fff\"",
+      "typeId": "{ String }",
+      "value": "fff"
+    },
+    {
+      "exception": "Expected \\{String\\}, got String \"cafe1122deadbeef\"",
+      "typeId": "{ String }",
+      "value": "cafe1122deadbeef"
+    },
+    {
+      "exception": "Expected \\{String\\}, got Number -1",
+      "typeId": "{ String }",
+      "value": -1
+    },
+    {
+      "exception": "Expected \\{String\\}, got Number 127",
+      "typeId": "{ String }",
+      "value": 127
+    },
+    {
+      "exception": "Expected \\{String\\}, got Number 128",
+      "typeId": "{ String }",
+      "value": 128
+    },
+    {
+      "exception": "Expected \\{String\\}, got Number 255",
+      "typeId": "{ String }",
+      "value": 255
+    },
+    {
+      "exception": "Expected \\{String\\}, got Number 256",
+      "typeId": "{ String }",
+      "value": 256
+    },
+    {
+      "exception": "Expected \\{String\\}, got Number -128",
+      "typeId": "{ String }",
+      "value": -128
+    },
+    {
+      "exception": "Expected \\{String\\}, got Number -129",
+      "typeId": "{ String }",
+      "value": -129
+    },
+    {
+      "exception": "Expected \\{String\\}, got Number 65534",
+      "typeId": "{ String }",
+      "value": 65534
+    },
+    {
+      "exception": "Expected \\{String\\}, got Number 65535",
+      "typeId": "{ String }",
+      "value": 65535
+    },
+    {
+      "exception": "Expected \\{String\\}, got Number 65536",
+      "typeId": "{ String }",
+      "value": 65536
+    },
+    {
+      "exception": "Expected \\{String\\}, got Number 4294967295",
+      "typeId": "{ String }",
+      "value": 4294967295
+    },
+    {
+      "exception": "Expected \\{String\\}, got Number 9007199254740991",
+      "typeId": "{ String }",
+      "value": 9007199254740991
+    },
+    {
+      "exception": "Expected \\{String\\}, got Number 9007199254740994",
+      "typeId": "{ String }",
+      "value": 9007199254740994
+    },
+    {
+      "exception": "Expected \\{String|Number\\}, got String \"buffer10\"",
+      "typeId": "{ String|Number }",
+      "value": "buffer10"
+    },
+    {
+      "exception": "Expected \\{String|Number\\}, got String \"fff\"",
+      "typeId": "{ String|Number }",
+      "value": "fff"
+    },
+    {
+      "exception": "Expected \\{String|Number\\}, got String \"cafe1122deadbeef\"",
+      "typeId": "{ String|Number }",
+      "value": "cafe1122deadbeef"
+    },
+    {
+      "exception": "Expected \\{String|Number\\}, got Number -1",
+      "typeId": "{ String|Number }",
+      "value": -1
+    },
+    {
+      "exception": "Expected \\{String|Number\\}, got Number 127",
+      "typeId": "{ String|Number }",
+      "value": 127
+    },
+    {
+      "exception": "Expected \\{String|Number\\}, got Number 128",
+      "typeId": "{ String|Number }",
+      "value": 128
+    },
+    {
+      "exception": "Expected \\{String|Number\\}, got Number 255",
+      "typeId": "{ String|Number }",
+      "value": 255
+    },
+    {
+      "exception": "Expected \\{String|Number\\}, got Number 256",
+      "typeId": "{ String|Number }",
+      "value": 256
+    },
+    {
+      "exception": "Expected \\{String|Number\\}, got Number -128",
+      "typeId": "{ String|Number }",
+      "value": -128
+    },
+    {
+      "exception": "Expected \\{String|Number\\}, got Number -129",
+      "typeId": "{ String|Number }",
+      "value": -129
+    },
+    {
+      "exception": "Expected \\{String|Number\\}, got Number 65534",
+      "typeId": "{ String|Number }",
+      "value": 65534
+    },
+    {
+      "exception": "Expected \\{String|Number\\}, got Number 65535",
+      "typeId": "{ String|Number }",
+      "value": 65535
+    },
+    {
+      "exception": "Expected \\{String|Number\\}, got Number 65536",
+      "typeId": "{ String|Number }",
+      "value": 65536
+    },
+    {
+      "exception": "Expected \\{String|Number\\}, got Number 4294967295",
+      "typeId": "{ String|Number }",
+      "value": 4294967295
+    },
+    {
+      "exception": "Expected \\{String|Number\\}, got Number 9007199254740991",
+      "typeId": "{ String|Number }",
+      "value": 9007199254740991
+    },
+    {
+      "exception": "Expected \\{String|Number\\}, got Number 9007199254740994",
+      "typeId": "{ String|Number }",
+      "value": 9007199254740994
+    },
+    {
+      "exception": "Expected \\{String\\: Number\\}, got String \"buffer10\"",
+      "typeId": "{ String: Number }",
+      "value": "buffer10"
+    },
+    {
+      "exception": "Expected \\{String\\: Number\\}, got String \"fff\"",
+      "typeId": "{ String: Number }",
+      "value": "fff"
+    },
+    {
+      "exception": "Expected \\{String\\: Number\\}, got String \"cafe1122deadbeef\"",
+      "typeId": "{ String: Number }",
+      "value": "cafe1122deadbeef"
+    },
+    {
+      "exception": "Expected \\{String\\: Number\\}, got Number -1",
+      "typeId": "{ String: Number }",
+      "value": -1
+    },
+    {
+      "exception": "Expected \\{String\\: Number\\}, got Number 127",
+      "typeId": "{ String: Number }",
+      "value": 127
+    },
+    {
+      "exception": "Expected \\{String\\: Number\\}, got Number 128",
+      "typeId": "{ String: Number }",
+      "value": 128
+    },
+    {
+      "exception": "Expected \\{String\\: Number\\}, got Number 255",
+      "typeId": "{ String: Number }",
+      "value": 255
+    },
+    {
+      "exception": "Expected \\{String\\: Number\\}, got Number 256",
+      "typeId": "{ String: Number }",
+      "value": 256
+    },
+    {
+      "exception": "Expected \\{String\\: Number\\}, got Number -128",
+      "typeId": "{ String: Number }",
+      "value": -128
+    },
+    {
+      "exception": "Expected \\{String\\: Number\\}, got Number -129",
+      "typeId": "{ String: Number }",
+      "value": -129
+    },
+    {
+      "exception": "Expected \\{String\\: Number\\}, got Number 65534",
+      "typeId": "{ String: Number }",
+      "value": 65534
+    },
+    {
+      "exception": "Expected \\{String\\: Number\\}, got Number 65535",
+      "typeId": "{ String: Number }",
+      "value": 65535
+    },
+    {
+      "exception": "Expected \\{String\\: Number\\}, got Number 65536",
+      "typeId": "{ String: Number }",
+      "value": 65536
+    },
+    {
+      "exception": "Expected \\{String\\: Number\\}, got Number 4294967295",
+      "typeId": "{ String: Number }",
+      "value": 4294967295
+    },
+    {
+      "exception": "Expected \\{String\\: Number\\}, got Number 9007199254740991",
+      "typeId": "{ String: Number }",
+      "value": 9007199254740991
+    },
+    {
+      "exception": "Expected \\{String\\: Number\\}, got Number 9007199254740994",
+      "typeId": "{ String: Number }",
+      "value": 9007199254740994
+    },
+    {
+      "exception": "Expected \\{Letter\\: Number\\}, got String \"buffer10\"",
+      "typeId": "{ Letter: Number }",
+      "value": "buffer10"
+    },
+    {
+      "exception": "Expected \\{Letter\\: Number\\}, got String \"fff\"",
+      "typeId": "{ Letter: Number }",
+      "value": "fff"
+    },
+    {
+      "exception": "Expected \\{Letter\\: Number\\}, got String \"cafe1122deadbeef\"",
+      "typeId": "{ Letter: Number }",
+      "value": "cafe1122deadbeef"
+    },
+    {
+      "exception": "Expected \\{Letter\\: Number\\}, got Number -1",
+      "typeId": "{ Letter: Number }",
+      "value": -1
+    },
+    {
+      "exception": "Expected \\{Letter\\: Number\\}, got Number 127",
+      "typeId": "{ Letter: Number }",
+      "value": 127
+    },
+    {
+      "exception": "Expected \\{Letter\\: Number\\}, got Number 128",
+      "typeId": "{ Letter: Number }",
+      "value": 128
+    },
+    {
+      "exception": "Expected \\{Letter\\: Number\\}, got Number 255",
+      "typeId": "{ Letter: Number }",
+      "value": 255
+    },
+    {
+      "exception": "Expected \\{Letter\\: Number\\}, got Number 256",
+      "typeId": "{ Letter: Number }",
+      "value": 256
+    },
+    {
+      "exception": "Expected \\{Letter\\: Number\\}, got Number -128",
+      "typeId": "{ Letter: Number }",
+      "value": -128
+    },
+    {
+      "exception": "Expected \\{Letter\\: Number\\}, got Number -129",
+      "typeId": "{ Letter: Number }",
+      "value": -129
+    },
+    {
+      "exception": "Expected \\{Letter\\: Number\\}, got Number 65534",
+      "typeId": "{ Letter: Number }",
+      "value": 65534
+    },
+    {
+      "exception": "Expected \\{Letter\\: Number\\}, got Number 65535",
+      "typeId": "{ Letter: Number }",
+      "value": 65535
+    },
+    {
+      "exception": "Expected \\{Letter\\: Number\\}, got Number 65536",
+      "typeId": "{ Letter: Number }",
+      "value": 65536
+    },
+    {
+      "exception": "Expected \\{Letter\\: Number\\}, got Number 4294967295",
+      "typeId": "{ Letter: Number }",
+      "value": 4294967295
+    },
+    {
+      "exception": "Expected \\{Letter\\: Number\\}, got Number 9007199254740991",
+      "typeId": "{ Letter: Number }",
+      "value": 9007199254740991
+    },
+    {
+      "exception": "Expected \\{Letter\\: Number\\}, got Number 9007199254740994",
+      "typeId": "{ Letter: Number }",
+      "value": 9007199254740994
+    },
+    {
+      "exception": "Expected Buffer, got String \"buffer10\"",
+      "typeId": "Buffer0",
+      "value": "buffer10"
+    },
+    {
+      "exception": "Expected Buffer, got String \"fff\"",
+      "typeId": "Buffer0",
+      "value": "fff"
+    },
+    {
+      "exception": "Expected Buffer, got String \"cafe1122deadbeef\"",
+      "typeId": "Buffer0",
+      "value": "cafe1122deadbeef"
+    },
+    {
+      "exception": "Expected Buffer, got Number -1",
+      "typeId": "Buffer0",
+      "value": -1
+    },
+    {
+      "exception": "Expected Buffer, got Number 127",
+      "typeId": "Buffer0",
+      "value": 127
+    },
+    {
+      "exception": "Expected Buffer, got Number 128",
+      "typeId": "Buffer0",
+      "value": 128
+    },
+    {
+      "exception": "Expected Buffer, got Number 255",
+      "typeId": "Buffer0",
+      "value": 255
+    },
+    {
+      "exception": "Expected Buffer, got Number 256",
+      "typeId": "Buffer0",
+      "value": 256
+    },
+    {
+      "exception": "Expected Buffer, got Number -128",
+      "typeId": "Buffer0",
+      "value": -128
+    },
+    {
+      "exception": "Expected Buffer, got Number -129",
+      "typeId": "Buffer0",
+      "value": -129
+    },
+    {
+      "exception": "Expected Buffer, got Number 65534",
+      "typeId": "Buffer0",
+      "value": 65534
+    },
+    {
+      "exception": "Expected Buffer, got Number 65535",
+      "typeId": "Buffer0",
+      "value": 65535
+    },
+    {
+      "exception": "Expected Buffer, got Number 65536",
+      "typeId": "Buffer0",
+      "value": 65536
+    },
+    {
+      "exception": "Expected Buffer, got Number 4294967295",
+      "typeId": "Buffer0",
+      "value": 4294967295
+    },
+    {
+      "exception": "Expected Buffer, got Number 9007199254740991",
+      "typeId": "Buffer0",
+      "value": 9007199254740991
+    },
+    {
+      "exception": "Expected Buffer, got Number 9007199254740994",
+      "typeId": "Buffer0",
+      "value": 9007199254740994
+    },
+    {
+      "exception": "Expected Buffer, got String \"buffer10\"",
+      "typeId": "Buffer10",
+      "value": "buffer10"
+    },
+    {
+      "exception": "Expected Buffer, got String \"fff\"",
+      "typeId": "Buffer10",
+      "value": "fff"
+    },
+    {
+      "exception": "Expected Buffer, got String \"cafe1122deadbeef\"",
+      "typeId": "Buffer10",
+      "value": "cafe1122deadbeef"
+    },
+    {
+      "exception": "Expected Buffer, got Number -1",
+      "typeId": "Buffer10",
+      "value": -1
+    },
+    {
+      "exception": "Expected Buffer, got Number 127",
+      "typeId": "Buffer10",
+      "value": 127
+    },
+    {
+      "exception": "Expected Buffer, got Number 128",
+      "typeId": "Buffer10",
+      "value": 128
+    },
+    {
+      "exception": "Expected Buffer, got Number 255",
+      "typeId": "Buffer10",
+      "value": 255
+    },
+    {
+      "exception": "Expected Buffer, got Number 256",
+      "typeId": "Buffer10",
+      "value": 256
+    },
+    {
+      "exception": "Expected Buffer, got Number -128",
+      "typeId": "Buffer10",
+      "value": -128
+    },
+    {
+      "exception": "Expected Buffer, got Number -129",
+      "typeId": "Buffer10",
+      "value": -129
+    },
+    {
+      "exception": "Expected Buffer, got Number 65534",
+      "typeId": "Buffer10",
+      "value": 65534
+    },
+    {
+      "exception": "Expected Buffer, got Number 65535",
+      "typeId": "Buffer10",
+      "value": 65535
+    },
+    {
+      "exception": "Expected Buffer, got Number 65536",
+      "typeId": "Buffer10",
+      "value": 65536
+    },
+    {
+      "exception": "Expected Buffer, got Number 4294967295",
+      "typeId": "Buffer10",
+      "value": 4294967295
+    },
+    {
+      "exception": "Expected Buffer, got Number 9007199254740991",
+      "typeId": "Buffer10",
+      "value": 9007199254740991
+    },
+    {
+      "exception": "Expected Buffer, got Number 9007199254740994",
+      "typeId": "Buffer10",
+      "value": 9007199254740994
+    },
+    {
+      "exception": "Expected Hex, got String \"buffer10\"",
+      "typeId": "Hex",
+      "value": "buffer10"
+    },
+    {
+      "exception": "Expected Hex, got String \"fff\"",
+      "typeId": "Hex",
+      "value": "fff"
+    },
+    {
+      "exception": "Expected Hex, got Number -1",
+      "typeId": "Hex",
+      "value": -1
+    },
+    {
+      "exception": "Expected Hex, got Number 127",
+      "typeId": "Hex",
+      "value": 127
+    },
+    {
+      "exception": "Expected Hex, got Number 128",
+      "typeId": "Hex",
+      "value": 128
+    },
+    {
+      "exception": "Expected Hex, got Number 255",
+      "typeId": "Hex",
+      "value": 255
+    },
+    {
+      "exception": "Expected Hex, got Number 256",
+      "typeId": "Hex",
+      "value": 256
+    },
+    {
+      "exception": "Expected Hex, got Number -128",
+      "typeId": "Hex",
+      "value": -128
+    },
+    {
+      "exception": "Expected Hex, got Number -129",
+      "typeId": "Hex",
+      "value": -129
+    },
+    {
+      "exception": "Expected Hex, got Number 65534",
+      "typeId": "Hex",
+      "value": 65534
+    },
+    {
+      "exception": "Expected Hex, got Number 65535",
+      "typeId": "Hex",
+      "value": 65535
+    },
+    {
+      "exception": "Expected Hex, got Number 65536",
+      "typeId": "Hex",
+      "value": 65536
+    },
+    {
+      "exception": "Expected Hex, got Number 4294967295",
+      "typeId": "Hex",
+      "value": 4294967295
+    },
+    {
+      "exception": "Expected Hex, got Number 9007199254740991",
+      "typeId": "Hex",
+      "value": 9007199254740991
+    },
+    {
+      "exception": "Expected Hex, got Number 9007199254740994",
+      "typeId": "Hex",
+      "value": 9007199254740994
+    },
+    {
+      "exception": "Expected Int8, got String \"buffer10\"",
+      "typeId": "Int8",
+      "value": "buffer10"
+    },
+    {
+      "exception": "Expected Int8, got String \"fff\"",
+      "typeId": "Int8",
+      "value": "fff"
+    },
+    {
+      "exception": "Expected Int8, got String \"cafe1122deadbeef\"",
+      "typeId": "Int8",
+      "value": "cafe1122deadbeef"
+    },
+    {
+      "exception": "Expected Int8, got Number 128",
+      "typeId": "Int8",
+      "value": 128
+    },
+    {
+      "exception": "Expected Int8, got Number 255",
+      "typeId": "Int8",
+      "value": 255
+    },
+    {
+      "exception": "Expected Int8, got Number 256",
+      "typeId": "Int8",
+      "value": 256
+    },
+    {
+      "exception": "Expected Int8, got Number -129",
+      "typeId": "Int8",
+      "value": -129
+    },
+    {
+      "exception": "Expected Int8, got Number 65534",
+      "typeId": "Int8",
+      "value": 65534
+    },
+    {
+      "exception": "Expected Int8, got Number 65535",
+      "typeId": "Int8",
+      "value": 65535
+    },
+    {
+      "exception": "Expected Int8, got Number 65536",
+      "typeId": "Int8",
+      "value": 65536
+    },
+    {
+      "exception": "Expected Int8, got Number 4294967295",
+      "typeId": "Int8",
+      "value": 4294967295
+    },
+    {
+      "exception": "Expected Int8, got Number 9007199254740991",
+      "typeId": "Int8",
+      "value": 9007199254740991
+    },
+    {
+      "exception": "Expected Int8, got Number 9007199254740994",
+      "typeId": "Int8",
+      "value": 9007199254740994
+    },
+    {
+      "exception": "Expected Int16, got String \"buffer10\"",
+      "typeId": "Int16",
+      "value": "buffer10"
+    },
+    {
+      "exception": "Expected Int16, got String \"fff\"",
+      "typeId": "Int16",
+      "value": "fff"
+    },
+    {
+      "exception": "Expected Int16, got String \"cafe1122deadbeef\"",
+      "typeId": "Int16",
+      "value": "cafe1122deadbeef"
+    },
+    {
+      "exception": "Expected Int16, got Number 65534",
+      "typeId": "Int16",
+      "value": 65534
+    },
+    {
+      "exception": "Expected Int16, got Number 65535",
+      "typeId": "Int16",
+      "value": 65535
+    },
+    {
+      "exception": "Expected Int16, got Number 65536",
+      "typeId": "Int16",
+      "value": 65536
+    },
+    {
+      "exception": "Expected Int16, got Number 4294967295",
+      "typeId": "Int16",
+      "value": 4294967295
+    },
+    {
+      "exception": "Expected Int16, got Number 9007199254740991",
+      "typeId": "Int16",
+      "value": 9007199254740991
+    },
+    {
+      "exception": "Expected Int16, got Number 9007199254740994",
+      "typeId": "Int16",
+      "value": 9007199254740994
+    },
+    {
+      "exception": "Expected Int32, got String \"buffer10\"",
+      "typeId": "Int32",
+      "value": "buffer10"
+    },
+    {
+      "exception": "Expected Int32, got String \"fff\"",
+      "typeId": "Int32",
+      "value": "fff"
+    },
+    {
+      "exception": "Expected Int32, got String \"cafe1122deadbeef\"",
+      "typeId": "Int32",
+      "value": "cafe1122deadbeef"
+    },
+    {
+      "exception": "Expected Int32, got Number 4294967295",
+      "typeId": "Int32",
+      "value": 4294967295
+    },
+    {
+      "exception": "Expected Int32, got Number 9007199254740991",
+      "typeId": "Int32",
+      "value": 9007199254740991
+    },
+    {
+      "exception": "Expected Int32, got Number 9007199254740994",
+      "typeId": "Int32",
+      "value": 9007199254740994
+    },
+    {
+      "exception": "Expected UInt8, got String \"buffer10\"",
+      "typeId": "UInt8",
+      "value": "buffer10"
+    },
+    {
+      "exception": "Expected UInt8, got String \"fff\"",
+      "typeId": "UInt8",
+      "value": "fff"
+    },
+    {
+      "exception": "Expected UInt8, got String \"cafe1122deadbeef\"",
+      "typeId": "UInt8",
+      "value": "cafe1122deadbeef"
+    },
+    {
+      "exception": "Expected UInt8, got Number -1",
+      "typeId": "UInt8",
+      "value": -1
+    },
+    {
+      "exception": "Expected UInt8, got Number 256",
+      "typeId": "UInt8",
+      "value": 256
+    },
+    {
+      "exception": "Expected UInt8, got Number -128",
+      "typeId": "UInt8",
+      "value": -128
+    },
+    {
+      "exception": "Expected UInt8, got Number -129",
+      "typeId": "UInt8",
+      "value": -129
+    },
+    {
+      "exception": "Expected UInt8, got Number 65534",
+      "typeId": "UInt8",
+      "value": 65534
+    },
+    {
+      "exception": "Expected UInt8, got Number 65535",
+      "typeId": "UInt8",
+      "value": 65535
+    },
+    {
+      "exception": "Expected UInt8, got Number 65536",
+      "typeId": "UInt8",
+      "value": 65536
+    },
+    {
+      "exception": "Expected UInt8, got Number 4294967295",
+      "typeId": "UInt8",
+      "value": 4294967295
+    },
+    {
+      "exception": "Expected UInt8, got Number 9007199254740991",
+      "typeId": "UInt8",
+      "value": 9007199254740991
+    },
+    {
+      "exception": "Expected UInt8, got Number 9007199254740994",
+      "typeId": "UInt8",
+      "value": 9007199254740994
+    },
+    {
+      "exception": "Expected UInt16, got String \"buffer10\"",
+      "typeId": "UInt16",
+      "value": "buffer10"
+    },
+    {
+      "exception": "Expected UInt16, got String \"fff\"",
+      "typeId": "UInt16",
+      "value": "fff"
+    },
+    {
+      "exception": "Expected UInt16, got String \"cafe1122deadbeef\"",
+      "typeId": "UInt16",
+      "value": "cafe1122deadbeef"
+    },
+    {
+      "exception": "Expected UInt16, got Number -1",
+      "typeId": "UInt16",
+      "value": -1
+    },
+    {
+      "exception": "Expected UInt16, got Number -128",
+      "typeId": "UInt16",
+      "value": -128
+    },
+    {
+      "exception": "Expected UInt16, got Number -129",
+      "typeId": "UInt16",
+      "value": -129
+    },
+    {
+      "exception": "Expected UInt16, got Number 65536",
+      "typeId": "UInt16",
+      "value": 65536
+    },
+    {
+      "exception": "Expected UInt16, got Number 4294967295",
+      "typeId": "UInt16",
+      "value": 4294967295
+    },
+    {
+      "exception": "Expected UInt16, got Number 9007199254740991",
+      "typeId": "UInt16",
+      "value": 9007199254740991
+    },
+    {
+      "exception": "Expected UInt16, got Number 9007199254740994",
+      "typeId": "UInt16",
+      "value": 9007199254740994
+    },
+    {
+      "exception": "Expected UInt32, got String \"buffer10\"",
+      "typeId": "UInt32",
+      "value": "buffer10"
+    },
+    {
+      "exception": "Expected UInt32, got String \"fff\"",
+      "typeId": "UInt32",
+      "value": "fff"
+    },
+    {
+      "exception": "Expected UInt32, got String \"cafe1122deadbeef\"",
+      "typeId": "UInt32",
+      "value": "cafe1122deadbeef"
+    },
+    {
+      "exception": "Expected UInt32, got Number -1",
+      "typeId": "UInt32",
+      "value": -1
+    },
+    {
+      "exception": "Expected UInt32, got Number -128",
+      "typeId": "UInt32",
+      "value": -128
+    },
+    {
+      "exception": "Expected UInt32, got Number -129",
+      "typeId": "UInt32",
+      "value": -129
+    },
+    {
+      "exception": "Expected UInt32, got Number 9007199254740991",
+      "typeId": "UInt32",
+      "value": 9007199254740991
+    },
+    {
+      "exception": "Expected UInt32, got Number 9007199254740994",
+      "typeId": "UInt32",
+      "value": 9007199254740994
+    },
+    {
+      "exception": "Expected UInt53, got String \"buffer10\"",
+      "typeId": "UInt53",
+      "value": "buffer10"
+    },
+    {
+      "exception": "Expected UInt53, got String \"fff\"",
+      "typeId": "UInt53",
+      "value": "fff"
+    },
+    {
+      "exception": "Expected UInt53, got String \"cafe1122deadbeef\"",
+      "typeId": "UInt53",
+      "value": "cafe1122deadbeef"
+    },
+    {
+      "exception": "Expected UInt53, got Number -1",
+      "typeId": "UInt53",
+      "value": -1
+    },
+    {
+      "exception": "Expected UInt53, got Number -128",
+      "typeId": "UInt53",
+      "value": -128
+    },
+    {
+      "exception": "Expected UInt53, got Number -129",
+      "typeId": "UInt53",
+      "value": -129
+    },
+    {
+      "exception": "Expected UInt53, got Number 9007199254740994",
+      "typeId": "UInt53",
+      "value": 9007199254740994
     }
   ]
 }

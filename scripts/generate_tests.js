@@ -125,6 +125,6 @@ const ALLTYPES = TYPES2.concat(Object.keys(TYPES))
 const ALLVALUES = VALUES2.concat(Object.keys(VALUES))
 
 ALLTYPES.forEach(type => ALLVALUES.forEach(value => addFixture(type, value)))
-// ALLTYPES.forEach(type => VALUESX.forEach(value => addFixture(type, value, true)))
+ALLTYPES.forEach(type => VALUESX.forEach(value => addFixture(type, value, true)))
 
 console.log(JSON.stringify(fixtures, null, 2))
