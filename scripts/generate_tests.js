@@ -87,18 +87,15 @@ function addFixture (type, value) {
   } catch (e) {
     let exception = e.message
       .replace(/([.*+?^=!:${}\[\]\/\\\(\)])/g, '\\$&')
-      .replace(/asciiSlice/g, '(asciiSlice|length|parent)')
-
-    if (exception.indexOf('asciiSlice') !== -1) {
-      exception = exception.replace(/Function/g, '(Function|Number|SlowBuffer)')
-    }
 
     try {
       typeforce(atype, avalue, false)
-
       fixtures.valid.push(f)
+
+      if (exception.indexOf('asciiSlice') !== -1) return
       fixtures.invalid.push(Object.assign({ exception, strict: true }, f))
     } catch (e) {
+      if (exception.indexOf('asciiSlice') !== -1) return
       fixtures.invalid.push(Object.assign({ exception }, f))
     }
   }

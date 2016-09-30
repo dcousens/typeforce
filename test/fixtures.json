@@ -6941,12 +6941,6 @@
       "valueId": "customType"
     },
     {
-      "exception": "Unexpected property \"(asciiSlice|length|parent)\"",
-      "strict": true,
-      "typeId": "?{ a: ?Number }",
-      "valueId": "buffer"
-    },
-    {
       "exception": "Unexpected property \"0\"",
       "strict": true,
       "typeId": "?{ a: ?Number }",
@@ -7312,12 +7306,6 @@
       "valueId": "customType"
     },
     {
-      "exception": "Unexpected property \"(asciiSlice|length|parent)\"",
-      "strict": true,
-      "typeId": "{ a: Number|Null }",
-      "valueId": "buffer"
-    },
-    {
       "exception": "Unexpected property \"0\"",
       "strict": true,
       "typeId": "{ a: Number|Null }",
@@ -7680,12 +7668,6 @@
       "valueId": "customType"
     },
     {
-      "exception": "Unexpected property \"(asciiSlice|length|parent)\"",
-      "strict": true,
-      "typeId": "{ a: ?{ b: Number } }",
-      "valueId": "buffer"
-    },
-    {
       "exception": "Unexpected property \"0\"",
       "strict": true,
       "typeId": "{ a: ?{ b: Number } }",
@@ -7848,12 +7830,6 @@
       "strict": true,
       "typeId": "{ a: ?{ b: ?{ c: Number } } }",
       "valueId": "customType"
-    },
-    {
-      "exception": "Unexpected property \"(asciiSlice|length|parent)\"",
-      "strict": true,
-      "typeId": "{ a: ?{ b: ?{ c: Number } } }",
-      "valueId": "buffer"
     },
     {
       "exception": "Unexpected property \"0\"",
@@ -8240,12 +8216,6 @@
       "strict": true,
       "typeId": "{ a: ?Unmatchable }",
       "valueId": "customType"
-    },
-    {
-      "exception": "Unexpected property \"(asciiSlice|length|parent)\"",
-      "strict": true,
-      "typeId": "{ a: ?Unmatchable }",
-      "valueId": "buffer"
     },
     {
       "exception": "Unexpected property \"0\"",
@@ -8818,11 +8788,6 @@
       "valueId": "customType"
     },
     {
-      "exception": "Expected property \"(asciiSlice|length|parent)\" of type String, got (Function|Number|SlowBuffer)",
-      "typeId": "{ String }",
-      "valueId": "buffer"
-    },
-    {
       "exception": "Expected property \"0\" of type String, got Number 255",
       "typeId": "{ String }",
       "valueId": "buffer3"
@@ -8955,16 +8920,6 @@
       "exception": "Expected \\{String|Number\\}, got Function",
       "typeId": "{ String|Number }",
       "valueId": "function"
-    },
-    {
-      "exception": "Expected property \"(asciiSlice|length|parent)\" of type String|Number, got (Function|Number|SlowBuffer)",
-      "typeId": "{ String|Number }",
-      "valueId": "buffer"
-    },
-    {
-      "exception": "Expected property \"(asciiSlice|length|parent)\" of type String|Number, got (Function|Number|SlowBuffer)",
-      "typeId": "{ String|Number }",
-      "valueId": "buffer3"
     },
     {
       "exception": "Expected \\{String\\: Number\\}, got String \"\"",
@@ -9109,16 +9064,6 @@
       "exception": "Expected \\{String\\: Number\\}, got Function",
       "typeId": "{ String: Number }",
       "valueId": "function"
-    },
-    {
-      "exception": "Expected property \"(asciiSlice|length|parent)\" of type Number, got (Function|Number|SlowBuffer)",
-      "typeId": "{ String: Number }",
-      "valueId": "buffer"
-    },
-    {
-      "exception": "Expected property \"(asciiSlice|length|parent)\" of type Number, got (Function|Number|SlowBuffer)",
-      "typeId": "{ String: Number }",
-      "valueId": "buffer3"
     },
     {
       "exception": "Expected \\{Letter\\: Number\\}, got String \"\"",
@@ -9270,11 +9215,6 @@
       "exception": "Expected \\{Letter\\: Number\\}, got Function",
       "typeId": "{ Letter: Number }",
       "valueId": "function"
-    },
-    {
-      "exception": "Expected property \"(asciiSlice|length|parent)\" with key type Letter, got String \"(asciiSlice|length|parent)\"",
-      "typeId": "{ Letter: Number }",
-      "valueId": "buffer"
     },
     {
       "exception": "Expected property \"0\" with key type Letter, got String \"0\"",
