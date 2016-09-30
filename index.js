@@ -45,24 +45,19 @@ function stfJSON (type) {
 
 function TfTypeError (type, value) {
   this.tfError = Error.call(this)
+  this.tfType = type
+  this.tfValue = value
 
-  if (arguments.length === 1 && typeof type === 'string') {
-    this.message = type
-  } else {
-    this.tfType = type
-    this.tfValue = value
+  var message
+  Object.defineProperty(this, 'message', {
+    enumerable: true,
+    get: function () {
+      if (message) return message
+      message = tfErrorString(type, value)
 
-    var message
-    Object.defineProperty(this, 'message', {
-      enumerable: true,
-      get: function () {
-        if (message) return message
-        message = tfErrorString(type, value)
-
-        return message
-      }
-    })
-  }
+      return message
+    }
+  })
 }
 
 inherits(TfTypeError, Error)
