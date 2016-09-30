@@ -70,16 +70,3 @@ tape('t.throws can handle TfTypeError', function (t) {
     typeforce(failType, 'value')
   }, new RegExp('custom error'))
 })
-
-tape('TfTypeError is caught by typeforce.oneOf', function (t) {
-  t.plan(1)
-
-  t.doesNotThrow(function () {
-    typeforce.oneOf(failType)('value')
-  })
-})
-
-tape('TfTypeError does not break typeforce.oneOf', function (t) {
-  t.plan(1)
-  t.ok(!typeforce.oneOf(failType, typeforce.string)('value'))
-})
