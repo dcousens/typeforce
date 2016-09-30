@@ -238,11 +238,11 @@ var otherTypes = {
   },
 
   tuple: function tuple () {
-    var types = [].slice.call(arguments)
+    var types = [].slice.call(arguments).map(compile)
 
     function tuple (value, strict) {
       return types.every(function (type, i) {
-        return typeforce(type, value[i], strict)
+        return typeforce(type, value[i], strict, tuple)
       })
     }
     tuple.toJSON = function () { return '(' + types.map(stfJSON).join(', ') + ')' }

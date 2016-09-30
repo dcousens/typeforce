@@ -5521,46 +5521,46 @@
       "valueId": "buffer"
     },
     {
-      "exception": "Expected Boolean, got undefined",
+      "exception": "Expected \\(Boolean, Number\\), got undefined",
       "typeId": "(Boolean, Number)",
       "value": ""
     },
     {
-      "exception": "Expected Boolean, got String \"f\"",
+      "exception": "Expected \\(Boolean, Number\\), got String \"f\"",
       "typeId": "(Boolean, Number)",
       "value": "foobar"
     },
     {
-      "exception": "Expected Boolean, got undefined",
+      "exception": "Expected \\(Boolean, Number\\), got undefined",
       "typeId": "(Boolean, Number)",
       "value": 0
     },
     {
-      "exception": "Expected Boolean, got undefined",
+      "exception": "Expected \\(Boolean, Number\\), got undefined",
       "typeId": "(Boolean, Number)",
       "value": 1
     },
     {
-      "exception": "Expected Boolean, got undefined",
+      "exception": "Expected \\(Boolean, Number\\), got undefined",
       "typeId": "(Boolean, Number)",
       "value": []
     },
     {
-      "exception": "Expected Boolean, got Number 0",
+      "exception": "Expected \\(Boolean, Number\\), got Number 0",
       "typeId": "(Boolean, Number)",
       "value": [
         0
       ]
     },
     {
-      "exception": "Expected Boolean, got String \"foobar\"",
+      "exception": "Expected \\(Boolean, Number\\), got String \"foobar\"",
       "typeId": "(Boolean, Number)",
       "value": [
         "foobar"
       ]
     },
     {
-      "exception": "Expected Boolean, got Object",
+      "exception": "Expected \\(Boolean, Number\\), got Object",
       "typeId": "(Boolean, Number)",
       "value": [
         {
@@ -5569,19 +5569,19 @@
       ]
     },
     {
-      "exception": "Expected Boolean, got null",
+      "exception": "Expected \\(Boolean, Number\\), got null",
       "typeId": "(Boolean, Number)",
       "value": [
         null
       ]
     },
     {
-      "exception": "Expected Boolean, got undefined",
+      "exception": "Expected \\(Boolean, Number\\), got undefined",
       "typeId": "(Boolean, Number)",
       "value": false
     },
     {
-      "exception": "Expected Boolean, got undefined",
+      "exception": "Expected \\(Boolean, Number\\), got undefined",
       "typeId": "(Boolean, Number)",
       "value": true
     },
@@ -5595,26 +5595,26 @@
       "value": null
     },
     {
-      "exception": "Expected Boolean, got undefined",
+      "exception": "Expected \\(Boolean, Number\\), got undefined",
       "typeId": "(Boolean, Number)",
       "value": {}
     },
     {
-      "exception": "Expected Boolean, got undefined",
+      "exception": "Expected \\(Boolean, Number\\), got undefined",
       "typeId": "(Boolean, Number)",
       "value": {
         "a": null
       }
     },
     {
-      "exception": "Expected Boolean, got undefined",
+      "exception": "Expected \\(Boolean, Number\\), got undefined",
       "typeId": "(Boolean, Number)",
       "value": {
         "a": 0
       }
     },
     {
-      "exception": "Expected Boolean, got undefined",
+      "exception": "Expected \\(Boolean, Number\\), got undefined",
       "typeId": "(Boolean, Number)",
       "value": {
         "a": 0,
@@ -5622,14 +5622,14 @@
       }
     },
     {
-      "exception": "Expected Boolean, got undefined",
+      "exception": "Expected \\(Boolean, Number\\), got undefined",
       "typeId": "(Boolean, Number)",
       "value": {
         "b": 0
       }
     },
     {
-      "exception": "Expected Boolean, got undefined",
+      "exception": "Expected \\(Boolean, Number\\), got undefined",
       "typeId": "(Boolean, Number)",
       "value": {
         "a": {
@@ -5638,7 +5638,7 @@
       }
     },
     {
-      "exception": "Expected Boolean, got undefined",
+      "exception": "Expected \\(Boolean, Number\\), got undefined",
       "typeId": "(Boolean, Number)",
       "value": {
         "a": {
@@ -5647,7 +5647,7 @@
       }
     },
     {
-      "exception": "Expected Boolean, got undefined",
+      "exception": "Expected \\(Boolean, Number\\), got undefined",
       "typeId": "(Boolean, Number)",
       "value": {
         "a": {
@@ -5658,7 +5658,7 @@
       }
     },
     {
-      "exception": "Expected Boolean, got undefined",
+      "exception": "Expected \\(Boolean, Number\\), got undefined",
       "typeId": "(Boolean, Number)",
       "value": {
         "a": {
@@ -5669,7 +5669,7 @@
       }
     },
     {
-      "exception": "Expected Boolean, got undefined",
+      "exception": "Expected \\(Boolean, Number\\), got undefined",
       "typeId": "(Boolean, Number)",
       "value": {
         "a": {
@@ -5681,7 +5681,7 @@
       }
     },
     {
-      "exception": "Expected Boolean, got undefined",
+      "exception": "Expected \\(Boolean, Number\\), got undefined",
       "typeId": "(Boolean, Number)",
       "value": {
         "a": "foo",
@@ -5689,7 +5689,7 @@
       }
     },
     {
-      "exception": "Expected Boolean, got undefined",
+      "exception": "Expected \\(Boolean, Number\\), got undefined",
       "typeId": "(Boolean, Number)",
       "value": {
         "a": "foo",
@@ -5699,47 +5699,47 @@
       }
     },
     {
-      "exception": "Expected Boolean, got undefined",
+      "exception": "Expected \\(Boolean, Number\\), got undefined",
       "typeId": "(Boolean, Number)",
       "valueId": "function"
     },
     {
-      "exception": "Expected Boolean, got undefined",
+      "exception": "Expected \\(Boolean, Number\\), got undefined",
       "typeId": "(Boolean, Number)",
       "valueId": "emptyType"
     },
     {
-      "exception": "Expected Boolean, got undefined",
+      "exception": "Expected \\(Boolean, Number\\), got undefined",
       "typeId": "(Boolean, Number)",
       "valueId": "customType"
     },
     {
-      "exception": "Expected Boolean, got undefined",
+      "exception": "Expected \\(Boolean, Number\\), got undefined",
       "typeId": "(Boolean, Number)",
       "valueId": "buffer"
     },
     {
-      "exception": "Expected Number|String, got undefined",
+      "exception": "Expected \\(Number|String\\), got undefined",
       "typeId": "(Number|String)",
       "value": ""
     },
     {
-      "exception": "Expected Number|String, got undefined",
+      "exception": "Expected \\(Number|String\\), got undefined",
       "typeId": "(Number|String)",
       "value": 0
     },
     {
-      "exception": "Expected Number|String, got undefined",
+      "exception": "Expected \\(Number|String\\), got undefined",
       "typeId": "(Number|String)",
       "value": 1
     },
     {
-      "exception": "Expected Number|String, got undefined",
+      "exception": "Expected \\(Number|String\\), got undefined",
       "typeId": "(Number|String)",
       "value": []
     },
     {
-      "exception": "Expected Number|String, got Object",
+      "exception": "Expected \\(Number|String\\), got Object",
       "typeId": "(Number|String)",
       "value": [
         {
@@ -5748,19 +5748,19 @@
       ]
     },
     {
-      "exception": "Expected Number|String, got null",
+      "exception": "Expected \\(Number|String\\), got null",
       "typeId": "(Number|String)",
       "value": [
         null
       ]
     },
     {
-      "exception": "Expected Number|String, got undefined",
+      "exception": "Expected \\(Number|String\\), got undefined",
       "typeId": "(Number|String)",
       "value": false
     },
     {
-      "exception": "Expected Number|String, got undefined",
+      "exception": "Expected \\(Number|String\\), got undefined",
       "typeId": "(Number|String)",
       "value": true
     },
@@ -5774,26 +5774,26 @@
       "value": null
     },
     {
-      "exception": "Expected Number|String, got undefined",
+      "exception": "Expected \\(Number|String\\), got undefined",
       "typeId": "(Number|String)",
       "value": {}
     },
     {
-      "exception": "Expected Number|String, got undefined",
+      "exception": "Expected \\(Number|String\\), got undefined",
       "typeId": "(Number|String)",
       "value": {
         "a": null
       }
     },
     {
-      "exception": "Expected Number|String, got undefined",
+      "exception": "Expected \\(Number|String\\), got undefined",
       "typeId": "(Number|String)",
       "value": {
         "a": 0
       }
     },
     {
-      "exception": "Expected Number|String, got undefined",
+      "exception": "Expected \\(Number|String\\), got undefined",
       "typeId": "(Number|String)",
       "value": {
         "a": 0,
@@ -5801,14 +5801,14 @@
       }
     },
     {
-      "exception": "Expected Number|String, got undefined",
+      "exception": "Expected \\(Number|String\\), got undefined",
       "typeId": "(Number|String)",
       "value": {
         "b": 0
       }
     },
     {
-      "exception": "Expected Number|String, got undefined",
+      "exception": "Expected \\(Number|String\\), got undefined",
       "typeId": "(Number|String)",
       "value": {
         "a": {
@@ -5817,7 +5817,7 @@
       }
     },
     {
-      "exception": "Expected Number|String, got undefined",
+      "exception": "Expected \\(Number|String\\), got undefined",
       "typeId": "(Number|String)",
       "value": {
         "a": {
@@ -5826,7 +5826,7 @@
       }
     },
     {
-      "exception": "Expected Number|String, got undefined",
+      "exception": "Expected \\(Number|String\\), got undefined",
       "typeId": "(Number|String)",
       "value": {
         "a": {
@@ -5837,7 +5837,7 @@
       }
     },
     {
-      "exception": "Expected Number|String, got undefined",
+      "exception": "Expected \\(Number|String\\), got undefined",
       "typeId": "(Number|String)",
       "value": {
         "a": {
@@ -5848,7 +5848,7 @@
       }
     },
     {
-      "exception": "Expected Number|String, got undefined",
+      "exception": "Expected \\(Number|String\\), got undefined",
       "typeId": "(Number|String)",
       "value": {
         "a": {
@@ -5860,7 +5860,7 @@
       }
     },
     {
-      "exception": "Expected Number|String, got undefined",
+      "exception": "Expected \\(Number|String\\), got undefined",
       "typeId": "(Number|String)",
       "value": {
         "a": "foo",
@@ -5868,7 +5868,7 @@
       }
     },
     {
-      "exception": "Expected Number|String, got undefined",
+      "exception": "Expected \\(Number|String\\), got undefined",
       "typeId": "(Number|String)",
       "value": {
         "a": "foo",
@@ -5878,59 +5878,59 @@
       }
     },
     {
-      "exception": "Expected Number|String, got undefined",
+      "exception": "Expected \\(Number|String\\), got undefined",
       "typeId": "(Number|String)",
       "valueId": "function"
     },
     {
-      "exception": "Expected Number|String, got undefined",
+      "exception": "Expected \\(Number|String\\), got undefined",
       "typeId": "(Number|String)",
       "valueId": "emptyType"
     },
     {
-      "exception": "Expected Number|String, got undefined",
+      "exception": "Expected \\(Number|String\\), got undefined",
       "typeId": "(Number|String)",
       "valueId": "customType"
     },
     {
-      "exception": "Expected Number|String, got undefined",
+      "exception": "Expected \\(Number|String\\), got undefined",
       "typeId": "(Number|String)",
       "valueId": "buffer"
     },
     {
-      "exception": "Expected Number, got undefined",
+      "exception": "Expected \\(Number\\), got undefined",
       "typeId": "(Number)",
       "value": ""
     },
     {
-      "exception": "Expected Number, got String \"f\"",
+      "exception": "Expected \\(Number\\), got String \"f\"",
       "typeId": "(Number)",
       "value": "foobar"
     },
     {
-      "exception": "Expected Number, got undefined",
+      "exception": "Expected \\(Number\\), got undefined",
       "typeId": "(Number)",
       "value": 0
     },
     {
-      "exception": "Expected Number, got undefined",
+      "exception": "Expected \\(Number\\), got undefined",
       "typeId": "(Number)",
       "value": 1
     },
     {
-      "exception": "Expected Number, got undefined",
+      "exception": "Expected \\(Number\\), got undefined",
       "typeId": "(Number)",
       "value": []
     },
     {
-      "exception": "Expected Number, got String \"foobar\"",
+      "exception": "Expected \\(Number\\), got String \"foobar\"",
       "typeId": "(Number)",
       "value": [
         "foobar"
       ]
     },
     {
-      "exception": "Expected Number, got Object",
+      "exception": "Expected \\(Number\\), got Object",
       "typeId": "(Number)",
       "value": [
         {
@@ -5939,19 +5939,19 @@
       ]
     },
     {
-      "exception": "Expected Number, got null",
+      "exception": "Expected \\(Number\\), got null",
       "typeId": "(Number)",
       "value": [
         null
       ]
     },
     {
-      "exception": "Expected Number, got undefined",
+      "exception": "Expected \\(Number\\), got undefined",
       "typeId": "(Number)",
       "value": false
     },
     {
-      "exception": "Expected Number, got undefined",
+      "exception": "Expected \\(Number\\), got undefined",
       "typeId": "(Number)",
       "value": true
     },
@@ -5965,26 +5965,26 @@
       "value": null
     },
     {
-      "exception": "Expected Number, got undefined",
+      "exception": "Expected \\(Number\\), got undefined",
       "typeId": "(Number)",
       "value": {}
     },
     {
-      "exception": "Expected Number, got undefined",
+      "exception": "Expected \\(Number\\), got undefined",
       "typeId": "(Number)",
       "value": {
         "a": null
       }
     },
     {
-      "exception": "Expected Number, got undefined",
+      "exception": "Expected \\(Number\\), got undefined",
       "typeId": "(Number)",
       "value": {
         "a": 0
       }
     },
     {
-      "exception": "Expected Number, got undefined",
+      "exception": "Expected \\(Number\\), got undefined",
       "typeId": "(Number)",
       "value": {
         "a": 0,
@@ -5992,14 +5992,14 @@
       }
     },
     {
-      "exception": "Expected Number, got undefined",
+      "exception": "Expected \\(Number\\), got undefined",
       "typeId": "(Number)",
       "value": {
         "b": 0
       }
     },
     {
-      "exception": "Expected Number, got undefined",
+      "exception": "Expected \\(Number\\), got undefined",
       "typeId": "(Number)",
       "value": {
         "a": {
@@ -6008,7 +6008,7 @@
       }
     },
     {
-      "exception": "Expected Number, got undefined",
+      "exception": "Expected \\(Number\\), got undefined",
       "typeId": "(Number)",
       "value": {
         "a": {
@@ -6017,7 +6017,7 @@
       }
     },
     {
-      "exception": "Expected Number, got undefined",
+      "exception": "Expected \\(Number\\), got undefined",
       "typeId": "(Number)",
       "value": {
         "a": {
@@ -6028,7 +6028,7 @@
       }
     },
     {
-      "exception": "Expected Number, got undefined",
+      "exception": "Expected \\(Number\\), got undefined",
       "typeId": "(Number)",
       "value": {
         "a": {
@@ -6039,7 +6039,7 @@
       }
     },
     {
-      "exception": "Expected Number, got undefined",
+      "exception": "Expected \\(Number\\), got undefined",
       "typeId": "(Number)",
       "value": {
         "a": {
@@ -6051,7 +6051,7 @@
       }
     },
     {
-      "exception": "Expected Number, got undefined",
+      "exception": "Expected \\(Number\\), got undefined",
       "typeId": "(Number)",
       "value": {
         "a": "foo",
@@ -6059,7 +6059,7 @@
       }
     },
     {
-      "exception": "Expected Number, got undefined",
+      "exception": "Expected \\(Number\\), got undefined",
       "typeId": "(Number)",
       "value": {
         "a": "foo",
@@ -6069,22 +6069,22 @@
       }
     },
     {
-      "exception": "Expected Number, got undefined",
+      "exception": "Expected \\(Number\\), got undefined",
       "typeId": "(Number)",
       "valueId": "function"
     },
     {
-      "exception": "Expected Number, got undefined",
+      "exception": "Expected \\(Number\\), got undefined",
       "typeId": "(Number)",
       "valueId": "emptyType"
     },
     {
-      "exception": "Expected Number, got undefined",
+      "exception": "Expected \\(Number\\), got undefined",
       "typeId": "(Number)",
       "valueId": "customType"
     },
     {
-      "exception": "Expected Number, got undefined",
+      "exception": "Expected \\(Number\\), got undefined",
       "typeId": "(Number)",
       "valueId": "buffer"
     },
