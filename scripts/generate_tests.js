@@ -86,9 +86,13 @@ TYPES2.concat(Object.keys(TYPES)).forEach(function (type) {
       typeforce(atype, avalue, true)
       fixtures.valid.push(f)
     } catch (e) {
-      const exception = e.message
-        .replace(/\)/g, '\\)')
-        .replace(/\(/g, '\\(')
+      let exception = e.message
+        .replace(/([.*+?^=!:${}\[\]\/\\\(\)])/g, '\\$&')
+        .replace(/asciiSlice/g, '(asciiSlice|length|parent)')
+
+      if (exception.indexOf('asciiSlice') !== -1) {
+        exception = exception.replace(/Function/g, '(Function|SlowBuffer)')
+      }
 
       try {
         typeforce(atype, avalue, false)

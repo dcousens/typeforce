@@ -32,22 +32,21 @@ fixtures.invalid.forEach(function (f) {
   var value = VALUES[f.valueId] || f.value
   var typeDescription = f.typeId || JSON.stringify(type)
   var valueDescription = JSON.stringify(value)
-  var exception = f.exception.replace(/([.*+?^=!:${}\[\]\/\\])/g, '\\$&')
 
-  tape('throws "' + exception + '" for type ' + typeDescription + ' with value of ' + valueDescription, function (t) {
+  tape('throws "' + f.exception + '" for type ' + typeDescription + ' with value of ' + valueDescription, function (t) {
     t.plan(1)
 
     t.throws(function () {
       typeforce(type, value, f.strict)
-    }, new RegExp(exception))
+    }, new RegExp(f.exception))
   })
 
-  tape('throws "' + exception + '" for type ' + typeDescription + ' (compiled) with value of ' + valueDescription, function (t) {
+  tape('throws "' + f.exception + '" for type ' + typeDescription + ' (compiled) with value of ' + valueDescription, function (t) {
     t.plan(1)
 
     t.throws(function () {
       typeforce(typeforce.compile(type), value, f.strict)
-    }, new RegExp(exception))
+    }, new RegExp(f.exception))
   })
 })
 
