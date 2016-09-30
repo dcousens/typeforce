@@ -1,8 +1,8 @@
-var typeforce = require('../')
-var TYPES = require('../test/types')
-var VALUES = require('../test/values')
+const typeforce = require('../')
+const TYPES = require('../test/types')
+const VALUES = require('../test/values')
 
-var TYPES2 = [
+const TYPES2 = [
   'Array',
   'Boolean',
   'Buffer',
@@ -28,7 +28,7 @@ var TYPES2 = [
   0
 ]
 
-var VALUES2 = [
+const VALUES2 = [
   '',
   'foobar',
   0,
@@ -56,54 +56,57 @@ var VALUES2 = [
   { a: 'foo', b: { c: 'bar' } }
 ]
 
-var fixtures = {
+const fixtures = {
   valid: [],
   invalid: []
 }
 
-TYPES2.concat(Object.keys(TYPES)).forEach(function (type) {
-  VALUES2.concat(Object.keys(VALUES)).forEach(function (value) {
-    var f = {}
-    var atype, avalue
+function addFixture (type, value) {
+  const f = {}
+  let atype, avalue
 
-    if (TYPES[type]) {
-      f.typeId = type
-      atype = TYPES[type]
-    } else {
-      f.type = type
-      atype = type
-    }
+  if (TYPES[type]) {
+    f.typeId = type
+    atype = TYPES[type]
+  } else {
+    f.type = type
+    atype = type
+  }
 
-    if (VALUES[value]) {
-      f.valueId = value
-      avalue = VALUES[value]
-    } else {
-      f.value = value
-      avalue = value
+  if (VALUES[value]) {
+    f.valueId = value
+    avalue = VALUES[value]
+  } else {
+    f.value = value
+    avalue = value
+  }
+
+  try {
+    typeforce(atype, avalue, true)
+    fixtures.valid.push(f)
+  } catch (e) {
+    let exception = e.message
+      .replace(/([.*+?^=!:${}\[\]\/\\\(\)])/g, '\\$&')
+      .replace(/asciiSlice/g, '(asciiSlice|length|parent)')
+
+    if (exception.indexOf('asciiSlice') !== -1) {
+      exception = exception.replace(/Function/g, '(Function|Number|SlowBuffer)')
     }
 
     try {
-      typeforce(atype, avalue, true)
+      typeforce(atype, avalue, false)
+
       fixtures.valid.push(f)
+      fixtures.invalid.push(Object.assign({ exception, strict: true }, f))
     } catch (e) {
-      let exception = e.message
-        .replace(/([.*+?^=!:${}\[\]\/\\\(\)])/g, '\\$&')
-        .replace(/asciiSlice/g, '(asciiSlice|length|parent)')
-
-      if (exception.indexOf('asciiSlice') !== -1) {
-        exception = exception.replace(/Function/g, '(Function|Number|SlowBuffer)')
-      }
-
-      try {
-        typeforce(atype, avalue, false)
-
-        fixtures.valid.push(f)
-        fixtures.invalid.push(Object.assign({ exception, strict: true }, f))
-      } catch (e) {
-        fixtures.invalid.push(Object.assign({ exception }, f))
-      }
+      fixtures.invalid.push(Object.assign({ exception }, f))
     }
-  })
-})
+  }
+}
+
+const ALLTYPES = TYPES2.concat(Object.keys(TYPES))
+const ALLVALUES = VALUES2.concat(Object.keys(VALUES))
+
+ALLTYPES.forEach(type => ALLVALUES.forEach(value => addFixture(type, value)))
 
 console.log(JSON.stringify(fixtures, null, 2))
