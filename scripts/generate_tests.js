@@ -81,7 +81,7 @@ const fixtures = {
   invalid: []
 }
 
-function addFixture (type, value, only) {
+function addFixture (type, value) {
   const f = {}
   let atype, avalue
 
@@ -103,14 +103,14 @@ function addFixture (type, value, only) {
 
   try {
     typeforce(atype, avalue, true)
-    if (!only) fixtures.valid.push(f)
+    fixtures.valid.push(f)
   } catch (e) {
     let exception = e.message
       .replace(/([.*+?^=!:${}\[\]\/\\\(\)])/g, '\\$&')
 
     try {
       typeforce(atype, avalue, false)
-      if (!only) fixtures.valid.push(f)
+      fixtures.valid.push(f)
 
       if (exception.indexOf('asciiSlice') !== -1) return
       fixtures.invalid.push(Object.assign({ exception, strict: true }, f))
@@ -125,6 +125,6 @@ const ALLTYPES = TYPES2.concat(Object.keys(TYPES))
 const ALLVALUES = VALUES2.concat(Object.keys(VALUES))
 
 ALLTYPES.forEach(type => ALLVALUES.forEach(value => addFixture(type, value)))
-ALLTYPES.forEach(type => VALUESX.forEach(value => addFixture(type, value, true)))
+ALLTYPES.forEach(type => VALUESX.forEach(value => addFixture(type, value)))
 
 console.log(JSON.stringify(fixtures, null, 2))

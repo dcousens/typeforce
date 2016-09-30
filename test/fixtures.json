@@ -1148,6 +1148,438 @@
     {
       "typeId": "UInt53",
       "value": 1
+    },
+    {
+      "type": "Number",
+      "value": -1
+    },
+    {
+      "type": "Number",
+      "value": 127
+    },
+    {
+      "type": "Number",
+      "value": 128
+    },
+    {
+      "type": "Number",
+      "value": 255
+    },
+    {
+      "type": "Number",
+      "value": 256
+    },
+    {
+      "type": "Number",
+      "value": -128
+    },
+    {
+      "type": "Number",
+      "value": -129
+    },
+    {
+      "type": "Number",
+      "value": 65534
+    },
+    {
+      "type": "Number",
+      "value": 65535
+    },
+    {
+      "type": "Number",
+      "value": 65536
+    },
+    {
+      "type": "Number",
+      "value": 4294967295
+    },
+    {
+      "type": "Number",
+      "value": 9007199254740991
+    },
+    {
+      "type": "Number",
+      "value": 9007199254740994
+    },
+    {
+      "type": "String",
+      "value": "buffer10"
+    },
+    {
+      "type": "String",
+      "value": "fff"
+    },
+    {
+      "type": "String",
+      "value": "cafe1122deadbeef"
+    },
+    {
+      "type": "?Number",
+      "value": -1
+    },
+    {
+      "type": "?Number",
+      "value": 127
+    },
+    {
+      "type": "?Number",
+      "value": 128
+    },
+    {
+      "type": "?Number",
+      "value": 255
+    },
+    {
+      "type": "?Number",
+      "value": 256
+    },
+    {
+      "type": "?Number",
+      "value": -128
+    },
+    {
+      "type": "?Number",
+      "value": -129
+    },
+    {
+      "type": "?Number",
+      "value": 65534
+    },
+    {
+      "type": "?Number",
+      "value": 65535
+    },
+    {
+      "type": "?Number",
+      "value": 65536
+    },
+    {
+      "type": "?Number",
+      "value": 4294967295
+    },
+    {
+      "type": "?Number",
+      "value": 9007199254740991
+    },
+    {
+      "type": "?Number",
+      "value": 9007199254740994
+    },
+    {
+      "typeId": "(Number|String)",
+      "value": "buffer10"
+    },
+    {
+      "typeId": "(Number|String)",
+      "value": "fff"
+    },
+    {
+      "typeId": "(Number|String)",
+      "value": "cafe1122deadbeef"
+    },
+    {
+      "typeId": "Boolean|Number|String",
+      "value": "buffer10"
+    },
+    {
+      "typeId": "Boolean|Number|String",
+      "value": "fff"
+    },
+    {
+      "typeId": "Boolean|Number|String",
+      "value": "cafe1122deadbeef"
+    },
+    {
+      "typeId": "Boolean|Number|String",
+      "value": -1
+    },
+    {
+      "typeId": "Boolean|Number|String",
+      "value": 127
+    },
+    {
+      "typeId": "Boolean|Number|String",
+      "value": 128
+    },
+    {
+      "typeId": "Boolean|Number|String",
+      "value": 255
+    },
+    {
+      "typeId": "Boolean|Number|String",
+      "value": 256
+    },
+    {
+      "typeId": "Boolean|Number|String",
+      "value": -128
+    },
+    {
+      "typeId": "Boolean|Number|String",
+      "value": -129
+    },
+    {
+      "typeId": "Boolean|Number|String",
+      "value": 65534
+    },
+    {
+      "typeId": "Boolean|Number|String",
+      "value": 65535
+    },
+    {
+      "typeId": "Boolean|Number|String",
+      "value": 65536
+    },
+    {
+      "typeId": "Boolean|Number|String",
+      "value": 4294967295
+    },
+    {
+      "typeId": "Boolean|Number|String",
+      "value": 9007199254740991
+    },
+    {
+      "typeId": "Boolean|Number|String",
+      "value": 9007199254740994
+    },
+    {
+      "typeId": "?Boolean|Number",
+      "value": -1
+    },
+    {
+      "typeId": "?Boolean|Number",
+      "value": 127
+    },
+    {
+      "typeId": "?Boolean|Number",
+      "value": 128
+    },
+    {
+      "typeId": "?Boolean|Number",
+      "value": 255
+    },
+    {
+      "typeId": "?Boolean|Number",
+      "value": 256
+    },
+    {
+      "typeId": "?Boolean|Number",
+      "value": -128
+    },
+    {
+      "typeId": "?Boolean|Number",
+      "value": -129
+    },
+    {
+      "typeId": "?Boolean|Number",
+      "value": 65534
+    },
+    {
+      "typeId": "?Boolean|Number",
+      "value": 65535
+    },
+    {
+      "typeId": "?Boolean|Number",
+      "value": 65536
+    },
+    {
+      "typeId": "?Boolean|Number",
+      "value": 4294967295
+    },
+    {
+      "typeId": "?Boolean|Number",
+      "value": 9007199254740991
+    },
+    {
+      "typeId": "?Boolean|Number",
+      "value": 9007199254740994
+    },
+    {
+      "typeId": "Hex",
+      "value": "cafe1122deadbeef"
+    },
+    {
+      "typeId": "Int8",
+      "value": -1
+    },
+    {
+      "typeId": "Int8",
+      "value": 127
+    },
+    {
+      "typeId": "Int8",
+      "value": -128
+    },
+    {
+      "typeId": "Int16",
+      "value": -1
+    },
+    {
+      "typeId": "Int16",
+      "value": 127
+    },
+    {
+      "typeId": "Int16",
+      "value": 128
+    },
+    {
+      "typeId": "Int16",
+      "value": 255
+    },
+    {
+      "typeId": "Int16",
+      "value": 256
+    },
+    {
+      "typeId": "Int16",
+      "value": -128
+    },
+    {
+      "typeId": "Int16",
+      "value": -129
+    },
+    {
+      "typeId": "Int32",
+      "value": -1
+    },
+    {
+      "typeId": "Int32",
+      "value": 127
+    },
+    {
+      "typeId": "Int32",
+      "value": 128
+    },
+    {
+      "typeId": "Int32",
+      "value": 255
+    },
+    {
+      "typeId": "Int32",
+      "value": 256
+    },
+    {
+      "typeId": "Int32",
+      "value": -128
+    },
+    {
+      "typeId": "Int32",
+      "value": -129
+    },
+    {
+      "typeId": "Int32",
+      "value": 65534
+    },
+    {
+      "typeId": "Int32",
+      "value": 65535
+    },
+    {
+      "typeId": "Int32",
+      "value": 65536
+    },
+    {
+      "typeId": "UInt8",
+      "value": 127
+    },
+    {
+      "typeId": "UInt8",
+      "value": 128
+    },
+    {
+      "typeId": "UInt8",
+      "value": 255
+    },
+    {
+      "typeId": "UInt16",
+      "value": 127
+    },
+    {
+      "typeId": "UInt16",
+      "value": 128
+    },
+    {
+      "typeId": "UInt16",
+      "value": 255
+    },
+    {
+      "typeId": "UInt16",
+      "value": 256
+    },
+    {
+      "typeId": "UInt16",
+      "value": 65534
+    },
+    {
+      "typeId": "UInt16",
+      "value": 65535
+    },
+    {
+      "typeId": "UInt32",
+      "value": 127
+    },
+    {
+      "typeId": "UInt32",
+      "value": 128
+    },
+    {
+      "typeId": "UInt32",
+      "value": 255
+    },
+    {
+      "typeId": "UInt32",
+      "value": 256
+    },
+    {
+      "typeId": "UInt32",
+      "value": 65534
+    },
+    {
+      "typeId": "UInt32",
+      "value": 65535
+    },
+    {
+      "typeId": "UInt32",
+      "value": 65536
+    },
+    {
+      "typeId": "UInt32",
+      "value": 4294967295
+    },
+    {
+      "typeId": "UInt53",
+      "value": 127
+    },
+    {
+      "typeId": "UInt53",
+      "value": 128
+    },
+    {
+      "typeId": "UInt53",
+      "value": 255
+    },
+    {
+      "typeId": "UInt53",
+      "value": 256
+    },
+    {
+      "typeId": "UInt53",
+      "value": 65534
+    },
+    {
+      "typeId": "UInt53",
+      "value": 65535
+    },
+    {
+      "typeId": "UInt53",
+      "value": 65536
+    },
+    {
+      "typeId": "UInt53",
+      "value": 4294967295
+    },
+    {
+      "typeId": "UInt53",
+      "value": 9007199254740991
     }
   ],
   "invalid": [
