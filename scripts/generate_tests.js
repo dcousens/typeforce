@@ -91,7 +91,7 @@ TYPES2.concat(Object.keys(TYPES)).forEach(function (type) {
         .replace(/asciiSlice/g, '(asciiSlice|length|parent)')
 
       if (exception.indexOf('asciiSlice') !== -1) {
-        exception = exception.replace(/Function/g, '(Function|SlowBuffer)')
+        exception = exception.replace(/Function/g, '(Function|Number|SlowBuffer)')
       }
 
       try {
