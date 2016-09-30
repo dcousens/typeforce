@@ -9907,7 +9907,7 @@
       "valueId": "customType"
     },
     {
-      "exception": "typeforce\\.TfTypeError is not a function",
+      "exception": "Expected Buffer\\(Length\\: 0\\), got String \"Buffer\\(Length\\: 3\\)\"",
       "typeId": "Buffer0",
       "valueId": "buffer3"
     },
@@ -10105,12 +10105,12 @@
       "valueId": "customType"
     },
     {
-      "exception": "typeforce\\.TfTypeError is not a function",
+      "exception": "Expected Buffer\\(Length\\: 10\\), got String \"Buffer\\(Length\\: 0\\)\"",
       "typeId": "Buffer10",
       "valueId": "buffer"
     },
     {
-      "exception": "typeforce\\.TfTypeError is not a function",
+      "exception": "Expected Buffer\\(Length\\: 10\\), got String \"Buffer\\(Length\\: 3\\)\"",
       "typeId": "Buffer10",
       "valueId": "buffer3"
     },
