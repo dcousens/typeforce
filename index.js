@@ -11,6 +11,38 @@ var nativeTypes = {
   '': function () { return true }
 }
 
+function getFunctionName (fn) {
+  return fn.name || fn.toString().match(/function (.*?)\s*\(/)[1]
+}
+
+function getValueTypeName (value) {
+  if (nativeTypes.Null(value)) return ''
+
+  return getFunctionName(value.constructor)
+}
+
+function getValue (value) {
+  if (nativeTypes.Function(value)) return ''
+  if (nativeTypes.String(value)) return JSON.stringify(value)
+  if (value && nativeTypes.Object(value)) return ''
+
+  return value
+}
+
+function tfJSON (type) {
+  if (nativeTypes.Function(type)) return type.toJSON ? type.toJSON() : getFunctionName(type)
+  if (nativeTypes.Array(type)) return 'Array'
+  if (type && nativeTypes.Object(type)) return 'Object'
+
+  return type !== undefined ? type : ''
+}
+
+function stfJSON (type) {
+  type = tfJSON(type)
+
+  return nativeTypes.Object(type) ? JSON.stringify(type) : type
+}
+
 function TfTypeError (type, value) {
   this.tfError = Error.call(this)
 
@@ -68,38 +100,6 @@ TfPropertyTypeError.prototype.asChildOf = function (property) {
   return new TfPropertyTypeError(this.tfType, property + '.' + this.tfProperty, this.tfSide, this.tfValue, this.tfError)
 }
 
-function getFunctionName (fn) {
-  return fn.name || fn.toString().match(/function (.*?)\s*\(/)[1]
-}
-
-function getValueTypeName (value) {
-  if (nativeTypes.Null(value)) return ''
-
-  return getFunctionName(value.constructor)
-}
-
-function getValue (value) {
-  if (nativeTypes.Function(value)) return ''
-  if (nativeTypes.String(value)) return JSON.stringify(value)
-  if (value && nativeTypes.Object(value)) return ''
-
-  return value
-}
-
-function tfJSON (type) {
-  if (nativeTypes.Function(type)) return type.toJSON ? type.toJSON() : getFunctionName(type)
-  if (nativeTypes.Array(type)) return 'Array'
-  if (type && nativeTypes.Object(type)) return 'Object'
-
-  return type || ''
-}
-
-function stfJSON (type) {
-  type = tfJSON(type)
-
-  return nativeTypes.Object(type) ? JSON.stringify(type) : type
-}
-
 function tfErrorString (type, value) {
   var valueTypeName = getValueTypeName(value)
   var valueValue = getValue(value)
@@ -115,7 +115,6 @@ function tfPropertyErrorString (type, side, name, value) {
 }
 
 function tfSubError (e, propertyName, sideLabel) {
-  if (typeof propertyName === 'number') propertyName = '[' + propertyName + ']'
   if (e instanceof TfPropertyTypeError) return e.asChildOf(propertyName)
   if (e instanceof TfTypeError) {
     return new TfPropertyTypeError(e.tfType, propertyName, sideLabel, e.tfValue, e.tfError)
