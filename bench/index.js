@@ -1,50 +1,43 @@
-var assert = require('assert')
-var benchmark = require('benchmark')
-benchmark.options.minTime = 1
-
-var local = require('../')
-var npm = require('typeforce')
-
-function CustomType () { return 'ensure non-greedy match'.toUpperCase() }
-var CUSTOM_TYPES = {
-  'Buffer': new Buffer(1),
-  'CustomType': new CustomType(),
-  'Function': function () {}
-}
-
-var fixtures = require('../test/fixtures').valid
-// var fixtures = [
-//   { 'type': '?Number', 'value': null },
-//   { 'type': [ '?Number' ], 'value': [ 1, null ] },
-//   { 'type': [ { 'a': 'Number' } ], 'value': [ { 'a': 1 }, { 'a': 2 } ] },
-//   { 'type': [ { 'a': '?Number' } ], 'value': [ { 'a': 1 }, { 'a': null } ] }
-// ]
+const assert = require('assert')
+const benchmark = require('benchmark')
+const local = require('../')
+const npm = require('typeforce')
+const TYPES = require('../test/types')
+const VALUES = require('../test/values')
+const fixtures = require('../test/fixtures').valid
 
 fixtures.forEach(function (f) {
-  var suite = new benchmark.Suite()
-  var tdescription = JSON.stringify(f.type)
+  const type = TYPES[f.typeId] || f.type
+  const value = VALUES[f.valueId] || f.value
+  const ctype = local.compile(type)
 
-  var actualValue = f.custom ? CUSTOM_TYPES[f.custom] : f.value
-  var ctype = local.compile(f.type)
+  local(ctype, value, f.strict)
+  npm(ctype, value, f.strict)
+})
+
+// benchmark.options.minTime = 1
+fixtures.forEach(function (f) {
+  const suite = new benchmark.Suite()
+  const tdescription = JSON.stringify(f.type)
+  const type = TYPES[f.typeId] || f.type
+  const value = VALUES[f.valueId] || f.value
+  const ctype = local.compile(type)
 
   if (f.exception) {
-    assert.throws(function () { local(f.type, actualValue, f.strict) }, new RegExp(f.exception))
-    assert.throws(function () { npm(f.type, actualValue, f.strict) }, new RegExp(f.exception))
-    assert.throws(function () { local(ctype, actualValue, f.strict) }, new RegExp(f.exception))
-    assert.throws(function () { npm(ctype, actualValue, f.strict) }, new RegExp(f.exception))
+    assert.throws(function () { local(f.type, value, f.strict) }, new RegExp(f.exception))
+    assert.throws(function () { npm(f.type, value, f.strict) }, new RegExp(f.exception))
+    assert.throws(function () { local(ctype, value, f.strict) }, new RegExp(f.exception))
+    assert.throws(function () { npm(ctype, value, f.strict) }, new RegExp(f.exception))
 
-    suite.add('local(e)#' + tdescription, function () { try { local(f.type, actualValue, f.strict) } catch (e) {} })
-    suite.add('  npm(e)#' + tdescription, function () { try { npm(f.type, actualValue, f.strict) } catch (e) {} })
-    suite.add('local(c, e)#' + tdescription, function () { try { local(ctype, actualValue, f.strict) } catch (e) {} })
-    suite.add('  npm(c, e)#' + tdescription, function () { try { npm(ctype, actualValue, f.strict) } catch (e) {} })
+    suite.add('local(e)#' + tdescription, function () { try { local(f.type, value, f.strict) } catch (e) {} })
+    suite.add('  npm(e)#' + tdescription, function () { try { npm(f.type, value, f.strict) } catch (e) {} })
+    suite.add('local(c, e)#' + tdescription, function () { try { local(ctype, value, f.strict) } catch (e) {} })
+    suite.add('  npm(c, e)#' + tdescription, function () { try { npm(ctype, value, f.strict) } catch (e) {} })
   } else {
-    local(ctype, actualValue, f.strict)
-    npm(ctype, actualValue, f.strict)
-
-    suite.add('local#' + tdescription, function () { local(f.type, actualValue, f.strict) })
-    suite.add('  npm#' + tdescription, function () { npm(f.type, actualValue, f.strict) })
-    suite.add('local(c)#' + tdescription, function () { local(ctype, actualValue, f.strict) })
-    suite.add('  npm(c)#' + tdescription, function () { npm(ctype, actualValue, f.strict) })
+    suite.add('local#' + tdescription, function () { local(f.type, value, f.strict) })
+    suite.add('  npm#' + tdescription, function () { npm(f.type, value, f.strict) })
+    suite.add('local(c)#' + tdescription, function () { local(ctype, value, f.strict) })
+    suite.add('  npm(c)#' + tdescription, function () { npm(ctype, value, f.strict) })
   }
 
   // after each cycle
