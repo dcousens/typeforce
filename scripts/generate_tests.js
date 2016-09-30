@@ -86,18 +86,17 @@ TYPES2.concat(Object.keys(TYPES)).forEach(function (type) {
       typeforce(atype, avalue, true)
       fixtures.valid.push(f)
     } catch (e) {
+      const exception = e.message
+        .replace(/\)/g, '\\)')
+        .replace(/\(/g, '\\(')
+
       try {
         typeforce(atype, avalue, false)
 
         fixtures.valid.push(f)
-        fixtures.invalid.push(Object.assign({
-          exception: e.message,
-          strict: true
-        }, f))
+        fixtures.invalid.push(Object.assign({ exception, strict: true }, f))
       } catch (e) {
-        fixtures.invalid.push(Object.assign({
-          exception: e.message
-        }, f))
+        fixtures.invalid.push(Object.assign({ exception }, f))
       }
     }
   })
