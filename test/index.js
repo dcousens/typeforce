@@ -52,11 +52,11 @@ fixtures.invalid.forEach(function (f) {
 })
 
 var err = new typeforce.TfTypeError('custom error')
-var failType = function () { throw new typeforce.TfTypeError('custom error') }
+var failType = function () { throw new typeforce.TfTypeError('mytype') }
 
 tape('TfTypeError has .message', function (t) {
   t.plan(1)
-  t.equal(err.message, 'custom error')
+  t.equal(err.message, 'Expected mytype, got undefined')
 })
 
 tape('TfTypeError is instance of Error', function (t) {
@@ -68,5 +68,5 @@ tape('t.throws can handle TfTypeError', function (t) {
   t.plan(1)
   t.throws(function () {
     typeforce(failType, 'value')
-  }, new RegExp('custom error'))
+  }, new RegExp('Expected mytype, got undefined'))
 })
