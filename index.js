@@ -129,7 +129,7 @@ var otherTypes = {
         try {
           return typeforce(type, value, strict)
         } catch (e) {
-          throw tfSubError(e, i, 'element')
+          throw tfSubError(e, i)
         }
       })
     }
@@ -164,7 +164,7 @@ var otherTypes = {
           typeforce(propertyType, propertyValue, strict)
         }
       } catch (e) {
-        throw tfSubError(e, propertyName, 'value')
+        throw tfSubError(e, propertyName)
       }
 
       if (strict) {
@@ -203,7 +203,7 @@ var otherTypes = {
           var propertyValue = value[propertyName]
           typeforce(propertyType, propertyValue, strict)
         } catch (e) {
-          throw tfSubError(e, propertyName, 'value')
+          throw tfSubError(e, propertyName)
         }
       }
 
@@ -249,7 +249,7 @@ var otherTypes = {
         try {
           return typeforce(type, values[i], strict)
         } catch (e) {
-          throw tfSubError(e, i, 'element')
+          throw tfSubError(e, i)
         }
       })
     }
