@@ -8587,7 +8587,7 @@
       "valueId": "customType"
     },
     {
-      "exception": "Expected property \"(asciiSlice|length|parent)\" of type String, got (Function|SlowBuffer)",
+      "exception": "Expected property \"(asciiSlice|length|parent)\" of type String, got (Function|Number|SlowBuffer)",
       "typeId": "{ String }",
       "valueId": "buffer"
     },
@@ -8721,7 +8721,7 @@
       "valueId": "function"
     },
     {
-      "exception": "Expected property \"(asciiSlice|length|parent)\" of type String|Number, got (Function|SlowBuffer)",
+      "exception": "Expected property \"(asciiSlice|length|parent)\" of type String|Number, got (Function|Number|SlowBuffer)",
       "typeId": "{ String|Number }",
       "valueId": "buffer"
     },
@@ -8870,7 +8870,7 @@
       "valueId": "function"
     },
     {
-      "exception": "Expected property \"(asciiSlice|length|parent)\" of type Number, got (Function|SlowBuffer)",
+      "exception": "Expected property \"(asciiSlice|length|parent)\" of type Number, got (Function|Number|SlowBuffer)",
       "typeId": "{ String: Number }",
       "valueId": "buffer"
     },
