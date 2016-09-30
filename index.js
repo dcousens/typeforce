@@ -2,7 +2,6 @@ var inherits = require('inherits')
 var nativeTypes = {
   Array: function (value) { return value !== null && value !== undefined && value.constructor === Array },
   Boolean: function (value) { return typeof value === 'boolean' },
-  Buffer: function (value) { return Buffer.isBuffer(value) },
   Function: function (value) { return typeof value === 'function' },
   Null: function (value) { return value === undefined || value === null },
   Number: function (value) { return typeof value === 'number' },
@@ -312,6 +311,11 @@ Object.keys(nativeTypes).forEach(function (typeName) {
 
 for (typeName in otherTypes) {
   typeforce[typeName] = otherTypes[typeName]
+}
+
+var extraTypes = require('./extra')
+for (typeName in extraTypes) {
+  typeforce[typeName] = extraTypes[typeName]
 }
 
 module.exports = typeforce

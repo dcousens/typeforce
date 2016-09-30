@@ -1088,6 +1088,66 @@
     {
       "typeId": "{ Letter: Number }",
       "valueId": "customType"
+    },
+    {
+      "typeId": "Buffer0",
+      "valueId": "buffer"
+    },
+    {
+      "typeId": "Int8",
+      "value": 0
+    },
+    {
+      "typeId": "Int8",
+      "value": 1
+    },
+    {
+      "typeId": "Int16",
+      "value": 0
+    },
+    {
+      "typeId": "Int16",
+      "value": 1
+    },
+    {
+      "typeId": "Int32",
+      "value": 0
+    },
+    {
+      "typeId": "Int32",
+      "value": 1
+    },
+    {
+      "typeId": "UInt8",
+      "value": 0
+    },
+    {
+      "typeId": "UInt8",
+      "value": 1
+    },
+    {
+      "typeId": "UInt16",
+      "value": 0
+    },
+    {
+      "typeId": "UInt16",
+      "value": 1
+    },
+    {
+      "typeId": "UInt32",
+      "value": 0
+    },
+    {
+      "typeId": "UInt32",
+      "value": 1
+    },
+    {
+      "typeId": "UInt53",
+      "value": 0
+    },
+    {
+      "typeId": "UInt53",
+      "value": 1
     }
   ],
   "invalid": [
@@ -9219,6 +9279,1961 @@
     {
       "exception": "Expected property \"0\" with key type Letter, got String \"0\"",
       "typeId": "{ Letter: Number }",
+      "valueId": "buffer3"
+    },
+    {
+      "exception": "Expected Buffer, got String \"\"",
+      "typeId": "Buffer0",
+      "value": ""
+    },
+    {
+      "exception": "Expected Buffer, got String \"foobar\"",
+      "typeId": "Buffer0",
+      "value": "foobar"
+    },
+    {
+      "exception": "Expected Buffer, got Number 0",
+      "typeId": "Buffer0",
+      "value": 0
+    },
+    {
+      "exception": "Expected Buffer, got Number 1",
+      "typeId": "Buffer0",
+      "value": 1
+    },
+    {
+      "exception": "Expected Buffer, got Array",
+      "typeId": "Buffer0",
+      "value": []
+    },
+    {
+      "exception": "Expected Buffer, got Array",
+      "typeId": "Buffer0",
+      "value": [
+        0
+      ]
+    },
+    {
+      "exception": "Expected Buffer, got Array",
+      "typeId": "Buffer0",
+      "value": [
+        "foobar"
+      ]
+    },
+    {
+      "exception": "Expected Buffer, got Array",
+      "typeId": "Buffer0",
+      "value": [
+        {
+          "a": 0
+        }
+      ]
+    },
+    {
+      "exception": "Expected Buffer, got Array",
+      "typeId": "Buffer0",
+      "value": [
+        null
+      ]
+    },
+    {
+      "exception": "Expected Buffer, got Boolean false",
+      "typeId": "Buffer0",
+      "value": false
+    },
+    {
+      "exception": "Expected Buffer, got Boolean true",
+      "typeId": "Buffer0",
+      "value": true
+    },
+    {
+      "exception": "Expected Buffer, got undefined",
+      "typeId": "Buffer0"
+    },
+    {
+      "exception": "Expected Buffer, got null",
+      "typeId": "Buffer0",
+      "value": null
+    },
+    {
+      "exception": "Expected Buffer, got Object",
+      "typeId": "Buffer0",
+      "value": {}
+    },
+    {
+      "exception": "Expected Buffer, got Object",
+      "typeId": "Buffer0",
+      "value": {
+        "a": null
+      }
+    },
+    {
+      "exception": "Expected Buffer, got Object",
+      "typeId": "Buffer0",
+      "value": {
+        "a": 0
+      }
+    },
+    {
+      "exception": "Expected Buffer, got Object",
+      "typeId": "Buffer0",
+      "value": {
+        "a": 0,
+        "b": 0
+      }
+    },
+    {
+      "exception": "Expected Buffer, got Object",
+      "typeId": "Buffer0",
+      "value": {
+        "b": 0
+      }
+    },
+    {
+      "exception": "Expected Buffer, got Object",
+      "typeId": "Buffer0",
+      "value": {
+        "a": {
+          "b": 0
+        }
+      }
+    },
+    {
+      "exception": "Expected Buffer, got Object",
+      "typeId": "Buffer0",
+      "value": {
+        "a": {
+          "b": null
+        }
+      }
+    },
+    {
+      "exception": "Expected Buffer, got Object",
+      "typeId": "Buffer0",
+      "value": {
+        "a": {
+          "b": {
+            "c": 0
+          }
+        }
+      }
+    },
+    {
+      "exception": "Expected Buffer, got Object",
+      "typeId": "Buffer0",
+      "value": {
+        "a": {
+          "b": {
+            "c": null
+          }
+        }
+      }
+    },
+    {
+      "exception": "Expected Buffer, got Object",
+      "typeId": "Buffer0",
+      "value": {
+        "a": {
+          "b": {
+            "c": 0,
+            "d": 0
+          }
+        }
+      }
+    },
+    {
+      "exception": "Expected Buffer, got Object",
+      "typeId": "Buffer0",
+      "value": {
+        "a": "foo",
+        "b": "bar"
+      }
+    },
+    {
+      "exception": "Expected Buffer, got Object",
+      "typeId": "Buffer0",
+      "value": {
+        "a": "foo",
+        "b": {
+          "c": "bar"
+        }
+      }
+    },
+    {
+      "exception": "Expected Buffer, got Function",
+      "typeId": "Buffer0",
+      "valueId": "function"
+    },
+    {
+      "exception": "Expected Buffer, got EmptyType",
+      "typeId": "Buffer0",
+      "valueId": "emptyType"
+    },
+    {
+      "exception": "Expected Buffer, got CustomType",
+      "typeId": "Buffer0",
+      "valueId": "customType"
+    },
+    {
+      "exception": "typeforce\\.TfTypeError is not a function",
+      "typeId": "Buffer0",
+      "valueId": "buffer3"
+    },
+    {
+      "exception": "Expected Buffer, got String \"\"",
+      "typeId": "Buffer10",
+      "value": ""
+    },
+    {
+      "exception": "Expected Buffer, got String \"foobar\"",
+      "typeId": "Buffer10",
+      "value": "foobar"
+    },
+    {
+      "exception": "Expected Buffer, got Number 0",
+      "typeId": "Buffer10",
+      "value": 0
+    },
+    {
+      "exception": "Expected Buffer, got Number 1",
+      "typeId": "Buffer10",
+      "value": 1
+    },
+    {
+      "exception": "Expected Buffer, got Array",
+      "typeId": "Buffer10",
+      "value": []
+    },
+    {
+      "exception": "Expected Buffer, got Array",
+      "typeId": "Buffer10",
+      "value": [
+        0
+      ]
+    },
+    {
+      "exception": "Expected Buffer, got Array",
+      "typeId": "Buffer10",
+      "value": [
+        "foobar"
+      ]
+    },
+    {
+      "exception": "Expected Buffer, got Array",
+      "typeId": "Buffer10",
+      "value": [
+        {
+          "a": 0
+        }
+      ]
+    },
+    {
+      "exception": "Expected Buffer, got Array",
+      "typeId": "Buffer10",
+      "value": [
+        null
+      ]
+    },
+    {
+      "exception": "Expected Buffer, got Boolean false",
+      "typeId": "Buffer10",
+      "value": false
+    },
+    {
+      "exception": "Expected Buffer, got Boolean true",
+      "typeId": "Buffer10",
+      "value": true
+    },
+    {
+      "exception": "Expected Buffer, got undefined",
+      "typeId": "Buffer10"
+    },
+    {
+      "exception": "Expected Buffer, got null",
+      "typeId": "Buffer10",
+      "value": null
+    },
+    {
+      "exception": "Expected Buffer, got Object",
+      "typeId": "Buffer10",
+      "value": {}
+    },
+    {
+      "exception": "Expected Buffer, got Object",
+      "typeId": "Buffer10",
+      "value": {
+        "a": null
+      }
+    },
+    {
+      "exception": "Expected Buffer, got Object",
+      "typeId": "Buffer10",
+      "value": {
+        "a": 0
+      }
+    },
+    {
+      "exception": "Expected Buffer, got Object",
+      "typeId": "Buffer10",
+      "value": {
+        "a": 0,
+        "b": 0
+      }
+    },
+    {
+      "exception": "Expected Buffer, got Object",
+      "typeId": "Buffer10",
+      "value": {
+        "b": 0
+      }
+    },
+    {
+      "exception": "Expected Buffer, got Object",
+      "typeId": "Buffer10",
+      "value": {
+        "a": {
+          "b": 0
+        }
+      }
+    },
+    {
+      "exception": "Expected Buffer, got Object",
+      "typeId": "Buffer10",
+      "value": {
+        "a": {
+          "b": null
+        }
+      }
+    },
+    {
+      "exception": "Expected Buffer, got Object",
+      "typeId": "Buffer10",
+      "value": {
+        "a": {
+          "b": {
+            "c": 0
+          }
+        }
+      }
+    },
+    {
+      "exception": "Expected Buffer, got Object",
+      "typeId": "Buffer10",
+      "value": {
+        "a": {
+          "b": {
+            "c": null
+          }
+        }
+      }
+    },
+    {
+      "exception": "Expected Buffer, got Object",
+      "typeId": "Buffer10",
+      "value": {
+        "a": {
+          "b": {
+            "c": 0,
+            "d": 0
+          }
+        }
+      }
+    },
+    {
+      "exception": "Expected Buffer, got Object",
+      "typeId": "Buffer10",
+      "value": {
+        "a": "foo",
+        "b": "bar"
+      }
+    },
+    {
+      "exception": "Expected Buffer, got Object",
+      "typeId": "Buffer10",
+      "value": {
+        "a": "foo",
+        "b": {
+          "c": "bar"
+        }
+      }
+    },
+    {
+      "exception": "Expected Buffer, got Function",
+      "typeId": "Buffer10",
+      "valueId": "function"
+    },
+    {
+      "exception": "Expected Buffer, got EmptyType",
+      "typeId": "Buffer10",
+      "valueId": "emptyType"
+    },
+    {
+      "exception": "Expected Buffer, got CustomType",
+      "typeId": "Buffer10",
+      "valueId": "customType"
+    },
+    {
+      "exception": "typeforce\\.TfTypeError is not a function",
+      "typeId": "Buffer10",
+      "valueId": "buffer"
+    },
+    {
+      "exception": "typeforce\\.TfTypeError is not a function",
+      "typeId": "Buffer10",
+      "valueId": "buffer3"
+    },
+    {
+      "exception": "Expected Hex, got String \"\"",
+      "typeId": "Hex",
+      "value": ""
+    },
+    {
+      "exception": "Expected Hex, got String \"foobar\"",
+      "typeId": "Hex",
+      "value": "foobar"
+    },
+    {
+      "exception": "Expected Hex, got Number 0",
+      "typeId": "Hex",
+      "value": 0
+    },
+    {
+      "exception": "Expected Hex, got Number 1",
+      "typeId": "Hex",
+      "value": 1
+    },
+    {
+      "exception": "Expected Hex, got Array",
+      "typeId": "Hex",
+      "value": []
+    },
+    {
+      "exception": "Expected Hex, got Array",
+      "typeId": "Hex",
+      "value": [
+        0
+      ]
+    },
+    {
+      "exception": "Expected Hex, got Array",
+      "typeId": "Hex",
+      "value": [
+        "foobar"
+      ]
+    },
+    {
+      "exception": "Expected Hex, got Array",
+      "typeId": "Hex",
+      "value": [
+        {
+          "a": 0
+        }
+      ]
+    },
+    {
+      "exception": "Expected Hex, got Array",
+      "typeId": "Hex",
+      "value": [
+        null
+      ]
+    },
+    {
+      "exception": "Expected Hex, got Boolean false",
+      "typeId": "Hex",
+      "value": false
+    },
+    {
+      "exception": "Expected Hex, got Boolean true",
+      "typeId": "Hex",
+      "value": true
+    },
+    {
+      "exception": "Expected Hex, got undefined",
+      "typeId": "Hex"
+    },
+    {
+      "exception": "Expected Hex, got null",
+      "typeId": "Hex",
+      "value": null
+    },
+    {
+      "exception": "Expected Hex, got Object",
+      "typeId": "Hex",
+      "value": {}
+    },
+    {
+      "exception": "Expected Hex, got Object",
+      "typeId": "Hex",
+      "value": {
+        "a": null
+      }
+    },
+    {
+      "exception": "Expected Hex, got Object",
+      "typeId": "Hex",
+      "value": {
+        "a": 0
+      }
+    },
+    {
+      "exception": "Expected Hex, got Object",
+      "typeId": "Hex",
+      "value": {
+        "a": 0,
+        "b": 0
+      }
+    },
+    {
+      "exception": "Expected Hex, got Object",
+      "typeId": "Hex",
+      "value": {
+        "b": 0
+      }
+    },
+    {
+      "exception": "Expected Hex, got Object",
+      "typeId": "Hex",
+      "value": {
+        "a": {
+          "b": 0
+        }
+      }
+    },
+    {
+      "exception": "Expected Hex, got Object",
+      "typeId": "Hex",
+      "value": {
+        "a": {
+          "b": null
+        }
+      }
+    },
+    {
+      "exception": "Expected Hex, got Object",
+      "typeId": "Hex",
+      "value": {
+        "a": {
+          "b": {
+            "c": 0
+          }
+        }
+      }
+    },
+    {
+      "exception": "Expected Hex, got Object",
+      "typeId": "Hex",
+      "value": {
+        "a": {
+          "b": {
+            "c": null
+          }
+        }
+      }
+    },
+    {
+      "exception": "Expected Hex, got Object",
+      "typeId": "Hex",
+      "value": {
+        "a": {
+          "b": {
+            "c": 0,
+            "d": 0
+          }
+        }
+      }
+    },
+    {
+      "exception": "Expected Hex, got Object",
+      "typeId": "Hex",
+      "value": {
+        "a": "foo",
+        "b": "bar"
+      }
+    },
+    {
+      "exception": "Expected Hex, got Object",
+      "typeId": "Hex",
+      "value": {
+        "a": "foo",
+        "b": {
+          "c": "bar"
+        }
+      }
+    },
+    {
+      "exception": "Expected Hex, got Function",
+      "typeId": "Hex",
+      "valueId": "function"
+    },
+    {
+      "exception": "Expected Hex, got EmptyType",
+      "typeId": "Hex",
+      "valueId": "emptyType"
+    },
+    {
+      "exception": "Expected Hex, got CustomType",
+      "typeId": "Hex",
+      "valueId": "customType"
+    },
+    {
+      "exception": "Expected Hex, got Buffer",
+      "typeId": "Hex",
+      "valueId": "buffer"
+    },
+    {
+      "exception": "Expected Hex, got Buffer",
+      "typeId": "Hex",
+      "valueId": "buffer3"
+    },
+    {
+      "exception": "Expected Int8, got String \"\"",
+      "typeId": "Int8",
+      "value": ""
+    },
+    {
+      "exception": "Expected Int8, got String \"foobar\"",
+      "typeId": "Int8",
+      "value": "foobar"
+    },
+    {
+      "exception": "Expected Int8, got Array",
+      "typeId": "Int8",
+      "value": []
+    },
+    {
+      "exception": "Expected Int8, got Array",
+      "typeId": "Int8",
+      "value": [
+        0
+      ]
+    },
+    {
+      "exception": "Expected Int8, got Array",
+      "typeId": "Int8",
+      "value": [
+        "foobar"
+      ]
+    },
+    {
+      "exception": "Expected Int8, got Array",
+      "typeId": "Int8",
+      "value": [
+        {
+          "a": 0
+        }
+      ]
+    },
+    {
+      "exception": "Expected Int8, got Array",
+      "typeId": "Int8",
+      "value": [
+        null
+      ]
+    },
+    {
+      "exception": "Expected Int8, got Boolean false",
+      "typeId": "Int8",
+      "value": false
+    },
+    {
+      "exception": "Expected Int8, got Boolean true",
+      "typeId": "Int8",
+      "value": true
+    },
+    {
+      "exception": "Expected Int8, got undefined",
+      "typeId": "Int8"
+    },
+    {
+      "exception": "Expected Int8, got null",
+      "typeId": "Int8",
+      "value": null
+    },
+    {
+      "exception": "Expected Int8, got Object",
+      "typeId": "Int8",
+      "value": {}
+    },
+    {
+      "exception": "Expected Int8, got Object",
+      "typeId": "Int8",
+      "value": {
+        "a": null
+      }
+    },
+    {
+      "exception": "Expected Int8, got Object",
+      "typeId": "Int8",
+      "value": {
+        "a": 0
+      }
+    },
+    {
+      "exception": "Expected Int8, got Object",
+      "typeId": "Int8",
+      "value": {
+        "a": 0,
+        "b": 0
+      }
+    },
+    {
+      "exception": "Expected Int8, got Object",
+      "typeId": "Int8",
+      "value": {
+        "b": 0
+      }
+    },
+    {
+      "exception": "Expected Int8, got Object",
+      "typeId": "Int8",
+      "value": {
+        "a": {
+          "b": 0
+        }
+      }
+    },
+    {
+      "exception": "Expected Int8, got Object",
+      "typeId": "Int8",
+      "value": {
+        "a": {
+          "b": null
+        }
+      }
+    },
+    {
+      "exception": "Expected Int8, got Object",
+      "typeId": "Int8",
+      "value": {
+        "a": {
+          "b": {
+            "c": 0
+          }
+        }
+      }
+    },
+    {
+      "exception": "Expected Int8, got Object",
+      "typeId": "Int8",
+      "value": {
+        "a": {
+          "b": {
+            "c": null
+          }
+        }
+      }
+    },
+    {
+      "exception": "Expected Int8, got Object",
+      "typeId": "Int8",
+      "value": {
+        "a": {
+          "b": {
+            "c": 0,
+            "d": 0
+          }
+        }
+      }
+    },
+    {
+      "exception": "Expected Int8, got Object",
+      "typeId": "Int8",
+      "value": {
+        "a": "foo",
+        "b": "bar"
+      }
+    },
+    {
+      "exception": "Expected Int8, got Object",
+      "typeId": "Int8",
+      "value": {
+        "a": "foo",
+        "b": {
+          "c": "bar"
+        }
+      }
+    },
+    {
+      "exception": "Expected Int8, got Function",
+      "typeId": "Int8",
+      "valueId": "function"
+    },
+    {
+      "exception": "Expected Int8, got EmptyType",
+      "typeId": "Int8",
+      "valueId": "emptyType"
+    },
+    {
+      "exception": "Expected Int8, got CustomType",
+      "typeId": "Int8",
+      "valueId": "customType"
+    },
+    {
+      "exception": "Expected Int8, got Buffer",
+      "typeId": "Int8",
+      "valueId": "buffer"
+    },
+    {
+      "exception": "Expected Int8, got Buffer",
+      "typeId": "Int8",
+      "valueId": "buffer3"
+    },
+    {
+      "exception": "Expected Int16, got String \"\"",
+      "typeId": "Int16",
+      "value": ""
+    },
+    {
+      "exception": "Expected Int16, got String \"foobar\"",
+      "typeId": "Int16",
+      "value": "foobar"
+    },
+    {
+      "exception": "Expected Int16, got Array",
+      "typeId": "Int16",
+      "value": []
+    },
+    {
+      "exception": "Expected Int16, got Array",
+      "typeId": "Int16",
+      "value": [
+        0
+      ]
+    },
+    {
+      "exception": "Expected Int16, got Array",
+      "typeId": "Int16",
+      "value": [
+        "foobar"
+      ]
+    },
+    {
+      "exception": "Expected Int16, got Array",
+      "typeId": "Int16",
+      "value": [
+        {
+          "a": 0
+        }
+      ]
+    },
+    {
+      "exception": "Expected Int16, got Array",
+      "typeId": "Int16",
+      "value": [
+        null
+      ]
+    },
+    {
+      "exception": "Expected Int16, got Boolean false",
+      "typeId": "Int16",
+      "value": false
+    },
+    {
+      "exception": "Expected Int16, got Boolean true",
+      "typeId": "Int16",
+      "value": true
+    },
+    {
+      "exception": "Expected Int16, got undefined",
+      "typeId": "Int16"
+    },
+    {
+      "exception": "Expected Int16, got null",
+      "typeId": "Int16",
+      "value": null
+    },
+    {
+      "exception": "Expected Int16, got Object",
+      "typeId": "Int16",
+      "value": {}
+    },
+    {
+      "exception": "Expected Int16, got Object",
+      "typeId": "Int16",
+      "value": {
+        "a": null
+      }
+    },
+    {
+      "exception": "Expected Int16, got Object",
+      "typeId": "Int16",
+      "value": {
+        "a": 0
+      }
+    },
+    {
+      "exception": "Expected Int16, got Object",
+      "typeId": "Int16",
+      "value": {
+        "a": 0,
+        "b": 0
+      }
+    },
+    {
+      "exception": "Expected Int16, got Object",
+      "typeId": "Int16",
+      "value": {
+        "b": 0
+      }
+    },
+    {
+      "exception": "Expected Int16, got Object",
+      "typeId": "Int16",
+      "value": {
+        "a": {
+          "b": 0
+        }
+      }
+    },
+    {
+      "exception": "Expected Int16, got Object",
+      "typeId": "Int16",
+      "value": {
+        "a": {
+          "b": null
+        }
+      }
+    },
+    {
+      "exception": "Expected Int16, got Object",
+      "typeId": "Int16",
+      "value": {
+        "a": {
+          "b": {
+            "c": 0
+          }
+        }
+      }
+    },
+    {
+      "exception": "Expected Int16, got Object",
+      "typeId": "Int16",
+      "value": {
+        "a": {
+          "b": {
+            "c": null
+          }
+        }
+      }
+    },
+    {
+      "exception": "Expected Int16, got Object",
+      "typeId": "Int16",
+      "value": {
+        "a": {
+          "b": {
+            "c": 0,
+            "d": 0
+          }
+        }
+      }
+    },
+    {
+      "exception": "Expected Int16, got Object",
+      "typeId": "Int16",
+      "value": {
+        "a": "foo",
+        "b": "bar"
+      }
+    },
+    {
+      "exception": "Expected Int16, got Object",
+      "typeId": "Int16",
+      "value": {
+        "a": "foo",
+        "b": {
+          "c": "bar"
+        }
+      }
+    },
+    {
+      "exception": "Expected Int16, got Function",
+      "typeId": "Int16",
+      "valueId": "function"
+    },
+    {
+      "exception": "Expected Int16, got EmptyType",
+      "typeId": "Int16",
+      "valueId": "emptyType"
+    },
+    {
+      "exception": "Expected Int16, got CustomType",
+      "typeId": "Int16",
+      "valueId": "customType"
+    },
+    {
+      "exception": "Expected Int16, got Buffer",
+      "typeId": "Int16",
+      "valueId": "buffer"
+    },
+    {
+      "exception": "Expected Int16, got Buffer",
+      "typeId": "Int16",
+      "valueId": "buffer3"
+    },
+    {
+      "exception": "Expected Int32, got String \"\"",
+      "typeId": "Int32",
+      "value": ""
+    },
+    {
+      "exception": "Expected Int32, got String \"foobar\"",
+      "typeId": "Int32",
+      "value": "foobar"
+    },
+    {
+      "exception": "Expected Int32, got Array",
+      "typeId": "Int32",
+      "value": []
+    },
+    {
+      "exception": "Expected Int32, got Array",
+      "typeId": "Int32",
+      "value": [
+        0
+      ]
+    },
+    {
+      "exception": "Expected Int32, got Array",
+      "typeId": "Int32",
+      "value": [
+        "foobar"
+      ]
+    },
+    {
+      "exception": "Expected Int32, got Array",
+      "typeId": "Int32",
+      "value": [
+        {
+          "a": 0
+        }
+      ]
+    },
+    {
+      "exception": "Expected Int32, got Array",
+      "typeId": "Int32",
+      "value": [
+        null
+      ]
+    },
+    {
+      "exception": "Expected Int32, got Boolean false",
+      "typeId": "Int32",
+      "value": false
+    },
+    {
+      "exception": "Expected Int32, got Boolean true",
+      "typeId": "Int32",
+      "value": true
+    },
+    {
+      "exception": "Expected Int32, got undefined",
+      "typeId": "Int32"
+    },
+    {
+      "exception": "Expected Int32, got null",
+      "typeId": "Int32",
+      "value": null
+    },
+    {
+      "exception": "Expected Int32, got Object",
+      "typeId": "Int32",
+      "value": {}
+    },
+    {
+      "exception": "Expected Int32, got Object",
+      "typeId": "Int32",
+      "value": {
+        "a": null
+      }
+    },
+    {
+      "exception": "Expected Int32, got Object",
+      "typeId": "Int32",
+      "value": {
+        "a": 0
+      }
+    },
+    {
+      "exception": "Expected Int32, got Object",
+      "typeId": "Int32",
+      "value": {
+        "a": 0,
+        "b": 0
+      }
+    },
+    {
+      "exception": "Expected Int32, got Object",
+      "typeId": "Int32",
+      "value": {
+        "b": 0
+      }
+    },
+    {
+      "exception": "Expected Int32, got Object",
+      "typeId": "Int32",
+      "value": {
+        "a": {
+          "b": 0
+        }
+      }
+    },
+    {
+      "exception": "Expected Int32, got Object",
+      "typeId": "Int32",
+      "value": {
+        "a": {
+          "b": null
+        }
+      }
+    },
+    {
+      "exception": "Expected Int32, got Object",
+      "typeId": "Int32",
+      "value": {
+        "a": {
+          "b": {
+            "c": 0
+          }
+        }
+      }
+    },
+    {
+      "exception": "Expected Int32, got Object",
+      "typeId": "Int32",
+      "value": {
+        "a": {
+          "b": {
+            "c": null
+          }
+        }
+      }
+    },
+    {
+      "exception": "Expected Int32, got Object",
+      "typeId": "Int32",
+      "value": {
+        "a": {
+          "b": {
+            "c": 0,
+            "d": 0
+          }
+        }
+      }
+    },
+    {
+      "exception": "Expected Int32, got Object",
+      "typeId": "Int32",
+      "value": {
+        "a": "foo",
+        "b": "bar"
+      }
+    },
+    {
+      "exception": "Expected Int32, got Object",
+      "typeId": "Int32",
+      "value": {
+        "a": "foo",
+        "b": {
+          "c": "bar"
+        }
+      }
+    },
+    {
+      "exception": "Expected Int32, got Function",
+      "typeId": "Int32",
+      "valueId": "function"
+    },
+    {
+      "exception": "Expected Int32, got EmptyType",
+      "typeId": "Int32",
+      "valueId": "emptyType"
+    },
+    {
+      "exception": "Expected Int32, got CustomType",
+      "typeId": "Int32",
+      "valueId": "customType"
+    },
+    {
+      "exception": "Expected Int32, got Buffer",
+      "typeId": "Int32",
+      "valueId": "buffer"
+    },
+    {
+      "exception": "Expected Int32, got Buffer",
+      "typeId": "Int32",
+      "valueId": "buffer3"
+    },
+    {
+      "exception": "Expected UInt8, got String \"\"",
+      "typeId": "UInt8",
+      "value": ""
+    },
+    {
+      "exception": "Expected UInt8, got String \"foobar\"",
+      "typeId": "UInt8",
+      "value": "foobar"
+    },
+    {
+      "exception": "Expected UInt8, got Array",
+      "typeId": "UInt8",
+      "value": []
+    },
+    {
+      "exception": "Expected UInt8, got Array",
+      "typeId": "UInt8",
+      "value": [
+        0
+      ]
+    },
+    {
+      "exception": "Expected UInt8, got Array",
+      "typeId": "UInt8",
+      "value": [
+        "foobar"
+      ]
+    },
+    {
+      "exception": "Expected UInt8, got Array",
+      "typeId": "UInt8",
+      "value": [
+        {
+          "a": 0
+        }
+      ]
+    },
+    {
+      "exception": "Expected UInt8, got Array",
+      "typeId": "UInt8",
+      "value": [
+        null
+      ]
+    },
+    {
+      "exception": "Expected UInt8, got Boolean false",
+      "typeId": "UInt8",
+      "value": false
+    },
+    {
+      "exception": "Expected UInt8, got Boolean true",
+      "typeId": "UInt8",
+      "value": true
+    },
+    {
+      "exception": "Expected UInt8, got undefined",
+      "typeId": "UInt8"
+    },
+    {
+      "exception": "Expected UInt8, got null",
+      "typeId": "UInt8",
+      "value": null
+    },
+    {
+      "exception": "Expected UInt8, got Object",
+      "typeId": "UInt8",
+      "value": {}
+    },
+    {
+      "exception": "Expected UInt8, got Object",
+      "typeId": "UInt8",
+      "value": {
+        "a": null
+      }
+    },
+    {
+      "exception": "Expected UInt8, got Object",
+      "typeId": "UInt8",
+      "value": {
+        "a": 0
+      }
+    },
+    {
+      "exception": "Expected UInt8, got Object",
+      "typeId": "UInt8",
+      "value": {
+        "a": 0,
+        "b": 0
+      }
+    },
+    {
+      "exception": "Expected UInt8, got Object",
+      "typeId": "UInt8",
+      "value": {
+        "b": 0
+      }
+    },
+    {
+      "exception": "Expected UInt8, got Object",
+      "typeId": "UInt8",
+      "value": {
+        "a": {
+          "b": 0
+        }
+      }
+    },
+    {
+      "exception": "Expected UInt8, got Object",
+      "typeId": "UInt8",
+      "value": {
+        "a": {
+          "b": null
+        }
+      }
+    },
+    {
+      "exception": "Expected UInt8, got Object",
+      "typeId": "UInt8",
+      "value": {
+        "a": {
+          "b": {
+            "c": 0
+          }
+        }
+      }
+    },
+    {
+      "exception": "Expected UInt8, got Object",
+      "typeId": "UInt8",
+      "value": {
+        "a": {
+          "b": {
+            "c": null
+          }
+        }
+      }
+    },
+    {
+      "exception": "Expected UInt8, got Object",
+      "typeId": "UInt8",
+      "value": {
+        "a": {
+          "b": {
+            "c": 0,
+            "d": 0
+          }
+        }
+      }
+    },
+    {
+      "exception": "Expected UInt8, got Object",
+      "typeId": "UInt8",
+      "value": {
+        "a": "foo",
+        "b": "bar"
+      }
+    },
+    {
+      "exception": "Expected UInt8, got Object",
+      "typeId": "UInt8",
+      "value": {
+        "a": "foo",
+        "b": {
+          "c": "bar"
+        }
+      }
+    },
+    {
+      "exception": "Expected UInt8, got Function",
+      "typeId": "UInt8",
+      "valueId": "function"
+    },
+    {
+      "exception": "Expected UInt8, got EmptyType",
+      "typeId": "UInt8",
+      "valueId": "emptyType"
+    },
+    {
+      "exception": "Expected UInt8, got CustomType",
+      "typeId": "UInt8",
+      "valueId": "customType"
+    },
+    {
+      "exception": "Expected UInt8, got Buffer",
+      "typeId": "UInt8",
+      "valueId": "buffer"
+    },
+    {
+      "exception": "Expected UInt8, got Buffer",
+      "typeId": "UInt8",
+      "valueId": "buffer3"
+    },
+    {
+      "exception": "Expected UInt16, got String \"\"",
+      "typeId": "UInt16",
+      "value": ""
+    },
+    {
+      "exception": "Expected UInt16, got String \"foobar\"",
+      "typeId": "UInt16",
+      "value": "foobar"
+    },
+    {
+      "exception": "Expected UInt16, got Array",
+      "typeId": "UInt16",
+      "value": []
+    },
+    {
+      "exception": "Expected UInt16, got Array",
+      "typeId": "UInt16",
+      "value": [
+        0
+      ]
+    },
+    {
+      "exception": "Expected UInt16, got Array",
+      "typeId": "UInt16",
+      "value": [
+        "foobar"
+      ]
+    },
+    {
+      "exception": "Expected UInt16, got Array",
+      "typeId": "UInt16",
+      "value": [
+        {
+          "a": 0
+        }
+      ]
+    },
+    {
+      "exception": "Expected UInt16, got Array",
+      "typeId": "UInt16",
+      "value": [
+        null
+      ]
+    },
+    {
+      "exception": "Expected UInt16, got Boolean false",
+      "typeId": "UInt16",
+      "value": false
+    },
+    {
+      "exception": "Expected UInt16, got Boolean true",
+      "typeId": "UInt16",
+      "value": true
+    },
+    {
+      "exception": "Expected UInt16, got undefined",
+      "typeId": "UInt16"
+    },
+    {
+      "exception": "Expected UInt16, got null",
+      "typeId": "UInt16",
+      "value": null
+    },
+    {
+      "exception": "Expected UInt16, got Object",
+      "typeId": "UInt16",
+      "value": {}
+    },
+    {
+      "exception": "Expected UInt16, got Object",
+      "typeId": "UInt16",
+      "value": {
+        "a": null
+      }
+    },
+    {
+      "exception": "Expected UInt16, got Object",
+      "typeId": "UInt16",
+      "value": {
+        "a": 0
+      }
+    },
+    {
+      "exception": "Expected UInt16, got Object",
+      "typeId": "UInt16",
+      "value": {
+        "a": 0,
+        "b": 0
+      }
+    },
+    {
+      "exception": "Expected UInt16, got Object",
+      "typeId": "UInt16",
+      "value": {
+        "b": 0
+      }
+    },
+    {
+      "exception": "Expected UInt16, got Object",
+      "typeId": "UInt16",
+      "value": {
+        "a": {
+          "b": 0
+        }
+      }
+    },
+    {
+      "exception": "Expected UInt16, got Object",
+      "typeId": "UInt16",
+      "value": {
+        "a": {
+          "b": null
+        }
+      }
+    },
+    {
+      "exception": "Expected UInt16, got Object",
+      "typeId": "UInt16",
+      "value": {
+        "a": {
+          "b": {
+            "c": 0
+          }
+        }
+      }
+    },
+    {
+      "exception": "Expected UInt16, got Object",
+      "typeId": "UInt16",
+      "value": {
+        "a": {
+          "b": {
+            "c": null
+          }
+        }
+      }
+    },
+    {
+      "exception": "Expected UInt16, got Object",
+      "typeId": "UInt16",
+      "value": {
+        "a": {
+          "b": {
+            "c": 0,
+            "d": 0
+          }
+        }
+      }
+    },
+    {
+      "exception": "Expected UInt16, got Object",
+      "typeId": "UInt16",
+      "value": {
+        "a": "foo",
+        "b": "bar"
+      }
+    },
+    {
+      "exception": "Expected UInt16, got Object",
+      "typeId": "UInt16",
+      "value": {
+        "a": "foo",
+        "b": {
+          "c": "bar"
+        }
+      }
+    },
+    {
+      "exception": "Expected UInt16, got Function",
+      "typeId": "UInt16",
+      "valueId": "function"
+    },
+    {
+      "exception": "Expected UInt16, got EmptyType",
+      "typeId": "UInt16",
+      "valueId": "emptyType"
+    },
+    {
+      "exception": "Expected UInt16, got CustomType",
+      "typeId": "UInt16",
+      "valueId": "customType"
+    },
+    {
+      "exception": "Expected UInt16, got Buffer",
+      "typeId": "UInt16",
+      "valueId": "buffer"
+    },
+    {
+      "exception": "Expected UInt16, got Buffer",
+      "typeId": "UInt16",
+      "valueId": "buffer3"
+    },
+    {
+      "exception": "Expected UInt32, got String \"\"",
+      "typeId": "UInt32",
+      "value": ""
+    },
+    {
+      "exception": "Expected UInt32, got String \"foobar\"",
+      "typeId": "UInt32",
+      "value": "foobar"
+    },
+    {
+      "exception": "Expected UInt32, got Array",
+      "typeId": "UInt32",
+      "value": []
+    },
+    {
+      "exception": "Expected UInt32, got Array",
+      "typeId": "UInt32",
+      "value": [
+        0
+      ]
+    },
+    {
+      "exception": "Expected UInt32, got Array",
+      "typeId": "UInt32",
+      "value": [
+        "foobar"
+      ]
+    },
+    {
+      "exception": "Expected UInt32, got Array",
+      "typeId": "UInt32",
+      "value": [
+        {
+          "a": 0
+        }
+      ]
+    },
+    {
+      "exception": "Expected UInt32, got Array",
+      "typeId": "UInt32",
+      "value": [
+        null
+      ]
+    },
+    {
+      "exception": "Expected UInt32, got Boolean false",
+      "typeId": "UInt32",
+      "value": false
+    },
+    {
+      "exception": "Expected UInt32, got Boolean true",
+      "typeId": "UInt32",
+      "value": true
+    },
+    {
+      "exception": "Expected UInt32, got undefined",
+      "typeId": "UInt32"
+    },
+    {
+      "exception": "Expected UInt32, got null",
+      "typeId": "UInt32",
+      "value": null
+    },
+    {
+      "exception": "Expected UInt32, got Object",
+      "typeId": "UInt32",
+      "value": {}
+    },
+    {
+      "exception": "Expected UInt32, got Object",
+      "typeId": "UInt32",
+      "value": {
+        "a": null
+      }
+    },
+    {
+      "exception": "Expected UInt32, got Object",
+      "typeId": "UInt32",
+      "value": {
+        "a": 0
+      }
+    },
+    {
+      "exception": "Expected UInt32, got Object",
+      "typeId": "UInt32",
+      "value": {
+        "a": 0,
+        "b": 0
+      }
+    },
+    {
+      "exception": "Expected UInt32, got Object",
+      "typeId": "UInt32",
+      "value": {
+        "b": 0
+      }
+    },
+    {
+      "exception": "Expected UInt32, got Object",
+      "typeId": "UInt32",
+      "value": {
+        "a": {
+          "b": 0
+        }
+      }
+    },
+    {
+      "exception": "Expected UInt32, got Object",
+      "typeId": "UInt32",
+      "value": {
+        "a": {
+          "b": null
+        }
+      }
+    },
+    {
+      "exception": "Expected UInt32, got Object",
+      "typeId": "UInt32",
+      "value": {
+        "a": {
+          "b": {
+            "c": 0
+          }
+        }
+      }
+    },
+    {
+      "exception": "Expected UInt32, got Object",
+      "typeId": "UInt32",
+      "value": {
+        "a": {
+          "b": {
+            "c": null
+          }
+        }
+      }
+    },
+    {
+      "exception": "Expected UInt32, got Object",
+      "typeId": "UInt32",
+      "value": {
+        "a": {
+          "b": {
+            "c": 0,
+            "d": 0
+          }
+        }
+      }
+    },
+    {
+      "exception": "Expected UInt32, got Object",
+      "typeId": "UInt32",
+      "value": {
+        "a": "foo",
+        "b": "bar"
+      }
+    },
+    {
+      "exception": "Expected UInt32, got Object",
+      "typeId": "UInt32",
+      "value": {
+        "a": "foo",
+        "b": {
+          "c": "bar"
+        }
+      }
+    },
+    {
+      "exception": "Expected UInt32, got Function",
+      "typeId": "UInt32",
+      "valueId": "function"
+    },
+    {
+      "exception": "Expected UInt32, got EmptyType",
+      "typeId": "UInt32",
+      "valueId": "emptyType"
+    },
+    {
+      "exception": "Expected UInt32, got CustomType",
+      "typeId": "UInt32",
+      "valueId": "customType"
+    },
+    {
+      "exception": "Expected UInt32, got Buffer",
+      "typeId": "UInt32",
+      "valueId": "buffer"
+    },
+    {
+      "exception": "Expected UInt32, got Buffer",
+      "typeId": "UInt32",
+      "valueId": "buffer3"
+    },
+    {
+      "exception": "Expected UInt53, got String \"\"",
+      "typeId": "UInt53",
+      "value": ""
+    },
+    {
+      "exception": "Expected UInt53, got String \"foobar\"",
+      "typeId": "UInt53",
+      "value": "foobar"
+    },
+    {
+      "exception": "Expected UInt53, got Array",
+      "typeId": "UInt53",
+      "value": []
+    },
+    {
+      "exception": "Expected UInt53, got Array",
+      "typeId": "UInt53",
+      "value": [
+        0
+      ]
+    },
+    {
+      "exception": "Expected UInt53, got Array",
+      "typeId": "UInt53",
+      "value": [
+        "foobar"
+      ]
+    },
+    {
+      "exception": "Expected UInt53, got Array",
+      "typeId": "UInt53",
+      "value": [
+        {
+          "a": 0
+        }
+      ]
+    },
+    {
+      "exception": "Expected UInt53, got Array",
+      "typeId": "UInt53",
+      "value": [
+        null
+      ]
+    },
+    {
+      "exception": "Expected UInt53, got Boolean false",
+      "typeId": "UInt53",
+      "value": false
+    },
+    {
+      "exception": "Expected UInt53, got Boolean true",
+      "typeId": "UInt53",
+      "value": true
+    },
+    {
+      "exception": "Expected UInt53, got undefined",
+      "typeId": "UInt53"
+    },
+    {
+      "exception": "Expected UInt53, got null",
+      "typeId": "UInt53",
+      "value": null
+    },
+    {
+      "exception": "Expected UInt53, got Object",
+      "typeId": "UInt53",
+      "value": {}
+    },
+    {
+      "exception": "Expected UInt53, got Object",
+      "typeId": "UInt53",
+      "value": {
+        "a": null
+      }
+    },
+    {
+      "exception": "Expected UInt53, got Object",
+      "typeId": "UInt53",
+      "value": {
+        "a": 0
+      }
+    },
+    {
+      "exception": "Expected UInt53, got Object",
+      "typeId": "UInt53",
+      "value": {
+        "a": 0,
+        "b": 0
+      }
+    },
+    {
+      "exception": "Expected UInt53, got Object",
+      "typeId": "UInt53",
+      "value": {
+        "b": 0
+      }
+    },
+    {
+      "exception": "Expected UInt53, got Object",
+      "typeId": "UInt53",
+      "value": {
+        "a": {
+          "b": 0
+        }
+      }
+    },
+    {
+      "exception": "Expected UInt53, got Object",
+      "typeId": "UInt53",
+      "value": {
+        "a": {
+          "b": null
+        }
+      }
+    },
+    {
+      "exception": "Expected UInt53, got Object",
+      "typeId": "UInt53",
+      "value": {
+        "a": {
+          "b": {
+            "c": 0
+          }
+        }
+      }
+    },
+    {
+      "exception": "Expected UInt53, got Object",
+      "typeId": "UInt53",
+      "value": {
+        "a": {
+          "b": {
+            "c": null
+          }
+        }
+      }
+    },
+    {
+      "exception": "Expected UInt53, got Object",
+      "typeId": "UInt53",
+      "value": {
+        "a": {
+          "b": {
+            "c": 0,
+            "d": 0
+          }
+        }
+      }
+    },
+    {
+      "exception": "Expected UInt53, got Object",
+      "typeId": "UInt53",
+      "value": {
+        "a": "foo",
+        "b": "bar"
+      }
+    },
+    {
+      "exception": "Expected UInt53, got Object",
+      "typeId": "UInt53",
+      "value": {
+        "a": "foo",
+        "b": {
+          "c": "bar"
+        }
+      }
+    },
+    {
+      "exception": "Expected UInt53, got Function",
+      "typeId": "UInt53",
+      "valueId": "function"
+    },
+    {
+      "exception": "Expected UInt53, got EmptyType",
+      "typeId": "UInt53",
+      "valueId": "emptyType"
+    },
+    {
+      "exception": "Expected UInt53, got CustomType",
+      "typeId": "UInt53",
+      "valueId": "customType"
+    },
+    {
+      "exception": "Expected UInt53, got Buffer",
+      "typeId": "UInt53",
+      "valueId": "buffer"
+    },
+    {
+      "exception": "Expected UInt53, got Buffer",
+      "typeId": "UInt53",
       "valueId": "buffer3"
     }
   ]

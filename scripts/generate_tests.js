@@ -56,12 +56,32 @@ const VALUES2 = [
   { a: 'foo', b: { c: 'bar' } }
 ]
 
+// extra
+const VALUESX = [
+  'buffer10',
+  'fff',
+  'cafe1122deadbeef',
+  -1,
+  127,
+  128,
+  255,
+  256,
+  -128,
+  -129,
+  0xfffe,
+  0xffff,
+  0x10000,
+  0xffffffff,
+  9007199254740991,
+  9007199254740994
+]
+
 const fixtures = {
   valid: [],
   invalid: []
 }
 
-function addFixture (type, value) {
+function addFixture (type, value, only) {
   const f = {}
   let atype, avalue
 
@@ -83,14 +103,14 @@ function addFixture (type, value) {
 
   try {
     typeforce(atype, avalue, true)
-    fixtures.valid.push(f)
+    if (!only) fixtures.valid.push(f)
   } catch (e) {
     let exception = e.message
       .replace(/([.*+?^=!:${}\[\]\/\\\(\)])/g, '\\$&')
 
     try {
       typeforce(atype, avalue, false)
-      fixtures.valid.push(f)
+      if (!only) fixtures.valid.push(f)
 
       if (exception.indexOf('asciiSlice') !== -1) return
       fixtures.invalid.push(Object.assign({ exception, strict: true }, f))
@@ -105,5 +125,6 @@ const ALLTYPES = TYPES2.concat(Object.keys(TYPES))
 const ALLVALUES = VALUES2.concat(Object.keys(VALUES))
 
 ALLTYPES.forEach(type => ALLVALUES.forEach(value => addFixture(type, value)))
+// ALLTYPES.forEach(type => VALUESX.forEach(value => addFixture(type, value, true)))
 
 console.log(JSON.stringify(fixtures, null, 2))
