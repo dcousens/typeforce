@@ -23,7 +23,7 @@
   },
   "scripts": {
     "coverage": "nyc --check-coverage --branches 100 --functions 100 tape test/*.js",
-    "test": "npm run lint && npm run unit",
+    "test": "npm run standard && npm run unit",
     "standard": "standard",
     "unit": "tape test/*.js | tap-dot"
   },
