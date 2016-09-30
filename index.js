@@ -208,8 +208,8 @@ for (typeName in extra) {
   typeforce[typeName] = extra[typeName]
 }
 
-// exports
+typeforce.compile = compile
+typeforce.TfTypeError = TfTypeError
+typeforce.TfPropertyTypeError = TfPropertyTypeError
+
 module.exports = typeforce
-module.exports.compile = compile
-module.exports.TfTypeError = TfTypeError
-module.exports.TfPropertyTypeError = TfPropertyTypeError

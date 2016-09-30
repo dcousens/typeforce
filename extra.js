@@ -1,4 +1,4 @@
-var typeforce = require('./')
+var errors = require('./errors')
 
 function _Buffer (value) {
   return Buffer.isBuffer(value)
@@ -9,7 +9,7 @@ function BufferN (length) {
   function BufferN (value) {
     if (!Buffer.isBuffer(value)) return false
     if (value.length !== length) {
-      throw typeforce.TfTypeError('Buffer(Length: ' + length + ')', 'Buffer(Length: ' + value.length + ')')
+      throw errors.TfTypeError('Buffer(Length: ' + length + ')', 'Buffer(Length: ' + value.length + ')')
     }
 
     return true

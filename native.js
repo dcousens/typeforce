@@ -1,4 +1,4 @@
-module.exports = {
+var types = {
   Array: function (value) { return value !== null && value !== undefined && value.constructor === Array },
   Boolean: function (value) { return typeof value === 'boolean' },
   Function: function (value) { return typeof value === 'function' },
@@ -9,8 +9,10 @@ module.exports = {
   '': function () { return true }
 }
 
-for (var typeName in module.exports) {
-  module.exports[typeName].toJSON = function (t) {
+for (var typeName in types) {
+  types[typeName].toJSON = function (t) {
     return t
   }.bind(null, typeName)
 }
+
+module.exports = types
