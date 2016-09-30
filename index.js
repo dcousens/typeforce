@@ -104,7 +104,7 @@ var nativeTypes = {
   Function: function (value) { return typeof value === 'function' },
   Null: function (value) { return value === undefined || value === null },
   Number: function (value) { return typeof value === 'number' },
-  Object: function (value) { return typeof value === 'object' },
+  Object: function (value) { return !!value && typeof value === 'object' },
   String: function (value) { return typeof value === 'string' },
   '': function () { return true }
 }
