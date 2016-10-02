@@ -307,6 +307,160 @@
       ]
     },
     {
+      "type": {},
+      "value": []
+    },
+    {
+      "type": {},
+      "value": [
+        0
+      ]
+    },
+    {
+      "type": {},
+      "value": [
+        "foobar"
+      ]
+    },
+    {
+      "type": {},
+      "value": [
+        {
+          "a": 0
+        }
+      ]
+    },
+    {
+      "type": {},
+      "value": [
+        null
+      ]
+    },
+    {
+      "type": {},
+      "value": {}
+    },
+    {
+      "type": {},
+      "value": {
+        "a": null
+      }
+    },
+    {
+      "type": {},
+      "value": {
+        "a": 0
+      }
+    },
+    {
+      "type": {},
+      "value": {
+        "a": 0,
+        "b": 0
+      }
+    },
+    {
+      "type": {},
+      "value": {
+        "b": 0
+      }
+    },
+    {
+      "type": {},
+      "value": {
+        "a": {
+          "b": 0
+        }
+      }
+    },
+    {
+      "type": {},
+      "value": {
+        "a": {
+          "b": null
+        }
+      }
+    },
+    {
+      "type": {},
+      "value": {
+        "a": {
+          "b": {
+            "c": 0
+          }
+        }
+      }
+    },
+    {
+      "type": {},
+      "value": {
+        "a": {
+          "b": {
+            "c": null
+          }
+        }
+      }
+    },
+    {
+      "type": {},
+      "value": {
+        "a": {
+          "b": {
+            "c": 0,
+            "d": 0
+          }
+        }
+      }
+    },
+    {
+      "type": {},
+      "value": {
+        "a": "foo",
+        "b": "bar"
+      }
+    },
+    {
+      "type": {},
+      "value": {
+        "a": "foo",
+        "b": {
+          "c": "bar"
+        }
+      }
+    },
+    {
+      "type": {},
+      "valueId": "emptyType"
+    },
+    {
+      "type": {},
+      "valueId": "customType"
+    },
+    {
+      "type": {},
+      "valueId": "{ a: undefined }"
+    },
+    {
+      "type": {},
+      "valueId": "{ a: { b: Buffer3 } }"
+    },
+    {
+      "type": {},
+      "valueId": "{ a: { b: Buffer10 } }"
+    },
+    {
+      "type": {},
+      "valueId": "Buffer"
+    },
+    {
+      "type": {},
+      "valueId": "Buffer3"
+    },
+    {
+      "type": {},
+      "valueId": "Buffer10"
+    },
+    {
       "type": {
         "a": "Number"
       },
@@ -4336,6 +4490,230 @@
           "a": "Number"
         }
       ],
+      "valueId": "Buffer10"
+    },
+    {
+      "exception": "Expected Object, got String \"\"",
+      "type": {},
+      "value": ""
+    },
+    {
+      "exception": "Expected Object, got String \"foobar\"",
+      "type": {},
+      "value": "foobar"
+    },
+    {
+      "exception": "Expected Object, got Number 0",
+      "type": {},
+      "value": 0
+    },
+    {
+      "exception": "Expected Object, got Number 1",
+      "type": {},
+      "value": 1
+    },
+    {
+      "exception": "Unexpected property \"0\"",
+      "strict": true,
+      "type": {},
+      "value": [
+        0
+      ]
+    },
+    {
+      "exception": "Unexpected property \"0\"",
+      "strict": true,
+      "type": {},
+      "value": [
+        "foobar"
+      ]
+    },
+    {
+      "exception": "Unexpected property \"0\"",
+      "strict": true,
+      "type": {},
+      "value": [
+        {
+          "a": 0
+        }
+      ]
+    },
+    {
+      "exception": "Unexpected property \"0\"",
+      "strict": true,
+      "type": {},
+      "value": [
+        null
+      ]
+    },
+    {
+      "exception": "Expected Object, got Boolean false",
+      "type": {},
+      "value": false
+    },
+    {
+      "exception": "Expected Object, got Boolean true",
+      "type": {},
+      "value": true
+    },
+    {
+      "exception": "Expected Object, got undefined",
+      "type": {}
+    },
+    {
+      "exception": "Expected Object, got null",
+      "type": {},
+      "value": null
+    },
+    {
+      "exception": "Unexpected property \"a\"",
+      "strict": true,
+      "type": {},
+      "value": {
+        "a": null
+      }
+    },
+    {
+      "exception": "Unexpected property \"a\"",
+      "strict": true,
+      "type": {},
+      "value": {
+        "a": 0
+      }
+    },
+    {
+      "exception": "Unexpected property \"a\"",
+      "strict": true,
+      "type": {},
+      "value": {
+        "a": 0,
+        "b": 0
+      }
+    },
+    {
+      "exception": "Unexpected property \"b\"",
+      "strict": true,
+      "type": {},
+      "value": {
+        "b": 0
+      }
+    },
+    {
+      "exception": "Unexpected property \"a\"",
+      "strict": true,
+      "type": {},
+      "value": {
+        "a": {
+          "b": 0
+        }
+      }
+    },
+    {
+      "exception": "Unexpected property \"a\"",
+      "strict": true,
+      "type": {},
+      "value": {
+        "a": {
+          "b": null
+        }
+      }
+    },
+    {
+      "exception": "Unexpected property \"a\"",
+      "strict": true,
+      "type": {},
+      "value": {
+        "a": {
+          "b": {
+            "c": 0
+          }
+        }
+      }
+    },
+    {
+      "exception": "Unexpected property \"a\"",
+      "strict": true,
+      "type": {},
+      "value": {
+        "a": {
+          "b": {
+            "c": null
+          }
+        }
+      }
+    },
+    {
+      "exception": "Unexpected property \"a\"",
+      "strict": true,
+      "type": {},
+      "value": {
+        "a": {
+          "b": {
+            "c": 0,
+            "d": 0
+          }
+        }
+      }
+    },
+    {
+      "exception": "Unexpected property \"a\"",
+      "strict": true,
+      "type": {},
+      "value": {
+        "a": "foo",
+        "b": "bar"
+      }
+    },
+    {
+      "exception": "Unexpected property \"a\"",
+      "strict": true,
+      "type": {},
+      "value": {
+        "a": "foo",
+        "b": {
+          "c": "bar"
+        }
+      }
+    },
+    {
+      "exception": "Expected Object, got Function",
+      "type": {},
+      "valueId": "function"
+    },
+    {
+      "exception": "Unexpected property \"x\"",
+      "strict": true,
+      "type": {},
+      "valueId": "customType"
+    },
+    {
+      "exception": "Unexpected property \"a\"",
+      "strict": true,
+      "type": {},
+      "valueId": "{ a: undefined }"
+    },
+    {
+      "exception": "Unexpected property \"a\"",
+      "strict": true,
+      "type": {},
+      "valueId": "{ a: { b: Buffer3 } }"
+    },
+    {
+      "exception": "Unexpected property \"a\"",
+      "strict": true,
+      "type": {},
+      "valueId": "{ a: { b: Buffer10 } }"
+    },
+    {
+      "exception": "Unexpected property \"0\"",
+      "strict": true,
+      "type": {},
+      "valueId": "Buffer3"
+    },
+    {
+      "exception": "Unexpected property \"0\"",
+      "strict": true,
+      "type": {},
       "valueId": "Buffer10"
     },
     {
@@ -14903,6 +15281,81 @@
           "a": "Number"
         }
       ],
+      "value": 9007199254740994
+    },
+    {
+      "exception": "Expected Object, got String \"fff\"",
+      "type": {},
+      "value": "fff"
+    },
+    {
+      "exception": "Expected Object, got String \"cafe1122deadbeef\"",
+      "type": {},
+      "value": "cafe1122deadbeef"
+    },
+    {
+      "exception": "Expected Object, got Number -1",
+      "type": {},
+      "value": -1
+    },
+    {
+      "exception": "Expected Object, got Number 127",
+      "type": {},
+      "value": 127
+    },
+    {
+      "exception": "Expected Object, got Number 128",
+      "type": {},
+      "value": 128
+    },
+    {
+      "exception": "Expected Object, got Number 255",
+      "type": {},
+      "value": 255
+    },
+    {
+      "exception": "Expected Object, got Number 256",
+      "type": {},
+      "value": 256
+    },
+    {
+      "exception": "Expected Object, got Number -128",
+      "type": {},
+      "value": -128
+    },
+    {
+      "exception": "Expected Object, got Number -129",
+      "type": {},
+      "value": -129
+    },
+    {
+      "exception": "Expected Object, got Number 65534",
+      "type": {},
+      "value": 65534
+    },
+    {
+      "exception": "Expected Object, got Number 65535",
+      "type": {},
+      "value": 65535
+    },
+    {
+      "exception": "Expected Object, got Number 65536",
+      "type": {},
+      "value": 65536
+    },
+    {
+      "exception": "Expected Object, got Number 4294967295",
+      "type": {},
+      "value": 4294967295
+    },
+    {
+      "exception": "Expected Object, got Number 9007199254740991",
+      "type": {},
+      "value": 9007199254740991
+    },
+    {
+      "exception": "Expected Object, got Number 9007199254740994",
+      "type": {},
       "value": 9007199254740994
     },
     {

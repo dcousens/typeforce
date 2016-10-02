@@ -15,6 +15,7 @@ const TYPES2 = [
   [ '?Number' ],
   [ 'Number' ],
   [ { a: 'Number' } ],
+  {},
   { a: 'Number' },
   { a: { b: 'Number' } },
   { a: { b: { c: '?Number' } } },
