@@ -5,6 +5,7 @@ module.exports = {
   'function': function () {},
   'emptyType': new function EmptyType () {}(),
   'customType': new function CustomType () { this.x = 2 }(),
+  '{ a: undefined }': { a: undefined },
   '{ a: { b: Buffer3 } }': { a: { b: buffer3 } },
   '{ a: { b: Buffer10 } }': { a: { b: buffer10 } },
   'Buffer': new Buffer(0),
