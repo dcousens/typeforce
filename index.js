@@ -9,39 +9,6 @@ var TfPropertyTypeError = errors.TfPropertyTypeError
 var tfSubError = errors.tfSubError
 var getValueTypeName = errors.getValueTypeName
 
-function schema (type) {
-  function schema (value, strict) {
-    if (!native.Object(value)) return false
-    if (native.Null(value)) return false
-
-    var propertyName
-
-    try {
-      for (propertyName in type) {
-        var propertyType = type[propertyName]
-        var propertyValue = value[propertyName]
-
-        typeforce(propertyType, propertyValue, strict)
-      }
-    } catch (e) {
-      throw tfSubError(e, propertyName)
-    }
-
-    if (strict) {
-      for (propertyName in value) {
-        if (type[propertyName]) continue
-
-        throw new TfPropertyTypeError(undefined, propertyName)
-      }
-    }
-
-    return true
-  }
-  schema.toJSON = function () { return tfJSON(type) }
-
-  return schema
-}
-
 var types = {
   arrayOf: function arrayOf (type) {
     type = compile(type)
@@ -112,6 +79,45 @@ var types = {
     return map
   },
 
+  object: function object (uncompiled) {
+    var type = {}
+
+    for (var propertyName in uncompiled) {
+      type[propertyName] = compile(uncompiled[propertyName])
+    }
+
+    function object (value, strict) {
+      if (!native.Object(value)) return false
+      if (native.Null(value)) return false
+
+      var propertyName
+
+      try {
+        for (propertyName in type) {
+          var propertyType = type[propertyName]
+          var propertyValue = value[propertyName]
+
+          typeforce(propertyType, propertyValue, strict)
+        }
+      } catch (e) {
+        throw tfSubError(e, propertyName)
+      }
+
+      if (strict) {
+        for (propertyName in value) {
+          if (type[propertyName]) continue
+
+          throw new TfPropertyTypeError(undefined, propertyName)
+        }
+      }
+
+      return true
+    }
+    object.toJSON = function () { return tfJSON(type) }
+
+    return type
+  },
+
   oneOf: function oneOf () {
     var types = [].slice.call(arguments).map(compile)
 
@@ -169,13 +175,7 @@ function compile (type) {
   } else if (type && native.Object(type)) {
     if (native.Array(type)) return types.arrayOf(compile(type[0]))
 
-    var compiled = {}
-
-    for (var propertyName in type) {
-      compiled[propertyName] = compile(type[propertyName])
-    }
-
-    return schema(compiled)
+    return types.object(type)
   } else if (native.Function(type)) {
     return type
   }
