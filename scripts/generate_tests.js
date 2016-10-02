@@ -19,6 +19,7 @@ const TYPES2 = [
   { a: { b: 'Number' } },
   { a: { b: { c: '?Number' } } },
   { a: { b: { c: 'Number' } } },
+  { a: null },
 
   // these will resolve to typeforce.value(...)
   undefined,
