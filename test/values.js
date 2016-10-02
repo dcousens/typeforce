@@ -1,7 +1,13 @@
+var buffer3 = new Buffer('ffffff', 'hex')
+var buffer10 = new Buffer('ffffffffffffffffffff', 'hex')
+
 module.exports = {
   'function': function () {},
   'emptyType': new function EmptyType () {}(),
   'customType': new function CustomType () { this.x = 2 }(),
-  'buffer': new Buffer(0),
-  'buffer3': new Buffer('ffffff', 'hex')
+  '{ a: { b: Buffer3 } }': { a: { b: buffer3 } },
+  '{ a: { b: Buffer10 } }': { a: { b: buffer10 } },
+  'Buffer': new Buffer(0),
+  'Buffer3': buffer3,
+  'Buffer10': buffer10
 }

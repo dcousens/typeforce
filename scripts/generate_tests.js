@@ -58,7 +58,6 @@ const VALUES2 = [
 
 // extra
 const VALUESX = [
-  'buffer10',
   'fff',
   'cafe1122deadbeef',
   -1,
