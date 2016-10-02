@@ -9,6 +9,39 @@ var TfPropertyTypeError = errors.TfPropertyTypeError
 var tfSubError = errors.tfSubError
 var getValueTypeName = errors.getValueTypeName
 
+function schema (type) {
+  function schema (value, strict) {
+    if (!native.Object(value)) return false
+    if (native.Null(value)) return false
+
+    var propertyName
+
+    try {
+      for (propertyName in type) {
+        var propertyType = type[propertyName]
+        var propertyValue = value[propertyName]
+
+        typeforce(propertyType, propertyValue, strict)
+      }
+    } catch (e) {
+      throw tfSubError(e, propertyName)
+    }
+
+    if (strict) {
+      for (propertyName in value) {
+        if (type[propertyName]) continue
+
+        throw new TfPropertyTypeError(undefined, propertyName)
+      }
+    }
+
+    return true
+  }
+  schema.toJSON = function () { return tfJSON(type) }
+
+  return schema
+}
+
 var types = {
   arrayOf: function arrayOf (type) {
     type = compile(type)
@@ -38,39 +71,6 @@ var types = {
     maybe.toJSON = function () { return '?' + stfJSON(type) }
 
     return maybe
-  },
-
-  object: function object (type) {
-    function object (value, strict) {
-      if (!native.Object(value)) return false
-      if (native.Null(value)) return false
-
-      var propertyName
-
-      try {
-        for (propertyName in type) {
-          var propertyType = type[propertyName]
-          var propertyValue = value[propertyName]
-
-          typeforce(propertyType, propertyValue, strict)
-        }
-      } catch (e) {
-        throw tfSubError(e, propertyName)
-      }
-
-      if (strict) {
-        for (propertyName in value) {
-          if (type[propertyName]) continue
-
-          throw new TfPropertyTypeError(undefined, propertyName)
-        }
-      }
-
-      return true
-    }
-    object.toJSON = function () { return tfJSON(type) }
-
-    return object
   },
 
   map: function map (propertyType, propertyKeyType) {
@@ -175,7 +175,7 @@ function compile (type) {
       compiled[propertyName] = compile(type[propertyName])
     }
 
-    return types.object(compiled)
+    return schema(compiled)
   } else if (native.Function(type)) {
     return type
   }
