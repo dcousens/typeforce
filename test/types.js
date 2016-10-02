@@ -19,6 +19,7 @@ module.exports = {
   '{ a: ?{ b: Number } }': { a: typeforce.maybe({ b: 'Number' }) },
   '{ a: ?{ b: ?{ c: Number } } }': { a: typeforce.maybe({ b: typeforce.maybe({ c: 'Number' }) }) },
   '{ a: undefined }': { a: undefined },
+  '@{ a: undefined }': typeforce.object({ a: undefined }), // DEPRECATED
   'Unmatchable': Unmatchable,
   '?Unmatchable': typeforce.maybe(Unmatchable),
   '{ a: ?Unmatchable }': { a: typeforce.maybe(Unmatchable) },
