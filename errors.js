@@ -79,26 +79,23 @@ function tfSubError (e, property, label) {
   return e
 }
 
-function getFunctionName (fn) {
+function getTypeName (fn) {
   return fn.name || fn.toString().match(/function (.*?)\s*\(/)[1]
 }
 
 function getValueTypeName (value) {
-  if (native.Null(value)) return ''
-
-  return getFunctionName(value.constructor)
+  return native.Null(value) ? '' : getTypeName(value.constructor)
 }
 
 function getValue (value) {
   if (native.Function(value)) return ''
   if (native.String(value)) return JSON.stringify(value)
   if (value && native.Object(value)) return ''
-
   return value
 }
 
 function tfJSON (type) {
-  if (native.Function(type)) return type.toJSON ? type.toJSON() : getFunctionName(type)
+  if (native.Function(type)) return type.toJSON ? type.toJSON() : getTypeName(type)
   if (native.Array(type)) return 'Array'
   if (type && native.Object(type)) return 'Object'
 
@@ -126,6 +123,5 @@ module.exports = {
   tfCustomError: tfCustomError,
   tfSubError: tfSubError,
   tfJSON: tfJSON,
-  getFunctionName: getFunctionName,
   getValueTypeName: getValueTypeName
 }
