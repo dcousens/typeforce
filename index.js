@@ -3,7 +3,6 @@ var native = require('./native')
 
 // short-hand
 var tfJSON = errors.tfJSON
-var stfJSON = errors.stfJSON
 var TfTypeError = errors.TfTypeError
 var TfPropertyTypeError = errors.TfPropertyTypeError
 var tfSubError = errors.tfSubError
@@ -24,7 +23,7 @@ var types = {
         }
       })
     }
-    _arrayOf.toJSON = function () { return [tfJSON(type)] }
+    _arrayOf.toJSON = function () { return '[' + tfJSON(type) + ']' }
 
     return _arrayOf
   },
@@ -35,7 +34,7 @@ var types = {
     function _maybe (value, strict) {
       return native.Null(value) || type(value, strict, maybe)
     }
-    _maybe.toJSON = function () { return '?' + stfJSON(type) }
+    _maybe.toJSON = function () { return '?' + tfJSON(type) }
 
     return _maybe
   },
@@ -70,10 +69,10 @@ var types = {
 
     if (propertyKeyType) {
       _map.toJSON = function () {
-        return '{' + stfJSON(propertyKeyType) + ': ' + stfJSON(propertyType) + '}'
+        return '{' + tfJSON(propertyKeyType) + ': ' + tfJSON(propertyType) + '}'
       }
     } else {
-      _map.toJSON = function () { return '{' + stfJSON(propertyType) + '}' }
+      _map.toJSON = function () { return '{' + tfJSON(propertyType) + '}' }
     }
 
     return _map
@@ -126,7 +125,7 @@ var types = {
         return type(value, strict)
       })
     }
-    _oneOf.toJSON = function () { return types.map(stfJSON).join('|') }
+    _oneOf.toJSON = function () { return types.map(tfJSON).join('|') }
 
     return _oneOf
   },
@@ -152,7 +151,7 @@ var types = {
         }
       })
     }
-    _tuple.toJSON = function () { return '(' + types.map(stfJSON).join(', ') + ')' }
+    _tuple.toJSON = function () { return '(' + types.map(tfJSON).join(', ') + ')' }
 
     return _tuple
   },
