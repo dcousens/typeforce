@@ -55,7 +55,7 @@ function TfPropertyTypeError (type, property, label, value, error, valueTypeName
 })
 
 function tfCustomError (expected, actual) {
-  return new TfTypeError(expected, '', actual)
+  return new TfTypeError(expected, {}, actual)
 }
 
 function tfSubError (e, property, label) {
