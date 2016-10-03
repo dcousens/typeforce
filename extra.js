@@ -9,7 +9,7 @@ function BufferN (length) {
   function BufferN (value) {
     if (!Buffer.isBuffer(value)) return false
     if (value.length !== length) {
-      throw new errors.TfTypeError('Buffer(Length: ' + length + ')', 'Buffer(Length: ' + value.length + ')')
+      throw errors.tfCustomError('Buffer(Length: ' + length + ')', 'Buffer(Length: ' + value.length + ')')
     }
 
     return true

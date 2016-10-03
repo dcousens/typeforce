@@ -1,29 +1,33 @@
 var inherits = require('inherits')
 var native = require('./native')
 
-function TfTypeError (type, value) {
+function TfTypeError (type, value, valueTypeName) {
   this.__error = Error.call(this)
   this.__type = type
   this.__value = value
+  this.__valueTypeName = valueTypeName
 
   var message
   Object.defineProperty(this, 'message', {
     enumerable: true,
     get: function () {
       if (message) return message
-      message = tfErrorString(type, value)
+
+      valueTypeName = valueTypeName || getValueTypeName(value)
+      message = tfErrorString(type, value, valueTypeName)
 
       return message
     }
   })
 }
 
-function TfPropertyTypeError (type, property, label, value, error) {
+function TfPropertyTypeError (type, property, label, value, error, valueTypeName) {
   this.__error = error || Error.call(this)
   this.__label = label
   this.__property = property
   this.__type = type
   this.__value = value
+  this.__valueTypeName = valueTypeName
 
   var message
   Object.defineProperty(this, 'message', {
@@ -31,7 +35,8 @@ function TfPropertyTypeError (type, property, label, value, error) {
     get: function () {
       if (message) return message
       if (type) {
-        message = tfPropertyErrorString(type, label, property, value)
+        valueTypeName = valueTypeName || getValueTypeName(value)
+        message = tfPropertyErrorString(type, label, property, value, valueTypeName)
       } else {
         message = 'Unexpected property "' + property + '"'
       }
@@ -49,6 +54,10 @@ function TfPropertyTypeError (type, property, label, value, error) {
   })
 })
 
+function tfCustomError (expected, actual) {
+  return new TfTypeError(expected, '', actual)
+}
+
 function tfSubError (e, property, label) {
   // sub child?
   if (e instanceof TfPropertyTypeError) {
@@ -56,14 +65,14 @@ function tfSubError (e, property, label) {
     label = e.__label
 
     return new TfPropertyTypeError(
-      e.__type, property, label, e.__value, e.__error
+      e.__type, property, label, e.__value, e.__error, e.__valueTypeName
     )
   }
 
   // child?
   if (e instanceof TfTypeError) {
     return new TfPropertyTypeError(
-      e.__type, property, label, e.__value, e.__error
+      e.__type, property, label, e.__value, e.__error, e.__valueTypeName
     )
   }
 
@@ -96,25 +105,25 @@ function tfJSON (type) {
   return type !== undefined ? type : ''
 }
 
-function tfErrorString (type, value) {
-  var valueTypeName = getValueTypeName(value)
-  var valueValue = getValue(value)
+function tfErrorString (type, value, valueTypeName) {
+  var valueJson = getValue(value)
 
   return 'Expected ' + tfJSON(type) + ', got' +
     (valueTypeName !== '' ? ' ' + valueTypeName : '') +
-    (valueValue !== '' ? ' ' + valueValue : '')
+    (valueJson !== '' ? ' ' + valueJson : '')
 }
 
-function tfPropertyErrorString (type, label, name, value) {
+function tfPropertyErrorString (type, label, name, value, valueTypeName) {
   var description = '" of type '
   if (label === 'key') description = '" with key type '
 
-  return tfErrorString('property "' + tfJSON(name) + description + tfJSON(type), value)
+  return tfErrorString('property "' + tfJSON(name) + description + tfJSON(type), value, valueTypeName)
 }
 
 module.exports = {
   TfTypeError: TfTypeError,
   TfPropertyTypeError: TfPropertyTypeError,
+  tfCustomError: tfCustomError,
   tfSubError: tfSubError,
   tfJSON: tfJSON,
   getFunctionName: getFunctionName,

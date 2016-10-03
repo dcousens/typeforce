@@ -12286,7 +12286,7 @@
       "valueId": "{ a: undefined }"
     },
     {
-      "exception": "Expected property \"a\\.b\" of type Buffer\\(Length\\: 3\\), got String \"Buffer\\(Length\\: 10\\)\"",
+      "exception": "Expected property \"a\\.b\" of type Buffer\\(Length\\: 3\\), got Buffer\\(Length\\: 10\\) \"\"",
       "typeId": "{ a: { b: Buffer3 } }",
       "valueId": "{ a: { b: Buffer10 } }"
     },
@@ -12514,12 +12514,12 @@
       "valueId": "{ a: { b: Buffer10 } }"
     },
     {
-      "exception": "Expected Buffer\\(Length\\: 0\\), got String \"Buffer\\(Length\\: 3\\)\"",
+      "exception": "Expected Buffer\\(Length\\: 0\\), got Buffer\\(Length\\: 3\\) \"\"",
       "typeId": "Buffer0",
       "valueId": "Buffer3"
     },
     {
-      "exception": "Expected Buffer\\(Length\\: 0\\), got String \"Buffer\\(Length\\: 10\\)\"",
+      "exception": "Expected Buffer\\(Length\\: 0\\), got Buffer\\(Length\\: 10\\) \"\"",
       "typeId": "Buffer0",
       "valueId": "Buffer10"
     },
@@ -12732,12 +12732,12 @@
       "valueId": "{ a: { b: Buffer10 } }"
     },
     {
-      "exception": "Expected Buffer\\(Length\\: 3\\), got String \"Buffer\\(Length\\: 0\\)\"",
+      "exception": "Expected Buffer\\(Length\\: 3\\), got Buffer\\(Length\\: 0\\) \"\"",
       "typeId": "Buffer3",
       "valueId": "Buffer"
     },
     {
-      "exception": "Expected Buffer\\(Length\\: 3\\), got String \"Buffer\\(Length\\: 10\\)\"",
+      "exception": "Expected Buffer\\(Length\\: 3\\), got Buffer\\(Length\\: 10\\) \"\"",
       "typeId": "Buffer3",
       "valueId": "Buffer10"
     },
@@ -12950,12 +12950,12 @@
       "valueId": "{ a: { b: Buffer10 } }"
     },
     {
-      "exception": "Expected Buffer\\(Length\\: 10\\), got String \"Buffer\\(Length\\: 0\\)\"",
+      "exception": "Expected Buffer\\(Length\\: 10\\), got Buffer\\(Length\\: 0\\) \"\"",
       "typeId": "Buffer10",
       "valueId": "Buffer"
     },
     {
-      "exception": "Expected Buffer\\(Length\\: 10\\), got String \"Buffer\\(Length\\: 3\\)\"",
+      "exception": "Expected Buffer\\(Length\\: 10\\), got Buffer\\(Length\\: 3\\) \"\"",
       "typeId": "Buffer10",
       "valueId": "Buffer3"
     },
