@@ -5,6 +5,8 @@
 
 Another biased type checking solution for Javascript.
 
+Expect exception messages to change between patch versions,  as often the patch will change some behaviour that was unexpected and naturally it results in a different error message.
+
 ## Examples
 
 ``` javascript
