@@ -30,6 +30,7 @@ module.exports = {
   '{ String: Number }': typeforce.map('Number', 'String'),
   '{ Letter: Number }': typeforce.map('Number', Letter),
   '{ a: { b: Buffer3 } }': { a: { b: typeforce.BufferN(3) } },
+  '{ a: Buffer10|Number }': { a: typeforce.oneOf(typeforce.BufferN(10), 'Number') },
   'Buffer0': typeforce.BufferN(0),
   'Buffer3': typeforce.BufferN(3),
   'Buffer10': typeforce.BufferN(10),

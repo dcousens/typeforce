@@ -122,7 +122,11 @@ var types = {
 
     function _oneOf (value, strict) {
       return types.some(function (type) {
-        return type(value, strict)
+        try {
+          return typeforce(type, value, strict)
+        } catch (e) {
+          return false
+        }
       })
     }
     _oneOf.toJSON = function () { return types.map(tfJSON).join('|') }
