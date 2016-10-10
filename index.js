@@ -153,7 +153,7 @@ var types = {
         } catch (e) {
           throw tfSubError(e, i)
         }
-      })
+      }) && (!strict || values.length === arguments.length)
     }
     _tuple.toJSON = function () { return '(' + types.map(tfJSON).join(', ') + ')' }
 
