@@ -22,10 +22,10 @@
     "url": "https://github.com/dcousens/typeforce.git"
   },
   "scripts": {
-    "coverage": "nyc --check-coverage --branches 100 --functions 100 tape test/*.js",
+    "coverage": "nyc --check-coverage --branches 100 --functions 100 node test/*.js",
     "test": "npm run standard && npm run unit",
     "standard": "standard",
-    "unit": "tape test/*.js | tap-dot"
+    "unit": "node test/*.js | tap-dot"
   },
   "dependencies": {
     "inherits": "^2.0.1"
