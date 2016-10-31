@@ -28,23 +28,6 @@ var types = {
     return _arrayOf
   },
 
-  eachOf: function eachOf () {
-    var types = [].slice.call(arguments).map(compile)
-
-    function _eachOf (value, strict) {
-      return types.every(function (type) {
-        try {
-          return typeforce(type, value, strict)
-        } catch (e) {
-          return false
-        }
-      })
-    }
-    _eachOf.toJSON = function () { return types.map(tfJSON).join('&') }
-
-    return _eachOf
-  },
-
   maybe: function maybe (type) {
     type = compile(type)
 
