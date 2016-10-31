@@ -117,10 +117,27 @@ var types = {
     return _object
   },
 
-  oneOf: function oneOf () {
+  every: function every () {
     var types = [].slice.call(arguments).map(compile)
 
-    function _oneOf (value, strict) {
+    function _every (value, strict) {
+      return types.every(function (type) {
+        try {
+          return typeforce(type, value, strict)
+        } catch (e) {
+          return false
+        }
+      })
+    }
+    _every.toJSON = function () { return types.map(tfJSON).join('&') }
+
+    return _every
+  },
+
+  some: function some () {
+    var types = [].slice.call(arguments).map(compile)
+
+    function _some (value, strict) {
       return types.some(function (type) {
         try {
           return typeforce(type, value, strict)
@@ -129,9 +146,9 @@ var types = {
         }
       })
     }
-    _oneOf.toJSON = function () { return types.map(tfJSON).join('|') }
+    _some.toJSON = function () { return types.map(tfJSON).join('|') }
 
-    return _oneOf
+    return _some
   },
 
   quacksLike: function quacksLike (type) {
@@ -169,6 +186,9 @@ var types = {
     return _value
   }
 }
+
+// (deprecated?) aliases
+types.oneOf = types.some
 
 function compile (type) {
   if (native.String(type)) {
