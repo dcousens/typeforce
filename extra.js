@@ -24,6 +24,12 @@ function Hex (value) {
   return typeof value === 'string' && /^([0-9a-f]{2})+$/i.test(value)
 }
 
+function HexN (length) {
+  return function HexN (value) {
+    return Hex(value) && value.length === length
+  }
+}
+
 var UINT53_MAX = Math.pow(2, 53) - 1
 
 function Int8 (value) { return ((value << 24) >> 24) === value }
@@ -43,6 +49,7 @@ module.exports = {
   Buffer: _Buffer,
   BufferN: BufferN,
   Hex: Hex,
+  HexN: HexN,
   Int8: Int8,
   Int16: Int16,
   Int32: Int32,

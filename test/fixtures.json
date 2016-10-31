@@ -1655,6 +1655,10 @@
       "value": "cafe1122deadbeef"
     },
     {
+      "type": "String",
+      "value": "0102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f20"
+    },
+    {
       "type": "?Number",
       "value": -1
     },
@@ -1715,12 +1719,20 @@
       "value": "cafe1122deadbeef"
     },
     {
+      "typeId": "(Number|String)",
+      "value": "0102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f20"
+    },
+    {
       "typeId": "Boolean|Number|String",
       "value": "fff"
     },
     {
       "typeId": "Boolean|Number|String",
       "value": "cafe1122deadbeef"
+    },
+    {
+      "typeId": "Boolean|Number|String",
+      "value": "0102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f20"
     },
     {
       "typeId": "Boolean|Number|String",
@@ -1829,6 +1841,14 @@
     {
       "typeId": "Hex",
       "value": "cafe1122deadbeef"
+    },
+    {
+      "typeId": "Hex",
+      "value": "0102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f20"
+    },
+    {
+      "typeId": "Hex64",
+      "value": "0102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f20"
     },
     {
       "typeId": "Int8",
@@ -14299,6 +14319,239 @@
       "valueId": "Buffer10"
     },
     {
+      "exception": "Expected HexN, got String \"\"",
+      "typeId": "Hex64",
+      "value": ""
+    },
+    {
+      "exception": "Expected HexN, got String \"foobar\"",
+      "typeId": "Hex64",
+      "value": "foobar"
+    },
+    {
+      "exception": "Expected HexN, got Number 0",
+      "typeId": "Hex64",
+      "value": 0
+    },
+    {
+      "exception": "Expected HexN, got Number 1",
+      "typeId": "Hex64",
+      "value": 1
+    },
+    {
+      "exception": "Expected HexN, got Array",
+      "typeId": "Hex64",
+      "value": []
+    },
+    {
+      "exception": "Expected HexN, got Array",
+      "typeId": "Hex64",
+      "value": [
+        0
+      ]
+    },
+    {
+      "exception": "Expected HexN, got Array",
+      "typeId": "Hex64",
+      "value": [
+        "foobar"
+      ]
+    },
+    {
+      "exception": "Expected HexN, got Array",
+      "typeId": "Hex64",
+      "value": [
+        {
+          "a": 0
+        }
+      ]
+    },
+    {
+      "exception": "Expected HexN, got Array",
+      "typeId": "Hex64",
+      "value": [
+        null
+      ]
+    },
+    {
+      "exception": "Expected HexN, got Boolean false",
+      "typeId": "Hex64",
+      "value": false
+    },
+    {
+      "exception": "Expected HexN, got Boolean true",
+      "typeId": "Hex64",
+      "value": true
+    },
+    {
+      "exception": "Expected HexN, got undefined",
+      "typeId": "Hex64"
+    },
+    {
+      "exception": "Expected HexN, got null",
+      "typeId": "Hex64",
+      "value": null
+    },
+    {
+      "exception": "Expected HexN, got Object",
+      "typeId": "Hex64",
+      "value": {}
+    },
+    {
+      "exception": "Expected HexN, got Object",
+      "typeId": "Hex64",
+      "value": {
+        "a": null
+      }
+    },
+    {
+      "exception": "Expected HexN, got Object",
+      "typeId": "Hex64",
+      "value": {
+        "a": 0
+      }
+    },
+    {
+      "exception": "Expected HexN, got Object",
+      "typeId": "Hex64",
+      "value": {
+        "a": 0,
+        "b": 0
+      }
+    },
+    {
+      "exception": "Expected HexN, got Object",
+      "typeId": "Hex64",
+      "value": {
+        "b": 0
+      }
+    },
+    {
+      "exception": "Expected HexN, got Object",
+      "typeId": "Hex64",
+      "value": {
+        "a": {
+          "b": 0
+        }
+      }
+    },
+    {
+      "exception": "Expected HexN, got Object",
+      "typeId": "Hex64",
+      "value": {
+        "a": {
+          "b": null
+        }
+      }
+    },
+    {
+      "exception": "Expected HexN, got Object",
+      "typeId": "Hex64",
+      "value": {
+        "a": {
+          "b": {
+            "c": 0
+          }
+        }
+      }
+    },
+    {
+      "exception": "Expected HexN, got Object",
+      "typeId": "Hex64",
+      "value": {
+        "a": {
+          "b": {
+            "c": null
+          }
+        }
+      }
+    },
+    {
+      "exception": "Expected HexN, got Object",
+      "typeId": "Hex64",
+      "value": {
+        "a": {
+          "b": {
+            "c": 0,
+            "d": 0
+          }
+        }
+      }
+    },
+    {
+      "exception": "Expected HexN, got Object",
+      "typeId": "Hex64",
+      "value": {
+        "a": "foo",
+        "b": "bar"
+      }
+    },
+    {
+      "exception": "Expected HexN, got Object",
+      "typeId": "Hex64",
+      "value": {
+        "a": "foo",
+        "b": {
+          "c": "bar"
+        }
+      }
+    },
+    {
+      "exception": "Expected HexN, got Function",
+      "typeId": "Hex64",
+      "valueId": "function"
+    },
+    {
+      "exception": "Expected HexN, got EmptyType",
+      "typeId": "Hex64",
+      "valueId": "emptyType"
+    },
+    {
+      "exception": "Expected HexN, got CustomType",
+      "typeId": "Hex64",
+      "valueId": "customType"
+    },
+    {
+      "exception": "Expected HexN, got Object",
+      "typeId": "Hex64",
+      "valueId": "{ a: undefined }"
+    },
+    {
+      "exception": "Expected HexN, got Object",
+      "typeId": "Hex64",
+      "valueId": "{ a: Buffer3 }"
+    },
+    {
+      "exception": "Expected HexN, got Object",
+      "typeId": "Hex64",
+      "valueId": "{ a: Buffer10 }"
+    },
+    {
+      "exception": "Expected HexN, got Object",
+      "typeId": "Hex64",
+      "valueId": "{ a: { b: Buffer3 } }"
+    },
+    {
+      "exception": "Expected HexN, got Object",
+      "typeId": "Hex64",
+      "valueId": "{ a: { b: Buffer10 } }"
+    },
+    {
+      "exception": "Expected HexN, got Buffer",
+      "typeId": "Hex64",
+      "valueId": "Buffer"
+    },
+    {
+      "exception": "Expected HexN, got Buffer",
+      "typeId": "Hex64",
+      "valueId": "Buffer3"
+    },
+    {
+      "exception": "Expected HexN, got Buffer",
+      "typeId": "Hex64",
+      "valueId": "Buffer10"
+    },
+    {
       "exception": "Expected Int8, got String \"\"",
       "typeId": "Int8",
       "value": ""
@@ -15870,6 +16123,11 @@
       "value": "cafe1122deadbeef"
     },
     {
+      "exception": "Expected Array, got String \"0102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f20\"",
+      "type": "Array",
+      "value": "0102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f20"
+    },
+    {
       "exception": "Expected Array, got Number -1",
       "type": "Array",
       "value": -1
@@ -15943,6 +16201,11 @@
       "exception": "Expected Boolean, got String \"cafe1122deadbeef\"",
       "type": "Boolean",
       "value": "cafe1122deadbeef"
+    },
+    {
+      "exception": "Expected Boolean, got String \"0102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f20\"",
+      "type": "Boolean",
+      "value": "0102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f20"
     },
     {
       "exception": "Expected Boolean, got Number -1",
@@ -16020,6 +16283,11 @@
       "value": "cafe1122deadbeef"
     },
     {
+      "exception": "Expected Buffer, got String \"0102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f20\"",
+      "type": "Buffer",
+      "value": "0102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f20"
+    },
+    {
       "exception": "Expected Buffer, got Number -1",
       "type": "Buffer",
       "value": -1
@@ -16093,6 +16361,11 @@
       "exception": "Expected Function, got String \"cafe1122deadbeef\"",
       "type": "Function",
       "value": "cafe1122deadbeef"
+    },
+    {
+      "exception": "Expected Function, got String \"0102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f20\"",
+      "type": "Function",
+      "value": "0102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f20"
     },
     {
       "exception": "Expected Function, got Number -1",
@@ -16170,6 +16443,11 @@
       "value": "cafe1122deadbeef"
     },
     {
+      "exception": "Expected Null, got String \"0102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f20\"",
+      "type": "Null",
+      "value": "0102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f20"
+    },
+    {
       "exception": "Expected Null, got Number -1",
       "type": "Null",
       "value": -1
@@ -16245,6 +16523,11 @@
       "value": "cafe1122deadbeef"
     },
     {
+      "exception": "Expected Number, got String \"0102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f20\"",
+      "type": "Number",
+      "value": "0102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f20"
+    },
+    {
       "exception": "Expected Object, got String \"fff\"",
       "type": "Object",
       "value": "fff"
@@ -16253,6 +16536,11 @@
       "exception": "Expected Object, got String \"cafe1122deadbeef\"",
       "type": "Object",
       "value": "cafe1122deadbeef"
+    },
+    {
+      "exception": "Expected Object, got String \"0102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f20\"",
+      "type": "Object",
+      "value": "0102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f20"
     },
     {
       "exception": "Expected Object, got Number -1",
@@ -16395,6 +16683,11 @@
       "value": "cafe1122deadbeef"
     },
     {
+      "exception": "Expected \\?Number, got String \"0102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f20\"",
+      "type": "?Number",
+      "value": "0102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f20"
+    },
+    {
       "exception": "Expected \\[\\?Number\\], got String \"fff\"",
       "type": [
         "?Number"
@@ -16407,6 +16700,13 @@
         "?Number"
       ],
       "value": "cafe1122deadbeef"
+    },
+    {
+      "exception": "Expected \\[\\?Number\\], got String \"0102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f20\"",
+      "type": [
+        "?Number"
+      ],
+      "value": "0102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f20"
     },
     {
       "exception": "Expected \\[\\?Number\\], got Number -1",
@@ -16512,6 +16812,13 @@
         "Number"
       ],
       "value": "cafe1122deadbeef"
+    },
+    {
+      "exception": "Expected \\[Number\\], got String \"0102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f20\"",
+      "type": [
+        "Number"
+      ],
+      "value": "0102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f20"
     },
     {
       "exception": "Expected \\[Number\\], got Number -1",
@@ -16621,6 +16928,15 @@
         }
       ],
       "value": "cafe1122deadbeef"
+    },
+    {
+      "exception": "Expected \\[Object\\], got String \"0102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f20\"",
+      "type": [
+        {
+          "a": "Number"
+        }
+      ],
+      "value": "0102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f20"
     },
     {
       "exception": "Expected \\[Object\\], got Number -1",
@@ -16750,6 +17066,11 @@
       "value": "cafe1122deadbeef"
     },
     {
+      "exception": "Expected Object, got String \"0102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f20\"",
+      "type": {},
+      "value": "0102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f20"
+    },
+    {
       "exception": "Expected Object, got Number -1",
       "type": {},
       "value": -1
@@ -16827,6 +17148,13 @@
         "a": "Number"
       },
       "value": "cafe1122deadbeef"
+    },
+    {
+      "exception": "Expected Object, got String \"0102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f20\"",
+      "type": {
+        "a": "Number"
+      },
+      "value": "0102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f20"
     },
     {
       "exception": "Expected Object, got Number -1",
@@ -16936,6 +17264,15 @@
         }
       },
       "value": "cafe1122deadbeef"
+    },
+    {
+      "exception": "Expected Object, got String \"0102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f20\"",
+      "type": {
+        "a": {
+          "b": "Number"
+        }
+      },
+      "value": "0102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f20"
     },
     {
       "exception": "Expected Object, got Number -1",
@@ -17075,6 +17412,17 @@
         }
       },
       "value": "cafe1122deadbeef"
+    },
+    {
+      "exception": "Expected Object, got String \"0102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f20\"",
+      "type": {
+        "a": {
+          "b": {
+            "c": "?Number"
+          }
+        }
+      },
+      "value": "0102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f20"
     },
     {
       "exception": "Expected Object, got Number -1",
@@ -17240,6 +17588,17 @@
         }
       },
       "value": "cafe1122deadbeef"
+    },
+    {
+      "exception": "Expected Object, got String \"0102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f20\"",
+      "type": {
+        "a": {
+          "b": {
+            "c": "Number"
+          }
+        }
+      },
+      "value": "0102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f20"
     },
     {
       "exception": "Expected Object, got Number -1",
@@ -17397,6 +17756,13 @@
         "a": null
       },
       "value": "cafe1122deadbeef"
+    },
+    {
+      "exception": "Expected Object, got String \"0102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f20\"",
+      "type": {
+        "a": null
+      },
+      "value": "0102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f20"
     },
     {
       "exception": "Expected Object, got Number -1",
@@ -17498,6 +17864,10 @@
       "value": "cafe1122deadbeef"
     },
     {
+      "exception": "Expected undefined, got String \"0102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f20\"",
+      "value": "0102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f20"
+    },
+    {
       "exception": "Expected undefined, got Number -1",
       "value": -1
     },
@@ -17558,6 +17928,11 @@
       "exception": "Expected null, got String \"cafe1122deadbeef\"",
       "type": null,
       "value": "cafe1122deadbeef"
+    },
+    {
+      "exception": "Expected null, got String \"0102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f20\"",
+      "type": null,
+      "value": "0102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f20"
     },
     {
       "exception": "Expected null, got Number -1",
@@ -17635,6 +18010,11 @@
       "value": "cafe1122deadbeef"
     },
     {
+      "exception": "Expected true, got String \"0102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f20\"",
+      "type": true,
+      "value": "0102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f20"
+    },
+    {
       "exception": "Expected true, got Number -1",
       "type": true,
       "value": -1
@@ -17708,6 +18088,11 @@
       "exception": "Expected false, got String \"cafe1122deadbeef\"",
       "type": false,
       "value": "cafe1122deadbeef"
+    },
+    {
+      "exception": "Expected false, got String \"0102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f20\"",
+      "type": false,
+      "value": "0102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f20"
     },
     {
       "exception": "Expected false, got Number -1",
@@ -17785,6 +18170,11 @@
       "value": "cafe1122deadbeef"
     },
     {
+      "exception": "Expected 0, got String \"0102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f20\"",
+      "type": 0,
+      "value": "0102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f20"
+    },
+    {
       "exception": "Expected 0, got Number -1",
       "type": 0,
       "value": -1
@@ -17858,6 +18248,11 @@
       "exception": "Expected property \"0\" of type Boolean, got String \"c\"",
       "typeId": "(Boolean, Number)",
       "value": "cafe1122deadbeef"
+    },
+    {
+      "exception": "Expected property \"0\" of type Boolean, got String \"0\"",
+      "typeId": "(Boolean, Number)",
+      "value": "0102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f20"
     },
     {
       "exception": "Expected property \"0\" of type Boolean, got undefined",
@@ -17937,6 +18332,12 @@
       "value": "cafe1122deadbeef"
     },
     {
+      "exception": "Expected \\(Number|String\\), got String \"0102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f20\"",
+      "strict": true,
+      "typeId": "(Number|String)",
+      "value": "0102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f20"
+    },
+    {
       "exception": "Expected property \"0\" of type Number|String, got undefined",
       "typeId": "(Number|String)",
       "value": -1
@@ -18010,6 +18411,11 @@
       "exception": "Expected property \"0\" of type Number, got String \"c\"",
       "typeId": "(Number)",
       "value": "cafe1122deadbeef"
+    },
+    {
+      "exception": "Expected property \"0\" of type Number, got String \"0\"",
+      "typeId": "(Number)",
+      "value": "0102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f20"
     },
     {
       "exception": "Expected property \"0\" of type Number, got undefined",
@@ -18087,6 +18493,11 @@
       "value": "cafe1122deadbeef"
     },
     {
+      "exception": "Expected \\[\\?Object\\], got String \"0102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f20\"",
+      "typeId": "[?{ a: Number }]",
+      "value": "0102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f20"
+    },
+    {
       "exception": "Expected \\[\\?Object\\], got Number -1",
       "typeId": "[?{ a: Number }]",
       "value": -1
@@ -18162,6 +18573,11 @@
       "value": "cafe1122deadbeef"
     },
     {
+      "exception": "Expected \\?Boolean|Number, got String \"0102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f20\"",
+      "typeId": "?Boolean|Number",
+      "value": "0102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f20"
+    },
+    {
       "exception": "Expected \\?Object, got String \"fff\"",
       "typeId": "?{ a: ?Number }",
       "value": "fff"
@@ -18170,6 +18586,11 @@
       "exception": "Expected \\?Object, got String \"cafe1122deadbeef\"",
       "typeId": "?{ a: ?Number }",
       "value": "cafe1122deadbeef"
+    },
+    {
+      "exception": "Expected \\?Object, got String \"0102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f20\"",
+      "typeId": "?{ a: ?Number }",
+      "value": "0102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f20"
     },
     {
       "exception": "Expected \\?Object, got Number -1",
@@ -18247,6 +18668,11 @@
       "value": "cafe1122deadbeef"
     },
     {
+      "exception": "Expected \\?Object, got String \"0102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f20\"",
+      "typeId": "?{ a: Number }",
+      "value": "0102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f20"
+    },
+    {
       "exception": "Expected \\?Object, got Number -1",
       "typeId": "?{ a: Number }",
       "value": -1
@@ -18322,6 +18748,11 @@
       "value": "cafe1122deadbeef"
     },
     {
+      "exception": "Expected Object, got String \"0102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f20\"",
+      "typeId": "{ a: Number|Null }",
+      "value": "0102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f20"
+    },
+    {
       "exception": "Expected Object, got Number -1",
       "typeId": "{ a: Number|Null }",
       "value": -1
@@ -18397,6 +18828,11 @@
       "value": "cafe1122deadbeef"
     },
     {
+      "exception": "Expected Object, got String \"0102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f20\"",
+      "typeId": "{ a: Number|{ b: Number } }",
+      "value": "0102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f20"
+    },
+    {
       "exception": "Expected Object, got Number -1",
       "typeId": "{ a: Number|{ b: Number } }",
       "value": -1
@@ -18470,6 +18906,11 @@
       "exception": "Expected Object, got String \"cafe1122deadbeef\"",
       "typeId": "{ a: ?{ b: Number } }",
       "value": "cafe1122deadbeef"
+    },
+    {
+      "exception": "Expected Object, got String \"0102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f20\"",
+      "typeId": "{ a: ?{ b: Number } }",
+      "value": "0102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f20"
     },
     {
       "exception": "Expected Object, got Number -1",
@@ -18545,6 +18986,11 @@
       "exception": "Expected Object, got String \"cafe1122deadbeef\"",
       "typeId": "{ a: ?{ b: ?{ c: Number } } }",
       "value": "cafe1122deadbeef"
+    },
+    {
+      "exception": "Expected Object, got String \"0102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f20\"",
+      "typeId": "{ a: ?{ b: ?{ c: Number } } }",
+      "value": "0102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f20"
     },
     {
       "exception": "Expected Object, got Number -1",
@@ -18620,6 +19066,11 @@
       "exception": "Expected Object, got String \"cafe1122deadbeef\"",
       "typeId": "{ a: undefined }",
       "value": "cafe1122deadbeef"
+    },
+    {
+      "exception": "Expected Object, got String \"0102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f20\"",
+      "typeId": "{ a: undefined }",
+      "value": "0102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f20"
     },
     {
       "exception": "Expected Object, got Number -1",
@@ -18695,6 +19146,11 @@
       "exception": "Expected Object, got String \"cafe1122deadbeef\"",
       "typeId": "@{ a: undefined }",
       "value": "cafe1122deadbeef"
+    },
+    {
+      "exception": "Expected Object, got String \"0102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f20\"",
+      "typeId": "@{ a: undefined }",
+      "value": "0102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f20"
     },
     {
       "exception": "Expected Object, got Number -1",
@@ -18772,6 +19228,11 @@
       "value": "cafe1122deadbeef"
     },
     {
+      "exception": "Expected Unmatchable, got String \"0102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f20\"",
+      "typeId": "Unmatchable",
+      "value": "0102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f20"
+    },
+    {
       "exception": "Expected Unmatchable, got Number -1",
       "typeId": "Unmatchable",
       "value": -1
@@ -18845,6 +19306,11 @@
       "exception": "Expected \\?Unmatchable, got String \"cafe1122deadbeef\"",
       "typeId": "?Unmatchable",
       "value": "cafe1122deadbeef"
+    },
+    {
+      "exception": "Expected \\?Unmatchable, got String \"0102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f20\"",
+      "typeId": "?Unmatchable",
+      "value": "0102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f20"
     },
     {
       "exception": "Expected \\?Unmatchable, got Number -1",
@@ -18922,6 +19388,11 @@
       "value": "cafe1122deadbeef"
     },
     {
+      "exception": "Expected Object, got String \"0102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f20\"",
+      "typeId": "{ a: ?Unmatchable }",
+      "value": "0102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f20"
+    },
+    {
       "exception": "Expected Object, got Number -1",
       "typeId": "{ a: ?Unmatchable }",
       "value": -1
@@ -18995,6 +19466,11 @@
       "exception": "Expected Object, got String \"cafe1122deadbeef\"",
       "typeId": "{ a: { b: Unmatchable } }",
       "value": "cafe1122deadbeef"
+    },
+    {
+      "exception": "Expected Object, got String \"0102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f20\"",
+      "typeId": "{ a: { b: Unmatchable } }",
+      "value": "0102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f20"
     },
     {
       "exception": "Expected Object, got Number -1",
@@ -19072,6 +19548,11 @@
       "value": "cafe1122deadbeef"
     },
     {
+      "exception": "Expected CustomType, got String \"0102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f20\"",
+      "typeId": ">CustomType",
+      "value": "0102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f20"
+    },
+    {
       "exception": "Expected CustomType, got Number -1",
       "typeId": ">CustomType",
       "value": -1
@@ -19145,6 +19626,11 @@
       "exception": "Expected \\{String\\}, got String \"cafe1122deadbeef\"",
       "typeId": "{ String }",
       "value": "cafe1122deadbeef"
+    },
+    {
+      "exception": "Expected \\{String\\}, got String \"0102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f20\"",
+      "typeId": "{ String }",
+      "value": "0102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f20"
     },
     {
       "exception": "Expected \\{String\\}, got Number -1",
@@ -19222,6 +19708,11 @@
       "value": "cafe1122deadbeef"
     },
     {
+      "exception": "Expected \\{String|Number\\}, got String \"0102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f20\"",
+      "typeId": "{ String|Number }",
+      "value": "0102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f20"
+    },
+    {
       "exception": "Expected \\{String|Number\\}, got Number -1",
       "typeId": "{ String|Number }",
       "value": -1
@@ -19295,6 +19786,11 @@
       "exception": "Expected \\{String\\: Number\\}, got String \"cafe1122deadbeef\"",
       "typeId": "{ String: Number }",
       "value": "cafe1122deadbeef"
+    },
+    {
+      "exception": "Expected \\{String\\: Number\\}, got String \"0102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f20\"",
+      "typeId": "{ String: Number }",
+      "value": "0102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f20"
     },
     {
       "exception": "Expected \\{String\\: Number\\}, got Number -1",
@@ -19372,6 +19868,11 @@
       "value": "cafe1122deadbeef"
     },
     {
+      "exception": "Expected \\{Letter\\: Number\\}, got String \"0102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f20\"",
+      "typeId": "{ Letter: Number }",
+      "value": "0102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f20"
+    },
+    {
       "exception": "Expected \\{Letter\\: Number\\}, got Number -1",
       "typeId": "{ Letter: Number }",
       "value": -1
@@ -19447,6 +19948,11 @@
       "value": "cafe1122deadbeef"
     },
     {
+      "exception": "Expected Object, got String \"0102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f20\"",
+      "typeId": "{ a: { b: Buffer3 } }",
+      "value": "0102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f20"
+    },
+    {
       "exception": "Expected Object, got Number -1",
       "typeId": "{ a: { b: Buffer3 } }",
       "value": -1
@@ -19520,6 +20026,11 @@
       "exception": "Expected Object, got String \"cafe1122deadbeef\"",
       "typeId": "{ a: Buffer10|Number }",
       "value": "cafe1122deadbeef"
+    },
+    {
+      "exception": "Expected Object, got String \"0102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f20\"",
+      "typeId": "{ a: Buffer10|Number }",
+      "value": "0102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f20"
     },
     {
       "exception": "Expected Object, got Number -1",
@@ -19597,6 +20108,11 @@
       "value": "cafe1122deadbeef"
     },
     {
+      "exception": "Expected Object&Object, got String \"0102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f20\"",
+      "typeId": "{ a: Number } & { b: Number }",
+      "value": "0102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f20"
+    },
+    {
       "exception": "Expected Object&Object, got Number -1",
       "typeId": "{ a: Number } & { b: Number }",
       "value": -1
@@ -19672,6 +20188,11 @@
       "value": "cafe1122deadbeef"
     },
     {
+      "exception": "Expected Buffer, got String \"0102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f20\"",
+      "typeId": "Buffer0",
+      "value": "0102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f20"
+    },
+    {
       "exception": "Expected Buffer, got Number -1",
       "typeId": "Buffer0",
       "value": -1
@@ -19747,6 +20268,11 @@
       "value": "cafe1122deadbeef"
     },
     {
+      "exception": "Expected Buffer, got String \"0102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f20\"",
+      "typeId": "Buffer3",
+      "value": "0102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f20"
+    },
+    {
       "exception": "Expected Buffer, got Number -1",
       "typeId": "Buffer3",
       "value": -1
@@ -19820,6 +20346,11 @@
       "exception": "Expected Buffer, got String \"cafe1122deadbeef\"",
       "typeId": "Buffer10",
       "value": "cafe1122deadbeef"
+    },
+    {
+      "exception": "Expected Buffer, got String \"0102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f20\"",
+      "typeId": "Buffer10",
+      "value": "0102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f20"
     },
     {
       "exception": "Expected Buffer, got Number -1",
@@ -19957,6 +20488,81 @@
       "value": 9007199254740994
     },
     {
+      "exception": "Expected HexN, got String \"fff\"",
+      "typeId": "Hex64",
+      "value": "fff"
+    },
+    {
+      "exception": "Expected HexN, got String \"cafe1122deadbeef\"",
+      "typeId": "Hex64",
+      "value": "cafe1122deadbeef"
+    },
+    {
+      "exception": "Expected HexN, got Number -1",
+      "typeId": "Hex64",
+      "value": -1
+    },
+    {
+      "exception": "Expected HexN, got Number 127",
+      "typeId": "Hex64",
+      "value": 127
+    },
+    {
+      "exception": "Expected HexN, got Number 128",
+      "typeId": "Hex64",
+      "value": 128
+    },
+    {
+      "exception": "Expected HexN, got Number 255",
+      "typeId": "Hex64",
+      "value": 255
+    },
+    {
+      "exception": "Expected HexN, got Number 256",
+      "typeId": "Hex64",
+      "value": 256
+    },
+    {
+      "exception": "Expected HexN, got Number -128",
+      "typeId": "Hex64",
+      "value": -128
+    },
+    {
+      "exception": "Expected HexN, got Number -129",
+      "typeId": "Hex64",
+      "value": -129
+    },
+    {
+      "exception": "Expected HexN, got Number 65534",
+      "typeId": "Hex64",
+      "value": 65534
+    },
+    {
+      "exception": "Expected HexN, got Number 65535",
+      "typeId": "Hex64",
+      "value": 65535
+    },
+    {
+      "exception": "Expected HexN, got Number 65536",
+      "typeId": "Hex64",
+      "value": 65536
+    },
+    {
+      "exception": "Expected HexN, got Number 4294967295",
+      "typeId": "Hex64",
+      "value": 4294967295
+    },
+    {
+      "exception": "Expected HexN, got Number 9007199254740991",
+      "typeId": "Hex64",
+      "value": 9007199254740991
+    },
+    {
+      "exception": "Expected HexN, got Number 9007199254740994",
+      "typeId": "Hex64",
+      "value": 9007199254740994
+    },
+    {
       "exception": "Expected Int8, got String \"fff\"",
       "typeId": "Int8",
       "value": "fff"
@@ -19965,6 +20571,11 @@
       "exception": "Expected Int8, got String \"cafe1122deadbeef\"",
       "typeId": "Int8",
       "value": "cafe1122deadbeef"
+    },
+    {
+      "exception": "Expected Int8, got String \"0102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f20\"",
+      "typeId": "Int8",
+      "value": "0102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f20"
     },
     {
       "exception": "Expected Int8, got Number 128",
@@ -20027,6 +20638,11 @@
       "value": "cafe1122deadbeef"
     },
     {
+      "exception": "Expected Int16, got String \"0102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f20\"",
+      "typeId": "Int16",
+      "value": "0102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f20"
+    },
+    {
       "exception": "Expected Int16, got Number 65534",
       "typeId": "Int16",
       "value": 65534
@@ -20067,6 +20683,11 @@
       "value": "cafe1122deadbeef"
     },
     {
+      "exception": "Expected Int32, got String \"0102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f20\"",
+      "typeId": "Int32",
+      "value": "0102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f20"
+    },
+    {
       "exception": "Expected Int32, got Number 4294967295",
       "typeId": "Int32",
       "value": 4294967295
@@ -20090,6 +20711,11 @@
       "exception": "Expected UInt8, got String \"cafe1122deadbeef\"",
       "typeId": "UInt8",
       "value": "cafe1122deadbeef"
+    },
+    {
+      "exception": "Expected UInt8, got String \"0102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f20\"",
+      "typeId": "UInt8",
+      "value": "0102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f20"
     },
     {
       "exception": "Expected UInt8, got Number -1",
@@ -20152,6 +20778,11 @@
       "value": "cafe1122deadbeef"
     },
     {
+      "exception": "Expected UInt16, got String \"0102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f20\"",
+      "typeId": "UInt16",
+      "value": "0102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f20"
+    },
+    {
       "exception": "Expected UInt16, got Number -1",
       "typeId": "UInt16",
       "value": -1
@@ -20197,6 +20828,11 @@
       "value": "cafe1122deadbeef"
     },
     {
+      "exception": "Expected UInt32, got String \"0102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f20\"",
+      "typeId": "UInt32",
+      "value": "0102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f20"
+    },
+    {
       "exception": "Expected UInt32, got Number -1",
       "typeId": "UInt32",
       "value": -1
@@ -20230,6 +20866,11 @@
       "exception": "Expected UInt53, got String \"cafe1122deadbeef\"",
       "typeId": "UInt53",
       "value": "cafe1122deadbeef"
+    },
+    {
+      "exception": "Expected UInt53, got String \"0102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f20\"",
+      "typeId": "UInt53",
+      "value": "0102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f20"
     },
     {
       "exception": "Expected UInt53, got Number -1",
