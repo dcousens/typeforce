@@ -87,7 +87,5 @@ typeforce({
 
 WARNING: Be wary of using `quacksLike` types which inherently rely on the `MyType.name` property,  if that property is mangled by say `uglifyjs` you will have a bad time.
 
-## License
-
-This library is free and open-source software released under the MIT license.
+## LICENSE [MIT](LICENSE)
 
