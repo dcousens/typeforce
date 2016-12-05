@@ -5,7 +5,7 @@ function _Buffer (value) {
 }
 _Buffer.toJSON = function () { return 'Buffer' }
 
-function BufferN (length) {
+function _BufferN (length) {
   function BufferN (value) {
     if (!Buffer.isBuffer(value)) return false
     if (value.length !== length) {
@@ -47,7 +47,7 @@ function UInt53 (value) {
 
 module.exports = {
   Buffer: _Buffer,
-  BufferN: BufferN,
+  BufferN: _BufferN,
   Hex: Hex,
   HexN: HexN,
   Int8: Int8,
