@@ -24,7 +24,7 @@ function Hex (value) {
   return typeof value === 'string' && /^([0-9a-f]{2})+$/i.test(value)
 }
 
-function HexN (length) {
+function _HexN (length) {
   return function HexN (value) {
     return Hex(value) && value.length === length
   }
@@ -32,6 +32,9 @@ function HexN (length) {
 
 var UINT53_MAX = Math.pow(2, 53) - 1
 
+function Finite (value) {
+  return typeof value === 'number' && isFinite(value)
+}
 function Int8 (value) { return ((value << 24) >> 24) === value }
 function Int16 (value) { return ((value << 16) >> 16) === value }
 function Int32 (value) { return (value | 0) === value }
@@ -48,8 +51,9 @@ function UInt53 (value) {
 module.exports = {
   Buffer: _Buffer,
   BufferN: _BufferN,
+  Finite: Finite,
   Hex: Hex,
-  HexN: HexN,
+  HexN: _HexN,
   Int8: Int8,
   Int16: Int16,
   Int32: Int32,
