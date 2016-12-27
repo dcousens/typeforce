@@ -11,17 +11,17 @@ fixtures.valid.forEach(function (f) {
   var valueDescription = JSON.stringify(value)
 
   tape('passes ' + typeDescription + ' with ' + valueDescription, function (t) {
-    t.plan(1)
-    t.doesNotThrow(function () {
-      typeforce(type, value, f.strict)
-    })
+    t.plan(2)
+    t.doesNotThrow(function () { typeforce(type, value, f.strict) })
+    typeforce.async(type, value, f.strict, t.ifErr)
   })
 
   tape('passes ' + typeDescription + ' (compiled) with ' + valueDescription, function (t) {
-    t.plan(1)
-    t.doesNotThrow(function () {
-      typeforce(typeforce.compile(type), value, f.strict)
-    })
+    var compiled = typeforce.compile(type)
+
+    t.plan(2)
+    t.doesNotThrow(function () { typeforce(compiled, value, f.strict) })
+    typeforce.async(compiled, value, f.strict, t.ifErr)
   })
 })
 
