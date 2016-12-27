@@ -17,6 +17,12 @@
   "license": "MIT",
   "author": "Daniel Cousens",
   "main": "index.js",
+  "files": [
+    "errors.js",
+    "extra.js",
+    "index.js",
+    "native.js"
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/dcousens/typeforce.git"
