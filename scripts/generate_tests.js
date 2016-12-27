@@ -108,7 +108,7 @@ function addFixture (type, value) {
     fixtures.valid.push(f)
   } catch (e) {
     let exception = e.message
-      .replace(/([.*+?^=!:${}\[\]\/\\\(\)])/g, '\\$&')
+      .replace(/([.*+?^=!:${}[\]/\\()])/g, '\\$&')
 
     try {
       typeforce(atype, avalue, false)
@@ -116,7 +116,7 @@ function addFixture (type, value) {
 
       if (exception.indexOf('asciiSlice') !== -1) return
       fixtures.invalid.push(Object.assign({ exception, strict: true }, f))
-    } catch (e) {
+    } catch (e2) {
       if (exception.indexOf('asciiSlice') !== -1) return
       fixtures.invalid.push(Object.assign({ exception }, f))
     }
