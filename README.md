@@ -85,7 +85,38 @@ typeforce({
 // TypeError: Unexpected property 'y' of type Number
 ```
 
-WARNING: Be wary of using `quacksLike` types which inherently rely on the `MyType.name` property,  if that property is mangled by say `uglifyjs` you will have a bad time.
+**Pro**tips (extended types):
+```
+typeforce(typeforce.tuple('String', 'Number'), ['foo', 1])
+// OK!
+
+typeforce(typeforce.tuple('Number', 'Number'), ['not a number', 1])
+// TypeError: Expected property "0" of type Number, got String 'not a number'
+
+typeforce(typeforce.map('Number'), {
+  'anyKeyIsOK': 1
+})
+// OK!
+
+typeforce(typeforce.map('Number', typeforce.HexN(8)), {
+  'deadbeef': 1,
+  'ffff0000': 2
+})
+// OK!
+
+function Foo () {
+  this.x = 2
+}
+
+typeforce(typeforce.quacksLike('Foo'), new Foo())
+// OK!
+
+// Note, any Foo will do
+typeforce(typeforce.quacksLike('Foo'), new (function Foo() {}))
+// OK!
+```
+
+WARNING: Be very wary of using the `quacksLike` type, as it relies on the `Foo.name` property.
+If that property is mangled by a transpiler,  such as `uglifyjs`,  you will have a bad time.
 
 ## LICENSE [MIT](LICENSE)
-
