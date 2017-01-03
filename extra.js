@@ -14,7 +14,6 @@ function _BufferN (length) {
 
     return true
   }
-
   BufferN.toJSON = function () { return 'Buffer' }
 
   return BufferN
@@ -25,9 +24,17 @@ function Hex (value) {
 }
 
 function _HexN (length) {
-  return function HexN (value) {
-    return Hex(value) && value.length === length
+  function HexN (value) {
+    if (!Hex(value)) return false
+    if (value.length !== length) {
+      throw errors.tfCustomError('Hex(Length: ' + length + ')', 'Hex(Length: ' + value.length + ')')
+    }
+
+    return true
   }
+  HexN.toJSON = function () { return 'Hex' }
+
+  return HexN
 }
 
 var UINT53_MAX = Math.pow(2, 53) - 1
