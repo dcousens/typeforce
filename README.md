@@ -86,7 +86,8 @@ typeforce({
 ```
 
 **Pro**tips (extended types):
-```
+
+``` javascript
 typeforce(typeforce.tuple('String', 'Number'), ['foo', 1])
 // OK!
 
