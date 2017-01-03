@@ -14078,46 +14078,46 @@
       "valueId": "Buffer10"
     },
     {
-      "exception": "Expected HexN, got String \"\"",
+      "exception": "Expected Hex, got String \"\"",
       "typeId": "Hex64",
       "value": ""
     },
     {
-      "exception": "Expected HexN, got String \"foobar\"",
+      "exception": "Expected Hex, got String \"foobar\"",
       "typeId": "Hex64",
       "value": "foobar"
     },
     {
-      "exception": "Expected HexN, got Number 0",
+      "exception": "Expected Hex, got Number 0",
       "typeId": "Hex64",
       "value": 0
     },
     {
-      "exception": "Expected HexN, got Number 1",
+      "exception": "Expected Hex, got Number 1",
       "typeId": "Hex64",
       "value": 1
     },
     {
-      "exception": "Expected HexN, got Array",
+      "exception": "Expected Hex, got Array",
       "typeId": "Hex64",
       "value": []
     },
     {
-      "exception": "Expected HexN, got Array",
+      "exception": "Expected Hex, got Array",
       "typeId": "Hex64",
       "value": [
         0
       ]
     },
     {
-      "exception": "Expected HexN, got Array",
+      "exception": "Expected Hex, got Array",
       "typeId": "Hex64",
       "value": [
         "foobar"
       ]
     },
     {
-      "exception": "Expected HexN, got Array",
+      "exception": "Expected Hex, got Array",
       "typeId": "Hex64",
       "value": [
         {
@@ -14126,52 +14126,52 @@
       ]
     },
     {
-      "exception": "Expected HexN, got Array",
+      "exception": "Expected Hex, got Array",
       "typeId": "Hex64",
       "value": [
         null
       ]
     },
     {
-      "exception": "Expected HexN, got Boolean false",
+      "exception": "Expected Hex, got Boolean false",
       "typeId": "Hex64",
       "value": false
     },
     {
-      "exception": "Expected HexN, got Boolean true",
+      "exception": "Expected Hex, got Boolean true",
       "typeId": "Hex64",
       "value": true
     },
     {
-      "exception": "Expected HexN, got undefined",
+      "exception": "Expected Hex, got undefined",
       "typeId": "Hex64"
     },
     {
-      "exception": "Expected HexN, got null",
+      "exception": "Expected Hex, got null",
       "typeId": "Hex64",
       "value": null
     },
     {
-      "exception": "Expected HexN, got Object",
+      "exception": "Expected Hex, got Object",
       "typeId": "Hex64",
       "value": {}
     },
     {
-      "exception": "Expected HexN, got Object",
+      "exception": "Expected Hex, got Object",
       "typeId": "Hex64",
       "value": {
         "a": null
       }
     },
     {
-      "exception": "Expected HexN, got Object",
+      "exception": "Expected Hex, got Object",
       "typeId": "Hex64",
       "value": {
         "a": 0
       }
     },
     {
-      "exception": "Expected HexN, got Object",
+      "exception": "Expected Hex, got Object",
       "typeId": "Hex64",
       "value": {
         "a": 0,
@@ -14179,14 +14179,14 @@
       }
     },
     {
-      "exception": "Expected HexN, got Object",
+      "exception": "Expected Hex, got Object",
       "typeId": "Hex64",
       "value": {
         "b": 0
       }
     },
     {
-      "exception": "Expected HexN, got Object",
+      "exception": "Expected Hex, got Object",
       "typeId": "Hex64",
       "value": {
         "a": {
@@ -14195,7 +14195,7 @@
       }
     },
     {
-      "exception": "Expected HexN, got Object",
+      "exception": "Expected Hex, got Object",
       "typeId": "Hex64",
       "value": {
         "a": {
@@ -14204,7 +14204,7 @@
       }
     },
     {
-      "exception": "Expected HexN, got Object",
+      "exception": "Expected Hex, got Object",
       "typeId": "Hex64",
       "value": {
         "a": {
@@ -14215,7 +14215,7 @@
       }
     },
     {
-      "exception": "Expected HexN, got Object",
+      "exception": "Expected Hex, got Object",
       "typeId": "Hex64",
       "value": {
         "a": {
@@ -14226,7 +14226,7 @@
       }
     },
     {
-      "exception": "Expected HexN, got Object",
+      "exception": "Expected Hex, got Object",
       "typeId": "Hex64",
       "value": {
         "a": {
@@ -14238,7 +14238,7 @@
       }
     },
     {
-      "exception": "Expected HexN, got Object",
+      "exception": "Expected Hex, got Object",
       "typeId": "Hex64",
       "value": {
         "a": "foo",
@@ -14246,7 +14246,7 @@
       }
     },
     {
-      "exception": "Expected HexN, got Object",
+      "exception": "Expected Hex, got Object",
       "typeId": "Hex64",
       "value": {
         "a": "foo",
@@ -14256,57 +14256,57 @@
       }
     },
     {
-      "exception": "Expected HexN, got Function",
+      "exception": "Expected Hex, got Function",
       "typeId": "Hex64",
       "valueId": "function"
     },
     {
-      "exception": "Expected HexN, got EmptyType",
+      "exception": "Expected Hex, got EmptyType",
       "typeId": "Hex64",
       "valueId": "emptyType"
     },
     {
-      "exception": "Expected HexN, got CustomType",
+      "exception": "Expected Hex, got CustomType",
       "typeId": "Hex64",
       "valueId": "customType"
     },
     {
-      "exception": "Expected HexN, got Object",
+      "exception": "Expected Hex, got Object",
       "typeId": "Hex64",
       "valueId": "{ a: undefined }"
     },
     {
-      "exception": "Expected HexN, got Object",
+      "exception": "Expected Hex, got Object",
       "typeId": "Hex64",
       "valueId": "{ a: Buffer3 }"
     },
     {
-      "exception": "Expected HexN, got Object",
+      "exception": "Expected Hex, got Object",
       "typeId": "Hex64",
       "valueId": "{ a: Buffer10 }"
     },
     {
-      "exception": "Expected HexN, got Object",
+      "exception": "Expected Hex, got Object",
       "typeId": "Hex64",
       "valueId": "{ a: { b: Buffer3 } }"
     },
     {
-      "exception": "Expected HexN, got Object",
+      "exception": "Expected Hex, got Object",
       "typeId": "Hex64",
       "valueId": "{ a: { b: Buffer10 } }"
     },
     {
-      "exception": "Expected HexN, got Buffer",
+      "exception": "Expected Hex, got Buffer",
       "typeId": "Hex64",
       "valueId": "Buffer"
     },
     {
-      "exception": "Expected HexN, got Buffer",
+      "exception": "Expected Hex, got Buffer",
       "typeId": "Hex64",
       "valueId": "Buffer3"
     },
     {
-      "exception": "Expected HexN, got Buffer",
+      "exception": "Expected Hex, got Buffer",
       "typeId": "Hex64",
       "valueId": "Buffer10"
     },
@@ -20167,77 +20167,77 @@
       "value": 9007199254740994
     },
     {
-      "exception": "Expected HexN, got String \"fff\"",
+      "exception": "Expected Hex, got String \"fff\"",
       "typeId": "Hex64",
       "value": "fff"
     },
     {
-      "exception": "Expected HexN, got String \"cafe1122deadbeef\"",
+      "exception": "Expected Hex\\(Length\\: 64\\), got Hex\\(Length\\: 16\\)",
       "typeId": "Hex64",
       "value": "cafe1122deadbeef"
     },
     {
-      "exception": "Expected HexN, got Number -1",
+      "exception": "Expected Hex, got Number -1",
       "typeId": "Hex64",
       "value": -1
     },
     {
-      "exception": "Expected HexN, got Number 127",
+      "exception": "Expected Hex, got Number 127",
       "typeId": "Hex64",
       "value": 127
     },
     {
-      "exception": "Expected HexN, got Number 128",
+      "exception": "Expected Hex, got Number 128",
       "typeId": "Hex64",
       "value": 128
     },
     {
-      "exception": "Expected HexN, got Number 255",
+      "exception": "Expected Hex, got Number 255",
       "typeId": "Hex64",
       "value": 255
     },
     {
-      "exception": "Expected HexN, got Number 256",
+      "exception": "Expected Hex, got Number 256",
       "typeId": "Hex64",
       "value": 256
     },
     {
-      "exception": "Expected HexN, got Number -128",
+      "exception": "Expected Hex, got Number -128",
       "typeId": "Hex64",
       "value": -128
     },
     {
-      "exception": "Expected HexN, got Number -129",
+      "exception": "Expected Hex, got Number -129",
       "typeId": "Hex64",
       "value": -129
     },
     {
-      "exception": "Expected HexN, got Number 65534",
+      "exception": "Expected Hex, got Number 65534",
       "typeId": "Hex64",
       "value": 65534
     },
     {
-      "exception": "Expected HexN, got Number 65535",
+      "exception": "Expected Hex, got Number 65535",
       "typeId": "Hex64",
       "value": 65535
     },
     {
-      "exception": "Expected HexN, got Number 65536",
+      "exception": "Expected Hex, got Number 65536",
       "typeId": "Hex64",
       "value": 65536
     },
     {
-      "exception": "Expected HexN, got Number 4294967295",
+      "exception": "Expected Hex, got Number 4294967295",
       "typeId": "Hex64",
       "value": 4294967295
     },
     {
-      "exception": "Expected HexN, got Number 9007199254740991",
+      "exception": "Expected Hex, got Number 9007199254740991",
       "typeId": "Hex64",
       "value": 9007199254740991
     },
     {
-      "exception": "Expected HexN, got Number 9007199254740994",
+      "exception": "Expected Hex, got Number 9007199254740994",
       "typeId": "Hex64",
       "value": 9007199254740994
     },
