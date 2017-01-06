@@ -81,8 +81,8 @@ var types = {
   object: function object (uncompiled) {
     var type = {}
 
-    for (var propertyName in uncompiled) {
-      type[propertyName] = compile(uncompiled[propertyName])
+    for (var typePropertyName in uncompiled) {
+      type[typePropertyName] = compile(uncompiled[typePropertyName])
     }
 
     function _object (value, strict) {
@@ -118,10 +118,10 @@ var types = {
   },
 
   oneOf: function oneOf () {
-    var types = [].slice.call(arguments).map(compile)
+    var _types = [].slice.call(arguments).map(compile)
 
     function _oneOf (value, strict) {
-      return types.some(function (type) {
+      return _types.some(function (type) {
         try {
           return typeforce(type, value, strict)
         } catch (e) {
@@ -144,10 +144,10 @@ var types = {
   },
 
   tuple: function tuple () {
-    var types = [].slice.call(arguments).map(compile)
+    var _types = [].slice.call(arguments).map(compile)
 
     function _tuple (values, strict) {
-      return types.every(function (type, i) {
+      return _types.every(function (type, i) {
         try {
           return typeforce(type, values[i], strict)
         } catch (e) {
