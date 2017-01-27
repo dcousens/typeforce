@@ -1,19 +1,19 @@
-var errors = require('./errors')
-var native = require('./native')
+var ERRORS = require('./errors')
+var NATIVE = require('./native')
 
 // short-hand
-var tfJSON = errors.tfJSON
-var TfTypeError = errors.TfTypeError
-var TfPropertyTypeError = errors.TfPropertyTypeError
-var tfSubError = errors.tfSubError
-var getValueTypeName = errors.getValueTypeName
+var tfJSON = ERRORS.tfJSON
+var TfTypeError = ERRORS.TfTypeError
+var TfPropertyTypeError = ERRORS.TfPropertyTypeError
+var tfSubError = ERRORS.tfSubError
+var getValueTypeName = ERRORS.getValueTypeName
 
-var types = {
+var TYPES = {
   arrayOf: function arrayOf (type) {
     type = compile(type)
 
     function _arrayOf (array, strict) {
-      if (!native.Array(array)) return false
+      if (!NATIVE.Array(array)) return false
 
       return array.every(function (value, i) {
         try {
@@ -32,7 +32,7 @@ var types = {
     type = compile(type)
 
     function _maybe (value, strict) {
-      return native.Null(value) || type(value, strict, maybe)
+      return NATIVE.Null(value) || type(value, strict, maybe)
     }
     _maybe.toJSON = function () { return '?' + tfJSON(type) }
 
@@ -44,8 +44,8 @@ var types = {
     if (propertyKeyType) propertyKeyType = compile(propertyKeyType)
 
     function _map (value, strict) {
-      if (!native.Object(value, strict)) return false
-      if (native.Null(value, strict)) return false
+      if (!NATIVE.Object(value, strict)) return false
+      if (NATIVE.Null(value, strict)) return false
 
       for (var propertyName in value) {
         try {
@@ -86,8 +86,8 @@ var types = {
     }
 
     function _object (value, strict) {
-      if (!native.Object(value)) return false
-      if (native.Null(value)) return false
+      if (!NATIVE.Object(value)) return false
+      if (NATIVE.Null(value)) return false
 
       var propertyName
 
@@ -171,23 +171,23 @@ var types = {
 }
 
 function compile (type) {
-  if (native.String(type)) {
-    if (type[0] === '?') return types.maybe(compile(type.slice(1)))
+  if (NATIVE.String(type)) {
+    if (type[0] === '?') return TYPES.maybe(compile(type.slice(1)))
 
-    return native[type] || types.quacksLike(type)
-  } else if (type && native.Object(type)) {
-    if (native.Array(type)) return types.arrayOf(compile(type[0]))
+    return NATIVE[type] || TYPES.quacksLike(type)
+  } else if (type && NATIVE.Object(type)) {
+    if (NATIVE.Array(type)) return TYPES.arrayOf(compile(type[0]))
 
-    return types.object(type)
-  } else if (native.Function(type)) {
+    return TYPES.object(type)
+  } else if (NATIVE.Function(type)) {
     return type
   }
 
-  return types.value(type)
+  return TYPES.value(type)
 }
 
 function typeforce (type, value, strict, surrogate) {
-  if (native.Function(type)) {
+  if (NATIVE.Function(type)) {
     if (type(value, strict)) return true
 
     throw new TfTypeError(surrogate || type, value)
@@ -198,12 +198,12 @@ function typeforce (type, value, strict, surrogate) {
 }
 
 // assign types to typeforce function
-for (var typeName in native) {
-  typeforce[typeName] = native[typeName]
+for (var typeName in NATIVE) {
+  typeforce[typeName] = NATIVE[typeName]
 }
 
-for (typeName in types) {
-  typeforce[typeName] = types[typeName]
+for (typeName in TYPES) {
+  typeforce[typeName] = TYPES[typeName]
 }
 
 var extra = require('./extra')
