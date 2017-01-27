@@ -118,10 +118,10 @@ var TYPES = {
   },
 
   oneOf: function oneOf () {
-    var _types = [].slice.call(arguments).map(compile)
+    var types = [].slice.call(arguments).map(compile)
 
     function _oneOf (value, strict) {
-      return _types.some(function (type) {
+      return types.some(function (type) {
         try {
           return typeforce(type, value, strict)
         } catch (e) {
@@ -129,7 +129,7 @@ var TYPES = {
         }
       })
     }
-    _oneOf.toJSON = function () { return _types.map(tfJSON).join('|') }
+    _oneOf.toJSON = function () { return types.map(tfJSON).join('|') }
 
     return _oneOf
   },
@@ -144,10 +144,10 @@ var TYPES = {
   },
 
   tuple: function tuple () {
-    var _types = [].slice.call(arguments).map(compile)
+    var types = [].slice.call(arguments).map(compile)
 
     function _tuple (values, strict) {
-      return _types.every(function (type, i) {
+      return types.every(function (type, i) {
         try {
           return typeforce(type, values[i], strict)
         } catch (e) {
@@ -155,7 +155,7 @@ var TYPES = {
         }
       }) && (!strict || values.length === arguments.length)
     }
-    _tuple.toJSON = function () { return '(' + _types.map(tfJSON).join(', ') + ')' }
+    _tuple.toJSON = function () { return '(' + types.map(tfJSON).join(', ') + ')' }
 
     return _tuple
   },
