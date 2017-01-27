@@ -129,7 +129,7 @@ var types = {
         }
       })
     }
-    _oneOf.toJSON = function () { return types.map(tfJSON).join('|') }
+    _oneOf.toJSON = function () { return _types.map(tfJSON).join('|') }
 
     return _oneOf
   },
@@ -155,7 +155,7 @@ var types = {
         }
       }) && (!strict || values.length === arguments.length)
     }
-    _tuple.toJSON = function () { return '(' + types.map(tfJSON).join(', ') + ')' }
+    _tuple.toJSON = function () { return '(' + _types.map(tfJSON).join(', ') + ')' }
 
     return _tuple
   },
