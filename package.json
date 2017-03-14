@@ -14,7 +14,7 @@
   "bugs": {
     "url": "https://github.com/dcousens/typeforce/issues"
   },
-  "license": "MIT",
+  "license": "ISC",
   "author": "Daniel Cousens",
   "main": "index.js",
   "files": [
