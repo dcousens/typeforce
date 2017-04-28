@@ -43,9 +43,9 @@ typeforce(typeforce.value(3.14), 3.14)
 
 // custom types
 function LongString (value, strict) {
-	if (!typeforce.String(value)) return false
-	if (value.length !== 32) return false
-	return true
+  if (!typeforce.String(value)) return false
+  if (value.length !== 32) return false
+  return true
 }
 
 typeforce(LongString, '00000000000000000000000000000000')
@@ -63,8 +63,8 @@ typeforce(typeforce.Array, array)
 
 // or just precompile a template
 var type = {
-	foo: 'Number',
-	bar: '?String'
+  foo: 'Number',
+  bar: '?String'
 }
 
 var fastType = typeforce.compile(type)
@@ -75,12 +75,12 @@ var fastType = typeforce.compile(type)
 
 // use strictness for recursive types to enforce whitelisting properties
 typeforce({
-	x: 'Number'
+  x: 'Number'
 }, { x: 1 }, true)
 // OK!
 
 typeforce({
-	x: 'Number'
+  x: 'Number'
 }, { x: 1, y: 2 }, true)
 // TypeError: Unexpected property 'y' of type Number
 ```
