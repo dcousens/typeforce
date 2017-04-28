@@ -10,7 +10,7 @@ function Hex (value) {
 }
 
 function _LengthN (type, length) {
-  let name = type.toJSON()
+  var name = type.toJSON()
 
   function Length (value) {
     if (!type(value)) return false
@@ -23,9 +23,9 @@ function _LengthN (type, length) {
   return Length
 }
 
-let _ArrayN = _LengthN.bind(null, NATIVE.Array)
-let _BufferN = _LengthN.bind(null, _Buffer)
-let _HexN = _LengthN.bind(null, Hex)
+var _ArrayN = _LengthN.bind(null, NATIVE.Array)
+var _BufferN = _LengthN.bind(null, _Buffer)
+var _HexN = _LengthN.bind(null, Hex)
 
 var UINT53_MAX = Math.pow(2, 53) - 1
 
