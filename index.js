@@ -206,9 +206,9 @@ for (typeName in TYPES) {
   typeforce[typeName] = TYPES[typeName]
 }
 
-var extra = require('./extra')
-for (typeName in extra) {
-  typeforce[typeName] = extra[typeName]
+var EXTRA = require('./extra')
+for (typeName in EXTRA) {
+  typeforce[typeName] = EXTRA[typeName]
 }
 
 // async wrapper
