@@ -44,14 +44,17 @@ function TfPropertyTypeError (type, property, label, value, error, valueTypeName
       return message
     }
   })
+
+  Object.defineProperty(this, 'stack', {
+    get: function () {
+      return this.__error.stack
+    }
+  })
 }
 
-// inherit from Error, assign stack
+// inherit from Error
 [TfTypeError, TfPropertyTypeError].forEach(function (tfErrorType) {
   inherits(tfErrorType, Error)
-  Object.defineProperty(tfErrorType, 'stack', {
-    get: function () { return this.__error.stack }
-  })
 })
 
 function tfCustomError (expected, actual) {
