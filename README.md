@@ -1,5 +1,4 @@
 # typeforce
-
 [![build status](https://secure.travis-ci.org/dcousens/typeforce.png)](http://travis-ci.org/dcousens/typeforce)
 [![Version](https://img.shields.io/npm/v/typeforce.svg)](https://www.npmjs.org/package/typeforce)
 
@@ -56,7 +55,6 @@ typeforce(LongString, 'not long enough')
 ```
 
 **Pro**tips:
-
 ``` javascript
 // use precompiled primitives for high performance
 typeforce(typeforce.Array, array)
@@ -86,7 +84,6 @@ typeforce({
 ```
 
 **Pro**tips (extended types):
-
 ``` javascript
 typeforce(typeforce.tuple('String', 'Number'), ['foo', 1])
 // OK!
