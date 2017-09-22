@@ -33,9 +33,7 @@
     "standard": "standard",
     "unit": "node test/*.js | tap-dot"
   },
-  "dependencies": {
-    "inherits": "^2.0.1"
-  },
+  "dependencies": {},
   "devDependencies": {
     "nyc": "^6.4.0",
     "standard": "^9.0.0",
