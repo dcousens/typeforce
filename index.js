@@ -149,6 +149,7 @@ var TYPES = {
 
     function _tuple (values, strict) {
       if (NATIVE.Nil(values)) return false
+      if (NATIVE.Nil(values.length)) return false
       if (strict && (values.length !== types.length)) return false
 
       return types.every(function (type, i) {
