@@ -1,5 +1,5 @@
-var buffer3 = new Buffer('ffffff', 'hex')
-var buffer10 = new Buffer('ffffffffffffffffffff', 'hex')
+var buffer3 = Buffer.from('ffffff', 'hex')
+var buffer10 = Buffer.from('ffffffffffffffffffff', 'hex')
 
 module.exports = {
   'function': function () {},
@@ -13,7 +13,7 @@ module.exports = {
   'Array5': [1, 2, 3, 4, 5],
   'Array6': [1, 2, 3, 4, 5, 6],
   'Array7': ['a', 'b', 'c', 'd', 'e', 'fghijklmno', 'p'],
-  'Buffer': new Buffer(0),
+  'Buffer': Buffer.alloc(0),
   'Buffer3': buffer3,
   'Buffer10': buffer10
 }
