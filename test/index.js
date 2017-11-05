@@ -9,17 +9,13 @@ fixtures.valid.forEach(function (f) {
   var value = VALUES[f.valueId] || f.value
   var typeDescription = JSON.stringify(type)
   var valueDescription = JSON.stringify(value)
+  var compiled = typeforce.compile(type)
 
   tape('passes ' + typeDescription + ' with ' + valueDescription, function (t) {
-    t.plan(2)
+    t.plan(4)
     t.doesNotThrow(function () { typeforce(type, value, f.strict) })
     typeforce.async(type, value, f.strict, t.ifErr)
-  })
 
-  tape('passes ' + typeDescription + ' (compiled) with ' + valueDescription, function (t) {
-    var compiled = typeforce.compile(type)
-
-    t.plan(2)
     t.doesNotThrow(function () { typeforce(compiled, value, f.strict) })
     typeforce.async(compiled, value, f.strict, t.ifErr)
   })
@@ -32,20 +28,17 @@ fixtures.invalid.forEach(function (f) {
   var value = VALUES[f.valueId] || f.value
   var typeDescription = f.typeId || JSON.stringify(type)
   var valueDescription = JSON.stringify(value)
+  var compiled = typeforce.compile(type)
 
   tape('throws "' + f.exception + '" for type ' + typeDescription + ' with value of ' + valueDescription, function (t) {
-    t.plan(1)
+    t.plan(2)
 
     t.throws(function () {
       typeforce(type, value, f.strict)
     }, new RegExp(f.exception))
-  })
-
-  tape('throws "' + f.exception + '" for type ' + typeDescription + ' (compiled) with value of ' + valueDescription, function (t) {
-    t.plan(1)
 
     t.throws(function () {
-      typeforce(typeforce.compile(type), value, f.strict)
+      typeforce(compiled, value, f.strict)
     }, new RegExp(f.exception))
   })
 })
