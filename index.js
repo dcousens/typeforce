@@ -8,21 +8,29 @@ var TfPropertyTypeError = ERRORS.TfPropertyTypeError
 var tfSubError = ERRORS.tfSubError
 var getValueTypeName = ERRORS.getValueTypeName
 
+function captureTfTE (type, value, surrogate) {
+  if (type.TfTypeError) return type.TfTypeError
+  return new TfTypeError(surrogate || type, value)
+}
+
 var TYPES = {
   arrayOf: function arrayOf (type) {
     type = compile(type)
 
     function _arrayOf (array, strict) {
+      delete _arrayOf.TfTypeError
       if (!NATIVE.Array(array)) return false
       if (NATIVE.Nil(array)) return false
 
-      return array.every(function (value, i) {
-        try {
-          return typeforce(type, value, strict)
-        } catch (e) {
-          throw tfSubError(e, i)
-        }
-      })
+      for (var i = 0; i < array.length; ++i) {
+        var value = array[i]
+        if (type(value, strict)) continue
+
+        _arrayOf.TfTypeError = tfSubError(captureTfTE(type, value), i)
+        return false
+      }
+
+      return true
     }
     _arrayOf.toJSON = function () { return '[' + tfJSON(type) + ']' }
 
@@ -33,7 +41,11 @@ var TYPES = {
     type = compile(type)
 
     function _maybe (value, strict) {
-      return NATIVE.Nil(value) || type(value, strict, maybe)
+      delete _maybe.TfTypeError
+      if (NATIVE.Nil(value)) return true
+      if (type(value, strict, maybe)) return true
+      _maybe.TfTypeError = type.TfTypeError
+      return false
     }
     _maybe.toJSON = function () { return '?' + tfJSON(type) }
 
@@ -45,24 +57,23 @@ var TYPES = {
     if (propertyKeyType) propertyKeyType = compile(propertyKeyType)
 
     function _map (value, strict) {
+      delete _map.TfTypeError
       if (!NATIVE.Object(value)) return false
       if (NATIVE.Nil(value)) return false
 
       for (var propertyName in value) {
-        try {
-          if (propertyKeyType) {
-            typeforce(propertyKeyType, propertyName, strict)
+        if (propertyKeyType) {
+          if (!propertyKeyType(propertyName, strict)) {
+            _map.TfTypeError = tfSubError(captureTfTE(propertyKeyType, propertyName), propertyName, 'key')
+            return false
           }
-        } catch (e) {
-          throw tfSubError(e, propertyName, 'key')
         }
 
-        try {
-          var propertyValue = value[propertyName]
-          typeforce(propertyType, propertyValue, strict)
-        } catch (e) {
-          throw tfSubError(e, propertyName)
-        }
+        var propertyValue = value[propertyName]
+        if (propertyType(propertyValue, strict)) continue
+
+        _map.TfTypeError = tfSubError(captureTfTE(propertyType, propertyValue), propertyName)
+        return false
       }
 
       return true
@@ -87,27 +98,27 @@ var TYPES = {
     }
 
     function _object (value, strict) {
+      delete _object.TfTypeError
       if (!NATIVE.Object(value)) return false
       if (NATIVE.Nil(value)) return false
 
       var propertyName
 
-      try {
-        for (propertyName in type) {
-          var propertyType = type[propertyName]
-          var propertyValue = value[propertyName]
+      for (propertyName in type) {
+        var propertyType = type[propertyName]
+        var propertyValue = value[propertyName]
+        if (propertyType(propertyValue, strict)) continue
 
-          typeforce(propertyType, propertyValue, strict)
-        }
-      } catch (e) {
-        throw tfSubError(e, propertyName)
+        _object.TfTypeError = tfSubError(captureTfTE(propertyType, propertyValue), propertyName)
+        return false
       }
 
       if (strict) {
         for (propertyName in value) {
           if (type[propertyName]) continue
 
-          throw new TfPropertyTypeError(undefined, propertyName)
+          _object.TfTypeError = new TfPropertyTypeError(undefined, propertyName)
+          return false
         }
       }
 
@@ -120,15 +131,15 @@ var TYPES = {
 
   oneOf: function oneOf () {
     var types = [].slice.call(arguments).map(compile)
+    var count = types.length
 
     function _oneOf (value, strict) {
-      return types.some(function (type) {
-        try {
-          return typeforce(type, value, strict)
-        } catch (e) {
-          return false
-        }
-      })
+      for (var i = 0; i < count; ++i) {
+        var type = types[i]
+        if (type(value, strict)) return true
+      }
+
+      return false
     }
     _oneOf.toJSON = function () { return types.map(tfJSON).join('|') }
 
@@ -148,17 +159,21 @@ var TYPES = {
     var types = [].slice.call(arguments).map(compile)
 
     function _tuple (values, strict) {
+      delete _tuple.TfTypeError
       if (NATIVE.Nil(values)) return false
       if (NATIVE.Nil(values.length)) return false
       if (strict && (values.length !== types.length)) return false
 
-      return types.every(function (type, i) {
-        try {
-          return typeforce(type, values[i], strict)
-        } catch (e) {
-          throw tfSubError(e, i)
-        }
-      })
+      for (var i = 0; i < types.length; ++i) {
+        var type = types[i]
+        var value = values[i]
+        if (type(value, strict)) continue
+
+        _tuple.TfTypeError = tfSubError(captureTfTE(type, value), i)
+        return false
+      }
+
+      return true
     }
     _tuple.toJSON = function () { return '(' + types.map(tfJSON).join(', ') + ')' }
 
@@ -195,7 +210,7 @@ function typeforce (type, value, strict, surrogate) {
   if (NATIVE.Function(type)) {
     if (type(value, strict)) return true
 
-    throw new TfTypeError(surrogate || type, value)
+    throw captureTfTE(type, value, surrogate)
   }
 
   // JIT

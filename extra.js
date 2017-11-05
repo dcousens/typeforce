@@ -13,10 +13,12 @@ function _LengthN (type, length) {
   var name = type.toJSON()
 
   function Length (value) {
+    delete Length.TfTypeError
     if (!type(value)) return false
     if (value.length === length) return true
 
-    throw ERRORS.tfCustomError(name + '(Length: ' + length + ')', name + '(Length: ' + value.length + ')')
+    Length.TfTypeError = ERRORS.tfCustomError(name + '(Length: ' + length + ')', name + '(Length: ' + value.length + ')')
+    return false
   }
   Length.toJSON = function () { return name }
 
