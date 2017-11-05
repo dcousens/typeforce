@@ -47,15 +47,12 @@ var err = new typeforce.TfTypeError('mytype')
 function failType () { throw err }
 
 tape('TfTypeError is an Error', function (t) {
-  t.plan(2)
+  t.plan(3)
   t.ok(err instanceof Error)
   t.equal(err.message, 'Expected mytype, got undefined')
-})
 
-tape('t.throws can handle TfTypeError', function (t) {
-  t.plan(1)
   t.throws(function () {
-    typeforce(failType, 'value')
+    typeforce(failType, 0xdeadbeef)
   }, new RegExp('Expected mytype, got undefined'))
 })
 
