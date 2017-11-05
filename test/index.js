@@ -44,16 +44,12 @@ fixtures.invalid.forEach(function (f) {
 })
 
 var err = new typeforce.TfTypeError('mytype')
-var failType = function () { throw err }
+function failType () { throw err }
 
-tape('TfTypeError has .message', function (t) {
-  t.plan(1)
-  t.equal(err.message, 'Expected mytype, got undefined')
-})
-
-tape('TfTypeError is instance of Error', function (t) {
-  t.plan(1)
+tape('TfTypeError is an Error', function (t) {
+  t.plan(2)
   t.ok(err instanceof Error)
+  t.equal(err.message, 'Expected mytype, got undefined')
 })
 
 tape('t.throws can handle TfTypeError', function (t) {
@@ -64,14 +60,11 @@ tape('t.throws can handle TfTypeError', function (t) {
 })
 
 tape('TfTypeError is caught by typeforce.oneOf', function (t) {
-  t.plan(1)
+  t.plan(2)
 
   t.doesNotThrow(function () {
     typeforce.oneOf(failType)('value')
   })
-})
 
-tape('TfTypeError does not break typeforce.oneOf', function (t) {
-  t.plan(1)
   t.ok(!typeforce.oneOf(failType, typeforce.string)('value'))
 })
