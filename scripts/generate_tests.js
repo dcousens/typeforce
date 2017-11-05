@@ -107,18 +107,21 @@ function addFixture (type, value) {
     typeforce(atype, avalue, true)
     fixtures.valid.push(f)
   } catch (e) {
-    let exception = e.message
+    let message = e.message
       .replace(/([.*+?^=!:${}[\]/\\()])/g, '\\$&')
 
     try {
       typeforce(atype, avalue, false)
       fixtures.valid.push(f)
 
-      if (exception.indexOf('asciiSlice') !== -1) return
-      fixtures.invalid.push(Object.assign({ exception, strict: true }, f))
+      if (message.indexOf('asciiSlice') !== -1) return
+      fixtures.invalid.push(Object.assign({ exception: message, strict: true }, f))
     } catch (e2) {
-      if (exception.indexOf('asciiSlice') !== -1) return
-      fixtures.invalid.push(Object.assign({ exception }, f))
+      message = e2.message
+        .replace(/([.*+?^=!:${}[\]/\\()])/g, '\\$&')
+
+      if (message.indexOf('asciiSlice') !== -1) return
+      fixtures.invalid.push(Object.assign({ exception: message }, f))
     }
   }
 }
