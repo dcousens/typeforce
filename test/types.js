@@ -38,6 +38,7 @@ module.exports = {
   'Buffer10': typeforce.BufferN(10),
   'Hex': typeforce.Hex,
   'Hex64': typeforce.HexN(64),
+  'String4': typeforce.StringN(4),
   'Int8': typeforce.Int8,
   'Int16': typeforce.Int16,
   'Int32': typeforce.Int32,

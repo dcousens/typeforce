@@ -268,6 +268,10 @@
       "value": "foobar"
     },
     {
+      "type": "String",
+      "valueId": "String4"
+    },
+    {
       "type": "?Number",
       "value": 0
     },
@@ -729,6 +733,10 @@
       "valueId": "Buffer10"
     },
     {
+      "typeId": "(Number|String)",
+      "valueId": "String4"
+    },
+    {
       "typeId": "(Number)",
       "value": [
         0
@@ -791,6 +799,10 @@
     {
       "typeId": "Boolean|Number|String",
       "value": true
+    },
+    {
+      "typeId": "Boolean|Number|String",
+      "valueId": "String4"
     },
     {
       "typeId": "?Boolean|Number",
@@ -1728,6 +1740,10 @@
       "valueId": "Buffer10"
     },
     {
+      "typeId": "String4",
+      "valueId": "String4"
+    },
+    {
       "typeId": "Int8",
       "value": 0
     },
@@ -2424,6 +2440,11 @@
       "valueId": "Buffer10"
     },
     {
+      "exception": "Expected Array, got String \"boop\"",
+      "type": "Array",
+      "valueId": "String4"
+    },
+    {
       "exception": "Expected Boolean, got String \"\"",
       "type": "Boolean",
       "value": ""
@@ -2662,6 +2683,11 @@
       "valueId": "Buffer10"
     },
     {
+      "exception": "Expected Boolean, got String \"boop\"",
+      "type": "Boolean",
+      "valueId": "String4"
+    },
+    {
       "exception": "Expected Buffer, got String \"\"",
       "type": "Buffer",
       "value": ""
@@ -2893,6 +2919,11 @@
       "exception": "Expected Buffer, got Array",
       "type": "Buffer",
       "valueId": "Array7"
+    },
+    {
+      "exception": "Expected Buffer, got String \"boop\"",
+      "type": "Buffer",
+      "valueId": "String4"
     },
     {
       "exception": "Expected Function, got String \"\"",
@@ -3138,6 +3169,11 @@
       "valueId": "Buffer10"
     },
     {
+      "exception": "Expected Function, got String \"boop\"",
+      "type": "Function",
+      "valueId": "String4"
+    },
+    {
       "exception": "Expected Null, got String \"\"",
       "type": "Null",
       "value": ""
@@ -3375,6 +3411,11 @@
       "exception": "Expected Null, got Buffer",
       "type": "Null",
       "valueId": "Buffer10"
+    },
+    {
+      "exception": "Expected Null, got String \"boop\"",
+      "type": "Null",
+      "valueId": "String4"
     },
     {
       "exception": "Expected Number, got String \"\"",
@@ -3615,6 +3656,11 @@
       "valueId": "Buffer10"
     },
     {
+      "exception": "Expected Number, got String \"boop\"",
+      "type": "Number",
+      "valueId": "String4"
+    },
+    {
       "exception": "Expected Object, got String \"\"",
       "type": "Object",
       "value": ""
@@ -3652,6 +3698,11 @@
       "exception": "Expected Object, got Function",
       "type": "Object",
       "valueId": "function"
+    },
+    {
+      "exception": "Expected Object, got String \"boop\"",
+      "type": "Object",
+      "valueId": "String4"
     },
     {
       "exception": "Expected String, got Number 0",
@@ -4121,6 +4172,11 @@
       "valueId": "Buffer10"
     },
     {
+      "exception": "Expected \\?Number, got String \"boop\"",
+      "type": "?Number",
+      "valueId": "String4"
+    },
+    {
       "exception": "Expected \\[\\?Number\\], got String \"\"",
       "type": [
         "?Number"
@@ -4406,6 +4462,13 @@
         "?Number"
       ],
       "valueId": "Buffer10"
+    },
+    {
+      "exception": "Expected \\[\\?Number\\], got String \"boop\"",
+      "type": [
+        "?Number"
+      ],
+      "valueId": "String4"
     },
     {
       "exception": "Expected \\[Number\\], got String \"\"",
@@ -4702,6 +4765,13 @@
         "Number"
       ],
       "valueId": "Buffer10"
+    },
+    {
+      "exception": "Expected \\[Number\\], got String \"boop\"",
+      "type": [
+        "Number"
+      ],
+      "valueId": "String4"
     },
     {
       "exception": "Expected \\[Object\\], got String \"\"",
@@ -5086,6 +5156,15 @@
       "valueId": "Buffer10"
     },
     {
+      "exception": "Expected \\[Object\\], got String \"boop\"",
+      "type": [
+        {
+          "a": "Number"
+        }
+      ],
+      "valueId": "String4"
+    },
+    {
       "exception": "Expected Object, got String \"\"",
       "type": {},
       "value": ""
@@ -5338,6 +5417,11 @@
       "strict": true,
       "type": {},
       "valueId": "Buffer10"
+    },
+    {
+      "exception": "Expected Object, got String \"boop\"",
+      "type": {},
+      "valueId": "String4"
     },
     {
       "exception": "Expected Object, got String \"\"",
@@ -5656,6 +5740,13 @@
         "a": "Number"
       },
       "valueId": "Buffer10"
+    },
+    {
+      "exception": "Expected Object, got String \"boop\"",
+      "type": {
+        "a": "Number"
+      },
+      "valueId": "String4"
     },
     {
       "exception": "Expected Object, got String \"\"",
@@ -6047,6 +6138,15 @@
         }
       },
       "valueId": "Buffer10"
+    },
+    {
+      "exception": "Expected Object, got String \"boop\"",
+      "type": {
+        "a": {
+          "b": "Number"
+        }
+      },
+      "valueId": "String4"
     },
     {
       "exception": "Expected Object, got String \"\"",
@@ -6498,6 +6598,17 @@
         }
       },
       "valueId": "Buffer10"
+    },
+    {
+      "exception": "Expected Object, got String \"boop\"",
+      "type": {
+        "a": {
+          "b": {
+            "c": "?Number"
+          }
+        }
+      },
+      "valueId": "String4"
     },
     {
       "exception": "Expected Object, got String \"\"",
@@ -6966,6 +7077,17 @@
       "valueId": "Buffer10"
     },
     {
+      "exception": "Expected Object, got String \"boop\"",
+      "type": {
+        "a": {
+          "b": {
+            "c": "Number"
+          }
+        }
+      },
+      "valueId": "String4"
+    },
+    {
       "exception": "Expected Object, got String \"\"",
       "type": {
         "a": null
@@ -7283,6 +7405,13 @@
       "valueId": "Buffer10"
     },
     {
+      "exception": "Expected Object, got String \"boop\"",
+      "type": {
+        "a": null
+      },
+      "valueId": "String4"
+    },
+    {
       "exception": "Expected undefined, got String \"\"",
       "value": ""
     },
@@ -7487,6 +7616,10 @@
     {
       "exception": "Expected undefined, got Buffer",
       "valueId": "Buffer10"
+    },
+    {
+      "exception": "Expected undefined, got String \"boop\"",
+      "valueId": "String4"
     },
     {
       "exception": "Expected null, got String \"\"",
@@ -7732,6 +7865,11 @@
       "valueId": "Buffer10"
     },
     {
+      "exception": "Expected null, got String \"boop\"",
+      "type": null,
+      "valueId": "String4"
+    },
+    {
       "exception": "Expected true, got String \"\"",
       "type": true,
       "value": ""
@@ -7973,6 +8111,11 @@
       "exception": "Expected true, got Buffer",
       "type": true,
       "valueId": "Buffer10"
+    },
+    {
+      "exception": "Expected true, got String \"boop\"",
+      "type": true,
+      "valueId": "String4"
     },
     {
       "exception": "Expected false, got String \"\"",
@@ -8218,6 +8361,11 @@
       "valueId": "Buffer10"
     },
     {
+      "exception": "Expected false, got String \"boop\"",
+      "type": false,
+      "valueId": "String4"
+    },
+    {
       "exception": "Expected 0, got String \"\"",
       "type": 0,
       "value": ""
@@ -8459,6 +8607,11 @@
       "exception": "Expected 0, got Buffer",
       "type": 0,
       "valueId": "Buffer10"
+    },
+    {
+      "exception": "Expected 0, got String \"boop\"",
+      "type": 0,
+      "valueId": "String4"
     },
     {
       "exception": "Expected property \"0\" of type Boolean, got undefined",
@@ -8709,6 +8862,11 @@
       "valueId": "Buffer10"
     },
     {
+      "exception": "Expected property \"0\" of type Boolean, got String \"b\"",
+      "typeId": "(Boolean, Number)",
+      "valueId": "String4"
+    },
+    {
       "exception": "Expected property \"0\" of type Number|String, got undefined",
       "typeId": "(Number|String)",
       "value": ""
@@ -8947,6 +9105,12 @@
       "strict": true,
       "typeId": "(Number|String)",
       "valueId": "Buffer10"
+    },
+    {
+      "exception": "Expected \\(Number|String\\), got String \"boop\"",
+      "strict": true,
+      "typeId": "(Number|String)",
+      "valueId": "String4"
     },
     {
       "exception": "Expected property \"0\" of type Number, got undefined",
@@ -9194,6 +9358,11 @@
       "valueId": "Buffer10"
     },
     {
+      "exception": "Expected property \"0\" of type Number, got String \"b\"",
+      "typeId": "(Number)",
+      "valueId": "String4"
+    },
+    {
       "exception": "Expected \\[\\?Object\\], got String \"\"",
       "typeId": "[?{ a: Number }]",
       "value": ""
@@ -9419,6 +9588,11 @@
       "exception": "Expected \\[\\?Object\\], got Buffer",
       "typeId": "[?{ a: Number }]",
       "valueId": "Buffer10"
+    },
+    {
+      "exception": "Expected \\[\\?Object\\], got String \"boop\"",
+      "typeId": "[?{ a: Number }]",
+      "valueId": "String4"
     },
     {
       "exception": "Expected Boolean|Number|String, got Array",
@@ -9858,6 +10032,11 @@
       "valueId": "Buffer10"
     },
     {
+      "exception": "Expected \\?Boolean|Number, got String \"boop\"",
+      "typeId": "?Boolean|Number",
+      "valueId": "String4"
+    },
+    {
       "exception": "Expected \\?Object, got String \"\"",
       "typeId": "?{ a: ?Number }",
       "value": ""
@@ -10068,6 +10247,11 @@
       "strict": true,
       "typeId": "?{ a: ?Number }",
       "valueId": "Buffer10"
+    },
+    {
+      "exception": "Expected \\?Object, got String \"boop\"",
+      "typeId": "?{ a: ?Number }",
+      "valueId": "String4"
     },
     {
       "exception": "Expected \\?Object, got String \"\"",
@@ -10303,6 +10487,11 @@
       "valueId": "Buffer10"
     },
     {
+      "exception": "Expected \\?Object, got String \"boop\"",
+      "typeId": "?{ a: Number }",
+      "valueId": "String4"
+    },
+    {
       "exception": "Expected Object, got String \"\"",
       "typeId": "{ a: Number|Null }",
       "value": ""
@@ -10522,6 +10711,11 @@
       "strict": true,
       "typeId": "{ a: Number|Null }",
       "valueId": "Buffer10"
+    },
+    {
+      "exception": "Expected Object, got String \"boop\"",
+      "typeId": "{ a: Number|Null }",
+      "valueId": "String4"
     },
     {
       "exception": "Expected Object, got String \"\"",
@@ -10757,6 +10951,11 @@
       "valueId": "Buffer10"
     },
     {
+      "exception": "Expected Object, got String \"boop\"",
+      "typeId": "{ a: Number|{ b: Number } }",
+      "valueId": "String4"
+    },
+    {
       "exception": "Expected Object, got String \"\"",
       "typeId": "{ a: ?{ b: Number } }",
       "value": ""
@@ -10975,6 +11174,11 @@
       "valueId": "Buffer10"
     },
     {
+      "exception": "Expected Object, got String \"boop\"",
+      "typeId": "{ a: ?{ b: Number } }",
+      "valueId": "String4"
+    },
+    {
       "exception": "Expected Object, got String \"\"",
       "typeId": "{ a: ?{ b: ?{ c: Number } } }",
       "value": ""
@@ -11183,6 +11387,11 @@
       "strict": true,
       "typeId": "{ a: ?{ b: ?{ c: Number } } }",
       "valueId": "Buffer10"
+    },
+    {
+      "exception": "Expected Object, got String \"boop\"",
+      "typeId": "{ a: ?{ b: ?{ c: Number } } }",
+      "valueId": "String4"
     },
     {
       "exception": "Expected Object, got String \"\"",
@@ -11419,6 +11628,11 @@
       "valueId": "Buffer10"
     },
     {
+      "exception": "Expected Object, got String \"boop\"",
+      "typeId": "{ a: undefined }",
+      "valueId": "String4"
+    },
+    {
       "exception": "Expected Object, got String \"\"",
       "typeId": "@{ a: undefined }",
       "value": ""
@@ -11651,6 +11865,11 @@
       "strict": true,
       "typeId": "@{ a: undefined }",
       "valueId": "Buffer10"
+    },
+    {
+      "exception": "Expected Object, got String \"boop\"",
+      "typeId": "@{ a: undefined }",
+      "valueId": "String4"
     },
     {
       "exception": "Expected Unmatchable, got String \"\"",
@@ -11901,6 +12120,11 @@
       "valueId": "Buffer10"
     },
     {
+      "exception": "Expected Unmatchable, got String \"boop\"",
+      "typeId": "Unmatchable",
+      "valueId": "String4"
+    },
+    {
       "exception": "Expected \\?Unmatchable, got String \"\"",
       "typeId": "?Unmatchable",
       "value": ""
@@ -12140,6 +12364,11 @@
       "valueId": "Buffer10"
     },
     {
+      "exception": "Expected \\?Unmatchable, got String \"boop\"",
+      "typeId": "?Unmatchable",
+      "valueId": "String4"
+    },
+    {
       "exception": "Expected Object, got String \"\"",
       "typeId": "{ a: ?Unmatchable }",
       "value": ""
@@ -12365,6 +12594,11 @@
       "strict": true,
       "typeId": "{ a: ?Unmatchable }",
       "valueId": "Buffer10"
+    },
+    {
+      "exception": "Expected Object, got String \"boop\"",
+      "typeId": "{ a: ?Unmatchable }",
+      "valueId": "String4"
     },
     {
       "exception": "Expected Object, got String \"\"",
@@ -12615,6 +12849,11 @@
       "valueId": "Buffer10"
     },
     {
+      "exception": "Expected Object, got String \"boop\"",
+      "typeId": "{ a: { b: Unmatchable } }",
+      "valueId": "String4"
+    },
+    {
       "exception": "Expected CustomType, got String \"\"",
       "typeId": ">CustomType",
       "value": ""
@@ -12858,6 +13097,11 @@
       "valueId": "Buffer10"
     },
     {
+      "exception": "Expected CustomType, got String \"boop\"",
+      "typeId": ">CustomType",
+      "valueId": "String4"
+    },
+    {
       "exception": "Expected \\{String\\}, got String \"\"",
       "typeId": "{ String }",
       "value": ""
@@ -13066,6 +13310,11 @@
       "valueId": "Buffer10"
     },
     {
+      "exception": "Expected \\{String\\}, got String \"boop\"",
+      "typeId": "{ String }",
+      "valueId": "String4"
+    },
+    {
       "exception": "Expected \\{String|Number\\}, got String \"\"",
       "typeId": "{ String|Number }",
       "value": ""
@@ -13218,6 +13467,11 @@
       "exception": "Expected property \"a\" of type String|Number, got Object",
       "typeId": "{ String|Number }",
       "valueId": "{ a: { b: Buffer10 } }"
+    },
+    {
+      "exception": "Expected \\{String|Number\\}, got String \"boop\"",
+      "typeId": "{ String|Number }",
+      "valueId": "String4"
     },
     {
       "exception": "Expected \\{String\\: Number\\}, got String \"\"",
@@ -13392,6 +13646,11 @@
       "exception": "Expected property \"0\" of type Number, got String \"a\"",
       "typeId": "{ String: Number }",
       "valueId": "Array7"
+    },
+    {
+      "exception": "Expected \\{String\\: Number\\}, got String \"boop\"",
+      "typeId": "{ String: Number }",
+      "valueId": "String4"
     },
     {
       "exception": "Expected \\{Letter\\: Number\\}, got String \"\"",
@@ -13593,6 +13852,11 @@
       "exception": "Expected property \"0\" with key type Letter, got String \"0\"",
       "typeId": "{ Letter: Number }",
       "valueId": "Buffer10"
+    },
+    {
+      "exception": "Expected \\{Letter\\: Number\\}, got String \"boop\"",
+      "typeId": "{ Letter: Number }",
+      "valueId": "String4"
     },
     {
       "exception": "Expected Object, got String \"\"",
@@ -13838,6 +14102,11 @@
       "valueId": "Buffer10"
     },
     {
+      "exception": "Expected Object, got String \"boop\"",
+      "typeId": "{ a: { b: Buffer3 } }",
+      "valueId": "String4"
+    },
+    {
       "exception": "Expected Object, got String \"\"",
       "typeId": "{ a: Buffer10|Number }",
       "value": ""
@@ -14073,6 +14342,11 @@
       "exception": "Expected property \"a\" of type Buffer|Number, got undefined",
       "typeId": "{ a: Buffer10|Number }",
       "valueId": "Buffer10"
+    },
+    {
+      "exception": "Expected Object, got String \"boop\"",
+      "typeId": "{ a: Buffer10|Number }",
+      "valueId": "String4"
     },
     {
       "exception": "Expected Array, got String \"\"",
@@ -14318,6 +14592,11 @@
       "valueId": "Buffer10"
     },
     {
+      "exception": "Expected Array, got String \"boop\"",
+      "typeId": "Array6",
+      "valueId": "String4"
+    },
+    {
       "exception": "Expected Array, got String \"\"",
       "typeId": "Array7",
       "value": ""
@@ -14559,6 +14838,11 @@
       "exception": "Expected Array, got Buffer",
       "typeId": "Array7",
       "valueId": "Buffer10"
+    },
+    {
+      "exception": "Expected Array, got String \"boop\"",
+      "typeId": "Array7",
+      "valueId": "String4"
     },
     {
       "exception": "Expected Buffer, got String \"\"",
@@ -14804,6 +15088,11 @@
       "valueId": "Buffer10"
     },
     {
+      "exception": "Expected Buffer, got String \"boop\"",
+      "typeId": "Buffer0",
+      "valueId": "String4"
+    },
+    {
       "exception": "Expected Buffer, got String \"\"",
       "typeId": "Buffer3",
       "value": ""
@@ -15047,6 +15336,11 @@
       "valueId": "Buffer10"
     },
     {
+      "exception": "Expected Buffer, got String \"boop\"",
+      "typeId": "Buffer3",
+      "valueId": "String4"
+    },
+    {
       "exception": "Expected Buffer, got String \"\"",
       "typeId": "Buffer10",
       "value": ""
@@ -15288,6 +15582,11 @@
       "exception": "Expected Buffer\\(Length\\: 10\\), got Buffer\\(Length\\: 3\\)",
       "typeId": "Buffer10",
       "valueId": "Buffer3"
+    },
+    {
+      "exception": "Expected Buffer, got String \"boop\"",
+      "typeId": "Buffer10",
+      "valueId": "String4"
     },
     {
       "exception": "Expected Hex, got String \"\"",
@@ -15538,6 +15837,11 @@
       "valueId": "Buffer10"
     },
     {
+      "exception": "Expected Hex, got String \"boop\"",
+      "typeId": "Hex",
+      "valueId": "String4"
+    },
+    {
       "exception": "Expected Hex, got String \"\"",
       "typeId": "Hex64",
       "value": ""
@@ -15786,6 +16090,259 @@
       "valueId": "Buffer10"
     },
     {
+      "exception": "Expected Hex, got String \"boop\"",
+      "typeId": "Hex64",
+      "valueId": "String4"
+    },
+    {
+      "exception": "Expected String\\(Length\\: 4\\), got String\\(Length\\: 0\\)",
+      "typeId": "String4",
+      "value": ""
+    },
+    {
+      "exception": "Expected String\\(Length\\: 4\\), got String\\(Length\\: 6\\)",
+      "typeId": "String4",
+      "value": "foobar"
+    },
+    {
+      "exception": "Expected String, got Number 0",
+      "typeId": "String4",
+      "value": 0
+    },
+    {
+      "exception": "Expected String, got Number 1",
+      "typeId": "String4",
+      "value": 1
+    },
+    {
+      "exception": "Expected String, got Array",
+      "typeId": "String4",
+      "value": []
+    },
+    {
+      "exception": "Expected String, got Array",
+      "typeId": "String4",
+      "value": [
+        0
+      ]
+    },
+    {
+      "exception": "Expected String, got Array",
+      "typeId": "String4",
+      "value": [
+        "foobar"
+      ]
+    },
+    {
+      "exception": "Expected String, got Array",
+      "typeId": "String4",
+      "value": [
+        {
+          "a": 0
+        }
+      ]
+    },
+    {
+      "exception": "Expected String, got Array",
+      "typeId": "String4",
+      "value": [
+        null
+      ]
+    },
+    {
+      "exception": "Expected String, got Boolean false",
+      "typeId": "String4",
+      "value": false
+    },
+    {
+      "exception": "Expected String, got Boolean true",
+      "typeId": "String4",
+      "value": true
+    },
+    {
+      "exception": "Expected String, got undefined",
+      "typeId": "String4"
+    },
+    {
+      "exception": "Expected String, got null",
+      "typeId": "String4",
+      "value": null
+    },
+    {
+      "exception": "Expected String, got Object",
+      "typeId": "String4",
+      "value": {}
+    },
+    {
+      "exception": "Expected String, got Object",
+      "typeId": "String4",
+      "value": {
+        "a": null
+      }
+    },
+    {
+      "exception": "Expected String, got Object",
+      "typeId": "String4",
+      "value": {
+        "a": 0
+      }
+    },
+    {
+      "exception": "Expected String, got Object",
+      "typeId": "String4",
+      "value": {
+        "a": 0,
+        "b": 0
+      }
+    },
+    {
+      "exception": "Expected String, got Object",
+      "typeId": "String4",
+      "value": {
+        "b": 0
+      }
+    },
+    {
+      "exception": "Expected String, got Object",
+      "typeId": "String4",
+      "value": {
+        "a": {
+          "b": 0
+        }
+      }
+    },
+    {
+      "exception": "Expected String, got Object",
+      "typeId": "String4",
+      "value": {
+        "a": {
+          "b": null
+        }
+      }
+    },
+    {
+      "exception": "Expected String, got Object",
+      "typeId": "String4",
+      "value": {
+        "a": {
+          "b": {
+            "c": 0
+          }
+        }
+      }
+    },
+    {
+      "exception": "Expected String, got Object",
+      "typeId": "String4",
+      "value": {
+        "a": {
+          "b": {
+            "c": null
+          }
+        }
+      }
+    },
+    {
+      "exception": "Expected String, got Object",
+      "typeId": "String4",
+      "value": {
+        "a": {
+          "b": {
+            "c": 0,
+            "d": 0
+          }
+        }
+      }
+    },
+    {
+      "exception": "Expected String, got Object",
+      "typeId": "String4",
+      "value": {
+        "a": "foo",
+        "b": "bar"
+      }
+    },
+    {
+      "exception": "Expected String, got Object",
+      "typeId": "String4",
+      "value": {
+        "a": "foo",
+        "b": {
+          "c": "bar"
+        }
+      }
+    },
+    {
+      "exception": "Expected String, got Function",
+      "typeId": "String4",
+      "valueId": "function"
+    },
+    {
+      "exception": "Expected String, got EmptyType",
+      "typeId": "String4",
+      "valueId": "emptyType"
+    },
+    {
+      "exception": "Expected String, got CustomType",
+      "typeId": "String4",
+      "valueId": "customType"
+    },
+    {
+      "exception": "Expected String, got Object",
+      "typeId": "String4",
+      "valueId": "{ a: undefined }"
+    },
+    {
+      "exception": "Expected String, got Object",
+      "typeId": "String4",
+      "valueId": "{ a: Buffer3 }"
+    },
+    {
+      "exception": "Expected String, got Object",
+      "typeId": "String4",
+      "valueId": "{ a: Buffer10 }"
+    },
+    {
+      "exception": "Expected String, got Object",
+      "typeId": "String4",
+      "valueId": "{ a: { b: Buffer3 } }"
+    },
+    {
+      "exception": "Expected String, got Object",
+      "typeId": "String4",
+      "valueId": "{ a: { b: Buffer10 } }"
+    },
+    {
+      "exception": "Expected String, got Array",
+      "typeId": "String4",
+      "valueId": "Array5"
+    },
+    {
+      "exception": "Expected String, got Array",
+      "typeId": "String4",
+      "valueId": "Array6"
+    },
+    {
+      "exception": "Expected String, got Array",
+      "typeId": "String4",
+      "valueId": "Array7"
+    },
+    {
+      "exception": "Expected String, got Buffer",
+      "typeId": "String4",
+      "valueId": "Buffer"
+    },
+    {
+      "exception": "Expected String, got Buffer",
+      "typeId": "String4",
+      "valueId": "Buffer3"
+    },
+    {
+      "exception": "Expected String, got Buffer",
+      "typeId": "String4",
+      "valueId": "Buffer10"
+    },
+    {
       "exception": "Expected Int8, got String \"\"",
       "typeId": "Int8",
       "value": ""
@@ -16022,6 +16579,11 @@
       "exception": "Expected Int8, got Buffer",
       "typeId": "Int8",
       "valueId": "Buffer10"
+    },
+    {
+      "exception": "Expected Int8, got String \"boop\"",
+      "typeId": "Int8",
+      "valueId": "String4"
     },
     {
       "exception": "Expected Int16, got String \"\"",
@@ -16262,6 +16824,11 @@
       "valueId": "Buffer10"
     },
     {
+      "exception": "Expected Int16, got String \"boop\"",
+      "typeId": "Int16",
+      "valueId": "String4"
+    },
+    {
       "exception": "Expected Int32, got String \"\"",
       "typeId": "Int32",
       "value": ""
@@ -16498,6 +17065,11 @@
       "exception": "Expected Int32, got Buffer",
       "typeId": "Int32",
       "valueId": "Buffer10"
+    },
+    {
+      "exception": "Expected Int32, got String \"boop\"",
+      "typeId": "Int32",
+      "valueId": "String4"
     },
     {
       "exception": "Expected UInt8, got String \"\"",
@@ -16738,6 +17310,11 @@
       "valueId": "Buffer10"
     },
     {
+      "exception": "Expected UInt8, got String \"boop\"",
+      "typeId": "UInt8",
+      "valueId": "String4"
+    },
+    {
       "exception": "Expected UInt16, got String \"\"",
       "typeId": "UInt16",
       "value": ""
@@ -16974,6 +17551,11 @@
       "exception": "Expected UInt16, got Buffer",
       "typeId": "UInt16",
       "valueId": "Buffer10"
+    },
+    {
+      "exception": "Expected UInt16, got String \"boop\"",
+      "typeId": "UInt16",
+      "valueId": "String4"
     },
     {
       "exception": "Expected UInt32, got String \"\"",
@@ -17214,6 +17796,11 @@
       "valueId": "Buffer10"
     },
     {
+      "exception": "Expected UInt32, got String \"boop\"",
+      "typeId": "UInt32",
+      "valueId": "String4"
+    },
+    {
       "exception": "Expected UInt53, got String \"\"",
       "typeId": "UInt53",
       "value": ""
@@ -17450,6 +18037,11 @@
       "exception": "Expected UInt53, got Buffer",
       "typeId": "UInt53",
       "valueId": "Buffer10"
+    },
+    {
+      "exception": "Expected UInt53, got String \"boop\"",
+      "typeId": "UInt53",
+      "valueId": "String4"
     },
     {
       "exception": "Expected Array, got String \"fff\"",
@@ -21979,6 +22571,86 @@
     {
       "exception": "Expected Hex, got Number 9007199254740994",
       "typeId": "Hex64",
+      "value": 9007199254740994
+    },
+    {
+      "exception": "Expected String\\(Length\\: 4\\), got String\\(Length\\: 3\\)",
+      "typeId": "String4",
+      "value": "fff"
+    },
+    {
+      "exception": "Expected String\\(Length\\: 4\\), got String\\(Length\\: 16\\)",
+      "typeId": "String4",
+      "value": "cafe1122deadbeef"
+    },
+    {
+      "exception": "Expected String\\(Length\\: 4\\), got String\\(Length\\: 64\\)",
+      "typeId": "String4",
+      "value": "0102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f20"
+    },
+    {
+      "exception": "Expected String, got Number -1",
+      "typeId": "String4",
+      "value": -1
+    },
+    {
+      "exception": "Expected String, got Number 127",
+      "typeId": "String4",
+      "value": 127
+    },
+    {
+      "exception": "Expected String, got Number 128",
+      "typeId": "String4",
+      "value": 128
+    },
+    {
+      "exception": "Expected String, got Number 255",
+      "typeId": "String4",
+      "value": 255
+    },
+    {
+      "exception": "Expected String, got Number 256",
+      "typeId": "String4",
+      "value": 256
+    },
+    {
+      "exception": "Expected String, got Number -128",
+      "typeId": "String4",
+      "value": -128
+    },
+    {
+      "exception": "Expected String, got Number -129",
+      "typeId": "String4",
+      "value": -129
+    },
+    {
+      "exception": "Expected String, got Number 65534",
+      "typeId": "String4",
+      "value": 65534
+    },
+    {
+      "exception": "Expected String, got Number 65535",
+      "typeId": "String4",
+      "value": 65535
+    },
+    {
+      "exception": "Expected String, got Number 65536",
+      "typeId": "String4",
+      "value": 65536
+    },
+    {
+      "exception": "Expected String, got Number 4294967295",
+      "typeId": "String4",
+      "value": 4294967295
+    },
+    {
+      "exception": "Expected String, got Number 9007199254740991",
+      "typeId": "String4",
+      "value": 9007199254740991
+    },
+    {
+      "exception": "Expected String, got Number 9007199254740994",
+      "typeId": "String4",
       "value": 9007199254740994
     },
     {

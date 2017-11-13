@@ -15,5 +15,6 @@ module.exports = {
   'Array7': ['a', 'b', 'c', 'd', 'e', 'fghijklmno', 'p'],
   'Buffer': Buffer.alloc(0),
   'Buffer3': buffer3,
-  'Buffer10': buffer10
+  'Buffer10': buffer10,
+  'String4': 'boop'
 }
