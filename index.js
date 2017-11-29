@@ -137,7 +137,8 @@ var TYPES = {
 
   quacksLike: function quacksLike (type) {
     function _quacksLike (value) {
-      return type === getValueTypeName(value)
+      return getValueTypeName(new ManglingCanary()) === 'ManglingCanary' &&
+             type === getValueTypeName(value)
     }
     _quacksLike.toJSON = function () { return type }
 
@@ -174,6 +175,8 @@ var TYPES = {
     return _value
   }
 }
+
+function ManglingCanary () {}; // To detect mangling of the source code
 
 function compile (type) {
   if (NATIVE.String(type)) {
