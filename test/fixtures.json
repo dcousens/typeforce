@@ -1520,6 +1520,10 @@
       "valueId": "customType"
     },
     {
+      "typeId": "CustomClass",
+      "valueId": "customClass"
+    },
+    {
       "typeId": "{ String }",
       "value": []
     },
@@ -13102,6 +13106,254 @@
       "valueId": "String4"
     },
     {
+      "exception": "Expected Waterfowl, got String \"\"",
+      "typeId": "CustomClass",
+      "value": ""
+    },
+    {
+      "exception": "Expected Waterfowl, got String \"foobar\"",
+      "typeId": "CustomClass",
+      "value": "foobar"
+    },
+    {
+      "exception": "Expected Waterfowl, got Number 0",
+      "typeId": "CustomClass",
+      "value": 0
+    },
+    {
+      "exception": "Expected Waterfowl, got Number 1",
+      "typeId": "CustomClass",
+      "value": 1
+    },
+    {
+      "exception": "Expected Waterfowl, got Array",
+      "typeId": "CustomClass",
+      "value": []
+    },
+    {
+      "exception": "Expected Waterfowl, got Array",
+      "typeId": "CustomClass",
+      "value": [
+        0
+      ]
+    },
+    {
+      "exception": "Expected Waterfowl, got Array",
+      "typeId": "CustomClass",
+      "value": [
+        "foobar"
+      ]
+    },
+    {
+      "exception": "Expected Waterfowl, got Array",
+      "typeId": "CustomClass",
+      "value": [
+        {
+          "a": 0
+        }
+      ]
+    },
+    {
+      "exception": "Expected Waterfowl, got Array",
+      "typeId": "CustomClass",
+      "value": [
+        null
+      ]
+    },
+    {
+      "exception": "Expected Waterfowl, got Boolean false",
+      "typeId": "CustomClass",
+      "value": false
+    },
+    {
+      "exception": "Expected Waterfowl, got Boolean true",
+      "typeId": "CustomClass",
+      "value": true
+    },
+    {
+      "exception": "Expected Waterfowl, got undefined",
+      "typeId": "CustomClass"
+    },
+    {
+      "exception": "Expected Waterfowl, got null",
+      "typeId": "CustomClass",
+      "value": null
+    },
+    {
+      "exception": "Expected Waterfowl, got Object",
+      "typeId": "CustomClass",
+      "value": {}
+    },
+    {
+      "exception": "Expected Waterfowl, got Object",
+      "typeId": "CustomClass",
+      "value": {
+        "a": null
+      }
+    },
+    {
+      "exception": "Expected Waterfowl, got Object",
+      "typeId": "CustomClass",
+      "value": {
+        "a": 0
+      }
+    },
+    {
+      "exception": "Expected Waterfowl, got Object",
+      "typeId": "CustomClass",
+      "value": {
+        "a": 0,
+        "b": 0
+      }
+    },
+    {
+      "exception": "Expected Waterfowl, got Object",
+      "typeId": "CustomClass",
+      "value": {
+        "b": 0
+      }
+    },
+    {
+      "exception": "Expected Waterfowl, got Object",
+      "typeId": "CustomClass",
+      "value": {
+        "a": {
+          "b": 0
+        }
+      }
+    },
+    {
+      "exception": "Expected Waterfowl, got Object",
+      "typeId": "CustomClass",
+      "value": {
+        "a": {
+          "b": null
+        }
+      }
+    },
+    {
+      "exception": "Expected Waterfowl, got Object",
+      "typeId": "CustomClass",
+      "value": {
+        "a": {
+          "b": {
+            "c": 0
+          }
+        }
+      }
+    },
+    {
+      "exception": "Expected Waterfowl, got Object",
+      "typeId": "CustomClass",
+      "value": {
+        "a": {
+          "b": {
+            "c": null
+          }
+        }
+      }
+    },
+    {
+      "exception": "Expected Waterfowl, got Object",
+      "typeId": "CustomClass",
+      "value": {
+        "a": {
+          "b": {
+            "c": 0,
+            "d": 0
+          }
+        }
+      }
+    },
+    {
+      "exception": "Expected Waterfowl, got Object",
+      "typeId": "CustomClass",
+      "value": {
+        "a": "foo",
+        "b": "bar"
+      }
+    },
+    {
+      "exception": "Expected Waterfowl, got Object",
+      "typeId": "CustomClass",
+      "value": {
+        "a": "foo",
+        "b": {
+          "c": "bar"
+        }
+      }
+    },
+    {
+      "exception": "Expected Waterfowl, got Function",
+      "typeId": "CustomClass",
+      "valueId": "function"
+    },
+    {
+      "exception": "Expected Waterfowl, got EmptyType",
+      "typeId": "CustomClass",
+      "valueId": "emptyType"
+    },
+    {
+      "exception": "Expected Waterfowl, got Object",
+      "typeId": "CustomClass",
+      "valueId": "{ a: undefined }"
+    },
+    {
+      "exception": "Expected Waterfowl, got Object",
+      "typeId": "CustomClass",
+      "valueId": "{ a: Buffer3 }"
+    },
+    {
+      "exception": "Expected Waterfowl, got Object",
+      "typeId": "CustomClass",
+      "valueId": "{ a: Buffer10 }"
+    },
+    {
+      "exception": "Expected Waterfowl, got Object",
+      "typeId": "CustomClass",
+      "valueId": "{ a: { b: Buffer3 } }"
+    },
+    {
+      "exception": "Expected Waterfowl, got Object",
+      "typeId": "CustomClass",
+      "valueId": "{ a: { b: Buffer10 } }"
+    },
+    {
+      "exception": "Expected Waterfowl, got Array",
+      "typeId": "CustomClass",
+      "valueId": "Array5"
+    },
+    {
+      "exception": "Expected Waterfowl, got Array",
+      "typeId": "CustomClass",
+      "valueId": "Array6"
+    },
+    {
+      "exception": "Expected Waterfowl, got Array",
+      "typeId": "CustomClass",
+      "valueId": "Array7"
+    },
+    {
+      "exception": "Expected Waterfowl, got Buffer",
+      "typeId": "CustomClass",
+      "valueId": "Buffer"
+    },
+    {
+      "exception": "Expected Waterfowl, got Buffer",
+      "typeId": "CustomClass",
+      "valueId": "Buffer3"
+    },
+    {
+      "exception": "Expected Waterfowl, got Buffer",
+      "typeId": "CustomClass",
+      "valueId": "Buffer10"
+    },
+    {
+      "exception": "Expected Waterfowl, got String \"boop\"",
+      "typeId": "CustomClass",
+      "valueId": "String4"
+    },
+    {
       "exception": "Expected \\{String\\}, got String \"\"",
       "typeId": "{ String }",
       "value": ""
@@ -21546,6 +21798,86 @@
     {
       "exception": "Expected CustomType, got Number 9007199254740994",
       "typeId": ">CustomType",
+      "value": 9007199254740994
+    },
+    {
+      "exception": "Expected Waterfowl, got String \"fff\"",
+      "typeId": "CustomClass",
+      "value": "fff"
+    },
+    {
+      "exception": "Expected Waterfowl, got String \"cafe1122deadbeef\"",
+      "typeId": "CustomClass",
+      "value": "cafe1122deadbeef"
+    },
+    {
+      "exception": "Expected Waterfowl, got String \"0102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f20\"",
+      "typeId": "CustomClass",
+      "value": "0102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f20"
+    },
+    {
+      "exception": "Expected Waterfowl, got Number -1",
+      "typeId": "CustomClass",
+      "value": -1
+    },
+    {
+      "exception": "Expected Waterfowl, got Number 127",
+      "typeId": "CustomClass",
+      "value": 127
+    },
+    {
+      "exception": "Expected Waterfowl, got Number 128",
+      "typeId": "CustomClass",
+      "value": 128
+    },
+    {
+      "exception": "Expected Waterfowl, got Number 255",
+      "typeId": "CustomClass",
+      "value": 255
+    },
+    {
+      "exception": "Expected Waterfowl, got Number 256",
+      "typeId": "CustomClass",
+      "value": 256
+    },
+    {
+      "exception": "Expected Waterfowl, got Number -128",
+      "typeId": "CustomClass",
+      "value": -128
+    },
+    {
+      "exception": "Expected Waterfowl, got Number -129",
+      "typeId": "CustomClass",
+      "value": -129
+    },
+    {
+      "exception": "Expected Waterfowl, got Number 65534",
+      "typeId": "CustomClass",
+      "value": 65534
+    },
+    {
+      "exception": "Expected Waterfowl, got Number 65535",
+      "typeId": "CustomClass",
+      "value": 65535
+    },
+    {
+      "exception": "Expected Waterfowl, got Number 65536",
+      "typeId": "CustomClass",
+      "value": 65536
+    },
+    {
+      "exception": "Expected Waterfowl, got Number 4294967295",
+      "typeId": "CustomClass",
+      "value": 4294967295
+    },
+    {
+      "exception": "Expected Waterfowl, got Number 9007199254740991",
+      "typeId": "CustomClass",
+      "value": 9007199254740991
+    },
+    {
+      "exception": "Expected Waterfowl, got Number 9007199254740994",
+      "typeId": "CustomClass",
       "value": 9007199254740994
     },
     {

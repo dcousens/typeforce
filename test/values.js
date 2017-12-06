@@ -1,3 +1,5 @@
+var objects = require('./objects')
+
 var buffer3 = Buffer.from('ffffff', 'hex')
 var buffer10 = Buffer.from('ffffffffffffffffffff', 'hex')
 
@@ -5,6 +7,7 @@ module.exports = {
   'function': function () {},
   'emptyType': new function EmptyType () {}(),
   'customType': new function CustomType () { this.x = 2 }(),
+  'customClass': new objects.Duck(),
   '{ a: undefined }': { a: undefined },
   '{ a: Buffer3 }': { a: buffer3 },
   '{ a: Buffer10 }': { a: buffer10 },

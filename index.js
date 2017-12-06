@@ -135,6 +135,16 @@ var TYPES = {
     return _oneOf
   },
 
+  quacksLike: function quacksLike (Type) {
+    function _quacksLike (value) {
+      return Type.prototype.isPrototypeOf(value)
+    }
+
+    _quacksLike.toJSON = function () { return Type.name }
+
+    return _quacksLike
+  },
+
   constructorName: function constructorName (type) {
     function _constructorName (value) {
       return type === getValueTypeName(value)

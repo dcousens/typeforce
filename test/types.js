@@ -1,4 +1,5 @@
 var typeforce = require('../')
+var objects = require('./objects')
 
 function Unmatchable () { return false }
 function Letter (value) {
@@ -25,6 +26,7 @@ module.exports = {
   '{ a: ?Unmatchable }': { a: typeforce.maybe(Unmatchable) },
   '{ a: { b: Unmatchable } }': { a: { b: Unmatchable } },
   '>CustomType': typeforce.constructorName('CustomType'),
+  'CustomClass': typeforce.quacksLike(objects.Waterfowl),
   '{ String }': typeforce.map('String'),
   '{ String|Number }': typeforce.map(typeforce.oneOf('String', 'Number')),
   '{ String: Number }': typeforce.map('Number', 'String'),
