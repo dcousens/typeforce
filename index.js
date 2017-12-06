@@ -135,13 +135,13 @@ var TYPES = {
     return _oneOf
   },
 
-  quacksLike: function quacksLike (type) {
-    function _quacksLike (value) {
+  constructorName: function constructorName (type) {
+    function _constructorName (value) {
       return type === getValueTypeName(value)
     }
-    _quacksLike.toJSON = function () { return type }
+    _constructorName.toJSON = function () { return type }
 
-    return _quacksLike
+    return _constructorName
   },
 
   tuple: function tuple () {
@@ -179,7 +179,7 @@ function compile (type) {
   if (NATIVE.String(type)) {
     if (type[0] === '?') return TYPES.maybe(type.slice(1))
 
-    return NATIVE[type] || TYPES.quacksLike(type)
+    return NATIVE[type] || TYPES.constructorName(type)
   } else if (type && NATIVE.Object(type)) {
     if (NATIVE.Array(type)) return TYPES.arrayOf(type[0])
 

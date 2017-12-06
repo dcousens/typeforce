@@ -106,15 +106,15 @@ function Foo () {
   this.x = 2
 }
 
-typeforce(typeforce.quacksLike('Foo'), new Foo())
+typeforce(typeforce.constructorName('Foo'), new Foo())
 // OK!
 
 // Note, any Foo will do
-typeforce(typeforce.quacksLike('Foo'), new (function Foo() {}))
+typeforce(typeforce.constructorName('Foo'), new (function Foo() {}))
 // OK!
 ```
 
-**WARNING**: Be very wary of using the `quacksLike` type, as it relies on the `Foo.name` property.
+**WARNING**: Be very wary of using the `constructorName` type, as it relies on the `Foo.name` property.
 If that property is mangled by a transpiler,  such as `uglifyjs`,  you will have a bad time.
 
 ## LICENSE [ISC](LICENSE)

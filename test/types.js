@@ -24,7 +24,7 @@ module.exports = {
   '?Unmatchable': typeforce.maybe(Unmatchable),
   '{ a: ?Unmatchable }': { a: typeforce.maybe(Unmatchable) },
   '{ a: { b: Unmatchable } }': { a: { b: Unmatchable } },
-  '>CustomType': typeforce.quacksLike('CustomType'),
+  '>CustomType': typeforce.constructorName('CustomType'),
   '{ String }': typeforce.map('String'),
   '{ String|Number }': typeforce.map(typeforce.oneOf('String', 'Number')),
   '{ String: Number }': typeforce.map('Number', 'String'),
