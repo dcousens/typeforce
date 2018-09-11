@@ -117,4 +117,4 @@ typeforce(typeforce.quacksLike('Foo'), new (function Foo() {}))
 **WARNING**: Be very wary of using the `quacksLike` type, as it relies on the `Foo.name` property.
 If that property is mangled by a transpiler,  such as `uglifyjs`,  you will have a bad time.
 
-## LICENSE [ISC](LICENSE)
+## LICENSE [MIT](LICENSE)
