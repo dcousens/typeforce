@@ -31,7 +31,7 @@ var _StringN = _LengthN.bind(null, NATIVE.String)
 function Range (a, b, f) {
   f = f || NATIVE.Number
   function _range (value, strict) {
-    return f(value) && (value > a) && (value < b)
+    return f(value, strict) && (value > a) && (value < b)
   }
   _range.toJSON = function () {
     return `${f.toJSON()} between [${a}, ${b}]`
