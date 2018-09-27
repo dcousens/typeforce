@@ -14,9 +14,9 @@ fixtures.forEach(function (f) {
 
   if (f.exception) {
     assert.throws(function () { local(type, value, f.strict) }, new RegExp(f.exception))
-//      assert.throws(function () { npm(type, value, f.strict) }, new RegExp(f.exception))
+    // assert.throws(function () { npm(type, value, f.strict) }, new RegExp(f.exception))
     assert.throws(function () { local(ctype, value, f.strict) }, new RegExp(f.exception))
-//      assert.throws(function () { npm(ctype, value, f.strict) }, new RegExp(f.exception))
+    // assert.throws(function () { npm(ctype, value, f.strict) }, new RegExp(f.exception))
   } else {
     local(type, value, f.strict)
     npm(type, value, f.strict)
