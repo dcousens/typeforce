@@ -1,3 +1,4 @@
+#!/bin/node
 const typeforce = require('../')
 const TYPES = require('../test/types')
 const VALUES = require('../test/values')
@@ -35,6 +36,8 @@ const VALUES2 = [
   'foobar',
   0,
   1,
+  1.5,
+  10,
   [],
   [0],
   ['foobar'],

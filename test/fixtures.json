@@ -82,6 +82,14 @@
       "value": 1
     },
     {
+      "type": "Number",
+      "value": 1.5
+    },
+    {
+      "type": "Number",
+      "value": 10
+    },
+    {
       "type": "Object",
       "value": []
     },
@@ -278,6 +286,14 @@
     {
       "type": "?Number",
       "value": 1
+    },
+    {
+      "type": "?Number",
+      "value": 1.5
+    },
+    {
+      "type": "?Number",
+      "value": 10
     },
     {
       "type": "?Number"
@@ -794,6 +810,14 @@
     },
     {
       "typeId": "Boolean|Number|String",
+      "value": 1.5
+    },
+    {
+      "typeId": "Boolean|Number|String",
+      "value": 10
+    },
+    {
+      "typeId": "Boolean|Number|String",
       "value": false
     },
     {
@@ -811,6 +835,14 @@
     {
       "typeId": "?Boolean|Number",
       "value": 1
+    },
+    {
+      "typeId": "?Boolean|Number",
+      "value": 1.5
+    },
+    {
+      "typeId": "?Boolean|Number",
+      "value": 10
     },
     {
       "typeId": "?Boolean|Number",
@@ -1744,12 +1776,28 @@
       "valueId": "String4"
     },
     {
+      "typeId": "Range1-5",
+      "value": 1.5
+    },
+    {
+      "typeId": "Int8Range0-100",
+      "value": 1
+    },
+    {
+      "typeId": "Int8Range0-100",
+      "value": 10
+    },
+    {
       "typeId": "Int8",
       "value": 0
     },
     {
       "typeId": "Int8",
       "value": 1
+    },
+    {
+      "typeId": "Int8",
+      "value": 10
     },
     {
       "typeId": "Int16",
@@ -1760,12 +1808,20 @@
       "value": 1
     },
     {
+      "typeId": "Int16",
+      "value": 10
+    },
+    {
       "typeId": "Int32",
       "value": 0
     },
     {
       "typeId": "Int32",
       "value": 1
+    },
+    {
+      "typeId": "Int32",
+      "value": 10
     },
     {
       "typeId": "UInt8",
@@ -1776,12 +1832,20 @@
       "value": 1
     },
     {
+      "typeId": "UInt8",
+      "value": 10
+    },
+    {
       "typeId": "UInt16",
       "value": 0
     },
     {
       "typeId": "UInt16",
       "value": 1
+    },
+    {
+      "typeId": "UInt16",
+      "value": 10
     },
     {
       "typeId": "UInt32",
@@ -1792,12 +1856,20 @@
       "value": 1
     },
     {
+      "typeId": "UInt32",
+      "value": 10
+    },
+    {
       "typeId": "UInt53",
       "value": 0
     },
     {
       "typeId": "UInt53",
       "value": 1
+    },
+    {
+      "typeId": "UInt53",
+      "value": 10
     },
     {
       "type": "Number",
@@ -2262,6 +2334,16 @@
       "value": 1
     },
     {
+      "exception": "Expected Array, got Number 1\\.5",
+      "type": "Array",
+      "value": 1.5
+    },
+    {
+      "exception": "Expected Array, got Number 10",
+      "type": "Array",
+      "value": 10
+    },
+    {
       "exception": "Expected Array, got Boolean false",
       "type": "Array",
       "value": false
@@ -2463,6 +2545,16 @@
       "exception": "Expected Boolean, got Number 1",
       "type": "Boolean",
       "value": 1
+    },
+    {
+      "exception": "Expected Boolean, got Number 1\\.5",
+      "type": "Boolean",
+      "value": 1.5
+    },
+    {
+      "exception": "Expected Boolean, got Number 10",
+      "type": "Boolean",
+      "value": 10
     },
     {
       "exception": "Expected Boolean, got Array",
@@ -2708,6 +2800,16 @@
       "value": 1
     },
     {
+      "exception": "Expected Buffer, got Number 1\\.5",
+      "type": "Buffer",
+      "value": 1.5
+    },
+    {
+      "exception": "Expected Buffer, got Number 10",
+      "type": "Buffer",
+      "value": 10
+    },
+    {
       "exception": "Expected Buffer, got Array",
       "type": "Buffer",
       "value": []
@@ -2944,6 +3046,16 @@
       "exception": "Expected Function, got Number 1",
       "type": "Function",
       "value": 1
+    },
+    {
+      "exception": "Expected Function, got Number 1\\.5",
+      "type": "Function",
+      "value": 1.5
+    },
+    {
+      "exception": "Expected Function, got Number 10",
+      "type": "Function",
+      "value": 10
     },
     {
       "exception": "Expected Function, got Array",
@@ -3192,6 +3304,16 @@
       "exception": "Expected Null, got Number 1",
       "type": "Null",
       "value": 1
+    },
+    {
+      "exception": "Expected Null, got Number 1\\.5",
+      "type": "Null",
+      "value": 1.5
+    },
+    {
+      "exception": "Expected Null, got Number 10",
+      "type": "Null",
+      "value": 10
     },
     {
       "exception": "Expected Null, got Array",
@@ -3681,6 +3803,16 @@
       "value": 1
     },
     {
+      "exception": "Expected Object, got Number 1\\.5",
+      "type": "Object",
+      "value": 1.5
+    },
+    {
+      "exception": "Expected Object, got Number 10",
+      "type": "Object",
+      "value": 10
+    },
+    {
       "exception": "Expected Object, got Boolean false",
       "type": "Object",
       "value": false
@@ -3713,6 +3845,16 @@
       "exception": "Expected String, got Number 1",
       "type": "String",
       "value": 1
+    },
+    {
+      "exception": "Expected String, got Number 1\\.5",
+      "type": "String",
+      "value": 1.5
+    },
+    {
+      "exception": "Expected String, got Number 10",
+      "type": "String",
+      "value": 10
     },
     {
       "exception": "Expected String, got Array",
@@ -4205,6 +4347,20 @@
       "value": 1
     },
     {
+      "exception": "Expected \\[\\?Number\\], got Number 1\\.5",
+      "type": [
+        "?Number"
+      ],
+      "value": 1.5
+    },
+    {
+      "exception": "Expected \\[\\?Number\\], got Number 10",
+      "type": [
+        "?Number"
+      ],
+      "value": 10
+    },
+    {
       "exception": "Expected property \"0\" of type \\?Number, got String \"foobar\"",
       "type": [
         "?Number"
@@ -4497,6 +4653,20 @@
         "Number"
       ],
       "value": 1
+    },
+    {
+      "exception": "Expected \\[Number\\], got Number 1\\.5",
+      "type": [
+        "Number"
+      ],
+      "value": 1.5
+    },
+    {
+      "exception": "Expected \\[Number\\], got Number 10",
+      "type": [
+        "Number"
+      ],
+      "value": 10
     },
     {
       "exception": "Expected property \"0\" of type Number, got String \"foobar\"",
@@ -4808,6 +4978,24 @@
         }
       ],
       "value": 1
+    },
+    {
+      "exception": "Expected \\[Object\\], got Number 1\\.5",
+      "type": [
+        {
+          "a": "Number"
+        }
+      ],
+      "value": 1.5
+    },
+    {
+      "exception": "Expected \\[Object\\], got Number 10",
+      "type": [
+        {
+          "a": "Number"
+        }
+      ],
+      "value": 10
     },
     {
       "exception": "Expected property \"0\" of type Object, got Number 0",
@@ -5185,6 +5373,16 @@
       "value": 1
     },
     {
+      "exception": "Expected Object, got Number 1\\.5",
+      "type": {},
+      "value": 1.5
+    },
+    {
+      "exception": "Expected Object, got Number 10",
+      "type": {},
+      "value": 10
+    },
+    {
       "exception": "Unexpected property \"0\"",
       "strict": true,
       "type": {},
@@ -5407,6 +5605,12 @@
       "valueId": "Array7"
     },
     {
+      "exception": "Unexpected property \"readUIntLE\"",
+      "strict": true,
+      "type": {},
+      "valueId": "Buffer"
+    },
+    {
       "exception": "Unexpected property \"0\"",
       "strict": true,
       "type": {},
@@ -5450,6 +5654,20 @@
         "a": "Number"
       },
       "value": 1
+    },
+    {
+      "exception": "Expected Object, got Number 1\\.5",
+      "type": {
+        "a": "Number"
+      },
+      "value": 1.5
+    },
+    {
+      "exception": "Expected Object, got Number 10",
+      "type": {
+        "a": "Number"
+      },
+      "value": 10
     },
     {
       "exception": "Expected property \"a\" of type Number, got undefined",
@@ -5783,6 +6001,24 @@
         }
       },
       "value": 1
+    },
+    {
+      "exception": "Expected Object, got Number 1\\.5",
+      "type": {
+        "a": {
+          "b": "Number"
+        }
+      },
+      "value": 1.5
+    },
+    {
+      "exception": "Expected Object, got Number 10",
+      "type": {
+        "a": {
+          "b": "Number"
+        }
+      },
+      "value": 10
     },
     {
       "exception": "Expected property \"a\" of type Object, got undefined",
@@ -6191,6 +6427,28 @@
         }
       },
       "value": 1
+    },
+    {
+      "exception": "Expected Object, got Number 1\\.5",
+      "type": {
+        "a": {
+          "b": {
+            "c": "?Number"
+          }
+        }
+      },
+      "value": 1.5
+    },
+    {
+      "exception": "Expected Object, got Number 10",
+      "type": {
+        "a": {
+          "b": {
+            "c": "?Number"
+          }
+        }
+      },
+      "value": 10
     },
     {
       "exception": "Expected property \"a\" of type Object, got undefined",
@@ -6653,6 +6911,28 @@
         }
       },
       "value": 1
+    },
+    {
+      "exception": "Expected Object, got Number 1\\.5",
+      "type": {
+        "a": {
+          "b": {
+            "c": "Number"
+          }
+        }
+      },
+      "value": 1.5
+    },
+    {
+      "exception": "Expected Object, got Number 10",
+      "type": {
+        "a": {
+          "b": {
+            "c": "Number"
+          }
+        }
+      },
+      "value": 10
     },
     {
       "exception": "Expected property \"a\" of type Object, got undefined",
@@ -7116,6 +7396,20 @@
       "value": 1
     },
     {
+      "exception": "Expected Object, got Number 1\\.5",
+      "type": {
+        "a": null
+      },
+      "value": 1.5
+    },
+    {
+      "exception": "Expected Object, got Number 10",
+      "type": {
+        "a": null
+      },
+      "value": 10
+    },
+    {
       "exception": "Expected property \"a\" of type null, got undefined",
       "type": {
         "a": null
@@ -7428,6 +7722,14 @@
       "value": 1
     },
     {
+      "exception": "Expected undefined, got Number 1\\.5",
+      "value": 1.5
+    },
+    {
+      "exception": "Expected undefined, got Number 10",
+      "value": 10
+    },
+    {
       "exception": "Expected undefined, got Array",
       "value": []
     },
@@ -7640,6 +7942,16 @@
       "exception": "Expected null, got Number 1",
       "type": null,
       "value": 1
+    },
+    {
+      "exception": "Expected null, got Number 1\\.5",
+      "type": null,
+      "value": 1.5
+    },
+    {
+      "exception": "Expected null, got Number 10",
+      "type": null,
+      "value": 10
     },
     {
       "exception": "Expected null, got Array",
@@ -7890,6 +8202,16 @@
       "value": 1
     },
     {
+      "exception": "Expected true, got Number 1\\.5",
+      "type": true,
+      "value": 1.5
+    },
+    {
+      "exception": "Expected true, got Number 10",
+      "type": true,
+      "value": 10
+    },
+    {
       "exception": "Expected true, got Array",
       "type": true,
       "value": []
@@ -8138,6 +8460,16 @@
       "value": 1
     },
     {
+      "exception": "Expected false, got Number 1\\.5",
+      "type": false,
+      "value": 1.5
+    },
+    {
+      "exception": "Expected false, got Number 10",
+      "type": false,
+      "value": 10
+    },
+    {
       "exception": "Expected false, got Array",
       "type": false,
       "value": []
@@ -8379,6 +8711,16 @@
       "exception": "Expected 0, got Number 1",
       "type": 0,
       "value": 1
+    },
+    {
+      "exception": "Expected 0, got Number 1\\.5",
+      "type": 0,
+      "value": 1.5
+    },
+    {
+      "exception": "Expected 0, got Number 10",
+      "type": 0,
+      "value": 10
     },
     {
       "exception": "Expected 0, got Array",
@@ -8632,6 +8974,16 @@
       "exception": "Expected \\(Boolean, Number\\), got Number 1",
       "typeId": "(Boolean, Number)",
       "value": 1
+    },
+    {
+      "exception": "Expected \\(Boolean, Number\\), got Number 1\\.5",
+      "typeId": "(Boolean, Number)",
+      "value": 1.5
+    },
+    {
+      "exception": "Expected \\(Boolean, Number\\), got Number 10",
+      "typeId": "(Boolean, Number)",
+      "value": 10
     },
     {
       "exception": "Expected property \"0\" of type Boolean, got undefined",
@@ -8888,6 +9240,16 @@
       "value": 1
     },
     {
+      "exception": "Expected \\(Number|String\\), got Number 1\\.5",
+      "typeId": "(Number|String)",
+      "value": 1.5
+    },
+    {
+      "exception": "Expected \\(Number|String\\), got Number 10",
+      "typeId": "(Number|String)",
+      "value": 10
+    },
+    {
       "exception": "Expected property \"0\" of type Number|String, got undefined",
       "typeId": "(Number|String)",
       "value": []
@@ -9131,6 +9493,16 @@
       "exception": "Expected \\(Number\\), got Number 1",
       "typeId": "(Number)",
       "value": 1
+    },
+    {
+      "exception": "Expected \\(Number\\), got Number 1\\.5",
+      "typeId": "(Number)",
+      "value": 1.5
+    },
+    {
+      "exception": "Expected \\(Number\\), got Number 10",
+      "typeId": "(Number)",
+      "value": 10
     },
     {
       "exception": "Expected property \"0\" of type Number, got undefined",
@@ -9381,6 +9753,16 @@
       "exception": "Expected \\[\\?Object\\], got Number 1",
       "typeId": "[?{ a: Number }]",
       "value": 1
+    },
+    {
+      "exception": "Expected \\[\\?Object\\], got Number 1\\.5",
+      "typeId": "[?{ a: Number }]",
+      "value": 1.5
+    },
+    {
+      "exception": "Expected \\[\\?Object\\], got Number 10",
+      "typeId": "[?{ a: Number }]",
+      "value": 10
     },
     {
       "exception": "Expected property \"0\" of type \\?Object, got Number 0",
@@ -10057,6 +10439,16 @@
       "value": 1
     },
     {
+      "exception": "Expected \\?Object, got Number 1\\.5",
+      "typeId": "?{ a: ?Number }",
+      "value": 1.5
+    },
+    {
+      "exception": "Expected \\?Object, got Number 10",
+      "typeId": "?{ a: ?Number }",
+      "value": 10
+    },
+    {
       "exception": "Unexpected property \"0\"",
       "strict": true,
       "typeId": "?{ a: ?Number }",
@@ -10237,6 +10629,12 @@
       "valueId": "Array7"
     },
     {
+      "exception": "Unexpected property \"readUIntLE\"",
+      "strict": true,
+      "typeId": "?{ a: ?Number }",
+      "valueId": "Buffer"
+    },
+    {
       "exception": "Unexpected property \"0\"",
       "strict": true,
       "typeId": "?{ a: ?Number }",
@@ -10272,6 +10670,16 @@
       "exception": "Expected \\?Object, got Number 1",
       "typeId": "?{ a: Number }",
       "value": 1
+    },
+    {
+      "exception": "Expected \\?Object, got Number 1\\.5",
+      "typeId": "?{ a: Number }",
+      "value": 1.5
+    },
+    {
+      "exception": "Expected \\?Object, got Number 10",
+      "typeId": "?{ a: Number }",
+      "value": 10
     },
     {
       "exception": "Expected property \"a\" of type Number, got undefined",
@@ -10512,6 +10920,16 @@
       "value": 1
     },
     {
+      "exception": "Expected Object, got Number 1\\.5",
+      "typeId": "{ a: Number|Null }",
+      "value": 1.5
+    },
+    {
+      "exception": "Expected Object, got Number 10",
+      "typeId": "{ a: Number|Null }",
+      "value": 10
+    },
+    {
       "exception": "Unexpected property \"0\"",
       "strict": true,
       "typeId": "{ a: Number|Null }",
@@ -10701,6 +11119,12 @@
       "valueId": "Array7"
     },
     {
+      "exception": "Unexpected property \"readUIntLE\"",
+      "strict": true,
+      "typeId": "{ a: Number|Null }",
+      "valueId": "Buffer"
+    },
+    {
       "exception": "Unexpected property \"0\"",
       "strict": true,
       "typeId": "{ a: Number|Null }",
@@ -10736,6 +11160,16 @@
       "exception": "Expected Object, got Number 1",
       "typeId": "{ a: Number|{ b: Number } }",
       "value": 1
+    },
+    {
+      "exception": "Expected Object, got Number 1\\.5",
+      "typeId": "{ a: Number|{ b: Number } }",
+      "value": 1.5
+    },
+    {
+      "exception": "Expected Object, got Number 10",
+      "typeId": "{ a: Number|{ b: Number } }",
+      "value": 10
     },
     {
       "exception": "Expected property \"a\" of type Number|Object, got undefined",
@@ -10976,6 +11410,16 @@
       "value": 1
     },
     {
+      "exception": "Expected Object, got Number 1\\.5",
+      "typeId": "{ a: ?{ b: Number } }",
+      "value": 1.5
+    },
+    {
+      "exception": "Expected Object, got Number 10",
+      "typeId": "{ a: ?{ b: Number } }",
+      "value": 10
+    },
+    {
       "exception": "Unexpected property \"0\"",
       "strict": true,
       "typeId": "{ a: ?{ b: Number } }",
@@ -11162,6 +11606,12 @@
       "valueId": "Array7"
     },
     {
+      "exception": "Unexpected property \"readUIntLE\"",
+      "strict": true,
+      "typeId": "{ a: ?{ b: Number } }",
+      "valueId": "Buffer"
+    },
+    {
       "exception": "Unexpected property \"0\"",
       "strict": true,
       "typeId": "{ a: ?{ b: Number } }",
@@ -11197,6 +11647,16 @@
       "exception": "Expected Object, got Number 1",
       "typeId": "{ a: ?{ b: ?{ c: Number } } }",
       "value": 1
+    },
+    {
+      "exception": "Expected Object, got Number 1\\.5",
+      "typeId": "{ a: ?{ b: ?{ c: Number } } }",
+      "value": 1.5
+    },
+    {
+      "exception": "Expected Object, got Number 10",
+      "typeId": "{ a: ?{ b: ?{ c: Number } } }",
+      "value": 10
     },
     {
       "exception": "Unexpected property \"0\"",
@@ -11377,6 +11837,12 @@
       "valueId": "Array7"
     },
     {
+      "exception": "Unexpected property \"readUIntLE\"",
+      "strict": true,
+      "typeId": "{ a: ?{ b: ?{ c: Number } } }",
+      "valueId": "Buffer"
+    },
+    {
       "exception": "Unexpected property \"0\"",
       "strict": true,
       "typeId": "{ a: ?{ b: ?{ c: Number } } }",
@@ -11412,6 +11878,16 @@
       "exception": "Expected Object, got Number 1",
       "typeId": "{ a: undefined }",
       "value": 1
+    },
+    {
+      "exception": "Expected Object, got Number 1\\.5",
+      "typeId": "{ a: undefined }",
+      "value": 1.5
+    },
+    {
+      "exception": "Expected Object, got Number 10",
+      "typeId": "{ a: undefined }",
+      "value": 10
     },
     {
       "exception": "Unexpected property \"0\"",
@@ -11616,6 +12092,12 @@
       "valueId": "Array7"
     },
     {
+      "exception": "Unexpected property \"readUIntLE\"",
+      "strict": true,
+      "typeId": "{ a: undefined }",
+      "valueId": "Buffer"
+    },
+    {
       "exception": "Unexpected property \"0\"",
       "strict": true,
       "typeId": "{ a: undefined }",
@@ -11651,6 +12133,16 @@
       "exception": "Expected Object, got Number 1",
       "typeId": "@{ a: undefined }",
       "value": 1
+    },
+    {
+      "exception": "Expected Object, got Number 1\\.5",
+      "typeId": "@{ a: undefined }",
+      "value": 1.5
+    },
+    {
+      "exception": "Expected Object, got Number 10",
+      "typeId": "@{ a: undefined }",
+      "value": 10
     },
     {
       "exception": "Unexpected property \"0\"",
@@ -11855,6 +12347,12 @@
       "valueId": "Array7"
     },
     {
+      "exception": "Unexpected property \"readUIntLE\"",
+      "strict": true,
+      "typeId": "@{ a: undefined }",
+      "valueId": "Buffer"
+    },
+    {
       "exception": "Unexpected property \"0\"",
       "strict": true,
       "typeId": "@{ a: undefined }",
@@ -11890,6 +12388,16 @@
       "exception": "Expected Unmatchable, got Number 1",
       "typeId": "Unmatchable",
       "value": 1
+    },
+    {
+      "exception": "Expected Unmatchable, got Number 1\\.5",
+      "typeId": "Unmatchable",
+      "value": 1.5
+    },
+    {
+      "exception": "Expected Unmatchable, got Number 10",
+      "typeId": "Unmatchable",
+      "value": 10
     },
     {
       "exception": "Expected Unmatchable, got Array",
@@ -12145,6 +12653,16 @@
       "value": 1
     },
     {
+      "exception": "Expected \\?Unmatchable, got Number 1\\.5",
+      "typeId": "?Unmatchable",
+      "value": 1.5
+    },
+    {
+      "exception": "Expected \\?Unmatchable, got Number 10",
+      "typeId": "?Unmatchable",
+      "value": 10
+    },
+    {
       "exception": "Expected \\?Unmatchable, got Array",
       "typeId": "?Unmatchable",
       "value": []
@@ -12389,6 +12907,16 @@
       "value": 1
     },
     {
+      "exception": "Expected Object, got Number 1\\.5",
+      "typeId": "{ a: ?Unmatchable }",
+      "value": 1.5
+    },
+    {
+      "exception": "Expected Object, got Number 10",
+      "typeId": "{ a: ?Unmatchable }",
+      "value": 10
+    },
+    {
       "exception": "Unexpected property \"0\"",
       "strict": true,
       "typeId": "{ a: ?Unmatchable }",
@@ -12584,6 +13112,12 @@
       "valueId": "Array7"
     },
     {
+      "exception": "Unexpected property \"readUIntLE\"",
+      "strict": true,
+      "typeId": "{ a: ?Unmatchable }",
+      "valueId": "Buffer"
+    },
+    {
       "exception": "Unexpected property \"0\"",
       "strict": true,
       "typeId": "{ a: ?Unmatchable }",
@@ -12619,6 +13153,16 @@
       "exception": "Expected Object, got Number 1",
       "typeId": "{ a: { b: Unmatchable } }",
       "value": 1
+    },
+    {
+      "exception": "Expected Object, got Number 1\\.5",
+      "typeId": "{ a: { b: Unmatchable } }",
+      "value": 1.5
+    },
+    {
+      "exception": "Expected Object, got Number 10",
+      "typeId": "{ a: { b: Unmatchable } }",
+      "value": 10
     },
     {
       "exception": "Expected property \"a\" of type Object, got undefined",
@@ -12874,6 +13418,16 @@
       "value": 1
     },
     {
+      "exception": "Expected CustomType, got Number 1\\.5",
+      "typeId": ">CustomType",
+      "value": 1.5
+    },
+    {
+      "exception": "Expected CustomType, got Number 10",
+      "typeId": ">CustomType",
+      "value": 10
+    },
+    {
       "exception": "Expected CustomType, got Array",
       "typeId": ">CustomType",
       "value": []
@@ -13122,6 +13676,16 @@
       "value": 1
     },
     {
+      "exception": "Expected \\{String\\}, got Number 1\\.5",
+      "typeId": "{ String }",
+      "value": 1.5
+    },
+    {
+      "exception": "Expected \\{String\\}, got Number 10",
+      "typeId": "{ String }",
+      "value": 10
+    },
+    {
       "exception": "Expected property \"0\" of type String, got Number 0",
       "typeId": "{ String }",
       "value": [
@@ -13300,6 +13864,11 @@
       "valueId": "Array6"
     },
     {
+      "exception": "Expected property \"readUIntLE\" of type String, got Function",
+      "typeId": "{ String }",
+      "valueId": "Buffer"
+    },
+    {
       "exception": "Expected property \"0\" of type String, got Number 255",
       "typeId": "{ String }",
       "valueId": "Buffer3"
@@ -13333,6 +13902,16 @@
       "exception": "Expected \\{String|Number\\}, got Number 1",
       "typeId": "{ String|Number }",
       "value": 1
+    },
+    {
+      "exception": "Expected \\{String|Number\\}, got Number 1\\.5",
+      "typeId": "{ String|Number }",
+      "value": 1.5
+    },
+    {
+      "exception": "Expected \\{String|Number\\}, got Number 10",
+      "typeId": "{ String|Number }",
+      "value": 10
     },
     {
       "exception": "Expected property \"0\" of type String|Number, got Object",
@@ -13469,6 +14048,21 @@
       "valueId": "{ a: { b: Buffer10 } }"
     },
     {
+      "exception": "Expected property \"readUIntLE\" of type String|Number, got Function",
+      "typeId": "{ String|Number }",
+      "valueId": "Buffer"
+    },
+    {
+      "exception": "Expected property \"readUIntLE\" of type String|Number, got Function",
+      "typeId": "{ String|Number }",
+      "valueId": "Buffer3"
+    },
+    {
+      "exception": "Expected property \"readUIntLE\" of type String|Number, got Function",
+      "typeId": "{ String|Number }",
+      "valueId": "Buffer10"
+    },
+    {
       "exception": "Expected \\{String|Number\\}, got String \"boop\"",
       "typeId": "{ String|Number }",
       "valueId": "String4"
@@ -13492,6 +14086,16 @@
       "exception": "Expected \\{String\\: Number\\}, got Number 1",
       "typeId": "{ String: Number }",
       "value": 1
+    },
+    {
+      "exception": "Expected \\{String\\: Number\\}, got Number 1\\.5",
+      "typeId": "{ String: Number }",
+      "value": 1.5
+    },
+    {
+      "exception": "Expected \\{String\\: Number\\}, got Number 10",
+      "typeId": "{ String: Number }",
+      "value": 10
     },
     {
       "exception": "Expected property \"0\" of type Number, got String \"foobar\"",
@@ -13648,6 +14252,21 @@
       "valueId": "Array7"
     },
     {
+      "exception": "Expected property \"readUIntLE\" of type Number, got Function",
+      "typeId": "{ String: Number }",
+      "valueId": "Buffer"
+    },
+    {
+      "exception": "Expected property \"readUIntLE\" of type Number, got Function",
+      "typeId": "{ String: Number }",
+      "valueId": "Buffer3"
+    },
+    {
+      "exception": "Expected property \"readUIntLE\" of type Number, got Function",
+      "typeId": "{ String: Number }",
+      "valueId": "Buffer10"
+    },
+    {
       "exception": "Expected \\{String\\: Number\\}, got String \"boop\"",
       "typeId": "{ String: Number }",
       "valueId": "String4"
@@ -13671,6 +14290,16 @@
       "exception": "Expected \\{Letter\\: Number\\}, got Number 1",
       "typeId": "{ Letter: Number }",
       "value": 1
+    },
+    {
+      "exception": "Expected \\{Letter\\: Number\\}, got Number 1\\.5",
+      "typeId": "{ Letter: Number }",
+      "value": 1.5
+    },
+    {
+      "exception": "Expected \\{Letter\\: Number\\}, got Number 10",
+      "typeId": "{ Letter: Number }",
+      "value": 10
     },
     {
       "exception": "Expected property \"0\" with key type Letter, got String \"0\"",
@@ -13844,6 +14473,11 @@
       "valueId": "Array7"
     },
     {
+      "exception": "Expected property \"readUIntLE\" with key type Letter, got String \"readUIntLE\"",
+      "typeId": "{ Letter: Number }",
+      "valueId": "Buffer"
+    },
+    {
       "exception": "Expected property \"0\" with key type Letter, got String \"0\"",
       "typeId": "{ Letter: Number }",
       "valueId": "Buffer3"
@@ -13877,6 +14511,16 @@
       "exception": "Expected Object, got Number 1",
       "typeId": "{ a: { b: Buffer3 } }",
       "value": 1
+    },
+    {
+      "exception": "Expected Object, got Number 1\\.5",
+      "typeId": "{ a: { b: Buffer3 } }",
+      "value": 1.5
+    },
+    {
+      "exception": "Expected Object, got Number 10",
+      "typeId": "{ a: { b: Buffer3 } }",
+      "value": 10
     },
     {
       "exception": "Expected property \"a\" of type Object, got undefined",
@@ -14127,6 +14771,16 @@
       "value": 1
     },
     {
+      "exception": "Expected Object, got Number 1\\.5",
+      "typeId": "{ a: Buffer10|Number }",
+      "value": 1.5
+    },
+    {
+      "exception": "Expected Object, got Number 10",
+      "typeId": "{ a: Buffer10|Number }",
+      "value": 10
+    },
+    {
       "exception": "Expected property \"a\" of type Buffer|Number, got undefined",
       "typeId": "{ a: Buffer10|Number }",
       "value": []
@@ -14367,6 +15021,16 @@
       "exception": "Expected Array, got Number 1",
       "typeId": "Array6",
       "value": 1
+    },
+    {
+      "exception": "Expected Array, got Number 1\\.5",
+      "typeId": "Array6",
+      "value": 1.5
+    },
+    {
+      "exception": "Expected Array, got Number 10",
+      "typeId": "Array6",
+      "value": 10
     },
     {
       "exception": "Expected Array\\(Length\\: 6\\), got Array\\(Length\\: 0\\)",
@@ -14617,6 +15281,16 @@
       "value": 1
     },
     {
+      "exception": "Expected Array, got Number 1\\.5",
+      "typeId": "Array7",
+      "value": 1.5
+    },
+    {
+      "exception": "Expected Array, got Number 10",
+      "typeId": "Array7",
+      "value": 10
+    },
+    {
       "exception": "Expected Array\\(Length\\: 7\\), got Array\\(Length\\: 0\\)",
       "typeId": "Array7",
       "value": []
@@ -14863,6 +15537,16 @@
       "exception": "Expected Buffer, got Number 1",
       "typeId": "Buffer0",
       "value": 1
+    },
+    {
+      "exception": "Expected Buffer, got Number 1\\.5",
+      "typeId": "Buffer0",
+      "value": 1.5
+    },
+    {
+      "exception": "Expected Buffer, got Number 10",
+      "typeId": "Buffer0",
+      "value": 10
     },
     {
       "exception": "Expected Buffer, got Array",
@@ -15113,6 +15797,16 @@
       "value": 1
     },
     {
+      "exception": "Expected Buffer, got Number 1\\.5",
+      "typeId": "Buffer3",
+      "value": 1.5
+    },
+    {
+      "exception": "Expected Buffer, got Number 10",
+      "typeId": "Buffer3",
+      "value": 10
+    },
+    {
       "exception": "Expected Buffer, got Array",
       "typeId": "Buffer3",
       "value": []
@@ -15361,6 +16055,16 @@
       "value": 1
     },
     {
+      "exception": "Expected Buffer, got Number 1\\.5",
+      "typeId": "Buffer10",
+      "value": 1.5
+    },
+    {
+      "exception": "Expected Buffer, got Number 10",
+      "typeId": "Buffer10",
+      "value": 10
+    },
+    {
       "exception": "Expected Buffer, got Array",
       "typeId": "Buffer10",
       "value": []
@@ -15607,6 +16311,16 @@
       "exception": "Expected Hex, got Number 1",
       "typeId": "Hex",
       "value": 1
+    },
+    {
+      "exception": "Expected Hex, got Number 1\\.5",
+      "typeId": "Hex",
+      "value": 1.5
+    },
+    {
+      "exception": "Expected Hex, got Number 10",
+      "typeId": "Hex",
+      "value": 10
     },
     {
       "exception": "Expected Hex, got Array",
@@ -15862,6 +16576,16 @@
       "value": 1
     },
     {
+      "exception": "Expected Hex, got Number 1\\.5",
+      "typeId": "Hex64",
+      "value": 1.5
+    },
+    {
+      "exception": "Expected Hex, got Number 10",
+      "typeId": "Hex64",
+      "value": 10
+    },
+    {
       "exception": "Expected Hex, got Array",
       "typeId": "Hex64",
       "value": []
@@ -16115,6 +16839,16 @@
       "value": 1
     },
     {
+      "exception": "Expected String, got Number 1\\.5",
+      "typeId": "String4",
+      "value": 1.5
+    },
+    {
+      "exception": "Expected String, got Number 10",
+      "typeId": "String4",
+      "value": 10
+    },
+    {
       "exception": "Expected String, got Array",
       "typeId": "String4",
       "value": []
@@ -16343,6 +17077,517 @@
       "valueId": "Buffer10"
     },
     {
+      "exception": "Expected Number between \\[1, 5\\], got String \"\"",
+      "typeId": "Range1-5",
+      "value": ""
+    },
+    {
+      "exception": "Expected Number between \\[1, 5\\], got String \"foobar\"",
+      "typeId": "Range1-5",
+      "value": "foobar"
+    },
+    {
+      "exception": "Expected Number between \\[1, 5\\], got Number 0",
+      "typeId": "Range1-5",
+      "value": 0
+    },
+    {
+      "exception": "Expected Number between \\[1, 5\\], got Number 1",
+      "typeId": "Range1-5",
+      "value": 1
+    },
+    {
+      "exception": "Expected Number between \\[1, 5\\], got Number 10",
+      "typeId": "Range1-5",
+      "value": 10
+    },
+    {
+      "exception": "Expected Number between \\[1, 5\\], got Array",
+      "typeId": "Range1-5",
+      "value": []
+    },
+    {
+      "exception": "Expected Number between \\[1, 5\\], got Array",
+      "typeId": "Range1-5",
+      "value": [
+        0
+      ]
+    },
+    {
+      "exception": "Expected Number between \\[1, 5\\], got Array",
+      "typeId": "Range1-5",
+      "value": [
+        "foobar"
+      ]
+    },
+    {
+      "exception": "Expected Number between \\[1, 5\\], got Array",
+      "typeId": "Range1-5",
+      "value": [
+        {
+          "a": 0
+        }
+      ]
+    },
+    {
+      "exception": "Expected Number between \\[1, 5\\], got Array",
+      "typeId": "Range1-5",
+      "value": [
+        null
+      ]
+    },
+    {
+      "exception": "Expected Number between \\[1, 5\\], got Boolean false",
+      "typeId": "Range1-5",
+      "value": false
+    },
+    {
+      "exception": "Expected Number between \\[1, 5\\], got Boolean true",
+      "typeId": "Range1-5",
+      "value": true
+    },
+    {
+      "exception": "Expected Number between \\[1, 5\\], got undefined",
+      "typeId": "Range1-5"
+    },
+    {
+      "exception": "Expected Number between \\[1, 5\\], got null",
+      "typeId": "Range1-5",
+      "value": null
+    },
+    {
+      "exception": "Expected Number between \\[1, 5\\], got Object",
+      "typeId": "Range1-5",
+      "value": {}
+    },
+    {
+      "exception": "Expected Number between \\[1, 5\\], got Object",
+      "typeId": "Range1-5",
+      "value": {
+        "a": null
+      }
+    },
+    {
+      "exception": "Expected Number between \\[1, 5\\], got Object",
+      "typeId": "Range1-5",
+      "value": {
+        "a": 0
+      }
+    },
+    {
+      "exception": "Expected Number between \\[1, 5\\], got Object",
+      "typeId": "Range1-5",
+      "value": {
+        "a": 0,
+        "b": 0
+      }
+    },
+    {
+      "exception": "Expected Number between \\[1, 5\\], got Object",
+      "typeId": "Range1-5",
+      "value": {
+        "b": 0
+      }
+    },
+    {
+      "exception": "Expected Number between \\[1, 5\\], got Object",
+      "typeId": "Range1-5",
+      "value": {
+        "a": {
+          "b": 0
+        }
+      }
+    },
+    {
+      "exception": "Expected Number between \\[1, 5\\], got Object",
+      "typeId": "Range1-5",
+      "value": {
+        "a": {
+          "b": null
+        }
+      }
+    },
+    {
+      "exception": "Expected Number between \\[1, 5\\], got Object",
+      "typeId": "Range1-5",
+      "value": {
+        "a": {
+          "b": {
+            "c": 0
+          }
+        }
+      }
+    },
+    {
+      "exception": "Expected Number between \\[1, 5\\], got Object",
+      "typeId": "Range1-5",
+      "value": {
+        "a": {
+          "b": {
+            "c": null
+          }
+        }
+      }
+    },
+    {
+      "exception": "Expected Number between \\[1, 5\\], got Object",
+      "typeId": "Range1-5",
+      "value": {
+        "a": {
+          "b": {
+            "c": 0,
+            "d": 0
+          }
+        }
+      }
+    },
+    {
+      "exception": "Expected Number between \\[1, 5\\], got Object",
+      "typeId": "Range1-5",
+      "value": {
+        "a": "foo",
+        "b": "bar"
+      }
+    },
+    {
+      "exception": "Expected Number between \\[1, 5\\], got Object",
+      "typeId": "Range1-5",
+      "value": {
+        "a": "foo",
+        "b": {
+          "c": "bar"
+        }
+      }
+    },
+    {
+      "exception": "Expected Number between \\[1, 5\\], got Function",
+      "typeId": "Range1-5",
+      "valueId": "function"
+    },
+    {
+      "exception": "Expected Number between \\[1, 5\\], got EmptyType",
+      "typeId": "Range1-5",
+      "valueId": "emptyType"
+    },
+    {
+      "exception": "Expected Number between \\[1, 5\\], got CustomType",
+      "typeId": "Range1-5",
+      "valueId": "customType"
+    },
+    {
+      "exception": "Expected Number between \\[1, 5\\], got Object",
+      "typeId": "Range1-5",
+      "valueId": "{ a: undefined }"
+    },
+    {
+      "exception": "Expected Number between \\[1, 5\\], got Object",
+      "typeId": "Range1-5",
+      "valueId": "{ a: Buffer3 }"
+    },
+    {
+      "exception": "Expected Number between \\[1, 5\\], got Object",
+      "typeId": "Range1-5",
+      "valueId": "{ a: Buffer10 }"
+    },
+    {
+      "exception": "Expected Number between \\[1, 5\\], got Object",
+      "typeId": "Range1-5",
+      "valueId": "{ a: { b: Buffer3 } }"
+    },
+    {
+      "exception": "Expected Number between \\[1, 5\\], got Object",
+      "typeId": "Range1-5",
+      "valueId": "{ a: { b: Buffer10 } }"
+    },
+    {
+      "exception": "Expected Number between \\[1, 5\\], got Array",
+      "typeId": "Range1-5",
+      "valueId": "Array5"
+    },
+    {
+      "exception": "Expected Number between \\[1, 5\\], got Array",
+      "typeId": "Range1-5",
+      "valueId": "Array6"
+    },
+    {
+      "exception": "Expected Number between \\[1, 5\\], got Array",
+      "typeId": "Range1-5",
+      "valueId": "Array7"
+    },
+    {
+      "exception": "Expected Number between \\[1, 5\\], got Buffer",
+      "typeId": "Range1-5",
+      "valueId": "Buffer"
+    },
+    {
+      "exception": "Expected Number between \\[1, 5\\], got Buffer",
+      "typeId": "Range1-5",
+      "valueId": "Buffer3"
+    },
+    {
+      "exception": "Expected Number between \\[1, 5\\], got Buffer",
+      "typeId": "Range1-5",
+      "valueId": "Buffer10"
+    },
+    {
+      "exception": "Expected Number between \\[1, 5\\], got String \"boop\"",
+      "typeId": "Range1-5",
+      "valueId": "String4"
+    },
+    {
+      "exception": "Expected Int8 between \\[0, 100\\], got String \"\"",
+      "typeId": "Int8Range0-100",
+      "value": ""
+    },
+    {
+      "exception": "Expected Int8 between \\[0, 100\\], got String \"foobar\"",
+      "typeId": "Int8Range0-100",
+      "value": "foobar"
+    },
+    {
+      "exception": "Expected Int8 between \\[0, 100\\], got Number 0",
+      "typeId": "Int8Range0-100",
+      "value": 0
+    },
+    {
+      "exception": "Expected Int8 between \\[0, 100\\], got Number 1\\.5",
+      "typeId": "Int8Range0-100",
+      "value": 1.5
+    },
+    {
+      "exception": "Expected Int8 between \\[0, 100\\], got Array",
+      "typeId": "Int8Range0-100",
+      "value": []
+    },
+    {
+      "exception": "Expected Int8 between \\[0, 100\\], got Array",
+      "typeId": "Int8Range0-100",
+      "value": [
+        0
+      ]
+    },
+    {
+      "exception": "Expected Int8 between \\[0, 100\\], got Array",
+      "typeId": "Int8Range0-100",
+      "value": [
+        "foobar"
+      ]
+    },
+    {
+      "exception": "Expected Int8 between \\[0, 100\\], got Array",
+      "typeId": "Int8Range0-100",
+      "value": [
+        {
+          "a": 0
+        }
+      ]
+    },
+    {
+      "exception": "Expected Int8 between \\[0, 100\\], got Array",
+      "typeId": "Int8Range0-100",
+      "value": [
+        null
+      ]
+    },
+    {
+      "exception": "Expected Int8 between \\[0, 100\\], got Boolean false",
+      "typeId": "Int8Range0-100",
+      "value": false
+    },
+    {
+      "exception": "Expected Int8 between \\[0, 100\\], got Boolean true",
+      "typeId": "Int8Range0-100",
+      "value": true
+    },
+    {
+      "exception": "Expected Int8 between \\[0, 100\\], got undefined",
+      "typeId": "Int8Range0-100"
+    },
+    {
+      "exception": "Expected Int8 between \\[0, 100\\], got null",
+      "typeId": "Int8Range0-100",
+      "value": null
+    },
+    {
+      "exception": "Expected Int8 between \\[0, 100\\], got Object",
+      "typeId": "Int8Range0-100",
+      "value": {}
+    },
+    {
+      "exception": "Expected Int8 between \\[0, 100\\], got Object",
+      "typeId": "Int8Range0-100",
+      "value": {
+        "a": null
+      }
+    },
+    {
+      "exception": "Expected Int8 between \\[0, 100\\], got Object",
+      "typeId": "Int8Range0-100",
+      "value": {
+        "a": 0
+      }
+    },
+    {
+      "exception": "Expected Int8 between \\[0, 100\\], got Object",
+      "typeId": "Int8Range0-100",
+      "value": {
+        "a": 0,
+        "b": 0
+      }
+    },
+    {
+      "exception": "Expected Int8 between \\[0, 100\\], got Object",
+      "typeId": "Int8Range0-100",
+      "value": {
+        "b": 0
+      }
+    },
+    {
+      "exception": "Expected Int8 between \\[0, 100\\], got Object",
+      "typeId": "Int8Range0-100",
+      "value": {
+        "a": {
+          "b": 0
+        }
+      }
+    },
+    {
+      "exception": "Expected Int8 between \\[0, 100\\], got Object",
+      "typeId": "Int8Range0-100",
+      "value": {
+        "a": {
+          "b": null
+        }
+      }
+    },
+    {
+      "exception": "Expected Int8 between \\[0, 100\\], got Object",
+      "typeId": "Int8Range0-100",
+      "value": {
+        "a": {
+          "b": {
+            "c": 0
+          }
+        }
+      }
+    },
+    {
+      "exception": "Expected Int8 between \\[0, 100\\], got Object",
+      "typeId": "Int8Range0-100",
+      "value": {
+        "a": {
+          "b": {
+            "c": null
+          }
+        }
+      }
+    },
+    {
+      "exception": "Expected Int8 between \\[0, 100\\], got Object",
+      "typeId": "Int8Range0-100",
+      "value": {
+        "a": {
+          "b": {
+            "c": 0,
+            "d": 0
+          }
+        }
+      }
+    },
+    {
+      "exception": "Expected Int8 between \\[0, 100\\], got Object",
+      "typeId": "Int8Range0-100",
+      "value": {
+        "a": "foo",
+        "b": "bar"
+      }
+    },
+    {
+      "exception": "Expected Int8 between \\[0, 100\\], got Object",
+      "typeId": "Int8Range0-100",
+      "value": {
+        "a": "foo",
+        "b": {
+          "c": "bar"
+        }
+      }
+    },
+    {
+      "exception": "Expected Int8 between \\[0, 100\\], got Function",
+      "typeId": "Int8Range0-100",
+      "valueId": "function"
+    },
+    {
+      "exception": "Expected Int8 between \\[0, 100\\], got EmptyType",
+      "typeId": "Int8Range0-100",
+      "valueId": "emptyType"
+    },
+    {
+      "exception": "Expected Int8 between \\[0, 100\\], got CustomType",
+      "typeId": "Int8Range0-100",
+      "valueId": "customType"
+    },
+    {
+      "exception": "Expected Int8 between \\[0, 100\\], got Object",
+      "typeId": "Int8Range0-100",
+      "valueId": "{ a: undefined }"
+    },
+    {
+      "exception": "Expected Int8 between \\[0, 100\\], got Object",
+      "typeId": "Int8Range0-100",
+      "valueId": "{ a: Buffer3 }"
+    },
+    {
+      "exception": "Expected Int8 between \\[0, 100\\], got Object",
+      "typeId": "Int8Range0-100",
+      "valueId": "{ a: Buffer10 }"
+    },
+    {
+      "exception": "Expected Int8 between \\[0, 100\\], got Object",
+      "typeId": "Int8Range0-100",
+      "valueId": "{ a: { b: Buffer3 } }"
+    },
+    {
+      "exception": "Expected Int8 between \\[0, 100\\], got Object",
+      "typeId": "Int8Range0-100",
+      "valueId": "{ a: { b: Buffer10 } }"
+    },
+    {
+      "exception": "Expected Int8 between \\[0, 100\\], got Array",
+      "typeId": "Int8Range0-100",
+      "valueId": "Array5"
+    },
+    {
+      "exception": "Expected Int8 between \\[0, 100\\], got Array",
+      "typeId": "Int8Range0-100",
+      "valueId": "Array6"
+    },
+    {
+      "exception": "Expected Int8 between \\[0, 100\\], got Array",
+      "typeId": "Int8Range0-100",
+      "valueId": "Array7"
+    },
+    {
+      "exception": "Expected Int8 between \\[0, 100\\], got Buffer",
+      "typeId": "Int8Range0-100",
+      "valueId": "Buffer"
+    },
+    {
+      "exception": "Expected Int8 between \\[0, 100\\], got Buffer",
+      "typeId": "Int8Range0-100",
+      "valueId": "Buffer3"
+    },
+    {
+      "exception": "Expected Int8 between \\[0, 100\\], got Buffer",
+      "typeId": "Int8Range0-100",
+      "valueId": "Buffer10"
+    },
+    {
+      "exception": "Expected Int8 between \\[0, 100\\], got String \"boop\"",
+      "typeId": "Int8Range0-100",
+      "valueId": "String4"
+    },
+    {
       "exception": "Expected Int8, got String \"\"",
       "typeId": "Int8",
       "value": ""
@@ -16351,6 +17596,11 @@
       "exception": "Expected Int8, got String \"foobar\"",
       "typeId": "Int8",
       "value": "foobar"
+    },
+    {
+      "exception": "Expected Int8, got Number 1\\.5",
+      "typeId": "Int8",
+      "value": 1.5
     },
     {
       "exception": "Expected Int8, got Array",
@@ -16596,6 +17846,11 @@
       "value": "foobar"
     },
     {
+      "exception": "Expected Int16, got Number 1\\.5",
+      "typeId": "Int16",
+      "value": 1.5
+    },
+    {
       "exception": "Expected Int16, got Array",
       "typeId": "Int16",
       "value": []
@@ -16837,6 +18092,11 @@
       "exception": "Expected Int32, got String \"foobar\"",
       "typeId": "Int32",
       "value": "foobar"
+    },
+    {
+      "exception": "Expected Int32, got Number 1\\.5",
+      "typeId": "Int32",
+      "value": 1.5
     },
     {
       "exception": "Expected Int32, got Array",
@@ -17082,6 +18342,11 @@
       "value": "foobar"
     },
     {
+      "exception": "Expected UInt8, got Number 1\\.5",
+      "typeId": "UInt8",
+      "value": 1.5
+    },
+    {
       "exception": "Expected UInt8, got Array",
       "typeId": "UInt8",
       "value": []
@@ -17323,6 +18588,11 @@
       "exception": "Expected UInt16, got String \"foobar\"",
       "typeId": "UInt16",
       "value": "foobar"
+    },
+    {
+      "exception": "Expected UInt16, got Number 1\\.5",
+      "typeId": "UInt16",
+      "value": 1.5
     },
     {
       "exception": "Expected UInt16, got Array",
@@ -17568,6 +18838,11 @@
       "value": "foobar"
     },
     {
+      "exception": "Expected UInt32, got Number 1\\.5",
+      "typeId": "UInt32",
+      "value": 1.5
+    },
+    {
       "exception": "Expected UInt32, got Array",
       "typeId": "UInt32",
       "value": []
@@ -17809,6 +19084,11 @@
       "exception": "Expected UInt53, got String \"foobar\"",
       "typeId": "UInt53",
       "value": "foobar"
+    },
+    {
+      "exception": "Expected UInt53, got Number 1\\.5",
+      "typeId": "UInt53",
+      "value": 1.5
     },
     {
       "exception": "Expected UInt53, got Array",
@@ -22651,6 +23931,166 @@
     {
       "exception": "Expected String, got Number 9007199254740994",
       "typeId": "String4",
+      "value": 9007199254740994
+    },
+    {
+      "exception": "Expected Number between \\[1, 5\\], got String \"fff\"",
+      "typeId": "Range1-5",
+      "value": "fff"
+    },
+    {
+      "exception": "Expected Number between \\[1, 5\\], got String \"cafe1122deadbeef\"",
+      "typeId": "Range1-5",
+      "value": "cafe1122deadbeef"
+    },
+    {
+      "exception": "Expected Number between \\[1, 5\\], got String \"0102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f20\"",
+      "typeId": "Range1-5",
+      "value": "0102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f20"
+    },
+    {
+      "exception": "Expected Number between \\[1, 5\\], got Number -1",
+      "typeId": "Range1-5",
+      "value": -1
+    },
+    {
+      "exception": "Expected Number between \\[1, 5\\], got Number 127",
+      "typeId": "Range1-5",
+      "value": 127
+    },
+    {
+      "exception": "Expected Number between \\[1, 5\\], got Number 128",
+      "typeId": "Range1-5",
+      "value": 128
+    },
+    {
+      "exception": "Expected Number between \\[1, 5\\], got Number 255",
+      "typeId": "Range1-5",
+      "value": 255
+    },
+    {
+      "exception": "Expected Number between \\[1, 5\\], got Number 256",
+      "typeId": "Range1-5",
+      "value": 256
+    },
+    {
+      "exception": "Expected Number between \\[1, 5\\], got Number -128",
+      "typeId": "Range1-5",
+      "value": -128
+    },
+    {
+      "exception": "Expected Number between \\[1, 5\\], got Number -129",
+      "typeId": "Range1-5",
+      "value": -129
+    },
+    {
+      "exception": "Expected Number between \\[1, 5\\], got Number 65534",
+      "typeId": "Range1-5",
+      "value": 65534
+    },
+    {
+      "exception": "Expected Number between \\[1, 5\\], got Number 65535",
+      "typeId": "Range1-5",
+      "value": 65535
+    },
+    {
+      "exception": "Expected Number between \\[1, 5\\], got Number 65536",
+      "typeId": "Range1-5",
+      "value": 65536
+    },
+    {
+      "exception": "Expected Number between \\[1, 5\\], got Number 4294967295",
+      "typeId": "Range1-5",
+      "value": 4294967295
+    },
+    {
+      "exception": "Expected Number between \\[1, 5\\], got Number 9007199254740991",
+      "typeId": "Range1-5",
+      "value": 9007199254740991
+    },
+    {
+      "exception": "Expected Number between \\[1, 5\\], got Number 9007199254740994",
+      "typeId": "Range1-5",
+      "value": 9007199254740994
+    },
+    {
+      "exception": "Expected Int8 between \\[0, 100\\], got String \"fff\"",
+      "typeId": "Int8Range0-100",
+      "value": "fff"
+    },
+    {
+      "exception": "Expected Int8 between \\[0, 100\\], got String \"cafe1122deadbeef\"",
+      "typeId": "Int8Range0-100",
+      "value": "cafe1122deadbeef"
+    },
+    {
+      "exception": "Expected Int8 between \\[0, 100\\], got String \"0102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f20\"",
+      "typeId": "Int8Range0-100",
+      "value": "0102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f20"
+    },
+    {
+      "exception": "Expected Int8 between \\[0, 100\\], got Number -1",
+      "typeId": "Int8Range0-100",
+      "value": -1
+    },
+    {
+      "exception": "Expected Int8 between \\[0, 100\\], got Number 127",
+      "typeId": "Int8Range0-100",
+      "value": 127
+    },
+    {
+      "exception": "Expected Int8 between \\[0, 100\\], got Number 128",
+      "typeId": "Int8Range0-100",
+      "value": 128
+    },
+    {
+      "exception": "Expected Int8 between \\[0, 100\\], got Number 255",
+      "typeId": "Int8Range0-100",
+      "value": 255
+    },
+    {
+      "exception": "Expected Int8 between \\[0, 100\\], got Number 256",
+      "typeId": "Int8Range0-100",
+      "value": 256
+    },
+    {
+      "exception": "Expected Int8 between \\[0, 100\\], got Number -128",
+      "typeId": "Int8Range0-100",
+      "value": -128
+    },
+    {
+      "exception": "Expected Int8 between \\[0, 100\\], got Number -129",
+      "typeId": "Int8Range0-100",
+      "value": -129
+    },
+    {
+      "exception": "Expected Int8 between \\[0, 100\\], got Number 65534",
+      "typeId": "Int8Range0-100",
+      "value": 65534
+    },
+    {
+      "exception": "Expected Int8 between \\[0, 100\\], got Number 65535",
+      "typeId": "Int8Range0-100",
+      "value": 65535
+    },
+    {
+      "exception": "Expected Int8 between \\[0, 100\\], got Number 65536",
+      "typeId": "Int8Range0-100",
+      "value": 65536
+    },
+    {
+      "exception": "Expected Int8 between \\[0, 100\\], got Number 4294967295",
+      "typeId": "Int8Range0-100",
+      "value": 4294967295
+    },
+    {
+      "exception": "Expected Int8 between \\[0, 100\\], got Number 9007199254740991",
+      "typeId": "Int8Range0-100",
+      "value": 9007199254740991
+    },
+    {
+      "exception": "Expected Int8 between \\[0, 100\\], got Number 9007199254740994",
+      "typeId": "Int8Range0-100",
       "value": 9007199254740994
     },
     {
