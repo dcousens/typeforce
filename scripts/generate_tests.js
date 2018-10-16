@@ -61,6 +61,8 @@ const VALUES2 = [
   { a: 'foo', b: { c: 'bar' } }
 ]
 
+const INT53_MAX = Math.pow(2, 53) - 1
+
 // extra
 const VALUESX = [
   'fff',
@@ -77,8 +79,10 @@ const VALUESX = [
   0xffff,
   0x10000,
   0xffffffff,
-  9007199254740991,
-  9007199254740994
+  INT53_MAX,
+  INT53_MAX + 3,
+  -INT53_MAX,
+  -INT53_MAX - 3
 ]
 
 const fixtures = {

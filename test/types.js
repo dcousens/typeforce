@@ -44,6 +44,7 @@ module.exports = {
   'Int8': typeforce.Int8,
   'Int16': typeforce.Int16,
   'Int32': typeforce.Int32,
+  'Int53': typeforce.Int53,
   'UInt8': typeforce.UInt8,
   'UInt16': typeforce.UInt16,
   'UInt32': typeforce.UInt32,

@@ -1824,6 +1824,18 @@
       "value": 10
     },
     {
+      "typeId": "Int53",
+      "value": 0
+    },
+    {
+      "typeId": "Int53",
+      "value": 1
+    },
+    {
+      "typeId": "Int53",
+      "value": 10
+    },
+    {
       "typeId": "UInt8",
       "value": 0
     },
@@ -1924,6 +1936,14 @@
       "value": 9007199254740994
     },
     {
+      "type": "Number",
+      "value": -9007199254740991
+    },
+    {
+      "type": "Number",
+      "value": -9007199254740994
+    },
+    {
       "type": "String",
       "value": "fff"
     },
@@ -1986,6 +2006,14 @@
     {
       "type": "?Number",
       "value": 9007199254740994
+    },
+    {
+      "type": "?Number",
+      "value": -9007199254740991
+    },
+    {
+      "type": "?Number",
+      "value": -9007199254740994
     },
     {
       "typeId": "(Number|String)",
@@ -2064,6 +2092,14 @@
       "value": 9007199254740994
     },
     {
+      "typeId": "Boolean|Number|String",
+      "value": -9007199254740991
+    },
+    {
+      "typeId": "Boolean|Number|String",
+      "value": -9007199254740994
+    },
+    {
       "typeId": "?Boolean|Number",
       "value": -1
     },
@@ -2114,6 +2150,14 @@
     {
       "typeId": "?Boolean|Number",
       "value": 9007199254740994
+    },
+    {
+      "typeId": "?Boolean|Number",
+      "value": -9007199254740991
+    },
+    {
+      "typeId": "?Boolean|Number",
+      "value": -9007199254740994
     },
     {
       "typeId": "Hex",
@@ -2206,6 +2250,58 @@
     {
       "typeId": "Int32",
       "value": 65536
+    },
+    {
+      "typeId": "Int53",
+      "value": -1
+    },
+    {
+      "typeId": "Int53",
+      "value": 127
+    },
+    {
+      "typeId": "Int53",
+      "value": 128
+    },
+    {
+      "typeId": "Int53",
+      "value": 255
+    },
+    {
+      "typeId": "Int53",
+      "value": 256
+    },
+    {
+      "typeId": "Int53",
+      "value": -128
+    },
+    {
+      "typeId": "Int53",
+      "value": -129
+    },
+    {
+      "typeId": "Int53",
+      "value": 65534
+    },
+    {
+      "typeId": "Int53",
+      "value": 65535
+    },
+    {
+      "typeId": "Int53",
+      "value": 65536
+    },
+    {
+      "typeId": "Int53",
+      "value": 4294967295
+    },
+    {
+      "typeId": "Int53",
+      "value": 9007199254740991
+    },
+    {
+      "typeId": "Int53",
+      "value": -9007199254740991
     },
     {
       "typeId": "UInt8",
@@ -18332,6 +18428,254 @@
       "valueId": "String4"
     },
     {
+      "exception": "Expected Int53, got String \"\"",
+      "typeId": "Int53",
+      "value": ""
+    },
+    {
+      "exception": "Expected Int53, got String \"foobar\"",
+      "typeId": "Int53",
+      "value": "foobar"
+    },
+    {
+      "exception": "Expected Int53, got Number 1\\.5",
+      "typeId": "Int53",
+      "value": 1.5
+    },
+    {
+      "exception": "Expected Int53, got Array",
+      "typeId": "Int53",
+      "value": []
+    },
+    {
+      "exception": "Expected Int53, got Array",
+      "typeId": "Int53",
+      "value": [
+        0
+      ]
+    },
+    {
+      "exception": "Expected Int53, got Array",
+      "typeId": "Int53",
+      "value": [
+        "foobar"
+      ]
+    },
+    {
+      "exception": "Expected Int53, got Array",
+      "typeId": "Int53",
+      "value": [
+        {
+          "a": 0
+        }
+      ]
+    },
+    {
+      "exception": "Expected Int53, got Array",
+      "typeId": "Int53",
+      "value": [
+        null
+      ]
+    },
+    {
+      "exception": "Expected Int53, got Boolean false",
+      "typeId": "Int53",
+      "value": false
+    },
+    {
+      "exception": "Expected Int53, got Boolean true",
+      "typeId": "Int53",
+      "value": true
+    },
+    {
+      "exception": "Expected Int53, got undefined",
+      "typeId": "Int53"
+    },
+    {
+      "exception": "Expected Int53, got null",
+      "typeId": "Int53",
+      "value": null
+    },
+    {
+      "exception": "Expected Int53, got Object",
+      "typeId": "Int53",
+      "value": {}
+    },
+    {
+      "exception": "Expected Int53, got Object",
+      "typeId": "Int53",
+      "value": {
+        "a": null
+      }
+    },
+    {
+      "exception": "Expected Int53, got Object",
+      "typeId": "Int53",
+      "value": {
+        "a": 0
+      }
+    },
+    {
+      "exception": "Expected Int53, got Object",
+      "typeId": "Int53",
+      "value": {
+        "a": 0,
+        "b": 0
+      }
+    },
+    {
+      "exception": "Expected Int53, got Object",
+      "typeId": "Int53",
+      "value": {
+        "b": 0
+      }
+    },
+    {
+      "exception": "Expected Int53, got Object",
+      "typeId": "Int53",
+      "value": {
+        "a": {
+          "b": 0
+        }
+      }
+    },
+    {
+      "exception": "Expected Int53, got Object",
+      "typeId": "Int53",
+      "value": {
+        "a": {
+          "b": null
+        }
+      }
+    },
+    {
+      "exception": "Expected Int53, got Object",
+      "typeId": "Int53",
+      "value": {
+        "a": {
+          "b": {
+            "c": 0
+          }
+        }
+      }
+    },
+    {
+      "exception": "Expected Int53, got Object",
+      "typeId": "Int53",
+      "value": {
+        "a": {
+          "b": {
+            "c": null
+          }
+        }
+      }
+    },
+    {
+      "exception": "Expected Int53, got Object",
+      "typeId": "Int53",
+      "value": {
+        "a": {
+          "b": {
+            "c": 0,
+            "d": 0
+          }
+        }
+      }
+    },
+    {
+      "exception": "Expected Int53, got Object",
+      "typeId": "Int53",
+      "value": {
+        "a": "foo",
+        "b": "bar"
+      }
+    },
+    {
+      "exception": "Expected Int53, got Object",
+      "typeId": "Int53",
+      "value": {
+        "a": "foo",
+        "b": {
+          "c": "bar"
+        }
+      }
+    },
+    {
+      "exception": "Expected Int53, got Function",
+      "typeId": "Int53",
+      "valueId": "function"
+    },
+    {
+      "exception": "Expected Int53, got EmptyType",
+      "typeId": "Int53",
+      "valueId": "emptyType"
+    },
+    {
+      "exception": "Expected Int53, got CustomType",
+      "typeId": "Int53",
+      "valueId": "customType"
+    },
+    {
+      "exception": "Expected Int53, got Object",
+      "typeId": "Int53",
+      "valueId": "{ a: undefined }"
+    },
+    {
+      "exception": "Expected Int53, got Object",
+      "typeId": "Int53",
+      "valueId": "{ a: Buffer3 }"
+    },
+    {
+      "exception": "Expected Int53, got Object",
+      "typeId": "Int53",
+      "valueId": "{ a: Buffer10 }"
+    },
+    {
+      "exception": "Expected Int53, got Object",
+      "typeId": "Int53",
+      "valueId": "{ a: { b: Buffer3 } }"
+    },
+    {
+      "exception": "Expected Int53, got Object",
+      "typeId": "Int53",
+      "valueId": "{ a: { b: Buffer10 } }"
+    },
+    {
+      "exception": "Expected Int53, got Array",
+      "typeId": "Int53",
+      "valueId": "Array5"
+    },
+    {
+      "exception": "Expected Int53, got Array",
+      "typeId": "Int53",
+      "valueId": "Array6"
+    },
+    {
+      "exception": "Expected Int53, got Array",
+      "typeId": "Int53",
+      "valueId": "Array7"
+    },
+    {
+      "exception": "Expected Int53, got Buffer",
+      "typeId": "Int53",
+      "valueId": "Buffer"
+    },
+    {
+      "exception": "Expected Int53, got Buffer",
+      "typeId": "Int53",
+      "valueId": "Buffer3"
+    },
+    {
+      "exception": "Expected Int53, got Buffer",
+      "typeId": "Int53",
+      "valueId": "Buffer10"
+    },
+    {
+      "exception": "Expected Int53, got String \"boop\"",
+      "typeId": "Int53",
+      "valueId": "String4"
+    },
+    {
       "exception": "Expected UInt8, got String \"\"",
       "typeId": "UInt8",
       "value": ""
@@ -19404,6 +19748,16 @@
       "value": 9007199254740994
     },
     {
+      "exception": "Expected Array, got Number -9007199254740991",
+      "type": "Array",
+      "value": -9007199254740991
+    },
+    {
+      "exception": "Expected Array, got Number -9007199254740994",
+      "type": "Array",
+      "value": -9007199254740994
+    },
+    {
       "exception": "Expected Boolean, got String \"fff\"",
       "type": "Boolean",
       "value": "fff"
@@ -19482,6 +19836,16 @@
       "exception": "Expected Boolean, got Number 9007199254740994",
       "type": "Boolean",
       "value": 9007199254740994
+    },
+    {
+      "exception": "Expected Boolean, got Number -9007199254740991",
+      "type": "Boolean",
+      "value": -9007199254740991
+    },
+    {
+      "exception": "Expected Boolean, got Number -9007199254740994",
+      "type": "Boolean",
+      "value": -9007199254740994
     },
     {
       "exception": "Expected Buffer, got String \"fff\"",
@@ -19564,6 +19928,16 @@
       "value": 9007199254740994
     },
     {
+      "exception": "Expected Buffer, got Number -9007199254740991",
+      "type": "Buffer",
+      "value": -9007199254740991
+    },
+    {
+      "exception": "Expected Buffer, got Number -9007199254740994",
+      "type": "Buffer",
+      "value": -9007199254740994
+    },
+    {
       "exception": "Expected Function, got String \"fff\"",
       "type": "Function",
       "value": "fff"
@@ -19644,6 +20018,16 @@
       "value": 9007199254740994
     },
     {
+      "exception": "Expected Function, got Number -9007199254740991",
+      "type": "Function",
+      "value": -9007199254740991
+    },
+    {
+      "exception": "Expected Function, got Number -9007199254740994",
+      "type": "Function",
+      "value": -9007199254740994
+    },
+    {
       "exception": "Expected Null, got String \"fff\"",
       "type": "Null",
       "value": "fff"
@@ -19722,6 +20106,16 @@
       "exception": "Expected Null, got Number 9007199254740994",
       "type": "Null",
       "value": 9007199254740994
+    },
+    {
+      "exception": "Expected Null, got Number -9007199254740991",
+      "type": "Null",
+      "value": -9007199254740991
+    },
+    {
+      "exception": "Expected Null, got Number -9007199254740994",
+      "type": "Null",
+      "value": -9007199254740994
     },
     {
       "exception": "Expected Number, got String \"fff\"",
@@ -19819,6 +20213,16 @@
       "value": 9007199254740994
     },
     {
+      "exception": "Expected Object, got Number -9007199254740991",
+      "type": "Object",
+      "value": -9007199254740991
+    },
+    {
+      "exception": "Expected Object, got Number -9007199254740994",
+      "type": "Object",
+      "value": -9007199254740994
+    },
+    {
       "exception": "Expected String, got Number -1",
       "type": "String",
       "value": -1
@@ -19882,6 +20286,16 @@
       "exception": "Expected String, got Number 9007199254740994",
       "type": "String",
       "value": 9007199254740994
+    },
+    {
+      "exception": "Expected String, got Number -9007199254740991",
+      "type": "String",
+      "value": -9007199254740991
+    },
+    {
+      "exception": "Expected String, got Number -9007199254740994",
+      "type": "String",
+      "value": -9007199254740994
     },
     {
       "exception": "Expected \\?Number, got String \"fff\"",
@@ -20011,6 +20425,20 @@
       "value": 9007199254740994
     },
     {
+      "exception": "Expected \\[\\?Number\\], got Number -9007199254740991",
+      "type": [
+        "?Number"
+      ],
+      "value": -9007199254740991
+    },
+    {
+      "exception": "Expected \\[\\?Number\\], got Number -9007199254740994",
+      "type": [
+        "?Number"
+      ],
+      "value": -9007199254740994
+    },
+    {
       "exception": "Expected \\[Number\\], got String \"fff\"",
       "type": [
         "Number"
@@ -20121,6 +20549,20 @@
         "Number"
       ],
       "value": 9007199254740994
+    },
+    {
+      "exception": "Expected \\[Number\\], got Number -9007199254740991",
+      "type": [
+        "Number"
+      ],
+      "value": -9007199254740991
+    },
+    {
+      "exception": "Expected \\[Number\\], got Number -9007199254740994",
+      "type": [
+        "Number"
+      ],
+      "value": -9007199254740994
     },
     {
       "exception": "Expected \\[Object\\], got String \"fff\"",
@@ -20267,6 +20709,24 @@
       "value": 9007199254740994
     },
     {
+      "exception": "Expected \\[Object\\], got Number -9007199254740991",
+      "type": [
+        {
+          "a": "Number"
+        }
+      ],
+      "value": -9007199254740991
+    },
+    {
+      "exception": "Expected \\[Object\\], got Number -9007199254740994",
+      "type": [
+        {
+          "a": "Number"
+        }
+      ],
+      "value": -9007199254740994
+    },
+    {
       "exception": "Expected Object, got String \"fff\"",
       "type": {},
       "value": "fff"
@@ -20347,6 +20807,16 @@
       "value": 9007199254740994
     },
     {
+      "exception": "Expected Object, got Number -9007199254740991",
+      "type": {},
+      "value": -9007199254740991
+    },
+    {
+      "exception": "Expected Object, got Number -9007199254740994",
+      "type": {},
+      "value": -9007199254740994
+    },
+    {
       "exception": "Expected Object, got String \"fff\"",
       "type": {
         "a": "Number"
@@ -20459,6 +20929,20 @@
       "value": 9007199254740994
     },
     {
+      "exception": "Expected Object, got Number -9007199254740991",
+      "type": {
+        "a": "Number"
+      },
+      "value": -9007199254740991
+    },
+    {
+      "exception": "Expected Object, got Number -9007199254740994",
+      "type": {
+        "a": "Number"
+      },
+      "value": -9007199254740994
+    },
+    {
       "exception": "Expected Object, got String \"fff\"",
       "type": {
         "a": {
@@ -20603,6 +21087,24 @@
       "value": 9007199254740994
     },
     {
+      "exception": "Expected Object, got Number -9007199254740991",
+      "type": {
+        "a": {
+          "b": "Number"
+        }
+      },
+      "value": -9007199254740991
+    },
+    {
+      "exception": "Expected Object, got Number -9007199254740994",
+      "type": {
+        "a": {
+          "b": "Number"
+        }
+      },
+      "value": -9007199254740994
+    },
+    {
       "exception": "Expected Object, got String \"fff\"",
       "type": {
         "a": {
@@ -20779,6 +21281,28 @@
       "value": 9007199254740994
     },
     {
+      "exception": "Expected Object, got Number -9007199254740991",
+      "type": {
+        "a": {
+          "b": {
+            "c": "?Number"
+          }
+        }
+      },
+      "value": -9007199254740991
+    },
+    {
+      "exception": "Expected Object, got Number -9007199254740994",
+      "type": {
+        "a": {
+          "b": {
+            "c": "?Number"
+          }
+        }
+      },
+      "value": -9007199254740994
+    },
+    {
       "exception": "Expected Object, got String \"fff\"",
       "type": {
         "a": {
@@ -20955,6 +21479,28 @@
       "value": 9007199254740994
     },
     {
+      "exception": "Expected Object, got Number -9007199254740991",
+      "type": {
+        "a": {
+          "b": {
+            "c": "Number"
+          }
+        }
+      },
+      "value": -9007199254740991
+    },
+    {
+      "exception": "Expected Object, got Number -9007199254740994",
+      "type": {
+        "a": {
+          "b": {
+            "c": "Number"
+          }
+        }
+      },
+      "value": -9007199254740994
+    },
+    {
       "exception": "Expected Object, got String \"fff\"",
       "type": {
         "a": null
@@ -21065,6 +21611,20 @@
         "a": null
       },
       "value": 9007199254740994
+    },
+    {
+      "exception": "Expected Object, got Number -9007199254740991",
+      "type": {
+        "a": null
+      },
+      "value": -9007199254740991
+    },
+    {
+      "exception": "Expected Object, got Number -9007199254740994",
+      "type": {
+        "a": null
+      },
+      "value": -9007199254740994
     },
     {
       "exception": "Expected undefined, got String \"fff\"",
@@ -21129,6 +21689,14 @@
     {
       "exception": "Expected undefined, got Number 9007199254740994",
       "value": 9007199254740994
+    },
+    {
+      "exception": "Expected undefined, got Number -9007199254740991",
+      "value": -9007199254740991
+    },
+    {
+      "exception": "Expected undefined, got Number -9007199254740994",
+      "value": -9007199254740994
     },
     {
       "exception": "Expected null, got String \"fff\"",
@@ -21211,6 +21779,16 @@
       "value": 9007199254740994
     },
     {
+      "exception": "Expected null, got Number -9007199254740991",
+      "type": null,
+      "value": -9007199254740991
+    },
+    {
+      "exception": "Expected null, got Number -9007199254740994",
+      "type": null,
+      "value": -9007199254740994
+    },
+    {
       "exception": "Expected true, got String \"fff\"",
       "type": true,
       "value": "fff"
@@ -21289,6 +21867,16 @@
       "exception": "Expected true, got Number 9007199254740994",
       "type": true,
       "value": 9007199254740994
+    },
+    {
+      "exception": "Expected true, got Number -9007199254740991",
+      "type": true,
+      "value": -9007199254740991
+    },
+    {
+      "exception": "Expected true, got Number -9007199254740994",
+      "type": true,
+      "value": -9007199254740994
     },
     {
       "exception": "Expected false, got String \"fff\"",
@@ -21371,6 +21959,16 @@
       "value": 9007199254740994
     },
     {
+      "exception": "Expected false, got Number -9007199254740991",
+      "type": false,
+      "value": -9007199254740991
+    },
+    {
+      "exception": "Expected false, got Number -9007199254740994",
+      "type": false,
+      "value": -9007199254740994
+    },
+    {
       "exception": "Expected 0, got String \"fff\"",
       "type": 0,
       "value": "fff"
@@ -21451,6 +22049,16 @@
       "value": 9007199254740994
     },
     {
+      "exception": "Expected 0, got Number -9007199254740991",
+      "type": 0,
+      "value": -9007199254740991
+    },
+    {
+      "exception": "Expected 0, got Number -9007199254740994",
+      "type": 0,
+      "value": -9007199254740994
+    },
+    {
       "exception": "Expected property \"0\" of type Boolean, got String \"f\"",
       "typeId": "(Boolean, Number)",
       "value": "fff"
@@ -21529,6 +22137,16 @@
       "exception": "Expected \\(Boolean, Number\\), got Number 9007199254740994",
       "typeId": "(Boolean, Number)",
       "value": 9007199254740994
+    },
+    {
+      "exception": "Expected \\(Boolean, Number\\), got Number -9007199254740991",
+      "typeId": "(Boolean, Number)",
+      "value": -9007199254740991
+    },
+    {
+      "exception": "Expected \\(Boolean, Number\\), got Number -9007199254740994",
+      "typeId": "(Boolean, Number)",
+      "value": -9007199254740994
     },
     {
       "exception": "Expected \\(Number|String\\), got String \"fff\"",
@@ -21614,6 +22232,16 @@
       "value": 9007199254740994
     },
     {
+      "exception": "Expected \\(Number|String\\), got Number -9007199254740991",
+      "typeId": "(Number|String)",
+      "value": -9007199254740991
+    },
+    {
+      "exception": "Expected \\(Number|String\\), got Number -9007199254740994",
+      "typeId": "(Number|String)",
+      "value": -9007199254740994
+    },
+    {
       "exception": "Expected property \"0\" of type Number, got String \"f\"",
       "typeId": "(Number)",
       "value": "fff"
@@ -21694,6 +22322,16 @@
       "value": 9007199254740994
     },
     {
+      "exception": "Expected \\(Number\\), got Number -9007199254740991",
+      "typeId": "(Number)",
+      "value": -9007199254740991
+    },
+    {
+      "exception": "Expected \\(Number\\), got Number -9007199254740994",
+      "typeId": "(Number)",
+      "value": -9007199254740994
+    },
+    {
       "exception": "Expected \\[\\?Object\\], got String \"fff\"",
       "typeId": "[?{ a: Number }]",
       "value": "fff"
@@ -21772,6 +22410,16 @@
       "exception": "Expected \\[\\?Object\\], got Number 9007199254740994",
       "typeId": "[?{ a: Number }]",
       "value": 9007199254740994
+    },
+    {
+      "exception": "Expected \\[\\?Object\\], got Number -9007199254740991",
+      "typeId": "[?{ a: Number }]",
+      "value": -9007199254740991
+    },
+    {
+      "exception": "Expected \\[\\?Object\\], got Number -9007199254740994",
+      "typeId": "[?{ a: Number }]",
+      "value": -9007199254740994
     },
     {
       "exception": "Expected \\?Boolean|Number, got String \"fff\"",
@@ -21869,6 +22517,16 @@
       "value": 9007199254740994
     },
     {
+      "exception": "Expected \\?Object, got Number -9007199254740991",
+      "typeId": "?{ a: ?Number }",
+      "value": -9007199254740991
+    },
+    {
+      "exception": "Expected \\?Object, got Number -9007199254740994",
+      "typeId": "?{ a: ?Number }",
+      "value": -9007199254740994
+    },
+    {
       "exception": "Expected \\?Object, got String \"fff\"",
       "typeId": "?{ a: Number }",
       "value": "fff"
@@ -21949,6 +22607,16 @@
       "value": 9007199254740994
     },
     {
+      "exception": "Expected \\?Object, got Number -9007199254740991",
+      "typeId": "?{ a: Number }",
+      "value": -9007199254740991
+    },
+    {
+      "exception": "Expected \\?Object, got Number -9007199254740994",
+      "typeId": "?{ a: Number }",
+      "value": -9007199254740994
+    },
+    {
       "exception": "Expected Object, got String \"fff\"",
       "typeId": "{ a: Number|Null }",
       "value": "fff"
@@ -22029,6 +22697,16 @@
       "value": 9007199254740994
     },
     {
+      "exception": "Expected Object, got Number -9007199254740991",
+      "typeId": "{ a: Number|Null }",
+      "value": -9007199254740991
+    },
+    {
+      "exception": "Expected Object, got Number -9007199254740994",
+      "typeId": "{ a: Number|Null }",
+      "value": -9007199254740994
+    },
+    {
       "exception": "Expected Object, got String \"fff\"",
       "typeId": "{ a: Number|{ b: Number } }",
       "value": "fff"
@@ -22109,6 +22787,16 @@
       "value": 9007199254740994
     },
     {
+      "exception": "Expected Object, got Number -9007199254740991",
+      "typeId": "{ a: Number|{ b: Number } }",
+      "value": -9007199254740991
+    },
+    {
+      "exception": "Expected Object, got Number -9007199254740994",
+      "typeId": "{ a: Number|{ b: Number } }",
+      "value": -9007199254740994
+    },
+    {
       "exception": "Expected Object, got String \"fff\"",
       "typeId": "{ a: ?{ b: Number } }",
       "value": "fff"
@@ -22189,6 +22877,16 @@
       "value": 9007199254740994
     },
     {
+      "exception": "Expected Object, got Number -9007199254740991",
+      "typeId": "{ a: ?{ b: Number } }",
+      "value": -9007199254740991
+    },
+    {
+      "exception": "Expected Object, got Number -9007199254740994",
+      "typeId": "{ a: ?{ b: Number } }",
+      "value": -9007199254740994
+    },
+    {
       "exception": "Expected Object, got String \"fff\"",
       "typeId": "{ a: ?{ b: ?{ c: Number } } }",
       "value": "fff"
@@ -22269,6 +22967,16 @@
       "value": 9007199254740994
     },
     {
+      "exception": "Expected Object, got Number -9007199254740991",
+      "typeId": "{ a: ?{ b: ?{ c: Number } } }",
+      "value": -9007199254740991
+    },
+    {
+      "exception": "Expected Object, got Number -9007199254740994",
+      "typeId": "{ a: ?{ b: ?{ c: Number } } }",
+      "value": -9007199254740994
+    },
+    {
       "exception": "Expected Object, got String \"fff\"",
       "typeId": "{ a: undefined }",
       "value": "fff"
@@ -22349,6 +23057,16 @@
       "value": 9007199254740994
     },
     {
+      "exception": "Expected Object, got Number -9007199254740991",
+      "typeId": "{ a: undefined }",
+      "value": -9007199254740991
+    },
+    {
+      "exception": "Expected Object, got Number -9007199254740994",
+      "typeId": "{ a: undefined }",
+      "value": -9007199254740994
+    },
+    {
       "exception": "Expected Object, got String \"fff\"",
       "typeId": "@{ a: undefined }",
       "value": "fff"
@@ -22427,6 +23145,16 @@
       "exception": "Expected Object, got Number 9007199254740994",
       "typeId": "@{ a: undefined }",
       "value": 9007199254740994
+    },
+    {
+      "exception": "Expected Object, got Number -9007199254740991",
+      "typeId": "@{ a: undefined }",
+      "value": -9007199254740991
+    },
+    {
+      "exception": "Expected Object, got Number -9007199254740994",
+      "typeId": "@{ a: undefined }",
+      "value": -9007199254740994
     },
     {
       "exception": "Expected Unmatchable, got String \"fff\"",
@@ -22509,6 +23237,16 @@
       "value": 9007199254740994
     },
     {
+      "exception": "Expected Unmatchable, got Number -9007199254740991",
+      "typeId": "Unmatchable",
+      "value": -9007199254740991
+    },
+    {
+      "exception": "Expected Unmatchable, got Number -9007199254740994",
+      "typeId": "Unmatchable",
+      "value": -9007199254740994
+    },
+    {
       "exception": "Expected \\?Unmatchable, got String \"fff\"",
       "typeId": "?Unmatchable",
       "value": "fff"
@@ -22589,6 +23327,16 @@
       "value": 9007199254740994
     },
     {
+      "exception": "Expected \\?Unmatchable, got Number -9007199254740991",
+      "typeId": "?Unmatchable",
+      "value": -9007199254740991
+    },
+    {
+      "exception": "Expected \\?Unmatchable, got Number -9007199254740994",
+      "typeId": "?Unmatchable",
+      "value": -9007199254740994
+    },
+    {
       "exception": "Expected Object, got String \"fff\"",
       "typeId": "{ a: ?Unmatchable }",
       "value": "fff"
@@ -22669,6 +23417,16 @@
       "value": 9007199254740994
     },
     {
+      "exception": "Expected Object, got Number -9007199254740991",
+      "typeId": "{ a: ?Unmatchable }",
+      "value": -9007199254740991
+    },
+    {
+      "exception": "Expected Object, got Number -9007199254740994",
+      "typeId": "{ a: ?Unmatchable }",
+      "value": -9007199254740994
+    },
+    {
       "exception": "Expected Object, got String \"fff\"",
       "typeId": "{ a: { b: Unmatchable } }",
       "value": "fff"
@@ -22747,6 +23505,16 @@
       "exception": "Expected Object, got Number 9007199254740994",
       "typeId": "{ a: { b: Unmatchable } }",
       "value": 9007199254740994
+    },
+    {
+      "exception": "Expected Object, got Number -9007199254740991",
+      "typeId": "{ a: { b: Unmatchable } }",
+      "value": -9007199254740991
+    },
+    {
+      "exception": "Expected Object, got Number -9007199254740994",
+      "typeId": "{ a: { b: Unmatchable } }",
+      "value": -9007199254740994
     },
     {
       "exception": "Expected CustomType, got String \"fff\"",
@@ -22829,6 +23597,16 @@
       "value": 9007199254740994
     },
     {
+      "exception": "Expected CustomType, got Number -9007199254740991",
+      "typeId": ">CustomType",
+      "value": -9007199254740991
+    },
+    {
+      "exception": "Expected CustomType, got Number -9007199254740994",
+      "typeId": ">CustomType",
+      "value": -9007199254740994
+    },
+    {
       "exception": "Expected \\{String\\}, got String \"fff\"",
       "typeId": "{ String }",
       "value": "fff"
@@ -22907,6 +23685,16 @@
       "exception": "Expected \\{String\\}, got Number 9007199254740994",
       "typeId": "{ String }",
       "value": 9007199254740994
+    },
+    {
+      "exception": "Expected \\{String\\}, got Number -9007199254740991",
+      "typeId": "{ String }",
+      "value": -9007199254740991
+    },
+    {
+      "exception": "Expected \\{String\\}, got Number -9007199254740994",
+      "typeId": "{ String }",
+      "value": -9007199254740994
     },
     {
       "exception": "Expected \\{String|Number\\}, got String \"fff\"",
@@ -22989,6 +23777,16 @@
       "value": 9007199254740994
     },
     {
+      "exception": "Expected \\{String|Number\\}, got Number -9007199254740991",
+      "typeId": "{ String|Number }",
+      "value": -9007199254740991
+    },
+    {
+      "exception": "Expected \\{String|Number\\}, got Number -9007199254740994",
+      "typeId": "{ String|Number }",
+      "value": -9007199254740994
+    },
+    {
       "exception": "Expected \\{String\\: Number\\}, got String \"fff\"",
       "typeId": "{ String: Number }",
       "value": "fff"
@@ -23067,6 +23865,16 @@
       "exception": "Expected \\{String\\: Number\\}, got Number 9007199254740994",
       "typeId": "{ String: Number }",
       "value": 9007199254740994
+    },
+    {
+      "exception": "Expected \\{String\\: Number\\}, got Number -9007199254740991",
+      "typeId": "{ String: Number }",
+      "value": -9007199254740991
+    },
+    {
+      "exception": "Expected \\{String\\: Number\\}, got Number -9007199254740994",
+      "typeId": "{ String: Number }",
+      "value": -9007199254740994
     },
     {
       "exception": "Expected \\{Letter\\: Number\\}, got String \"fff\"",
@@ -23149,6 +23957,16 @@
       "value": 9007199254740994
     },
     {
+      "exception": "Expected \\{Letter\\: Number\\}, got Number -9007199254740991",
+      "typeId": "{ Letter: Number }",
+      "value": -9007199254740991
+    },
+    {
+      "exception": "Expected \\{Letter\\: Number\\}, got Number -9007199254740994",
+      "typeId": "{ Letter: Number }",
+      "value": -9007199254740994
+    },
+    {
       "exception": "Expected Object, got String \"fff\"",
       "typeId": "{ a: { b: Buffer3 } }",
       "value": "fff"
@@ -23229,6 +24047,16 @@
       "value": 9007199254740994
     },
     {
+      "exception": "Expected Object, got Number -9007199254740991",
+      "typeId": "{ a: { b: Buffer3 } }",
+      "value": -9007199254740991
+    },
+    {
+      "exception": "Expected Object, got Number -9007199254740994",
+      "typeId": "{ a: { b: Buffer3 } }",
+      "value": -9007199254740994
+    },
+    {
       "exception": "Expected Object, got String \"fff\"",
       "typeId": "{ a: Buffer10|Number }",
       "value": "fff"
@@ -23307,6 +24135,16 @@
       "exception": "Expected Object, got Number 9007199254740994",
       "typeId": "{ a: Buffer10|Number }",
       "value": 9007199254740994
+    },
+    {
+      "exception": "Expected Object, got Number -9007199254740991",
+      "typeId": "{ a: Buffer10|Number }",
+      "value": -9007199254740991
+    },
+    {
+      "exception": "Expected Object, got Number -9007199254740994",
+      "typeId": "{ a: Buffer10|Number }",
+      "value": -9007199254740994
     },
     {
       "exception": "Expected Array, got String \"fff\"",
@@ -23389,6 +24227,16 @@
       "value": 9007199254740994
     },
     {
+      "exception": "Expected Array, got Number -9007199254740991",
+      "typeId": "Array6",
+      "value": -9007199254740991
+    },
+    {
+      "exception": "Expected Array, got Number -9007199254740994",
+      "typeId": "Array6",
+      "value": -9007199254740994
+    },
+    {
       "exception": "Expected Array, got String \"fff\"",
       "typeId": "Array7",
       "value": "fff"
@@ -23469,6 +24317,16 @@
       "value": 9007199254740994
     },
     {
+      "exception": "Expected Array, got Number -9007199254740991",
+      "typeId": "Array7",
+      "value": -9007199254740991
+    },
+    {
+      "exception": "Expected Array, got Number -9007199254740994",
+      "typeId": "Array7",
+      "value": -9007199254740994
+    },
+    {
       "exception": "Expected Buffer, got String \"fff\"",
       "typeId": "Buffer0",
       "value": "fff"
@@ -23549,6 +24407,16 @@
       "value": 9007199254740994
     },
     {
+      "exception": "Expected Buffer, got Number -9007199254740991",
+      "typeId": "Buffer0",
+      "value": -9007199254740991
+    },
+    {
+      "exception": "Expected Buffer, got Number -9007199254740994",
+      "typeId": "Buffer0",
+      "value": -9007199254740994
+    },
+    {
       "exception": "Expected Buffer, got String \"fff\"",
       "typeId": "Buffer3",
       "value": "fff"
@@ -23629,6 +24497,16 @@
       "value": 9007199254740994
     },
     {
+      "exception": "Expected Buffer, got Number -9007199254740991",
+      "typeId": "Buffer3",
+      "value": -9007199254740991
+    },
+    {
+      "exception": "Expected Buffer, got Number -9007199254740994",
+      "typeId": "Buffer3",
+      "value": -9007199254740994
+    },
+    {
       "exception": "Expected Buffer, got String \"fff\"",
       "typeId": "Buffer10",
       "value": "fff"
@@ -23707,6 +24585,16 @@
       "exception": "Expected Buffer, got Number 9007199254740994",
       "typeId": "Buffer10",
       "value": 9007199254740994
+    },
+    {
+      "exception": "Expected Buffer, got Number -9007199254740991",
+      "typeId": "Buffer10",
+      "value": -9007199254740991
+    },
+    {
+      "exception": "Expected Buffer, got Number -9007199254740994",
+      "typeId": "Buffer10",
+      "value": -9007199254740994
     },
     {
       "exception": "Expected Hex, got String \"fff\"",
@@ -23777,6 +24665,16 @@
       "exception": "Expected Hex, got Number 9007199254740994",
       "typeId": "Hex",
       "value": 9007199254740994
+    },
+    {
+      "exception": "Expected Hex, got Number -9007199254740991",
+      "typeId": "Hex",
+      "value": -9007199254740991
+    },
+    {
+      "exception": "Expected Hex, got Number -9007199254740994",
+      "typeId": "Hex",
+      "value": -9007199254740994
     },
     {
       "exception": "Expected Hex, got String \"fff\"",
@@ -23852,6 +24750,16 @@
       "exception": "Expected Hex, got Number 9007199254740994",
       "typeId": "Hex64",
       "value": 9007199254740994
+    },
+    {
+      "exception": "Expected Hex, got Number -9007199254740991",
+      "typeId": "Hex64",
+      "value": -9007199254740991
+    },
+    {
+      "exception": "Expected Hex, got Number -9007199254740994",
+      "typeId": "Hex64",
+      "value": -9007199254740994
     },
     {
       "exception": "Expected String\\(Length\\: 4\\), got String\\(Length\\: 3\\)",
@@ -23934,6 +24842,16 @@
       "value": 9007199254740994
     },
     {
+      "exception": "Expected String, got Number -9007199254740991",
+      "typeId": "String4",
+      "value": -9007199254740991
+    },
+    {
+      "exception": "Expected String, got Number -9007199254740994",
+      "typeId": "String4",
+      "value": -9007199254740994
+    },
+    {
       "exception": "Expected Number between \\[1, 5\\], got String \"fff\"",
       "typeId": "Range1-5",
       "value": "fff"
@@ -24012,6 +24930,16 @@
       "exception": "Expected Number between \\[1, 5\\], got Number 9007199254740994",
       "typeId": "Range1-5",
       "value": 9007199254740994
+    },
+    {
+      "exception": "Expected Number between \\[1, 5\\], got Number -9007199254740991",
+      "typeId": "Range1-5",
+      "value": -9007199254740991
+    },
+    {
+      "exception": "Expected Number between \\[1, 5\\], got Number -9007199254740994",
+      "typeId": "Range1-5",
+      "value": -9007199254740994
     },
     {
       "exception": "Expected Int8 between \\[0, 100\\], got String \"fff\"",
@@ -24094,6 +25022,16 @@
       "value": 9007199254740994
     },
     {
+      "exception": "Expected Int8 between \\[0, 100\\], got Number -9007199254740991",
+      "typeId": "Int8Range0-100",
+      "value": -9007199254740991
+    },
+    {
+      "exception": "Expected Int8 between \\[0, 100\\], got Number -9007199254740994",
+      "typeId": "Int8Range0-100",
+      "value": -9007199254740994
+    },
+    {
       "exception": "Expected Int8, got String \"fff\"",
       "typeId": "Int8",
       "value": "fff"
@@ -24159,6 +25097,16 @@
       "value": 9007199254740994
     },
     {
+      "exception": "Expected Int8, got Number -9007199254740991",
+      "typeId": "Int8",
+      "value": -9007199254740991
+    },
+    {
+      "exception": "Expected Int8, got Number -9007199254740994",
+      "typeId": "Int8",
+      "value": -9007199254740994
+    },
+    {
       "exception": "Expected Int16, got String \"fff\"",
       "typeId": "Int16",
       "value": "fff"
@@ -24204,6 +25152,16 @@
       "value": 9007199254740994
     },
     {
+      "exception": "Expected Int16, got Number -9007199254740991",
+      "typeId": "Int16",
+      "value": -9007199254740991
+    },
+    {
+      "exception": "Expected Int16, got Number -9007199254740994",
+      "typeId": "Int16",
+      "value": -9007199254740994
+    },
+    {
       "exception": "Expected Int32, got String \"fff\"",
       "typeId": "Int32",
       "value": "fff"
@@ -24232,6 +25190,41 @@
       "exception": "Expected Int32, got Number 9007199254740994",
       "typeId": "Int32",
       "value": 9007199254740994
+    },
+    {
+      "exception": "Expected Int32, got Number -9007199254740991",
+      "typeId": "Int32",
+      "value": -9007199254740991
+    },
+    {
+      "exception": "Expected Int32, got Number -9007199254740994",
+      "typeId": "Int32",
+      "value": -9007199254740994
+    },
+    {
+      "exception": "Expected Int53, got String \"fff\"",
+      "typeId": "Int53",
+      "value": "fff"
+    },
+    {
+      "exception": "Expected Int53, got String \"cafe1122deadbeef\"",
+      "typeId": "Int53",
+      "value": "cafe1122deadbeef"
+    },
+    {
+      "exception": "Expected Int53, got String \"0102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f20\"",
+      "typeId": "Int53",
+      "value": "0102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f20"
+    },
+    {
+      "exception": "Expected Int53, got Number 9007199254740994",
+      "typeId": "Int53",
+      "value": 9007199254740994
+    },
+    {
+      "exception": "Expected Int53, got Number -9007199254740994",
+      "typeId": "Int53",
+      "value": -9007199254740994
     },
     {
       "exception": "Expected UInt8, got String \"fff\"",
@@ -24299,6 +25292,16 @@
       "value": 9007199254740994
     },
     {
+      "exception": "Expected UInt8, got Number -9007199254740991",
+      "typeId": "UInt8",
+      "value": -9007199254740991
+    },
+    {
+      "exception": "Expected UInt8, got Number -9007199254740994",
+      "typeId": "UInt8",
+      "value": -9007199254740994
+    },
+    {
       "exception": "Expected UInt16, got String \"fff\"",
       "typeId": "UInt16",
       "value": "fff"
@@ -24349,6 +25352,16 @@
       "value": 9007199254740994
     },
     {
+      "exception": "Expected UInt16, got Number -9007199254740991",
+      "typeId": "UInt16",
+      "value": -9007199254740991
+    },
+    {
+      "exception": "Expected UInt16, got Number -9007199254740994",
+      "typeId": "UInt16",
+      "value": -9007199254740994
+    },
+    {
       "exception": "Expected UInt32, got String \"fff\"",
       "typeId": "UInt32",
       "value": "fff"
@@ -24389,6 +25402,16 @@
       "value": 9007199254740994
     },
     {
+      "exception": "Expected UInt32, got Number -9007199254740991",
+      "typeId": "UInt32",
+      "value": -9007199254740991
+    },
+    {
+      "exception": "Expected UInt32, got Number -9007199254740994",
+      "typeId": "UInt32",
+      "value": -9007199254740994
+    },
+    {
       "exception": "Expected UInt53, got String \"fff\"",
       "typeId": "UInt53",
       "value": "fff"
@@ -24422,6 +25445,16 @@
       "exception": "Expected UInt53, got Number 9007199254740994",
       "typeId": "UInt53",
       "value": 9007199254740994
+    },
+    {
+      "exception": "Expected UInt53, got Number -9007199254740991",
+      "typeId": "UInt53",
+      "value": -9007199254740991
+    },
+    {
+      "exception": "Expected UInt53, got Number -9007199254740994",
+      "typeId": "UInt53",
+      "value": -9007199254740994
     }
   ]
 }
