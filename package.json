@@ -31,13 +31,12 @@
     "coverage": "nyc --check-coverage --branches 100 --functions 100 node test/*.js",
     "test": "npm run standard && npm run unit",
     "standard": "standard",
-    "unit": "node test/*.js | tap-dot"
+    "unit": "node test/*.js"
   },
   "dependencies": {},
   "devDependencies": {
     "nyc": "^6.4.0",
     "standard": "^9.0.0",
-    "tap-dot": "^1.0.5",
     "tape": "^4.6.1"
   }
 }
