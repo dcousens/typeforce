@@ -12,6 +12,7 @@ module.exports = {
   '{ a: { b: Buffer10 } }': { a: { b: buffer10 } },
   'Array5': [1, 2, 3, 4, 5],
   'Array6': [1, 2, 3, 4, 5, 6],
+  'Array7-N': [1, 2, 3, 4, 5, 6, 7],
   'Array6-S': ['a', 'b', 'c', 'd', 'e', 'f'],
   'Array7': ['a', 'b', 'c', 'd', 'e', 'fghijklmno', 'p'],
   'Buffer': Buffer.alloc(0),

@@ -9,13 +9,16 @@ var tfSubError = ERRORS.tfSubError
 var getValueTypeName = ERRORS.getValueTypeName
 
 var TYPES = {
-  arrayOf: function arrayOf (type, arrayType) {
+  arrayOf: function arrayOf (type, options) {
     type = compile(type)
-    arrayType = compile(arrayType || NATIVE.Array)
+    options = options || {}
 
     function _arrayOf (array, strict) {
-      if (!arrayType(array)) return false
+      if (!NATIVE.Array(array)) return false
       if (NATIVE.Nil(array)) return false
+      if (options.minLength !== undefined && array.length < options.minLength) return false
+      if (options.maxLength !== undefined && array.length > options.maxLength) return false
+      if (options.length !== undefined && array.length !== options.length) return false
 
       return array.every(function (value, i) {
         try {
@@ -25,7 +28,17 @@ var TYPES = {
         }
       })
     }
-    _arrayOf.toJSON = function () { return '[' + tfJSON(type) + ']' }
+    _arrayOf.toJSON = function () {
+      var str = '[' + tfJSON(type) + ']'
+      if (options.length !== undefined) {
+        str += '{' + options.length + '}'
+      } else if (options.minLength !== undefined || options.maxLength !== undefined) {
+        str += '{' +
+          (options.minLength === undefined ? 0 : options.minLength) + ',' +
+          (options.maxLength === undefined ? Infinity : options.maxLength) + '}'
+      }
+      return str
+    }
 
     return _arrayOf
   },
