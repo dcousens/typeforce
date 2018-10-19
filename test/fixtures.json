@@ -40,6 +40,10 @@
     },
     {
       "type": "Array",
+      "valueId": "Array6-S"
+    },
+    {
+      "type": "Array",
       "valueId": "Array7"
     },
     {
@@ -250,6 +254,10 @@
     {
       "type": "Object",
       "valueId": "Array6"
+    },
+    {
+      "type": "Object",
+      "valueId": "Array6-S"
     },
     {
       "type": "Object",
@@ -542,6 +550,10 @@
     },
     {
       "type": {},
+      "valueId": "Array6-S"
+    },
+    {
+      "type": {},
       "valueId": "Array7"
     },
     {
@@ -735,6 +747,10 @@
     {
       "typeId": "(Number|String)",
       "valueId": "Array6"
+    },
+    {
+      "typeId": "(Number|String)",
+      "valueId": "Array6-S"
     },
     {
       "typeId": "(Number|String)",
@@ -947,6 +963,10 @@
     },
     {
       "typeId": "?{ a: ?Number }",
+      "valueId": "Array6-S"
+    },
+    {
+      "typeId": "?{ a: ?Number }",
       "valueId": "Array7"
     },
     {
@@ -1062,6 +1082,10 @@
     },
     {
       "typeId": "{ a: Number|Null }",
+      "valueId": "Array6-S"
+    },
+    {
+      "typeId": "{ a: Number|Null }",
       "valueId": "Array7"
     },
     {
@@ -1170,6 +1194,10 @@
     {
       "typeId": "{ a: ?{ b: Number } }",
       "valueId": "Array6"
+    },
+    {
+      "typeId": "{ a: ?{ b: Number } }",
+      "valueId": "Array6-S"
     },
     {
       "typeId": "{ a: ?{ b: Number } }",
@@ -1292,6 +1320,10 @@
     },
     {
       "typeId": "{ a: ?{ b: ?{ c: Number } } }",
+      "valueId": "Array6-S"
+    },
+    {
+      "typeId": "{ a: ?{ b: ?{ c: Number } } }",
       "valueId": "Array7"
     },
     {
@@ -1368,6 +1400,10 @@
     },
     {
       "typeId": "{ a: undefined }",
+      "valueId": "Array6-S"
+    },
+    {
+      "typeId": "{ a: undefined }",
       "valueId": "Array7"
     },
     {
@@ -1441,6 +1477,10 @@
     {
       "typeId": "@{ a: undefined }",
       "valueId": "Array6"
+    },
+    {
+      "typeId": "@{ a: undefined }",
+      "valueId": "Array6-S"
     },
     {
       "typeId": "@{ a: undefined }",
@@ -1533,6 +1573,10 @@
     },
     {
       "typeId": "{ a: ?Unmatchable }",
+      "valueId": "Array6-S"
+    },
+    {
+      "typeId": "{ a: ?Unmatchable }",
       "valueId": "Array7"
     },
     {
@@ -1575,6 +1619,10 @@
     {
       "typeId": "{ String }",
       "valueId": "emptyType"
+    },
+    {
+      "typeId": "{ String }",
+      "valueId": "Array6-S"
     },
     {
       "typeId": "{ String }",
@@ -1641,6 +1689,10 @@
     {
       "typeId": "{ String|Number }",
       "valueId": "Array6"
+    },
+    {
+      "typeId": "{ String|Number }",
+      "valueId": "Array6-S"
     },
     {
       "typeId": "{ String|Number }",
@@ -1752,8 +1804,16 @@
       "valueId": "{ a: Buffer10 }"
     },
     {
+      "typeId": "Array6(Number)",
+      "valueId": "Array6"
+    },
+    {
       "typeId": "Array6",
       "valueId": "Array6"
+    },
+    {
+      "typeId": "Array6",
+      "valueId": "Array6-S"
     },
     {
       "typeId": "Array7",
@@ -2853,6 +2913,11 @@
     {
       "exception": "Expected Boolean, got Array",
       "type": "Boolean",
+      "valueId": "Array6-S"
+    },
+    {
+      "exception": "Expected Boolean, got Array",
+      "type": "Boolean",
       "valueId": "Array7"
     },
     {
@@ -3116,6 +3181,11 @@
     {
       "exception": "Expected Buffer, got Array",
       "type": "Buffer",
+      "valueId": "Array6-S"
+    },
+    {
+      "exception": "Expected Buffer, got Array",
+      "type": "Buffer",
       "valueId": "Array7"
     },
     {
@@ -3355,6 +3425,11 @@
       "exception": "Expected Function, got Array",
       "type": "Function",
       "valueId": "Array6"
+    },
+    {
+      "exception": "Expected Function, got Array",
+      "type": "Function",
+      "valueId": "Array6-S"
     },
     {
       "exception": "Expected Function, got Array",
@@ -3613,6 +3688,11 @@
     {
       "exception": "Expected Null, got Array",
       "type": "Null",
+      "valueId": "Array6-S"
+    },
+    {
+      "exception": "Expected Null, got Array",
+      "type": "Null",
       "valueId": "Array7"
     },
     {
@@ -3852,6 +3932,11 @@
       "exception": "Expected Number, got Array",
       "type": "Number",
       "valueId": "Array6"
+    },
+    {
+      "exception": "Expected Number, got Array",
+      "type": "Number",
+      "valueId": "Array6-S"
     },
     {
       "exception": "Expected Number, got Array",
@@ -4163,6 +4248,11 @@
     {
       "exception": "Expected String, got Array",
       "type": "String",
+      "valueId": "Array6-S"
+    },
+    {
+      "exception": "Expected String, got Array",
+      "type": "String",
       "valueId": "Array7"
     },
     {
@@ -4388,6 +4478,11 @@
       "exception": "Expected \\?Number, got Array",
       "type": "?Number",
       "valueId": "Array6"
+    },
+    {
+      "exception": "Expected \\?Number, got Array",
+      "type": "?Number",
+      "valueId": "Array6-S"
     },
     {
       "exception": "Expected \\?Number, got Array",
@@ -4686,6 +4781,13 @@
         "?Number"
       ],
       "valueId": "{ a: { b: Buffer10 } }"
+    },
+    {
+      "exception": "Expected property \"0\" of type \\?Number, got String \"a\"",
+      "type": [
+        "?Number"
+      ],
+      "valueId": "Array6-S"
     },
     {
       "exception": "Expected property \"0\" of type \\?Number, got String \"a\"",
@@ -5003,6 +5105,13 @@
         "Number"
       ],
       "valueId": "{ a: { b: Buffer10 } }"
+    },
+    {
+      "exception": "Expected property \"0\" of type Number, got String \"a\"",
+      "type": [
+        "Number"
+      ],
+      "valueId": "Array6-S"
     },
     {
       "exception": "Expected property \"0\" of type Number, got String \"a\"",
@@ -5410,6 +5519,15 @@
           "a": "Number"
         }
       ],
+      "valueId": "Array6-S"
+    },
+    {
+      "exception": "Expected property \"0\" of type Object, got String \"a\"",
+      "type": [
+        {
+          "a": "Number"
+        }
+      ],
       "valueId": "Array7"
     },
     {
@@ -5698,6 +5816,12 @@
       "exception": "Unexpected property \"0\"",
       "strict": true,
       "type": {},
+      "valueId": "Array6-S"
+    },
+    {
+      "exception": "Unexpected property \"0\"",
+      "strict": true,
+      "type": {},
       "valueId": "Array7"
     },
     {
@@ -6026,6 +6150,13 @@
         "a": "Number"
       },
       "valueId": "Array6"
+    },
+    {
+      "exception": "Expected property \"a\" of type Number, got undefined",
+      "type": {
+        "a": "Number"
+      },
+      "valueId": "Array6-S"
     },
     {
       "exception": "Expected property \"a\" of type Number, got undefined",
@@ -6434,6 +6565,15 @@
         }
       },
       "valueId": "Array6"
+    },
+    {
+      "exception": "Expected property \"a\" of type Object, got undefined",
+      "type": {
+        "a": {
+          "b": "Number"
+        }
+      },
+      "valueId": "Array6-S"
     },
     {
       "exception": "Expected property \"a\" of type Object, got undefined",
@@ -6908,6 +7048,17 @@
         }
       },
       "valueId": "Array6"
+    },
+    {
+      "exception": "Expected property \"a\" of type Object, got undefined",
+      "type": {
+        "a": {
+          "b": {
+            "c": "?Number"
+          }
+        }
+      },
+      "valueId": "Array6-S"
     },
     {
       "exception": "Expected property \"a\" of type Object, got undefined",
@@ -7417,6 +7568,17 @@
           }
         }
       },
+      "valueId": "Array6-S"
+    },
+    {
+      "exception": "Expected property \"a\" of type Object, got undefined",
+      "type": {
+        "a": {
+          "b": {
+            "c": "Number"
+          }
+        }
+      },
       "valueId": "Array7"
     },
     {
@@ -7771,6 +7933,13 @@
       "type": {
         "a": null
       },
+      "valueId": "Array6-S"
+    },
+    {
+      "exception": "Expected property \"a\" of type null, got undefined",
+      "type": {
+        "a": null
+      },
       "valueId": "Array7"
     },
     {
@@ -7998,6 +8167,10 @@
     {
       "exception": "Expected undefined, got Array",
       "valueId": "Array6"
+    },
+    {
+      "exception": "Expected undefined, got Array",
+      "valueId": "Array6-S"
     },
     {
       "exception": "Expected undefined, got Array",
@@ -8251,6 +8424,11 @@
       "exception": "Expected null, got Array",
       "type": null,
       "valueId": "Array6"
+    },
+    {
+      "exception": "Expected null, got Array",
+      "type": null,
+      "valueId": "Array6-S"
     },
     {
       "exception": "Expected null, got Array",
@@ -8513,6 +8691,11 @@
     {
       "exception": "Expected true, got Array",
       "type": true,
+      "valueId": "Array6-S"
+    },
+    {
+      "exception": "Expected true, got Array",
+      "type": true,
       "valueId": "Array7"
     },
     {
@@ -8771,6 +8954,11 @@
     {
       "exception": "Expected false, got Array",
       "type": false,
+      "valueId": "Array6-S"
+    },
+    {
+      "exception": "Expected false, got Array",
+      "type": false,
       "valueId": "Array7"
     },
     {
@@ -9025,6 +9213,11 @@
       "exception": "Expected 0, got Array",
       "type": 0,
       "valueId": "Array6"
+    },
+    {
+      "exception": "Expected 0, got Array",
+      "type": 0,
+      "valueId": "Array6-S"
     },
     {
       "exception": "Expected 0, got Array",
@@ -9292,6 +9485,11 @@
     {
       "exception": "Expected property \"0\" of type Boolean, got String \"a\"",
       "typeId": "(Boolean, Number)",
+      "valueId": "Array6-S"
+    },
+    {
+      "exception": "Expected property \"0\" of type Boolean, got String \"a\"",
+      "typeId": "(Boolean, Number)",
       "valueId": "Array7"
     },
     {
@@ -9540,6 +9738,12 @@
       "strict": true,
       "typeId": "(Number|String)",
       "valueId": "Array6"
+    },
+    {
+      "exception": "Expected \\(Number|String\\), got Array",
+      "strict": true,
+      "typeId": "(Number|String)",
+      "valueId": "Array6-S"
     },
     {
       "exception": "Expected \\(Number|String\\), got Array",
@@ -9806,6 +10010,11 @@
     {
       "exception": "Expected property \"0\" of type Number, got String \"a\"",
       "typeId": "(Number)",
+      "valueId": "Array6-S"
+    },
+    {
+      "exception": "Expected property \"0\" of type Number, got String \"a\"",
+      "typeId": "(Number)",
       "valueId": "Array7"
     },
     {
@@ -10050,6 +10259,11 @@
     {
       "exception": "Expected property \"0\" of type \\?Object, got String \"a\"",
       "typeId": "[?{ a: Number }]",
+      "valueId": "Array6-S"
+    },
+    {
+      "exception": "Expected property \"0\" of type \\?Object, got String \"a\"",
+      "typeId": "[?{ a: Number }]",
       "valueId": "Array7"
     },
     {
@@ -10273,6 +10487,11 @@
     {
       "exception": "Expected Boolean|Number|String, got Array",
       "typeId": "Boolean|Number|String",
+      "valueId": "Array6-S"
+    },
+    {
+      "exception": "Expected Boolean|Number|String, got Array",
+      "typeId": "Boolean|Number|String",
       "valueId": "Array7"
     },
     {
@@ -10488,6 +10707,11 @@
       "exception": "Expected \\?Boolean|Number, got Array",
       "typeId": "?Boolean|Number",
       "valueId": "Array6"
+    },
+    {
+      "exception": "Expected \\?Boolean|Number, got Array",
+      "typeId": "?Boolean|Number",
+      "valueId": "Array6-S"
     },
     {
       "exception": "Expected \\?Boolean|Number, got Array",
@@ -10717,6 +10941,12 @@
       "strict": true,
       "typeId": "?{ a: ?Number }",
       "valueId": "Array6"
+    },
+    {
+      "exception": "Unexpected property \"0\"",
+      "strict": true,
+      "typeId": "?{ a: ?Number }",
+      "valueId": "Array6-S"
     },
     {
       "exception": "Unexpected property \"0\"",
@@ -10973,6 +11203,11 @@
     {
       "exception": "Expected property \"a\" of type Number, got undefined",
       "typeId": "?{ a: Number }",
+      "valueId": "Array6-S"
+    },
+    {
+      "exception": "Expected property \"a\" of type Number, got undefined",
+      "typeId": "?{ a: Number }",
       "valueId": "Array7"
     },
     {
@@ -11207,6 +11442,12 @@
       "strict": true,
       "typeId": "{ a: Number|Null }",
       "valueId": "Array6"
+    },
+    {
+      "exception": "Unexpected property \"0\"",
+      "strict": true,
+      "typeId": "{ a: Number|Null }",
+      "valueId": "Array6-S"
     },
     {
       "exception": "Unexpected property \"0\"",
@@ -11463,6 +11704,11 @@
     {
       "exception": "Expected property \"a\" of type Number|Object, got undefined",
       "typeId": "{ a: Number|{ b: Number } }",
+      "valueId": "Array6-S"
+    },
+    {
+      "exception": "Expected property \"a\" of type Number|Object, got undefined",
+      "typeId": "{ a: Number|{ b: Number } }",
       "valueId": "Array7"
     },
     {
@@ -11699,6 +11945,12 @@
       "exception": "Unexpected property \"0\"",
       "strict": true,
       "typeId": "{ a: ?{ b: Number } }",
+      "valueId": "Array6-S"
+    },
+    {
+      "exception": "Unexpected property \"0\"",
+      "strict": true,
+      "typeId": "{ a: ?{ b: Number } }",
       "valueId": "Array7"
     },
     {
@@ -11925,6 +12177,12 @@
       "strict": true,
       "typeId": "{ a: ?{ b: ?{ c: Number } } }",
       "valueId": "Array6"
+    },
+    {
+      "exception": "Unexpected property \"0\"",
+      "strict": true,
+      "typeId": "{ a: ?{ b: ?{ c: Number } } }",
+      "valueId": "Array6-S"
     },
     {
       "exception": "Unexpected property \"0\"",
@@ -12185,6 +12443,12 @@
       "exception": "Unexpected property \"0\"",
       "strict": true,
       "typeId": "{ a: undefined }",
+      "valueId": "Array6-S"
+    },
+    {
+      "exception": "Unexpected property \"0\"",
+      "strict": true,
+      "typeId": "{ a: undefined }",
       "valueId": "Array7"
     },
     {
@@ -12435,6 +12699,12 @@
       "strict": true,
       "typeId": "@{ a: undefined }",
       "valueId": "Array6"
+    },
+    {
+      "exception": "Unexpected property \"0\"",
+      "strict": true,
+      "typeId": "@{ a: undefined }",
+      "valueId": "Array6-S"
     },
     {
       "exception": "Unexpected property \"0\"",
@@ -12706,6 +12976,11 @@
     {
       "exception": "Expected Unmatchable, got Array",
       "typeId": "Unmatchable",
+      "valueId": "Array6-S"
+    },
+    {
+      "exception": "Expected Unmatchable, got Array",
+      "typeId": "Unmatchable",
       "valueId": "Array7"
     },
     {
@@ -12960,6 +13235,11 @@
     {
       "exception": "Expected \\?Unmatchable, got Array",
       "typeId": "?Unmatchable",
+      "valueId": "Array6-S"
+    },
+    {
+      "exception": "Expected \\?Unmatchable, got Array",
+      "typeId": "?Unmatchable",
       "valueId": "Array7"
     },
     {
@@ -13200,6 +13480,12 @@
       "strict": true,
       "typeId": "{ a: ?Unmatchable }",
       "valueId": "Array6"
+    },
+    {
+      "exception": "Unexpected property \"0\"",
+      "strict": true,
+      "typeId": "{ a: ?Unmatchable }",
+      "valueId": "Array6-S"
     },
     {
       "exception": "Unexpected property \"0\"",
@@ -13471,6 +13757,11 @@
     {
       "exception": "Expected property \"a\" of type Object, got undefined",
       "typeId": "{ a: { b: Unmatchable } }",
+      "valueId": "Array6-S"
+    },
+    {
+      "exception": "Expected property \"a\" of type Object, got undefined",
+      "typeId": "{ a: { b: Unmatchable } }",
       "valueId": "Array7"
     },
     {
@@ -13725,6 +14016,11 @@
       "exception": "Expected CustomType, got Array",
       "typeId": ">CustomType",
       "valueId": "Array6"
+    },
+    {
+      "exception": "Expected CustomType, got Array",
+      "typeId": ">CustomType",
+      "valueId": "Array6-S"
     },
     {
       "exception": "Expected CustomType, got Array",
@@ -14345,6 +14641,11 @@
     {
       "exception": "Expected property \"0\" of type Number, got String \"a\"",
       "typeId": "{ String: Number }",
+      "valueId": "Array6-S"
+    },
+    {
+      "exception": "Expected property \"0\" of type Number, got String \"a\"",
+      "typeId": "{ String: Number }",
       "valueId": "Array7"
     },
     {
@@ -14562,6 +14863,11 @@
       "exception": "Expected property \"0\" with key type Letter, got String \"0\"",
       "typeId": "{ Letter: Number }",
       "valueId": "Array6"
+    },
+    {
+      "exception": "Expected property \"0\" with key type Letter, got String \"0\"",
+      "typeId": "{ Letter: Number }",
+      "valueId": "Array6-S"
     },
     {
       "exception": "Expected property \"0\" with key type Letter, got String \"0\"",
@@ -14824,6 +15130,11 @@
     {
       "exception": "Expected property \"a\" of type Object, got undefined",
       "typeId": "{ a: { b: Buffer3 } }",
+      "valueId": "Array6-S"
+    },
+    {
+      "exception": "Expected property \"a\" of type Object, got undefined",
+      "typeId": "{ a: { b: Buffer3 } }",
       "valueId": "Array7"
     },
     {
@@ -15076,6 +15387,11 @@
     {
       "exception": "Expected property \"a\" of type Buffer|Number, got undefined",
       "typeId": "{ a: Buffer10|Number }",
+      "valueId": "Array6-S"
+    },
+    {
+      "exception": "Expected property \"a\" of type Buffer|Number, got undefined",
+      "typeId": "{ a: Buffer10|Number }",
       "valueId": "Array7"
     },
     {
@@ -15096,6 +15412,269 @@
     {
       "exception": "Expected Object, got String \"boop\"",
       "typeId": "{ a: Buffer10|Number }",
+      "valueId": "String4"
+    },
+    {
+      "exception": "Expected \\[Number\\], got String \"\"",
+      "typeId": "Array6(Number)",
+      "value": ""
+    },
+    {
+      "exception": "Expected \\[Number\\], got String \"foobar\"",
+      "typeId": "Array6(Number)",
+      "value": "foobar"
+    },
+    {
+      "exception": "Expected \\[Number\\], got Number 0",
+      "typeId": "Array6(Number)",
+      "value": 0
+    },
+    {
+      "exception": "Expected \\[Number\\], got Number 1",
+      "typeId": "Array6(Number)",
+      "value": 1
+    },
+    {
+      "exception": "Expected \\[Number\\], got Number 1\\.5",
+      "typeId": "Array6(Number)",
+      "value": 1.5
+    },
+    {
+      "exception": "Expected \\[Number\\], got Number 10",
+      "typeId": "Array6(Number)",
+      "value": 10
+    },
+    {
+      "exception": "Expected Array\\(Length\\: 6\\), got Array\\(Length\\: 0\\)",
+      "typeId": "Array6(Number)",
+      "value": []
+    },
+    {
+      "exception": "Expected Array\\(Length\\: 6\\), got Array\\(Length\\: 1\\)",
+      "typeId": "Array6(Number)",
+      "value": [
+        0
+      ]
+    },
+    {
+      "exception": "Expected Array\\(Length\\: 6\\), got Array\\(Length\\: 1\\)",
+      "typeId": "Array6(Number)",
+      "value": [
+        "foobar"
+      ]
+    },
+    {
+      "exception": "Expected Array\\(Length\\: 6\\), got Array\\(Length\\: 1\\)",
+      "typeId": "Array6(Number)",
+      "value": [
+        {
+          "a": 0
+        }
+      ]
+    },
+    {
+      "exception": "Expected Array\\(Length\\: 6\\), got Array\\(Length\\: 1\\)",
+      "typeId": "Array6(Number)",
+      "value": [
+        null
+      ]
+    },
+    {
+      "exception": "Expected \\[Number\\], got Boolean false",
+      "typeId": "Array6(Number)",
+      "value": false
+    },
+    {
+      "exception": "Expected \\[Number\\], got Boolean true",
+      "typeId": "Array6(Number)",
+      "value": true
+    },
+    {
+      "exception": "Expected \\[Number\\], got undefined",
+      "typeId": "Array6(Number)"
+    },
+    {
+      "exception": "Expected \\[Number\\], got null",
+      "typeId": "Array6(Number)",
+      "value": null
+    },
+    {
+      "exception": "Expected \\[Number\\], got Object",
+      "typeId": "Array6(Number)",
+      "value": {}
+    },
+    {
+      "exception": "Expected \\[Number\\], got Object",
+      "typeId": "Array6(Number)",
+      "value": {
+        "a": null
+      }
+    },
+    {
+      "exception": "Expected \\[Number\\], got Object",
+      "typeId": "Array6(Number)",
+      "value": {
+        "a": 0
+      }
+    },
+    {
+      "exception": "Expected \\[Number\\], got Object",
+      "typeId": "Array6(Number)",
+      "value": {
+        "a": 0,
+        "b": 0
+      }
+    },
+    {
+      "exception": "Expected \\[Number\\], got Object",
+      "typeId": "Array6(Number)",
+      "value": {
+        "b": 0
+      }
+    },
+    {
+      "exception": "Expected \\[Number\\], got Object",
+      "typeId": "Array6(Number)",
+      "value": {
+        "a": {
+          "b": 0
+        }
+      }
+    },
+    {
+      "exception": "Expected \\[Number\\], got Object",
+      "typeId": "Array6(Number)",
+      "value": {
+        "a": {
+          "b": null
+        }
+      }
+    },
+    {
+      "exception": "Expected \\[Number\\], got Object",
+      "typeId": "Array6(Number)",
+      "value": {
+        "a": {
+          "b": {
+            "c": 0
+          }
+        }
+      }
+    },
+    {
+      "exception": "Expected \\[Number\\], got Object",
+      "typeId": "Array6(Number)",
+      "value": {
+        "a": {
+          "b": {
+            "c": null
+          }
+        }
+      }
+    },
+    {
+      "exception": "Expected \\[Number\\], got Object",
+      "typeId": "Array6(Number)",
+      "value": {
+        "a": {
+          "b": {
+            "c": 0,
+            "d": 0
+          }
+        }
+      }
+    },
+    {
+      "exception": "Expected \\[Number\\], got Object",
+      "typeId": "Array6(Number)",
+      "value": {
+        "a": "foo",
+        "b": "bar"
+      }
+    },
+    {
+      "exception": "Expected \\[Number\\], got Object",
+      "typeId": "Array6(Number)",
+      "value": {
+        "a": "foo",
+        "b": {
+          "c": "bar"
+        }
+      }
+    },
+    {
+      "exception": "Expected \\[Number\\], got Function",
+      "typeId": "Array6(Number)",
+      "valueId": "function"
+    },
+    {
+      "exception": "Expected \\[Number\\], got EmptyType",
+      "typeId": "Array6(Number)",
+      "valueId": "emptyType"
+    },
+    {
+      "exception": "Expected \\[Number\\], got CustomType",
+      "typeId": "Array6(Number)",
+      "valueId": "customType"
+    },
+    {
+      "exception": "Expected \\[Number\\], got Object",
+      "typeId": "Array6(Number)",
+      "valueId": "{ a: undefined }"
+    },
+    {
+      "exception": "Expected \\[Number\\], got Object",
+      "typeId": "Array6(Number)",
+      "valueId": "{ a: Buffer3 }"
+    },
+    {
+      "exception": "Expected \\[Number\\], got Object",
+      "typeId": "Array6(Number)",
+      "valueId": "{ a: Buffer10 }"
+    },
+    {
+      "exception": "Expected \\[Number\\], got Object",
+      "typeId": "Array6(Number)",
+      "valueId": "{ a: { b: Buffer3 } }"
+    },
+    {
+      "exception": "Expected \\[Number\\], got Object",
+      "typeId": "Array6(Number)",
+      "valueId": "{ a: { b: Buffer10 } }"
+    },
+    {
+      "exception": "Expected Array\\(Length\\: 6\\), got Array\\(Length\\: 5\\)",
+      "typeId": "Array6(Number)",
+      "valueId": "Array5"
+    },
+    {
+      "exception": "Expected property \"0\" of type Number, got String \"a\"",
+      "typeId": "Array6(Number)",
+      "valueId": "Array6-S"
+    },
+    {
+      "exception": "Expected Array\\(Length\\: 6\\), got Array\\(Length\\: 7\\)",
+      "typeId": "Array6(Number)",
+      "valueId": "Array7"
+    },
+    {
+      "exception": "Expected \\[Number\\], got Buffer",
+      "typeId": "Array6(Number)",
+      "valueId": "Buffer"
+    },
+    {
+      "exception": "Expected \\[Number\\], got Buffer",
+      "typeId": "Array6(Number)",
+      "valueId": "Buffer3"
+    },
+    {
+      "exception": "Expected \\[Number\\], got Buffer",
+      "typeId": "Array6(Number)",
+      "valueId": "Buffer10"
+    },
+    {
+      "exception": "Expected \\[Number\\], got String \"boop\"",
+      "typeId": "Array6(Number)",
       "valueId": "String4"
     },
     {
@@ -15595,6 +16174,11 @@
       "valueId": "Array6"
     },
     {
+      "exception": "Expected Array\\(Length\\: 7\\), got Array\\(Length\\: 6\\)",
+      "typeId": "Array7",
+      "valueId": "Array6-S"
+    },
+    {
       "exception": "Expected Array, got Buffer",
       "typeId": "Array7",
       "valueId": "Buffer"
@@ -15851,6 +16435,11 @@
       "exception": "Expected Buffer, got Array",
       "typeId": "Buffer0",
       "valueId": "Array6"
+    },
+    {
+      "exception": "Expected Buffer, got Array",
+      "typeId": "Buffer0",
+      "valueId": "Array6-S"
     },
     {
       "exception": "Expected Buffer, got Array",
@@ -16113,6 +16702,11 @@
     {
       "exception": "Expected Buffer, got Array",
       "typeId": "Buffer3",
+      "valueId": "Array6-S"
+    },
+    {
+      "exception": "Expected Buffer, got Array",
+      "typeId": "Buffer3",
       "valueId": "Array7"
     },
     {
@@ -16371,6 +16965,11 @@
     {
       "exception": "Expected Buffer, got Array",
       "typeId": "Buffer10",
+      "valueId": "Array6-S"
+    },
+    {
+      "exception": "Expected Buffer, got Array",
+      "typeId": "Buffer10",
       "valueId": "Array7"
     },
     {
@@ -16625,6 +17224,11 @@
       "exception": "Expected Hex, got Array",
       "typeId": "Hex",
       "valueId": "Array6"
+    },
+    {
+      "exception": "Expected Hex, got Array",
+      "typeId": "Hex",
+      "valueId": "Array6-S"
     },
     {
       "exception": "Expected Hex, got Array",
@@ -16892,6 +17496,11 @@
     {
       "exception": "Expected Hex, got Array",
       "typeId": "Hex64",
+      "valueId": "Array6-S"
+    },
+    {
+      "exception": "Expected Hex, got Array",
+      "typeId": "Hex64",
       "valueId": "Array7"
     },
     {
@@ -17155,6 +17764,11 @@
     {
       "exception": "Expected String, got Array",
       "typeId": "String4",
+      "valueId": "Array6-S"
+    },
+    {
+      "exception": "Expected String, got Array",
+      "typeId": "String4",
       "valueId": "Array7"
     },
     {
@@ -17404,6 +18018,11 @@
       "exception": "Expected Number between \\[1, 5\\], got Array",
       "typeId": "Range1-5",
       "valueId": "Array6"
+    },
+    {
+      "exception": "Expected Number between \\[1, 5\\], got Array",
+      "typeId": "Range1-5",
+      "valueId": "Array6-S"
     },
     {
       "exception": "Expected Number between \\[1, 5\\], got Array",
@@ -17661,6 +18280,11 @@
     {
       "exception": "Expected Int8 between \\[0, 100\\], got Array",
       "typeId": "Int8Range0-100",
+      "valueId": "Array6-S"
+    },
+    {
+      "exception": "Expected Int8 between \\[0, 100\\], got Array",
+      "typeId": "Int8Range0-100",
       "valueId": "Array7"
     },
     {
@@ -17905,6 +18529,11 @@
       "exception": "Expected Int8, got Array",
       "typeId": "Int8",
       "valueId": "Array6"
+    },
+    {
+      "exception": "Expected Int8, got Array",
+      "typeId": "Int8",
+      "valueId": "Array6-S"
     },
     {
       "exception": "Expected Int8, got Array",
@@ -18157,6 +18786,11 @@
     {
       "exception": "Expected Int16, got Array",
       "typeId": "Int16",
+      "valueId": "Array6-S"
+    },
+    {
+      "exception": "Expected Int16, got Array",
+      "typeId": "Int16",
       "valueId": "Array7"
     },
     {
@@ -18401,6 +19035,11 @@
       "exception": "Expected Int32, got Array",
       "typeId": "Int32",
       "valueId": "Array6"
+    },
+    {
+      "exception": "Expected Int32, got Array",
+      "typeId": "Int32",
+      "valueId": "Array6-S"
     },
     {
       "exception": "Expected Int32, got Array",
@@ -18653,6 +19292,11 @@
     {
       "exception": "Expected Int53, got Array",
       "typeId": "Int53",
+      "valueId": "Array6-S"
+    },
+    {
+      "exception": "Expected Int53, got Array",
+      "typeId": "Int53",
       "valueId": "Array7"
     },
     {
@@ -18897,6 +19541,11 @@
       "exception": "Expected UInt8, got Array",
       "typeId": "UInt8",
       "valueId": "Array6"
+    },
+    {
+      "exception": "Expected UInt8, got Array",
+      "typeId": "UInt8",
+      "valueId": "Array6-S"
     },
     {
       "exception": "Expected UInt8, got Array",
@@ -19149,6 +19798,11 @@
     {
       "exception": "Expected UInt16, got Array",
       "typeId": "UInt16",
+      "valueId": "Array6-S"
+    },
+    {
+      "exception": "Expected UInt16, got Array",
+      "typeId": "UInt16",
       "valueId": "Array7"
     },
     {
@@ -19397,6 +20051,11 @@
     {
       "exception": "Expected UInt32, got Array",
       "typeId": "UInt32",
+      "valueId": "Array6-S"
+    },
+    {
+      "exception": "Expected UInt32, got Array",
+      "typeId": "UInt32",
       "valueId": "Array7"
     },
     {
@@ -19641,6 +20300,11 @@
       "exception": "Expected UInt53, got Array",
       "typeId": "UInt53",
       "valueId": "Array6"
+    },
+    {
+      "exception": "Expected UInt53, got Array",
+      "typeId": "UInt53",
+      "valueId": "Array6-S"
     },
     {
       "exception": "Expected UInt53, got Array",
@@ -24144,6 +24808,96 @@
     {
       "exception": "Expected Object, got Number -9007199254740994",
       "typeId": "{ a: Buffer10|Number }",
+      "value": -9007199254740994
+    },
+    {
+      "exception": "Expected \\[Number\\], got String \"fff\"",
+      "typeId": "Array6(Number)",
+      "value": "fff"
+    },
+    {
+      "exception": "Expected \\[Number\\], got String \"cafe1122deadbeef\"",
+      "typeId": "Array6(Number)",
+      "value": "cafe1122deadbeef"
+    },
+    {
+      "exception": "Expected \\[Number\\], got String \"0102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f20\"",
+      "typeId": "Array6(Number)",
+      "value": "0102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f20"
+    },
+    {
+      "exception": "Expected \\[Number\\], got Number -1",
+      "typeId": "Array6(Number)",
+      "value": -1
+    },
+    {
+      "exception": "Expected \\[Number\\], got Number 127",
+      "typeId": "Array6(Number)",
+      "value": 127
+    },
+    {
+      "exception": "Expected \\[Number\\], got Number 128",
+      "typeId": "Array6(Number)",
+      "value": 128
+    },
+    {
+      "exception": "Expected \\[Number\\], got Number 255",
+      "typeId": "Array6(Number)",
+      "value": 255
+    },
+    {
+      "exception": "Expected \\[Number\\], got Number 256",
+      "typeId": "Array6(Number)",
+      "value": 256
+    },
+    {
+      "exception": "Expected \\[Number\\], got Number -128",
+      "typeId": "Array6(Number)",
+      "value": -128
+    },
+    {
+      "exception": "Expected \\[Number\\], got Number -129",
+      "typeId": "Array6(Number)",
+      "value": -129
+    },
+    {
+      "exception": "Expected \\[Number\\], got Number 65534",
+      "typeId": "Array6(Number)",
+      "value": 65534
+    },
+    {
+      "exception": "Expected \\[Number\\], got Number 65535",
+      "typeId": "Array6(Number)",
+      "value": 65535
+    },
+    {
+      "exception": "Expected \\[Number\\], got Number 65536",
+      "typeId": "Array6(Number)",
+      "value": 65536
+    },
+    {
+      "exception": "Expected \\[Number\\], got Number 4294967295",
+      "typeId": "Array6(Number)",
+      "value": 4294967295
+    },
+    {
+      "exception": "Expected \\[Number\\], got Number 9007199254740991",
+      "typeId": "Array6(Number)",
+      "value": 9007199254740991
+    },
+    {
+      "exception": "Expected \\[Number\\], got Number 9007199254740994",
+      "typeId": "Array6(Number)",
+      "value": 9007199254740994
+    },
+    {
+      "exception": "Expected \\[Number\\], got Number -9007199254740991",
+      "typeId": "Array6(Number)",
+      "value": -9007199254740991
+    },
+    {
+      "exception": "Expected \\[Number\\], got Number -9007199254740994",
+      "typeId": "Array6(Number)",
       "value": -9007199254740994
     },
     {

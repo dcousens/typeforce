@@ -9,11 +9,12 @@ var tfSubError = ERRORS.tfSubError
 var getValueTypeName = ERRORS.getValueTypeName
 
 var TYPES = {
-  arrayOf: function arrayOf (type) {
+  arrayOf: function arrayOf (type, arrayType) {
     type = compile(type)
+    arrayType = compile(arrayType || NATIVE.Array)
 
     function _arrayOf (array, strict) {
-      if (!NATIVE.Array(array)) return false
+      if (!arrayType(array)) return false
       if (NATIVE.Nil(array)) return false
 
       return array.every(function (value, i) {
