@@ -114,6 +114,31 @@ typeforce(typeforce.quacksLike('Foo'), new (function Foo() {}))
 // OK!
 ```
 
+**Pro**tips (no throw)
+``` javascript
+var typeforce = require('typeforce/nothrow')
+var value = 'foobar'
+
+if (typeforce(typeforce.Number, value)) {
+	// didn't throw!
+	console.log(`${value} is a number`) // never happens
+} else {
+	console.log(`Oops, ${typeforce.error.message}`)
+	// prints 'Oops, Expected Number, got String foobar'
+}
+```
+
+**Pro**tips (async)
+```
+var typeforce = require('typeforce/async')
+
+typeforce(typeforce.Number, value, function (err) {
+	if (err) return console.log(`Oops, ${typeforce.error.message}`)
+
+	console.log(`${value} is a number`) // never happens
+})
+```
+
 **WARNING**: Be very wary of using the `quacksLike` type, as it relies on the `Foo.name` property.
 If that property is mangled by a transpiler,  such as `uglifyjs`,  you will have a bad time.
 

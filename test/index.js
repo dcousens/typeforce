@@ -1,5 +1,7 @@
 var tape = require('tape')
 var typeforce = require('../')
+var typeforceAsync = require('../async')
+var typeforceNoThrow = require('../nothrow')
 var fixtures = require('./fixtures')
 var TYPES = require('./types')
 var VALUES = require('./values')
@@ -12,12 +14,14 @@ fixtures.valid.forEach(function (f) {
   var compiled = typeforce.compile(type)
 
   tape('passes ' + typeDescription + ' with ' + valueDescription, function (t) {
-    t.plan(4)
+    t.plan(6)
     t.doesNotThrow(function () { typeforce(type, value, f.strict) })
-    typeforce.async(type, value, f.strict, t.ifErr)
+    typeforceAsync(type, value, f.strict, t.ifErr)
+    t.equal(typeforceNoThrow(type, value, f.strict), true)
 
     t.doesNotThrow(function () { typeforce(compiled, value, f.strict) })
-    typeforce.async(compiled, value, f.strict, t.ifErr)
+    typeforceAsync(compiled, value, f.strict, t.ifErr)
+    t.equal(typeforceNoThrow(compiled, value, f.strict), true)
   })
 })
 
@@ -31,15 +35,27 @@ fixtures.invalid.forEach(function (f) {
   var compiled = typeforce.compile(type)
 
   tape('throws "' + f.exception + '" for type ' + typeDescription + ' with value of ' + valueDescription, function (t) {
-    t.plan(2)
+    t.plan(10)
 
     t.throws(function () {
       typeforce(type, value, f.strict)
     }, new RegExp(f.exception))
+    typeforceAsync(type, value, f.strict, (err) => {
+      t.ok(err)
+      t.throws(function () { throw err }, new RegExp(f.exception))
+    })
+    t.equal(typeforceNoThrow(type, value, f.strict), false)
+    t.throws(function () { throw typeforceNoThrow.error }, new RegExp(f.exception))
 
     t.throws(function () {
       typeforce(compiled, value, f.strict)
     }, new RegExp(f.exception))
+    typeforceAsync(compiled, value, f.strict, (err) => {
+      t.ok(err)
+      t.throws(function () { throw err }, new RegExp(f.exception))
+    })
+    t.equal(typeforceNoThrow(compiled, value, f.strict), false)
+    t.throws(function () { throw typeforceNoThrow.error }, new RegExp(f.exception))
   })
 })
 
