@@ -18,10 +18,12 @@
   "author": "Daniel Cousens",
   "main": "index.js",
   "files": [
+    "async.js",
     "errors.js",
     "extra.js",
     "index.js",
-    "native.js"
+    "native.js",
+    "nothrow.js"
   ],
   "repository": {
     "type": "git",
