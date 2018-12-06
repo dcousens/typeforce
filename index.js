@@ -149,6 +149,23 @@ var TYPES = {
     return _oneOf
   },
 
+  allOf: function allOf () {
+    var types = [].slice.call(arguments).map(compile)
+
+    function _allOf (value, strict) {
+      return types.every(function (type) {
+        try {
+          return typeforce(type, value, strict)
+        } catch (e) {
+          return false
+        }
+      })
+    }
+    _allOf.toJSON = function () { return types.map(tfJSON).join(' & ') }
+
+    return _allOf
+  },
+
   quacksLike: function quacksLike (type) {
     function _quacksLike (value) {
       return type === getValueTypeName(value)
