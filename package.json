@@ -1,6 +1,6 @@
 {
   "name": "typeforce",
-  "version": "1.16.0",
+  "version": "1.17.0",
   "description": "Another biased type checking solution for Javascript",
   "keywords": [
     "typeforce",
