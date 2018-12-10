@@ -35,7 +35,11 @@ typeforce(typeforce.maybe(typeforce.Number), 2)
 typeforce(typeforce.maybe(typeforce.Number), null)
 
 // sum types
-typeforce(typeforce.oneOf('String', 'Number'))
+typeforce(typeforce.anyOf('String', 'Number'), 2)
+typeforce(typeforce.allOf({ x: typeforce.Number }, { y: typeforce.Number }), {
+  x: 1,
+  y: 2
+})
 
 // value types
 typeforce(typeforce.value(3.14), 3.14)

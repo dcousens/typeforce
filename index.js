@@ -132,10 +132,10 @@ var TYPES = {
     return _object
   },
 
-  oneOf: function oneOf () {
+  anyOf: function anyOf () {
     var types = [].slice.call(arguments).map(compile)
 
-    function _oneOf (value, strict) {
+    function _anyOf (value, strict) {
       return types.some(function (type) {
         try {
           return typeforce(type, value, strict)
@@ -144,9 +144,9 @@ var TYPES = {
         }
       })
     }
-    _oneOf.toJSON = function () { return types.map(tfJSON).join('|') }
+    _anyOf.toJSON = function () { return types.map(tfJSON).join('|') }
 
-    return _oneOf
+    return _anyOf
   },
 
   allOf: function allOf () {
@@ -205,6 +205,9 @@ var TYPES = {
     return _value
   }
 }
+
+// TODO: deprecate
+TYPES.oneOf = TYPES.anyOf
 
 function compile (type) {
   if (NATIVE.String(type)) {
