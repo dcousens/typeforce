@@ -81,3 +81,15 @@ tape('TfTypeError is caught by typeforce.oneOf', function (t) {
 
   t.ok(!typeforce.oneOf(failType, typeforce.string)('value'))
 })
+
+tape('Error is thrown for bad compile parameters', function (t) {
+  t.plan(2)
+
+  t.throws(function () {
+    typeforce.compile([])
+  }, /Expected compile\(\) parameter of type Array of length 1/)
+
+  t.throws(function () {
+    typeforce.compile([typeforce.Number, typeforce.String])
+  }, /Expected compile\(\) parameter of type Array of length 1/)
+})

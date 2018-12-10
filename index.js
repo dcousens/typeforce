@@ -212,7 +212,10 @@ function compile (type) {
 
     return NATIVE[type] || TYPES.quacksLike(type)
   } else if (type && NATIVE.Object(type)) {
-    if (NATIVE.Array(type)) return TYPES.arrayOf(type[0])
+    if (NATIVE.Array(type)) {
+      if (type.length !== 1) throw new TypeError('Expected compile() parameter of type Array of length 1')
+      return TYPES.arrayOf(type[0])
+    }
 
     return TYPES.object(type)
   } else if (NATIVE.Function(type)) {
