@@ -11,22 +11,24 @@ Exception messages may change between patch versions,  as often the patch will c
 ``` javascript
 var typeforce = require('typeforce')
 
-var element = { prop: 'foo' }
-var elementNumber = { prop: 2 }
-var array = [element, element, elementNumber]
 
 // supported primitives 'Array', 'Boolean', 'Buffer', 'Number', 'Object', 'String'
-typeforce('Array', array)
+typeforce('Array', [])
 
-typeforce('Number', array)
+typeforce('Number', [])
 // TypeError: Expected Number, got Array
 
 // array types
-typeforce(['Object'], array)
-typeforce(typeforce.arrayOf('Object'), array)
+typeforce(['Object'], [{}])
+typeforce(typeforce.arrayOf('Object'), [{}, {}, {}])
 
-// supports recursive type templating
-typeforce({ prop: 'Number' }, elementNumber)
+// enforces object properties 
+typeforce({
+  foo: 'Number'
+}, {
+  foo: 'bar'
+})
+// TypeError: Expected property "foo" of type Number, got String "bar"
 
 // maybe types
 typeforce('?Number', 2)
