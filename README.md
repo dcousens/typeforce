@@ -124,22 +124,22 @@ var typeforce = require('typeforce/nothrow')
 var value = 'foobar'
 
 if (typeforce(typeforce.Number, value)) {
-	// didn't throw!
-	console.log(`${value} is a number`) // never happens
+  // didn't throw!
+  console.log(`${value} is a number`) // never happens
 } else {
-	console.log(`Oops, ${typeforce.error.message}`)
-	// prints 'Oops, Expected Number, got String foobar'
+  console.log(`Oops, ${typeforce.error.message}`)
+  // prints 'Oops, Expected Number, got String foobar'
 }
 ```
 
 **Pro**tips (async)
-```
+``` javascript
 var typeforce = require('typeforce/async')
 
 typeforce(typeforce.Number, value, function (err) {
-	if (err) return console.log(`Oops, ${typeforce.error.message}`)
+  if (err) return console.log(`Oops, ${typeforce.error.message}`)
 
-	console.log(`${value} is a number`) // never happens
+  console.log(`${value} is a number`) // never happens
 })
 ```
 
