@@ -1,5 +1,4 @@
 # typeforce
-[![build status](https://secure.travis-ci.org/dcousens/typeforce.png)](http://travis-ci.org/dcousens/typeforce)
 [![Version](https://img.shields.io/npm/v/typeforce.svg)](https://www.npmjs.org/package/typeforce)
 
 Another biased type checking solution for Javascript.
@@ -9,8 +8,7 @@ Exception messages may change between patch versions,  as often the patch will c
 ## Examples
 
 ``` javascript
-var typeforce = require('typeforce')
-
+const typeforce = require('typeforce')
 
 // supported primitives 'Array', 'Boolean', 'Buffer', 'Number', 'Object', 'String'
 typeforce('Array', [])
@@ -66,12 +64,12 @@ typeforce(LongString, 'not long enough')
 typeforce(typeforce.Array, array)
 
 // or just precompile a template
-var type = {
+const type = {
   foo: 'Number',
   bar: '?String'
 }
 
-var fastType = typeforce.compile(type)
+const fastType = typeforce.compile(type)
 // fastType => typeforce.object({
 //   foo: typeforce.Number,
 //   bar: typeforce.maybe(typeforce.String)
@@ -122,8 +120,8 @@ typeforce(typeforce.quacksLike('Foo'), new (function Foo() {}))
 
 **Pro**tips (no throw)
 ``` javascript
-var typeforce = require('typeforce/nothrow')
-var value = 'foobar'
+const typeforce = require('typeforce/nothrow')
+const value = 'foobar'
 
 if (typeforce(typeforce.Number, value)) {
   // didn't throw!
@@ -136,7 +134,7 @@ if (typeforce(typeforce.Number, value)) {
 
 **Pro**tips (async)
 ``` javascript
-var typeforce = require('typeforce/async')
+const typeforce = require('typeforce/async')
 
 typeforce(typeforce.Number, value, function (err) {
   if (err) return console.log(`Oops, ${typeforce.error.message}`)
