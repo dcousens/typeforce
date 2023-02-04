@@ -2,6 +2,20 @@
   "name": "typeforce",
   "version": "1.18.0",
   "description": "Another biased type checking solution for Javascript",
+  "main": "index.js",
+  "scripts": {
+    "coverage": "nyc --check-coverage --branches 100 --functions 100 node test/*.js",
+    "standard": "standard",
+    "test": "node test/*.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dcousens/typeforce.git"
+  },
+  "bugs": {
+    "url": "https://github.com/dcousens/typeforce/issues"
+  },
+  "homepage": "https://github.com/dcousens/typeforce",
   "keywords": [
     "typeforce",
     "types",
@@ -10,13 +24,8 @@
     "exceptions",
     "force"
   ],
-  "homepage": "https://github.com/dcousens/typeforce",
-  "bugs": {
-    "url": "https://github.com/dcousens/typeforce/issues"
-  },
-  "license": "MIT",
   "author": "Daniel Cousens",
-  "main": "index.js",
+  "license": "MIT",
   "files": [
     "async.js",
     "errors.js",
@@ -25,20 +34,9 @@
     "native.js",
     "nothrow.js"
   ],
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/dcousens/typeforce.git"
-  },
-  "scripts": {
-    "coverage": "nyc --check-coverage --branches 100 --functions 100 node test/*.js",
-    "test": "npm run standard && npm run unit",
-    "standard": "standard",
-    "unit": "node test/*.js"
-  },
-  "dependencies": {},
   "devDependencies": {
     "nyc": "^13.1.0",
     "standard": "*",
-    "tape": "^4.6.1"
+    "tape": "^5.0.0"
   }
 }
