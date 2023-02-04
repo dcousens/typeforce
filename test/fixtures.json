@@ -6336,7 +6336,7 @@
       "valueId": "Array7"
     },
     {
-      "exception": "Unexpected property \"readUIntLE\"",
+      "exception": "Unexpected property \"[A-Za-z0-9]+\"",
       "strict": true,
       "type": {},
       "valueId": "Buffer"
@@ -11888,7 +11888,7 @@
       "valueId": "Array7"
     },
     {
-      "exception": "Unexpected property \"readUIntLE\"",
+      "exception": "Unexpected property \"[A-Za-z0-9]+\"",
       "strict": true,
       "typeId": "?{ a: ?Number }",
       "valueId": "Buffer"
@@ -12433,7 +12433,7 @@
       "valueId": "Array7"
     },
     {
-      "exception": "Unexpected property \"readUIntLE\"",
+      "exception": "Unexpected property \"[A-Za-z0-9]+\"",
       "strict": true,
       "typeId": "{ a: Number|Nil }",
       "valueId": "Buffer"
@@ -12975,7 +12975,7 @@
       "valueId": "Array7"
     },
     {
-      "exception": "Unexpected property \"readUIntLE\"",
+      "exception": "Unexpected property \"[A-Za-z0-9]+\"",
       "strict": true,
       "typeId": "{ a: ?{ b: Number } }",
       "valueId": "Buffer"
@@ -13236,7 +13236,7 @@
       "valueId": "Array7"
     },
     {
-      "exception": "Unexpected property \"readUIntLE\"",
+      "exception": "Unexpected property \"[A-Za-z0-9]+\"",
       "strict": true,
       "typeId": "{ a: ?{ b: ?{ c: Number } } }",
       "valueId": "Buffer"
@@ -13521,7 +13521,7 @@
       "valueId": "Array7"
     },
     {
-      "exception": "Unexpected property \"readUIntLE\"",
+      "exception": "Unexpected property \"[A-Za-z0-9]+\"",
       "strict": true,
       "typeId": "{ a: undefined }",
       "valueId": "Buffer"
@@ -13806,7 +13806,7 @@
       "valueId": "Array7"
     },
     {
-      "exception": "Unexpected property \"readUIntLE\"",
+      "exception": "Unexpected property \"[A-Za-z0-9]+\"",
       "strict": true,
       "typeId": "@{ a: undefined }",
       "valueId": "Buffer"
@@ -14651,7 +14651,7 @@
       "valueId": "Array7"
     },
     {
-      "exception": "Unexpected property \"readUIntLE\"",
+      "exception": "Unexpected property \"[A-Za-z0-9]+\"",
       "strict": true,
       "typeId": "{ a: ?Unmatchable }",
       "valueId": "Buffer"
@@ -15473,7 +15473,7 @@
       "valueId": "Array7-N"
     },
     {
-      "exception": "Expected property \"readUIntLE\" of type String, got Function",
+      "exception": "Expected property \"[A-Za-z0-9]+\" of type String, got Function",
       "typeId": "{ String }",
       "valueId": "Buffer"
     },
@@ -15657,17 +15657,17 @@
       "valueId": "{ a: { b: Buffer10 } }"
     },
     {
-      "exception": "Expected property \"readUIntLE\" of type String|Number, got Function",
+      "exception": "Expected property \"[A-Za-z0-9]+\" of type String|Number, got Function",
       "typeId": "{ String|Number }",
       "valueId": "Buffer"
     },
     {
-      "exception": "Expected property \"readUIntLE\" of type String|Number, got Function",
+      "exception": "Expected property \"[A-Za-z0-9]+\" of type String|Number, got Function",
       "typeId": "{ String|Number }",
       "valueId": "Buffer3"
     },
     {
-      "exception": "Expected property \"readUIntLE\" of type String|Number, got Function",
+      "exception": "Expected property \"[A-Za-z0-9]+\" of type String|Number, got Function",
       "typeId": "{ String|Number }",
       "valueId": "Buffer10"
     },
@@ -15866,17 +15866,17 @@
       "valueId": "Array7"
     },
     {
-      "exception": "Expected property \"readUIntLE\" of type Number, got Function",
+      "exception": "Expected property \"[A-Za-z0-9]+\" of type Number, got Function",
       "typeId": "{ String: Number }",
       "valueId": "Buffer"
     },
     {
-      "exception": "Expected property \"readUIntLE\" of type Number, got Function",
+      "exception": "Expected property \"[A-Za-z0-9]+\" of type Number, got Function",
       "typeId": "{ String: Number }",
       "valueId": "Buffer3"
     },
     {
-      "exception": "Expected property \"readUIntLE\" of type Number, got Function",
+      "exception": "Expected property \"[A-Za-z0-9]+\" of type Number, got Function",
       "typeId": "{ String: Number }",
       "valueId": "Buffer10"
     },
@@ -16097,7 +16097,7 @@
       "valueId": "Array7"
     },
     {
-      "exception": "Expected property \"readUIntLE\" with key type Letter, got String \"readUIntLE\"",
+      "exception": "Expected property \"read[A-Za-z0-9]+\" with key type Letter, got String \"read[A-Za-z0-9]+\"",
       "typeId": "{ Letter: Number }",
       "valueId": "Buffer"
     },
