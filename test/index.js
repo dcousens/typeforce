@@ -1,17 +1,17 @@
-var tape = require('tape')
-var typeforce = require('../')
-var typeforceAsync = require('../async')
-var typeforceNoThrow = require('../nothrow')
-var fixtures = require('./fixtures')
-var TYPES = require('./types')
-var VALUES = require('./values')
+const tape = require('tape')
+const typeforce = require('../')
+const typeforceAsync = require('../async')
+const typeforceNoThrow = require('../nothrow')
+const fixtures = require('./fixtures')
+const TYPES = require('./types')
+const VALUES = require('./values')
 
-fixtures.valid.forEach(function (f) {
-  var type = TYPES[f.typeId] || f.type
-  var value = VALUES[f.valueId] || f.value
-  var typeDescription = JSON.stringify(type)
-  var valueDescription = JSON.stringify(value)
-  var compiled = typeforce.compile(type)
+for (const f of fixtures.valid) {
+  const type = TYPES[f.typeId] || f.type
+  const value = VALUES[f.valueId] || f.value
+  const typeDescription = JSON.stringify(type)
+  const valueDescription = JSON.stringify(value)
+  const compiled = typeforce.compile(type)
 
   tape('passes ' + typeDescription + ' with ' + valueDescription, function (t) {
     t.plan(6)
@@ -23,16 +23,16 @@ fixtures.valid.forEach(function (f) {
     typeforceAsync(compiled, value, f.strict, t.ifErr)
     t.equal(typeforceNoThrow(compiled, value, f.strict), true)
   })
-})
+}
 
-fixtures.invalid.forEach(function (f) {
+for (const f of fixtures.invalid) {
   if (!f.exception) throw new TypeError('Expected exception')
 
-  var type = TYPES[f.typeId] || f.type
-  var value = VALUES[f.valueId] || f.value
-  var typeDescription = f.typeId || JSON.stringify(type)
-  var valueDescription = JSON.stringify(value)
-  var compiled = typeforce.compile(type)
+  const type = TYPES[f.typeId] || f.type
+  const value = VALUES[f.valueId] || f.value
+  const typeDescription = f.typeId || JSON.stringify(type)
+  const valueDescription = JSON.stringify(value)
+  const compiled = typeforce.compile(type)
 
   tape('throws "' + f.exception + '" for type ' + typeDescription + ' with value of ' + valueDescription, function (t) {
     t.plan(10)
@@ -57,9 +57,9 @@ fixtures.invalid.forEach(function (f) {
     t.equal(typeforceNoThrow(compiled, value, f.strict), false)
     t.throws(function () { throw typeforceNoThrow.error }, new RegExp(f.exception))
   })
-})
+}
 
-var err = new typeforce.TfTypeError('mytype')
+const err = new typeforce.TfTypeError('mytype')
 function failType () { throw err }
 
 tape('TfTypeError is an Error', function (t) {

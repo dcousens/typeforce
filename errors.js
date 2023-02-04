@@ -1,4 +1,4 @@
-var native = require('./native')
+const native = require('./native')
 
 function getTypeName (fn) {
   return fn.name || fn.toString().match(/function (.*?)\s*\(/)[1]
@@ -30,7 +30,7 @@ function tfJSON (type) {
 }
 
 function tfErrorString (type, value, valueTypeName) {
-  var valueJson = getValue(value)
+  const valueJson = getValue(value)
 
   return 'Expected ' + tfJSON(type) + ', got' +
     (valueTypeName !== '' ? ' ' + valueTypeName : '') +
@@ -51,7 +51,7 @@ TfTypeError.prototype = Object.create(Error.prototype)
 TfTypeError.prototype.constructor = TfTypeError
 
 function tfPropertyErrorString (type, label, name, value, valueTypeName) {
-  var description = '" of type '
+  let description = '" of type '
   if (label === 'key') description = '" with key type '
 
   return tfErrorString('property "' + tfJSON(name) + description + tfJSON(type), value, valueTypeName)

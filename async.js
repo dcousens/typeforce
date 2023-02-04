@@ -1,4 +1,4 @@
-var typeforce = require('./')
+const typeforce = require('./')
 
 // async wrapper
 function tfAsync (type, value, strict, callback) {

@@ -1,14 +1,14 @@
-var ERRORS = require('./errors')
-var NATIVE = require('./native')
+const ERRORS = require('./errors')
+const NATIVE = require('./native')
 
 // short-hand
-var tfJSON = ERRORS.tfJSON
-var TfTypeError = ERRORS.TfTypeError
-var TfPropertyTypeError = ERRORS.TfPropertyTypeError
-var tfSubError = ERRORS.tfSubError
-var getValueTypeName = ERRORS.getValueTypeName
+const tfJSON = ERRORS.tfJSON
+const TfTypeError = ERRORS.TfTypeError
+const TfPropertyTypeError = ERRORS.TfPropertyTypeError
+const tfSubError = ERRORS.tfSubError
+const getValueTypeName = ERRORS.getValueTypeName
 
-var TYPES = {
+const TYPES = {
   arrayOf: function arrayOf (type, options) {
     type = compile(type)
     options = options || {}
@@ -29,7 +29,7 @@ var TYPES = {
       })
     }
     _arrayOf.toJSON = function () {
-      var str = '[' + tfJSON(type) + ']'
+      let str = '[' + tfJSON(type) + ']'
       if (options.length !== undefined) {
         str += '{' + options.length + '}'
       } else if (options.minLength !== undefined || options.maxLength !== undefined) {
@@ -62,7 +62,7 @@ var TYPES = {
       if (!NATIVE.Object(value)) return false
       if (NATIVE.Nil(value)) return false
 
-      for (var propertyName in value) {
+      for (const propertyName in value) {
         try {
           if (propertyKeyType) {
             typeforce(propertyKeyType, propertyName, strict)
@@ -72,7 +72,7 @@ var TYPES = {
         }
 
         try {
-          var propertyValue = value[propertyName]
+          const propertyValue = value[propertyName]
           typeforce(propertyType, propertyValue, strict)
         } catch (e) {
           throw tfSubError(e, propertyName)
@@ -94,9 +94,9 @@ var TYPES = {
   },
 
   object: function object (uncompiled) {
-    var type = {}
+    const type = {}
 
-    for (var typePropertyName in uncompiled) {
+    for (const typePropertyName in uncompiled) {
       type[typePropertyName] = compile(uncompiled[typePropertyName])
     }
 
@@ -104,12 +104,12 @@ var TYPES = {
       if (!NATIVE.Object(value)) return false
       if (NATIVE.Nil(value)) return false
 
-      var propertyName
+      let propertyName
 
       try {
         for (propertyName in type) {
-          var propertyType = type[propertyName]
-          var propertyValue = value[propertyName]
+          const propertyType = type[propertyName]
+          const propertyValue = value[propertyName]
 
           typeforce(propertyType, propertyValue, strict)
         }
@@ -133,7 +133,7 @@ var TYPES = {
   },
 
   anyOf: function anyOf () {
-    var types = [].slice.call(arguments).map(compile)
+    const types = [].slice.call(arguments).map(compile)
 
     function _anyOf (value, strict) {
       return types.some(function (type) {
@@ -150,7 +150,7 @@ var TYPES = {
   },
 
   allOf: function allOf () {
-    var types = [].slice.call(arguments).map(compile)
+    const types = [].slice.call(arguments).map(compile)
 
     function _allOf (value, strict) {
       return types.every(function (type) {
@@ -176,7 +176,7 @@ var TYPES = {
   },
 
   tuple: function tuple () {
-    var types = [].slice.call(arguments).map(compile)
+    const types = [].slice.call(arguments).map(compile)
 
     function _tuple (values, strict) {
       if (NATIVE.Nil(values)) return false
@@ -240,7 +240,7 @@ function typeforce (type, value, strict, surrogate) {
 }
 
 // assign types to typeforce function
-for (var typeName in NATIVE) {
+for (const typeName in NATIVE) {
   typeforce[typeName] = NATIVE[typeName]
 }
 
@@ -248,7 +248,7 @@ for (typeName in TYPES) {
   typeforce[typeName] = TYPES[typeName]
 }
 
-var EXTRA = require('./extra')
+const EXTRA = require('./extra')
 for (typeName in EXTRA) {
   typeforce[typeName] = EXTRA[typeName]
 }

@@ -1,4 +1,4 @@
-var types = {
+const types = {
   Array: function (value) { return value !== null && value !== undefined && value.constructor === Array },
   Boolean: function (value) { return typeof value === 'boolean' },
   Function: function (value) { return typeof value === 'function' },
@@ -12,7 +12,7 @@ var types = {
 // TODO: deprecate
 types.Null = types.Nil
 
-for (var typeName in types) {
+for (const typeName in types) {
   types[typeName].toJSON = function (t) {
     return t
   }.bind(null, typeName)

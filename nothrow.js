@@ -1,4 +1,4 @@
-var typeforce = require('./')
+const typeforce = require('./')
 
 function tfNoThrow (type, value, strict) {
   try {
