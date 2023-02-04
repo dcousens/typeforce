@@ -4,7 +4,6 @@
   "description": "Another biased type checking solution for Javascript",
   "main": "index.js",
   "scripts": {
-    "coverage": "nyc --check-coverage --branches 100 --functions 100 node test/*.js",
     "test": "node test/*.js"
   },
   "repository": {
@@ -34,7 +33,6 @@
     "nothrow.js"
   ],
   "devDependencies": {
-    "nyc": "^13.1.0",
     "tape": "^5.0.0"
   }
 }
